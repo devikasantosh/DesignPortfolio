@@ -4,10 +4,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #f4f4f4;
 }
 
-/* header {
+/* index-header {
     background: linear-gradient(135deg, #f8e0e0, #c8e6c9);
     text-align: center;
     padding: 20px 0;
@@ -20,19 +20,19 @@ body {
     75% { background-position: 60% 20%; }
     100% { background-position: 0% 50%; }
 }
-header, footer {
+index-header, footer {
     position: relative;
     background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
     background-size: 300% 300%;
     animation: gradientAnimation 8s ease infinite;
-    color: white;
+    color: #f6f4d2;
     padding: 20px;
     text-align: center;
     overflow: hidden; /* Prevents noise layer from overflowing */
 }
 
 /* Noise Overlay */
-header::after, footer::after {
+index-header::after, footer::after {
     content: "";
     position: absolute;
     top: 0;
@@ -44,80 +44,110 @@ header::after, footer::after {
     pointer-events: none; /* Ensures it doesn't interfere with clicks */
 }
 
-
-header h1 {
-    color: #f4f4f4;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
-    margin: 0;
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: swirl 1.5s linear infinite;
+    pointer-events: none;
+    transform-origin: center;
 }
 
-header p {
-    font-size: 1.2em;
-    margin: 5px 0;
+/* Particle animation to swirl and fade */
+@keyframes swirl {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) rotate(360deg);
+        opacity: 0;
+    }
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.full-screen {
     display: flex;
     justify-content: center;
-    gap: 15px;
-}
-
-nav ul li {
+    align-items: center;
+    min-height: 100vh;
+    color: #f6f4d2;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
     display: inline;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
+    color: #f6f4d2;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
-}
-
-/* About Section */
-#about {
-    max-width: 75%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 40px 0; /* Padding to create space at the top/bottom */
-    margin: 0 auto; /* Center the section horizontally */
-}
-
-.about-me {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    gap: 20px; 
-}
-
-.text-content {
-    flex: 1;
-    max-width: 60%;
-}
-
-
-/* .text-content h1 {
-    background: linear-gradient(to right, #6ec3f4, #b9beff);
-    -webkit-background-clip: text; /* Clip the background to the text
-    color: transparent;
-    font-family: 'Playfair Display', serif;
-    font-size: 2em;
-    margin-bottom: 10px;
-} */
-
-.text-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.text-content p {
     font-size: 1.1em;
-    line-height: 1.6;
-}
-
+  }
+  
+  .index-header-content {
+    text-align: center;
+  }
+  
+  .index-header-content h1 {
+    font-size: 3em;
+  }
+  
+  .index-header-content p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3em;
+  }
+  
+  .about-me {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin-top: 30px;
+    width: 100%; /* Ensure it takes up full width */
+    max-width: 800px; /* Limit the width if needed */
+    margin-left: auto;
+    margin-right: auto; /* Horizontally center */
+  }
+  
+  .about-me h2 {
+    font-size: 2em;
+  }
+  
+  .about-me p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .index-header-content {
+      text-align: center;
+    }
+  
+    nav {
+      top: 10px;
+      right: 10px;
+    }
+  }
 #three-container-about img {
     max-width: 300px;
     height: auto;
@@ -166,8 +196,34 @@ h1 {
     font-size: 2em;
     margin-bottom: 10px;
     text-align: center;
-    color: #333; /* Adjust color if needed */
+    color: #f6f4d2; /* Adjust color if needed */
 }
+
+/* Style the button with a down arrow image */
+.down-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transform: translateY(70%);
+    padding: 50px;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.down-button img {
+    width: 50px;  /* Adjust size of the arrow */
+    height: auto;
+}
+
+/* Optional: Add a smooth transition effect for scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+.down-button:hover {
+    transform: translateY(20%);
+}
+
 
 /* Project Cards Layout */
 #game-projects {
@@ -179,6 +235,9 @@ h1 {
     margin: auto;
 }
 
+h1.dark{
+    color: #333;
+}
 .project {
     display: flex;
     flex-direction: column;
@@ -245,3 +304,4 @@ h1 {
 .keyword-role {
     background: #ff6b6b; /* Red tone */
 }
+

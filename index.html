@@ -7,7 +7,7 @@
   <title>Devika Santosh</title>
   <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
 
-  <link rel="stylesheet" href="home-styles.css">
+  <link rel="stylesheet" href="index-styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
@@ -17,9 +17,7 @@
 </head>
 
 <body>
-  <header>
-    <h1>Devika Santosh</h1>
-    <p>Entertainment Technology student, aspiring Experience Designer</p>
+  <index-header class="full-screen">
     <nav>
       <ul>
         <li><a href="index.html">About + Showreel</a></li>
@@ -29,43 +27,23 @@
         <li><a href="contact.html">Résumé</a></li>
       </ul>
     </nav>
-  </header>
 
-  <main>
-
-    <section id="about">
+    <div class="index-header-content">
+      <h1>Devika Santosh</h1>
+      <p>Entertainment Technology student, aspiring Experience Designer</p>
       <div class="about-me">
-        <div class="text-content">
-
-          <h1>About Me</h1>
-          <p>An entertainment technology graduate student with a computer science background, a passion for creative
-            technologies, and a keen interest in storytelling and immersive experiences.
-          </p>
-          <p>Combining my technical background with my
-            love for art, I strive to merge the boundaries between creativity and technology.
-            &#10024;</p>
-        </div>
-        <div id="three-container-about">
-          <img src="Assets\android-chrome-512x512.png" alt="Project Image 2">
-        </div>
+        <p>With a passion for creative
+          technologies, and a keen interest in storytelling and immersive experiences, I strive to merge the boundaries
+          between creativity and technology. &#10024;</p>
       </div>
+      <button id="downButton" class="down-button">
+        <img src="Assets/chevron-down.svg" alt="Down Arrow">
+      </button>
+    </div>
 
-    </section>
-
-    <!-- <section id="showreel">
-      <h2>Showreel</h2>
-      <video controls>
-        <source src="showreel.mov" type="video/mp4">
-      </video>
-    </section> -->
-    <!-- <div class="video-container">
-      <iframe width="910.80" height="513.15" src="https://www.youtube.com/embed/3mMFzGdcou8"
-        title="Devika Santosh - Showreel" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </iframe>
-    </div> -->
-    <h1>My Work</h1>
+  </index-header>
+  <main>
+    <h1 class="dark">My Work</h1>
 
 
     <section id="game-projects">
@@ -152,7 +130,8 @@
         <img src="Assets/maya1.png" alt="Project 3 Thumbnail" width="100">
         <div class="project-info">
           <h2>Technical Art</h2>
-          <p class="tagline">Tools created for Maya, to help ease the workflow of artists. Also features shader programming.</p>
+          <p class="tagline">Tools created for Maya, to help ease the workflow of artists. Also features shader
+            programming.</p>
           <div class="keywords">
             <span class="keyword">Tool Development</span>
             <span class="keyword">Shader Development</span>

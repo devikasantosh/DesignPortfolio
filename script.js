@@ -1,4 +1,8 @@
-       
+document.getElementById("downButton").addEventListener("click", function() {
+    document.querySelector("#game-projects").scrollIntoView({ behavior: "smooth" });
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
     let currentImageIndex = 0;
     const images = document.querySelectorAll('.art-item');
