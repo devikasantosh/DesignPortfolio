@@ -106,13 +106,13 @@ index-header::after, footer::after {
   }
   
   .index-header-content h1 {
-    font-size: 3em;
+    font-size: 3.75em;
   }
   
   .index-header-content p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1.3em;
+    font-size: 1.625em;
   }
   
   .about-me {
@@ -122,19 +122,19 @@ index-header::after, footer::after {
     align-items: center; /* Center content horizontally */
     margin-top: 30px;
     width: 100%; /* Ensure it takes up full width */
-    max-width: 800px; /* Limit the width if needed */
+    max-width: 1000px; /* Limit the width if needed */
     margin-left: auto;
     margin-right: auto; /* Horizontally center */
   }
   
   .about-me h2 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
   
   .about-me p {
     font-family: 'Montserrat';
     font-style: normal;
-    font-size: 1.1em;
+    font-size: 1.375em;
     line-height: 1.5;
   }
   
