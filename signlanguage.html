@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link rel="stylesheet" href="styles-projects.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Devika Santosh</h1>
+    <p>Entertainment Technology student, aspiring Experience Designer</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">About + Showreel</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="maya.html">Technical Art</a></li>
+        <li><a href="contact.html">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="breadcrumbs">
+    <a href="index.html">Home</a> &gt;
+    <a href="games.html">Games</a> &gt;
+    <span class="current">Gamified Sign Language Learning Experience</span>
+  </nav>
+  <main id="project-content">
+    <section class="project-header">
+      <h2>Gamified Sign Language Learning Experience</h2>
+      <p class="tagline">Creating a VR application for teaching sign language to the hearing community, to encourage
+        inclusivity and bridge barriers.</p>
+    </section>
+
+
+    <section class="project-features">
+      <h3>Capstone Project - VIT Chennai</h3>
+      <p>Implemented gesture recognition, gamification techniques and dynamic difficulty adjustment to create a VR
+        application for teaching sign language to the hearing community.</p>
+      <p>My thesis compared the traditional learning method, along with a randomized game-based method and two dynamic
+        difficulty adjustment algorithms and measured factors like accuracy, time, knowledge retention, player feedback,
+        and motivation and engagement levels.
+
+      </p>
+      <br>
+      <p>Created hand gesture recognition that maps the coordinates of the hand skeleton finger bones, and saves these
+        coordinates for each gesture. User can add as many gestures as required for either hand.
+        <br>
+        <img src="Assets\gestures.png" height=500 alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      <p><i>Storing the coordinates of each gesture's Oculus hand skeleton finger bones for recognition</i></p>
+      <br>
+
+      </p>
+
+      <p>Created 2 modes: practice and test. Practice round is more forgiving, displays the hand gesture and shows if
+        the user’s response is correct or not, and lets them retry until it is correct.
+      </p>
+      <br>
+      <img src="Assets\practice1.png" height=200 alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      <img src="Assets\practice2.png" height=200 alt="Art Project 2" class="art-item" onclick="openGallery(1)">
+      <p><i>Practice mode - teaches by displaying the hand gesture and allows retries</i></p>
+      <br>
+      <img src="Assets\test3.png" height=200 alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      <img src="Assets\test4.png" height=200 alt="Art Project 2" class="art-item" onclick="openGallery(1)">
+      <p><i>One of the 3 variations of test mode</i></p>
+      <br>
+      <p>Test mode has 3 types -
+      <ul>
+        <li>randomized, </li>
+        <li>linear algorithm for dynamic difficulty adjustment, and </li>
+        <li>an exponential dynamic difficulty adjustment algorithm.</li>
+      </ul>
+
+      </p>
+      <br>
+      <p>The dynamic modes would increase the frequency of questions being asked if the user answers them wrong, and
+        decrease the frequency of the answers users seem to know, thus creating a more personalized learning experience.
+      </p>
+      <br>
+      <img src="Assets\DynamicMode.png" height=400 alt="Art Project 2" class="art-item" onclick="openGallery(1)">
+      <p><i>Frequency of questions changing dynamically based on an exponential algorithm</i></p>
+      <br>
+
+      <ul>
+        <li><b>Time: </b>1 semester</li>
+        <li><b>Software and Platforms: </b>Unity Engine, Oculus Quest 2</li>
+      </ul>
+    </section>
+
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8QbWwQwzxeE" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+
+    <section class="project-technologies">
+      <h3>Technologies Used</h3>
+      <ul>
+        <li>Unity</li>
+        <li>C#</li>
+        <li>Oculus Quest 2</li>
+      </ul>
+    </section>
+
+    <!-- <section class="project-challenges">
+          <h3>Challenges & Solutions</h3>
+          <p>Briefly describe the major challenges faced during development and the solutions implemented.</p>
+        </section> -->
+
+  </main>
+
+  <footer id="contact">
+    <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+    <div class="social-icons">
+      <div class="button-container">
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+            style="width: 5.5em">
+        </div>
+
+        <div class="glass-btn blue-btn">
+
+          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+            style="width: 5.5em">
+
+        </div>
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+            style="width: 5.5em">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

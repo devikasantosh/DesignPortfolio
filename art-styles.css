@@ -1,0 +1,582 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  html, body {
+    height: 100%;
+  }
+
+    
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Flexbox Layout to keep footer at the bottom */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #f6f4d2 ; /* Text color */
+    background-color: #252422; /* Background color */
+  }
+  
+  main{
+    padding-left: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+
+  /* Header and Footer Styling */
+  header, footer {
+    background-color: #252422;
+    color: 028090;
+    text-align: center;
+    padding: 20px;
+  }
+
+  
+  header h1 {
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
+    margin-top: 10px; /* Adjusted space */
+    font-weight: 700; /* You can change this to 400 for a lighter style */
+    font-size: 3.1rem;
+    background: linear-gradient(to right, #22577a, #38a3a5); /* Linear gradient background */
+    -webkit-background-clip: text; /* For gradient text */
+    -webkit-text-fill-color: transparent; /* Make text fill transparent */
+}
+
+  header p{
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  
+ /* Base styles for nav links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover state */
+nav ul li a:hover {
+    color: #028090; /* Blue color on hover */
+}
+
+/* Focus and active states */
+nav ul li a:focus,
+nav ul li a.active {
+    color: #028090; /* Blue color on active */
+}
+
+/* Optional underline effect */
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+  
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  #second-nav {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+      background: linear-gradient(to right, #22577a, #38a3a5); /* Gradient from pink to orange */
+    z-index: 10; /* Ensure it stays above other content */
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray; /* Optional shadow effect */
+}
+
+  #second-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #second-nav li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  #second-nav li a:hover {
+    color: #252422;
+  }
+  
+  #second-nav li a:focus,
+  #second-nav li a.active {
+    color: #252422;
+  }
+  
+  #second-nav li a:hover,
+  #second-nav li a.active {
+    text-decoration: underline;
+  }
+  
+  
+  /* Main content area takes up remaining space */
+  main {
+    flex: 1;
+    padding: 40px;
+    padding-top: 60px;
+    padding-left: 100px;
+  }
+  
+  #about {
+    max-width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    padding: 40px 0; /* Padding to create space at the top/bottom */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px; /* Add gap between text and image */
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+    font-size: 1.5em;
+}
+
+.about-me h1 {
+    background: linear-gradient(to right, #22577a, #38a3a5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: black;
+}
+
+h1{
+    background: linear-gradient(to right, #22577a, #38a3a5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: black;
+    text-align: center;
+}
+
+.about-me p {
+    max-width: 100%;
+    line-height: 1.6;
+}
+
+#three-container-about {
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#three-container-about img {
+    max-width: 100%;
+    height: auto;
+}
+
+  
+  /* Showreel Section */
+  #showreel {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  #showreel video {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+  }
+  
+  /* Projects Section */
+  #projects {
+    text-align: center;
+  }
+  
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  
+  .project img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .project h3 {
+    margin: 10px 0;
+  }
+  
+  /* Footer Styling */
+  footer .social-icons {
+    margin-top: 10px;
+  }
+  
+  footer .social-icons a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+  }
+  
+  .fa {
+    padding: 10px; /* Keep padding for spacing */
+    font-size: 24px; /* Adjust icon size */
+    width: 50px; /* Fixed width for circle */
+    height: 50px; /* Fixed height for circle */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%; /* Make it circular */
+    background: none; /* No background */
+    color: white; /* Default icon color */
+    border: 2px solid white; /* White border for line art effect */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+/* Change to blue on hover */
+.fa:hover {
+    color: #028090; /* Change text color on hover */
+    border-color: #028090; /* Change border color on hover */
+    opacity: 1; /* Ensure full opacity */
+}
+
+/* Specific color for each brand can go here */
+.fa-facebook {
+    /* Custom styles for Facebook icon can go here */
+}
+
+.fa-twitter {
+    /* Custom styles for Twitter icon can go here */
+}
+
+footer {
+  position: relative; /* Ensure the footer can have effects like box-shadow */
+  box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53); /* Glow effect on top */
+}
+/* Footer Styling */
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.glass-btn {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  margin-left: 1em;
+  margin-right: 1em;  
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.blue-btn {
+    -webkit-box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+    -moz-box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+    box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+
+    &:hover {
+      -webkit-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+      -moz-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+      box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);      
+    }
+  }
+}
+
+.icon-link {
+  display: inline-flex; /* Ensures the link behaves like a flex container */
+  align-items: center; /* Centers the image vertically */
+  justify-content: center; /* Centers the image horizontally */
+  text-decoration: none; /* Removes underline */
+}
+
+.icon-link img {
+  width: 100%; /* Makes the image take up 80% of its container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Ensures image fits well within its container */
+  transition: transform 0.3s ease; /* Adds smooth hover animation */
+}
+
+.icon-link:hover img {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
+
+
+#game-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.project {
+  display: block;
+  width: 300px; /* Adjust as needed */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  text-decoration: none; /* Remove default link underline */
+  color: inherit; /* Keep text color consistent */
+  transition: transform 0.2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.project img, .project video {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #028090;
+  border-radius: 10px 10px 0 0;
+}
+
+.project-info {
+  padding: 10px;
+}
+
+.project-info h2 {
+  font-family: 'Playfair Display', serif;
+  color: #028090;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.project-info .tagline {
+  font-family: 'Montserrat', sans-serif;
+  color: #252422;
+  font-size: 1em;
+}
+
+.project video {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #028090;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+#game-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  display: block;
+  width: 300px; /* Adjust as needed */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  text-decoration: none; /* Remove default link underline */
+  color: inherit; /* Keep text color consistent */
+  transition: transform 0.2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.project video, .project img {
+  width: 100%;
+  border-bottom: 2px solid #028090;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #f6f4d2 ; /* Text color */
+    background-color: #252422; /* Background color */
+  }
+
+
+/* Bento-style art grid */
+.art-grid {
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.art-item {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.art-item:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery overlay styling */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.overlay-image {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+}
+
+.close, .prev, .next {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.close {
+    top: 20px;
+    right: 20px;
+}
+
+.prev {
+    top: 50%;
+    left: 20px;
+}
+
+.next {
+    top: 50%;
+    right: 20px;
+}
+
+
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .design-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .design-grid {
+      grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+
+
+
+.sticky-notes-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sticky-note {
+  background: #FFEB3B;
+  padding: 15px;
+  width: 220px;
+  transform: rotate(-3deg);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  border-radius: 5px;
+}
+
+
+.breadcrumbs {
+  font-size: 14px;
+  color: #f6f4d2;
+  padding: 10px 20px;
+  background: #252422;
+  border-radius: 5px;
+  display: inline-block;
+  
+  position: sticky;
+  top: 0;  /* Stick to the top of the page */
+  left: 0;
+  width: 100%;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+  z-index: 1000;  /* Ensure it stays above other content */
+}
+
+
+.breadcrumbs a {
+text-decoration: none;
+color: #0077cc;
+font-weight: 500;
+}

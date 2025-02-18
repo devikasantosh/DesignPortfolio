@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link rel="stylesheet" href="styles-projects.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Devika Santosh</h1>
+    <p>Entertainment Technology student, aspiring Experience Designer</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">About + Showreel</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="maya.html">Technical Art</a></li>
+        <li><a href="contact.html">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="breadcrumbs">
+    <a href="index.html">Home</a> &gt;
+    <a href="design.html">Design</a> &gt;
+    <span class="current">Transformational Design</span>
+  </nav>
+  <main id="project-content">
+    <section class="project-header">
+      <h2>Transformational Design</h2>
+      <h3>Transformational design pitch for an exhibit highlighting human complicity
+        created as part of CMU's <i>Entertainment Technology Fundamentals</i> class.</h3>
+
+    </section>
+
+
+
+    <br>
+    <section class="project-features">
+      <h3>The Assignment</h3>
+      <p>We were tasked to pitch interactive projects to be mounted somewhere in Washington DC, with an imaginary $2
+        million budget and an imaginary year to create. We had to also research which site it will be mounted in, and
+        it's availability, the manpower, and schedule.</p>
+      <br><br>
+      <div class="sticky-notes-container">
+        <div class="sticky-note">
+          <p><b>Constraints and Criteria:</b></p>
+          <ul>
+            <li>Interactive</li>
+            <li>Make humans aware of their complicity</li>
+            <li>"Will this project make the world a better place?"</li>
+            <li>Well-researched premise</li>
+            <li>Visual Design to sell the idea</li>
+          </ul>
+        </div>
+      </div><br><br>
+      <h4><b>The Prompt: You are Complicit, and You can make a difference.</b></h4>
+      <p>You are to create an <b>interactive</b> experience about some real-world issue, set in the
+        present day. The Guest performs a task in which there is at least ONE decision they
+        make. Regardless of the decision, your goal is the make the guest feel <b>something
+          important</b>.</p>
+      <br>
+      <p><b>Our Exhibit</b></p>
+      <p>We wanted to focus on how history is always written by the victor, and how we are complicit in whether or not
+        we educate ourselves on what's happening in the world, because today's present is tomorrow's history. We really
+        wanted to focus on erased stories and silenced voices, and how information that is out today may be gone
+        tomorrow.</p>
+      <br>
+      <p><b>The Concept</b></p>
+      <p>A physical structure with audio interactive components.</p>
+      <p>As you walk past it, you hear voices telling their stories. You feel educated, like you're learning something
+        new. <i>And then suddenly, the voices are cut off.</i> Radio silence. You try to move back to where you heard
+        the voices, you try to bring them back, to hear the end of their story, but you can't. It's lost.</p>
+
+    </section>
+
+    <div class="design-grid">
+      <img src="Assets\fundies1.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="40%">
+      <img src="Assets\fundies2.png" alt="Art Project 2" class="art-item" onclick="openGallery(1)" width="40%">
+    </div>
+    <i>Early concept inspiration, and sketch. Notice how one side is higher to represent the information always being
+      louder. The other sides sees a smaller voice, taking a long time to rise; and when it does, it's shut down almost
+      immediately, and again takes a long time to gather up and rise again.</i>
+    <br><br>
+    <p><b>Ideation</b></p>
+    <ul>
+      <li>Access to information opens up and shuts down in waves. We have knowledge and then lose access and interest in
+        it, as it becomes more scarce.</li>
+      <li>We propose a <b>sculpture with an element of audio interactivity</b> to depict these waves of knowledge and
+        access to
+        it.</li>
+      <li>As the listener walks past the sculpture – audio keeps rising and they’re learning, getting more knowledge.
+      </li>
+      <li>Then, suddenly, the voice cuts off.</li>
+      <li>Concept of being at the right place, right time</li>
+      <li>Listeners are complicit</li>
+      <li>Trying to educate yourself -> trying to help out</li>
+      </li>
+    </ul>
+    <br><br>
+    <p><b>Further Ideation</b></p>
+
+    <p><b>Core Ideas</b></p>
+    <ul>
+      <li>The truth</li>
+      <ul>
+        <li>Educating the public</li>
+        <li>One story that has been lost/hidden - voice grows and cuts off</li>
+        <li>Book bannings</li>
+      </ul>
+      <li>Two sides of the story</li>
+      <ul>
+        <li>Showing how history can be manipulated
+        </li>
+        <li>Watered down version/misinformation vs real story
+        </li>
+        <li>Racial profiling - police radio vs real history
+        </li>
+        <li>Inventions - commercials/what became of it vs the real beginnings
+        </li>
+      </ul>
+    </ul>
+
+    <br><br>
+    <p><b>Deciding a theme</b></p>
+    <p>The team agreed upon using the erasure of women's contributions in history as the underlying theme of the exhibit.</p>
+<p>We also decided to incorporate a digital, AR segment to the installation alongside the physical one we had planned.</p>
+
+
+
+    <!-- Gallery Overlay -->
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+  </main>
+
+  <footer id="contact">
+    <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+    <div class="social-icons">
+      <div class="button-container">
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+            style="width: 5.5em">
+        </div>
+
+        <div class="glass-btn blue-btn">
+
+          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+            style="width: 5.5em">
+
+        </div>
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+            style="width: 5.5em">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

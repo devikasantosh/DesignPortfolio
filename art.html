@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link rel="stylesheet" href="art-styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Devika Santosh</h1>
+    <p>Entertainment Technology student, aspiring Experience Designer</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">About + Showreel</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="maya.html">Technical Art</a></li>
+        <li><a href="contact.html">Résumé</a></li>
+      </ul>
+    </nav>
+    <br>
+    <nav id="second-nav">
+            <ul>
+        <li><a href="#art">2D Art</a></li>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#animation">Animation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p>This section includes 
+      <ul><li><b>personal projects</b>,</li>
+        <li><b>illustrations</b> created for <a href="https://www.thescientificteen.org/" style="color: #0077b5;">The Scientific Teen</a> (designer and illustrator, and later design team lead),</li>
+        <li><b>magazine covers</b> for The Capsule (designer and later design team lead),</li>
+        <li><b>social media posts</b> for <a href="https://hackclubvit.github.io/" style="color: #0077b5;">HackClub</a> (designer, and later Content and Media team lead) and for <a href="https://www.ieeecsvitc.com/" style="color: #0077b5;">IEEE Computer Society</a> (designer).</li>
+      </ul>   </p>
+    <section id="art">
+<br><br>
+    <h1>Art Projects</h1>
+    <div class="art-grid">
+      <img src="Assets\photo1703964769.jpeg" alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      <img src="Assets\Untitled_Artwork (8).png" alt="Art Project 2" class="art-item" onclick="openGallery(1, 'Earth Day artwork for The Scientific Teen')">
+      <img src="Assets\photo1703965160.jpeg" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+      <img src="Assets\animation.gif" alt="Art Project 3" class="art-item" onclick="openGallery(3)">
+      <img src="Assets\photo1703964500.jpeg" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+      <img src="Assets\wandaanimation (1).gif" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+
+      <img src="Assets\photo1703965106.jpeg" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+
+      <img src="Assets\photo1703964593.jpeg" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+      <!-- <img src="Assets\photo1703965042.jpeg" alt="Art Project 3" class="art-item" onclick="openGallery(2)"> -->
+
+      <img src="Assets\photo1703965067.jpeg" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+      <!-- <img src="Assets\Tst2.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+      <img src="Assets\UVresize.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)"> -->
+    </div>
+
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+</section>
+<section id="design">
+
+    <h1>Design Projects</h1>
+    <h2>Music App UI</h2>
+    Created in 2 hours for Gradient, a UI ideathon by our university’s Android Club. Our design went on to win <b>second place</b> in the event.
+
+    <br>
+    Teammate: Yashvardhan Gupta
+    <br>
+
+    <img src="Assets\musicapp\Fonts and Palette.png" class="center">
+    <br>
+    We drew inspiration from a vinyl record and tried to implement that classic aesthetic in a modern context. This led
+    us to design a clean and minimalist interface, with a nostalgic touch of circular elements and a <b>vinyl-inspired
+      player</b>.
+    <br>
+
+    The color palette was specifically chosen to give a theatrical feel inspired by <b>nightclubs and concerts</b>, and
+    the typography was kept simple to maintain the clean, minimalist aesthetic. We also ensured that the user experience
+    was smooth and intuitive, with easily accessible features and a clear, easy-to-understand layout.
+    <br>
+    <div class="design-grid">
+      <img src="Assets\musicapp\Welcome.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      <img src="Assets\musicapp\Home.png" alt="Art Project 2" class="art-item" onclick="openGallery(1)">
+      <img src="Assets\musicapp\Search Page.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+      <img src="Assets\musicapp\Music.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+      <img src="Assets\musicapp\Playlists.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+      <img src="Assets\musicapp\Profile.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+    </div>
+
+    <!-- Gallery Overlay -->
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+    This is one of my favourite creations, purely from the thrill of collaboratively creating something against a
+    deadline and seeing it come to life right in front of you.
+    <br>
+<br>
+    <h2>Event App UI</h2>
+    This was probably my first step into the world of UI and UX design. HC Educates, HackClub’s yearly flagship event, consisted of a series of workshops followed by a Hackathon where participants could showcase what they learnt. I was tasked with designing a one-page website framework to be presented to the web developers to create a site where participants could find all the event details. 
+
+    <img src="Assets\eventapp\fonts and palette.png" class="center">
+    <br>
+    Gradients and futuristic fonts, combined with the use of 3D elements and dynamic shapes, were used to create an engaging and futuristic design that would appeal to the tech-savvy audience of the event. The layout was designed to be clean and intuitive, ensuring that users could easily navigate through the site and find the information they needed.
+    <br>
+
+    <br>
+    <!-- <div class="design-grid">
+      <img src="Assets\eventapp\Website.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+    </div>
+
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div> -->
+    <p style="text-align:center; color: #0077b5; font-size: 20px; font-style: italic; font-weight: bold;">~✨Figma embeds may take a few seconds to load!✨~</p>
+
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=115-3184&embed-host=share" allowfullscreen></iframe>
+    <br>
+    The website was later developed and deployed by HackClub’s web development department, and can be viewed at <a href="https://hackclubvit.github.io/hc-educates-site/" style="color: #0077b5;">https://hackclubvit.github.io/hc-educates-site/</a>
+
+    <br>
+<br> 
+
+    <h2>Social Media - Graphic Design</h2>
+Created as part of my roles as design team member and design lead at various clubs and extracurriculars within and outside VIT Chennai.
+<br><br>
+<h3>Post series on web development basics for IEEE Computer Society</h3> 
+<p style="text-align:center; color: #0077b5; font-size: 20px; font-style: italic; font-weight: bold;">~✨Figma embeds may take a few seconds to load!✨~</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+    <!-- <div class="design-grid">
+      <img src="Assets\IEEEpost.png" alt="Art Project 1" width = "800px" class="art-item" onclick="openGallery(0)" >
+    </div>
+
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div> -->
+<br><br>
+<h3>Online and Offline Marketing Content for HackClub's First Hackathon</h3> 
+<p style="text-align:center; color: #0077b5; font-size: 20px; font-style: italic; font-weight: bold;">~✨Figma embeds may take a few seconds to load!✨~</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=1-2&embed-host=share" allowfullscreen></iframe>
+<br>
+<br>
+<h3>Promotional Content for Envisage - HackClub's Ideathon Event</h3>
+<p style="text-align:center; color: #0077b5; font-size: 20px; font-style: italic; font-weight: bold;">~✨Figma embeds may take a few seconds to load!✨~</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=6-2365&embed-host=share" allowfullscreen></iframe>
+    <br>
+<br>
+</section>
+
+
+<section id="animation">
+  <br><br>
+
+  <h1>Animation Projects</h1>
+  <p>Software: Procreate</p>
+  <br><br>
+
+<b><u>When the Clock Strikes 12</u></b>
+<p>Imagine a world where shadows spring to life at the stroke of midday. As the sun reaches its zenith, and the shadows fall right below, the magic unfolds. Unseen by human eyes, a secret realm reveals itself in the shadows below.</p>
+<br><br>
+
+<p><b><u>Character Design</u></b></p>
+<img src="Assets\shadow 1.jpeg" height="315">
+<p><b><u>Basic Storyboarding</u></b></p>
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/AjOtR5tJveA"
+title="YouTube video player" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+<p><b><u>Animation (work-in-progress!)</u></b></p>
+
+</section>
+  </main>
+
+  <footer id="contact">
+    <p>Contact me at: <a href= "mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+    <div class="social-icons">
+      <div class="button-container">
+  
+        <div class="glass-btn blue-btn">
+            <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon" style="width: 5.5em">
+        </div>
+      
+        <div class="glass-btn blue-btn">
+
+          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon" style="width: 5.5em">
+      
+      </div>
+        
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon" style="width: 5.5em">
+        </div>
+      
+      </div>    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

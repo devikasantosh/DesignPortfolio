@@ -1,0 +1,247 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* header {
+    background: linear-gradient(135deg, #f8e0e0, #c8e6c9);
+    text-align: center;
+    padding: 20px 0;
+} */
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 40% 30%; }
+    50% { background-position: 100% 70%; }
+    75% { background-position: 60% 20%; }
+    100% { background-position: 0% 50%; }
+}
+header, footer {
+    position: relative;
+    background: linear-gradient(90deg, #c3e4ff, #6ec3f4, #eae2ff, #b9beff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 8s ease infinite;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* Prevents noise layer from overflowing */
+}
+
+/* Noise Overlay */
+header::after, footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Assets/noise.png'); /* Add your noise image */
+    opacity: 0.15; /* Adjust transparency */
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
+}
+
+
+header h1 {
+    color: #f4f4f4;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* About Section */
+#about {
+    max-width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 40px 0; /* Padding to create space at the top/bottom */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    gap: 20px; 
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+}
+
+
+/* .text-content h1 {
+    background: linear-gradient(to right, #6ec3f4, #b9beff);
+    -webkit-background-clip: text; /* Clip the background to the text
+    color: transparent;
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+} */
+
+.text-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#three-container-about img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Video Section */
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+/* Footer */
+/* footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8e0e0, #c8e6c9);
+    color: #333;
+} */
+
+footer a {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.glass-btn {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333; /* Adjust color if needed */
+}
+
+/* Project Cards Layout */
+#game-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.keyword, .keyword-role {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.keyword {
+    background: #0077b5; /* Blue tone */
+}
+
+.keyword-role {
+    background: #ff6b6b; /* Red tone */
+}

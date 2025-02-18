@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles-projects.css">
+</head>
+
+<body>
+  <header>
+    <h1>Devika Santosh</h1>
+    <p>Entertainment Technology student, aspiring Experience Designer</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">About + Showreel</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="maya.html">Technical Art</a></li>
+        <li><a href="contact.html">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="breadcrumbs">
+    <a href="index.html">Home</a> &gt;
+    <a href="design.html">Design</a> &gt;
+    <span class="current">User Experience</span>
+  </nav>
+  <main id="project-content">
+    <section class="project-header">
+      <p class="tagline">This is an <b>ongoing project</b> and will be updated as work progresses.</p>
+
+      <h2>Encore</h2>
+      <h3>Titanic the Musical pre-show experience for CMU's School of Drama</h3>
+      <p>Currently working as an <b>experience designer</b> and <b>narrative designer</b> for a pre-show experience for
+        CMU’s School of Drama production of Titanic the Musical, as part of a client project with CMU’s Entertainment
+        Technology Center.</p>
+
+      <h2>Concept</h2>
+      <p>Exploring the lives and stories of the characters through their luggage. The musical represents the passengers
+        and their dreams and hopes for their future in America. <br>It focuses on the class disparities between them -
+        the Third-Class immigrants dream of a better life in America, the Second Class imagine they too can join the
+        lifestyles of the rich and famous, while the millionaire Barons of the First Class anticipate legacies lasting
+        forever.</p>
+      <p>We also plan to make our experience change with time, during the run of the show.</p>
+      <br>
+      <ul>
+      <li>The beginning represents the passengers boarding the ship - bright and hopeful, with countless dreams.</li>
+      <li>The intermission begins right after the ship hits the iceberg. We wanted a feeling of panic, danger, and a
+        sense of rush.</li>
+      <li>The show ends on a melancholic note, and there are accounts of passengers on lifeboats remembering the dark,
+        starry sky they saw as the ship sank because they were in the middle of the sea on a moonless night. We wanted
+        to replicate this and create a mood for introspection and quiet stillness.</li>
+      </ul>
+      <br>
+      <p>We plan to change the lighting, visuals, and soundscapes through these three parts of the experience:</p>
+      <ul>
+        <li>We plan to have a bright and sunny pre-show, symbolising the luggage being boarded onto the ship, and the
+          sounds of seagulls and shipyards.</li>
+        <li>During the intermission, we plan to use ocean floor gobos and theatrical lighting to create a blue tinged
+          effect, fog machines and cooling the room down, and harsh lighting to represent warning signals. The
+          soundscape is going to be unsettling, with the ship creaking ominously, and water splashing precariously.</li>
+        <li>Our post-show will be quiet and reflective, an almost dark stillness. We expect the audience to be quiet and
+          thoughtful at the end of the performance, and want the environment to be eerily unsettling, and yet calm. The
+          soundscape would be silent, either with no sound playing, or using noise-cancelling effects to make it more
+          unsettling.</li>
+      </ul>
+      <br>
+      <h2>Challenges</h2>
+      <p>Our challenges include fabricating the luggage stations, programming the Arduino for the functions we want, and
+        encouraging guests to touch and interact with the exhibit. Another major challenge is making the sound
+        technology audible in a lobby full of theater-goers.</p>
+
+      <br>
+      <h2>Quick User Journey - Interactions</h2>
+      <p>As the user walks past a luggage station, a motion sensor detects their presence and the trunk opens, with a
+        programmed light tracing the outlines of the props inside, encouraging them to interact with it. We would use
+        directional speakers to play an audio recording of the character narrating, also triggered by the motion sensor.
+        The guests can explore the props inside - rift through the characters' clothing, read their diaries and letters,
+        examine their possessions, and thereby understand and empathise with their stories.</p>
+
+      <br>
+      <h2>Role</h2>
+      <p>I am working as the <b>experience designer</b> and the <b>narrative designer</b> on the project.</p>
+      <p>I will be crafting user journeys and personas for our young and old audience, and making sure the experience
+        feels complete even if they miss any or more of the three parts.</p>
+      <p>I will also be conducting extensive research into the characters' lives, who they were to others, and how they
+        each spoke or wrote, and would mimic these and create stories for them that I'll write in their journals,
+        diaries, and pocketbooks.</p>
+      <p>I am also going to be creating a strong and engaging narrative for the whole experience, to ensure guests
+        connect with these characters.</p>
+      <p>For the Entertainment Technology Center, I am designing our team's logo, poster, and halves sheet, too.</p>
+      <div class="art-grid">
+        <img src="Assets/encore1.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+        <img src="Assets/encore2.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+        <img src="Assets/encore3.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      </div>
+
+      <div id="galleryOverlay" class="overlay">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+
+    </section>
+
+    <br>
+    <div class="video-container">
+      </iframe>
+    </div>
+    <br>
+
+    <section class="project-features">
+
+    </section>
+
+
+
+    <p class="tagline">This is an <b>ongoing project</b> and will be updated as work progresses.</p>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+    <div class="social-icons">
+      <div class="button-container">
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+            style="width: 5.5em">
+        </div>
+
+        <div class="glass-btn blue-btn">
+
+          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+            style="width: 5.5em">
+
+        </div>
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+            style="width: 5.5em">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

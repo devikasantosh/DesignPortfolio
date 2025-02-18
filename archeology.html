@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles-projects.css">
+</head>
+
+<body>
+    <header>
+        <h1>Devika Santosh</h1>
+        <p>Entertainment Technology student, aspiring Experience Designer</p>
+        <nav>
+          <ul>
+            <li><a href="index.html">About + Showreel</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="maya.html">Technical Art</a></li>
+            <li><a href="contact.html">Résumé</a></li></ul>
+        </nav>
+      </header>
+      <nav class="breadcrumbs">
+        <a href="index.html">Home</a> &gt;  
+        <a href="maya.html">Tools and Pipeline</a> &gt;  
+        <span class="current">Scene Scatter Tool - Generating Archeological Ruins</span>
+    </nav>
+      <main id="project-content">
+        <section class="project-header">
+          <h2>Scene Scatter Tool - Generating Archeological Ruins</h2>
+          
+      
+        
+        <p class="tagline">Created using Maya and Python scripting, this script allows the artist to generate an archeological ruins scene by selecting 3D models of arches and pillars with varying levels of decay, and setting the number of 3D models and their relative distance.</p>
+        <div class="art-grid">
+          <img src="Assets/maya1.png" height=200 alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+          <img src="Assets/maya3.png" height=200 alt="Art Project 2" class="art-item" onclick="openGallery(1)">
+      </div>
+      
+      <div id="galleryOverlay" class="overlay">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+          </section>
+
+          <br>
+          <div class="video-container">
+
+                <iframe width="728.64" height="410.52" src="https://www.youtube.com/embed/HGoiMposBaU" title="Scene Randomizer Tool - Generating Archeological Ruins" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
+            </iframe>
+        </div>
+    
+        <section class="project-features">
+          <h3>Code</h3>
+          <a href=https://github.com/devikasantosh/ArcheologicalRuinsGenerator>https://github.com/devikasantosh/ArcheologicalRuinsGenerator</a>
+          <br><br>
+          
+          <h3>Credits</h3>
+          <p>Pillar assets from chuckcg (<a href=https://sketchfab.com/3d-models/ancient-pillars-7e5990c67d9e4cbcbd00dc9f87221462>https://sketchfab.com/3d-models/ancient-pillars-7e5990c67d9e4cbcbd00dc9f87221462</a>)
+
+            <p>Arch assets from Unreal Designer (<a href = https://sketchfab.com/3d-models/stone-arch-pillars-ruins-a1a8e633c9aa40c08b4d2a0631ac61d2>https://sketchfab.com/3d-models/stone-arch-pillars-ruins-a1a8e633c9aa40c08b4d2a0631ac61d2</a>)</p>
+          </p>
+          
+        </section>
+
+        
+      
+    
+    
+      </main>
+    
+      <footer id="contact">
+        <p>Contact me at: <a href= "mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+        <div class="social-icons">
+          <div class="button-container">
+      
+            <div class="glass-btn blue-btn">
+                <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon" style="width: 5.5em">
+            </div>
+          
+            <div class="glass-btn blue-btn">
+    
+              <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon" style="width: 5.5em">
+          
+          </div>
+            
+            <div class="glass-btn blue-btn">
+              <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon" style="width: 5.5em">
+            </div>
+          
+          </div>    </div>
+      </footer>
+      <script src="script.js"></script>
+    </body>
+    </html>

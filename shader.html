@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles-projects.css">
+</head>
+
+<body>
+    <header>
+        <h1>Devika Santosh</h1>
+        <p>Entertainment Technology student, aspiring Experience Designer</p>
+        <nav>
+          <ul>
+            <li><a href="index.html">About + Showreel</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="maya.html">Technical Art</a></li>
+            <li><a href="contact.html">Résumé</a></li>
+          </ul>
+        </nav>
+      </header>
+      <nav class="breadcrumbs">
+        <a href="index.html">Home</a> &gt;  
+        <a href="maya.html">Tools and Pipeline</a> &gt;  
+        <span class="current">Technical Art - Shaders</span>
+    </nav>
+      <main id="project-content">
+        <section class="project-header">
+          <h2>Technical Art - Shaders</h2>
+          
+      
+        
+        <p class="tagline">A glitch effect shader created for CMU's Building Virtual Worlds Round 4, to respawn a fantasy character after they fall into a pit.</p>
+        <div class="art-grid">
+          <img src="Assets/shader1.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+          <img src="Assets/shader2.png" width=49% alt="Art Project 2" class="art-item" onclick="openGallery(1)">
+      </div>
+      
+      <div id="galleryOverlay" class="overlay">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+          </section>
+          <img src="shader-unity.png" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
+
+          <br>
+          <div class="video-container">
+            <img src="shadergif-closeup.gif" alt="Technical Art - Shaders" style="max-width: 60%; height: auto;">
+
+            <img src="Assets/shaderfar.gif" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
+            <!-- <img src="Assets/shadernear.gif" alt="Technical Art - Shaders" style="max-width: 30%; height: auto;"> -->
+            <img src="shadergif-far.gif" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
+            </iframe>
+        </div>
+        <br>
+        <p>Effect at start of page recreated on character assets from the Unity Asset Store. <br><b>Creator:</b> Dungeon Mason</p>
+        <p><b>Link to character asset:</b> <a href="https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-tiny-hero-duo-pbr-polyart-225148">https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-tiny-hero-duo-pbr-polyart-225148</a></p>
+        <p>Gifs are from original BVW game. Character artist: Joy Lim</p>
+        <section class="project-features">
+          
+        </section>
+
+        
+      
+    
+    
+      </main>
+    
+      <!-- Footer -->
+      <footer id="contact">
+        <p>Contact me at: <a href= "mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+        <div class="social-icons">
+          <div class="button-container">
+      
+            <div class="glass-btn blue-btn">
+                <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon" style="width: 5.5em">
+            </div>
+          
+            <div class="glass-btn blue-btn">
+    
+              <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon" style="width: 5.5em">
+          
+          </div>
+            
+            <div class="glass-btn blue-btn">
+              <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon" style="width: 5.5em">
+            </div>
+          
+          </div>    </div>
+      </footer>
+      <script src="script.js"></script>
+    </body>
+    </html>
