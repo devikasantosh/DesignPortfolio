@@ -47,13 +47,16 @@
     padding: 20px;
   }
 
-  
+  header a{
+    text-decoration: none;
+    color: inherit;
+  }
   header h1 {
     font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
     margin-top: 10px; /* Adjusted space */
     font-weight: 700; /* You can change this to 400 for a lighter style */
     font-size: 3.1rem;
-    background: linear-gradient(to right, #22577a, #38a3a5); /* Linear gradient background */
+    background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
     -webkit-background-clip: text; /* For gradient text */
     -webkit-text-fill-color: transparent; /* Make text fill transparent */
 }
@@ -83,13 +86,20 @@ nav ul li a {
 
 /* Hover state */
 nav ul li a:hover {
-    color: #028090; /* Blue color on hover */
+  background: linear-gradient(90deg, #6d597a, #b56576, #e56b6f);
+  -webkit-background-clip: text;
+  color: transparent;
+
+
 }
 
 /* Focus and active states */
 nav ul li a:focus,
 nav ul li a.active {
-    color: #028090; /* Blue color on active */
+  background: linear-gradient(90deg, #6d597a, #b56576, #e56b6f);
+  -webkit-background-clip: text;
+  color: transparent;
+
 }
 
 /* Optional underline effect */
@@ -173,7 +183,7 @@ nav ul li a.active {
 }
 
 .about-me h1 {
-    background: linear-gradient(to right, #22577a, #38a3a5);
+    background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -181,7 +191,7 @@ nav ul li a.active {
 }
 
 h1{
-    background: linear-gradient(to right, #22577a, #38a3a5);
+  background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

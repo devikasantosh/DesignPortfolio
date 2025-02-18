@@ -44,7 +44,10 @@ header::after, footer::after {
     pointer-events: none; /* Ensures it doesn't interfere with clicks */
 }
 
-
+header a{
+    text-decoration: none;
+    color: inherit;
+  }
 header h1 {
     color: #f4f4f4;
     font-family: 'Playfair Display', serif;
@@ -74,6 +77,17 @@ nav ul li a {
     color: #333;
     font-weight: bold;
 }
+
+/* nav ul li.active {
+    padding-left: 2px;
+    padding-right: 2px;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border-width: 15px;
+    border-color: #f4f4f4;
+} */
 
 /* About Section */
 #about {
@@ -243,5 +257,5 @@ h1 {
 }
 
 .keyword-role {
-    background: #ff6b6b; /* Red tone */
+    background: #e56b6f; /* Red tone */
 }

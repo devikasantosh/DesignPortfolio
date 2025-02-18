@@ -282,6 +282,7 @@ h1.dark{
 }
 
 .keywords {
+
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -289,6 +290,9 @@ h1.dark{
 }
 
 .keyword, .keyword-role {
+    background: linear-gradient(to right, #6ec3f4, #b9beff);
+    -webkit-background-clip: text; 
+    color: transparent;
     font-size: 12px;
     padding: 6px 10px;
     border-radius: 20px;
@@ -302,6 +306,6 @@ h1.dark{
 }
 
 .keyword-role {
-    background: #ff6b6b; /* Red tone */
+    background: #b56576; /* Red tone */
 }
 

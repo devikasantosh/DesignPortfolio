@@ -1,184 +1,223 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    
-  }
-  
-  /* Flexbox Layout to keep footer at the bottom */
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    color: #f6f4d2 ; /* Text color */
-    background-color: #252422; /* Background color */
-  }
-  
-  /* Header and Footer Styling */
-  header, footer {
-    background-color: #252422;
-    color: 028090;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  header h1 {
-    font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
-    margin-top: 10px; /* Adjusted space */
-    font-weight: 700; /* You can change this to 400 for a lighter style */
-    font-size: 3.1rem;
-    background: linear-gradient(to right, #22577a, #38a3a5); /* Linear gradient background */
-    -webkit-background-clip: text; /* For gradient text */
-    -webkit-text-fill-color: transparent; /* Make text fill transparent */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  header p{
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-family: 'Montserrat', sans-serif;
+html,
+body {
+  height: 100%;
 
-  }
-  
- /* Base styles for nav links */
+}
+
+/* Flexbox Layout to keep footer at the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #f6f4d2;
+  /* Text color */
+  background-color: #252422;
+  /* Background color */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 40% 30%; }
+  50% { background-position: 100% 70%; }
+  75% { background-position: 60% 20%; }
+  100% { background-position: 0% 50%; }
+}
+/* Header and Footer Styling */
+header,
+footer {
+  position: relative;
+  background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Noise Overlay */
+header::after,
+footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Assets/noise.png');
+  /* Add your noise image */
+  opacity: 0.15;
+  /* Adjust transparency */
+  pointer-events: none;
+  /* Ensures it doesn't interfere with clicks */
+}
+
+header a{
+  text-decoration: none;
+  color: inherit;
+}
+header h1 {
+  color: #f4f4f4;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease; /* Smooth transition effect */
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
 /* Hover state */
 nav ul li a:hover {
-    color: #028090; /* Blue color on hover */
+  color: #f4f4f4;
+  /* Blue color on hover */
 }
 
 /* Focus and active states */
 nav ul li a:focus,
 nav ul li a.active {
-    color: #028090; /* Blue color on active */
+  color: #f4f4f4;
+  /* Blue color on active */
 }
 
 /* Optional underline effect */
 nav ul li a:hover,
 nav ul li a.active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-  
 
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Main content area takes up remaining space */
-  main {
-    flex: 1;
-    padding: 40px;
-    padding-left: 100px;
-  }
-  
-  #about {
-    max-width: 85%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
-    padding: 40px 0; /* Padding to create space at the top/bottom */
-    margin: 0 auto; /* Center the section horizontally */
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content area takes up remaining space */
+main {
+  flex: 1;
+  padding: 40px;
+  padding-left: 100px;
+}
+
+#about {
+  max-width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Align items to the top */
+  padding: 40px 0;
+  /* Padding to create space at the top/bottom */
+  margin: 0 auto;
+  /* Center the section horizontally */
 }
 
 .about-me {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 20px; /* Add gap between text and image */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  /* Add gap between text and image */
 }
 
 .text-content {
-    flex: 1;
-    max-width: 60%;
-    font-size: 1.5em;
+  flex: 1;
+  max-width: 60%;
+  font-size: 1.5em;
 }
 
 .about-me h1 {
-    background: linear-gradient(to right, #22577a, #38a3a5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: black;
+  background: linear-gradient(to right, #22577a, #38a3a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: black;
 }
 
 .about-me p {
-    max-width: 100%;
-    line-height: 1.6;
+  max-width: 100%;
+  line-height: 1.6;
 }
 
 #three-container-about {
-    flex-basis: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #three-container-about img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-  
-  /* Showreel Section */
-  #showreel {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  #showreel video {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-  }
-  
-  /* Projects Section */
-  #projects {
-    text-align: center;
-  }
-  
-  .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .project {
-    width: 200px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .project img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .project h3 {
-    margin: 10px 0;
-  }
-  
+
+/* Showreel Section */
+#showreel {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#showreel video {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+/* Projects Section */
+#projects {
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  margin: 10px 0;
+}
+
 
 #game-projects {
   display: flex;
@@ -216,7 +255,6 @@ nav ul li a.active {
   font-family: 'Playfair Display', serif;
   color: #028090;
   font-size: 1.5em;
-  margin-bottom: 5px;
 }
 
 .project-info .tagline {
@@ -241,7 +279,8 @@ nav ul li a.active {
 }
 
 .keyword {
-  background-color: #007acc; /* Blue bubble background */
+  background-color: #007acc;
+  /* Blue bubble background */
   color: #005999;
   font-size: 0.85rem;
   padding: 5px 10px;
@@ -251,11 +290,13 @@ nav ul li a.active {
 }
 
 .keyword:nth-child(odd) {
-  background-color: #005999; /* Alternating orange bubbles */
+  background-color: #005999;
+  /* Alternating orange bubbles */
 }
 
 .keyword:hover {
-  background-color: #005999; /* Darker blue on hover */
+  background-color: #005999;
+  /* Darker blue on hover */
   cursor: default;
 }
 
@@ -268,60 +309,75 @@ nav ul li a.active {
 
 .project {
   display: block;
-  width: 300px; /* Adjust as needed */
+  width: 300px;
+  /* Adjust as needed */
   border: 1px solid #ddd;
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
-  text-decoration: none; /* Remove default link underline */
-  color: inherit; /* Keep text color consistent */
+  text-decoration: none;
+  /* Remove default link underline */
+  color: inherit;
+  /* Keep text color consistent */
   transition: transform 0.2s ease-in-out;
 }
 
 .project:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
 }
 
-.project video, .project img {
+.project video,
+.project img {
   width: 100%;
   border-bottom: 2px solid #028090;
   border-radius: 10px 10px 0 0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #252422;
-    background-color: #f7f7f2;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header, footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #252422;
-    color: #f7f7f2;
-  }
-  
-  header h1 a {
-    color: inherit;
-    text-decoration: none;
-  }
-  footer {
-    position: relative; /* Ensure the footer can have effects like box-shadow */
-    box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53); /* Glow effect on top */
-  }
-  /* Footer Styling */
-  footer .social-icons {
-    margin-top: 10px;
-  }
-  
-  footer .social-icons a img {
-    width: 24px;
-    height: 24px;
-    margin: 0 8px;
-  }
-  
+  font-family: 'Montserrat', sans-serif;
+  color: #252422;
+  background-color: #f7f7f2;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #252422;
+  color: #f7f7f2;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  position: relative;
+  /* Ensure the footer can have effects like box-shadow */
+  box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53);
+  /* Glow effect on top */
+}
+
+/* Footer Styling */
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+
 .button-container {
   display: flex;
   align-items: center;
@@ -337,7 +393,7 @@ body {
   justify-content: center;
   border-radius: 500px;
   margin-left: 1em;
-  margin-right: 1em;  
+  margin-right: 1em;
   cursor: pointer;
   transition: all 0.3s;
 
@@ -349,88 +405,103 @@ body {
     &:hover {
       -webkit-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
       -moz-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
-      box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);      
+      box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
     }
   }
 }
 
 .icon-link {
-  display: inline-flex; /* Ensures the link behaves like a flex container */
-  align-items: center; /* Centers the image vertically */
-  justify-content: center; /* Centers the image horizontally */
-  text-decoration: none; /* Removes underline */
+  display: inline-flex;
+  /* Ensures the link behaves like a flex container */
+  align-items: center;
+  /* Centers the image vertically */
+  justify-content: center;
+  /* Centers the image horizontally */
+  text-decoration: none;
+  /* Removes underline */
 }
 
 .icon-link img {
-  width: 100%; /* Makes the image take up 80% of its container */
-  height: auto; /* Maintains aspect ratio */
-  object-fit: contain; /* Ensures image fits well within its container */
-  transition: transform 0.3s ease; /* Adds smooth hover animation */
+  width: 100%;
+  /* Makes the image take up 80% of its container */
+  height: auto;
+  /* Maintains aspect ratio */
+  object-fit: contain;
+  /* Ensures image fits well within its container */
+  transition: transform 0.3s ease;
+  /* Adds smooth hover animation */
 }
 
 .icon-link:hover img {
-  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  transform: scale(1.1);
+  /* Slightly enlarges the icon on hover */
 }
 
 
 
-  main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  
-  .project-header h2 {
-    font-size: 2.5rem;
-    color: #22577a;
-  }
-  
-  .tagline {
-    font-size: 1.25rem;
-    color: #028090;
-    margin-top: 5px;
-  }
-  
-  .media video, .media img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-  .project-description, .project-features, .project-technologies, .project-challenges {
-    margin-top: 0px;
-  }
-  
-  h3 {
-    color: #22577a;
-    font-weight: bold;
-  }
-  
-  ul {
-    padding-left: 20px;
-  }
-  
-  footer {
-    font-size: 0.9rem;
-    color: #f7f7f2;
-  }
-  
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-  #galleryOverlay {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+.project-header h2 {
+  font-size: 2.5rem;
+  color: #22577a;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: #028090;
+  margin-top: 5px;
+}
+
+.media video,
+.media img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.project-description,
+.project-features,
+.project-technologies,
+.project-challenges {
+  margin-top: 0px;
+}
+
+h3 {
+  color: #22577a;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #f7f7f2;
+}
+
+
+#galleryOverlay {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .overlay {
-  display: none; /* Initially hidden */
+  display: none;
+  /* Initially hidden */
   position: fixed;
   top: 0;
   left: 0;
@@ -440,17 +511,21 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 #galleryOverlay {
-  display: none; /* Initially hidden */
+  display: none;
+  /* Initially hidden */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Semi-transparent background */
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Make sure it appears on top */
+  z-index: 1000;
+  /* Make sure it appears on top */
 }
 
 .overlay-image {
@@ -458,7 +533,9 @@ body {
   max-height: 80%;
 }
 
-.close, .prev, .next {
+.close,
+.prev,
+.next {
   position: absolute;
   color: white;
   font-size: 30px;
@@ -542,7 +619,8 @@ body {
   cursor: pointer;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   font-size: 30px;
@@ -560,9 +638,12 @@ body {
 
 /* Styling for the footer */
 footer {
-  position: relative; /* Ensure the footer can have effects like box-shadow */
-  box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53); /* Glow effect on top */
+  position: relative;
+  /* Ensure the footer can have effects like box-shadow */
+  box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53);
+  /* Glow effect on top */
 }
+
 /* Footer Styling */
 footer .social-icons {
   margin-top: 10px;
@@ -633,7 +714,7 @@ footer .social-icons a img {
   padding: 15px;
   width: 440px;
   transform: rotate(-3deg);
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   text-align: left;
   border-radius: 5px;
 }
@@ -649,8 +730,10 @@ footer .social-icons a img {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transform: rotate(-3deg); /* Tilt the card by 3 degrees */
-  overflow: hidden; /* Ensure the gradient stays within bounds */
+  transform: rotate(-3deg);
+  /* Tilt the card by 3 degrees */
+  overflow: hidden;
+  /* Ensure the gradient stays within bounds */
   position: relative;
 }
 
@@ -661,7 +744,8 @@ footer .social-icons a img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 10px; /* Gradient height */
+  height: 10px;
+  /* Gradient height */
   background: linear-gradient(to right, #22577a, #38a3a5);
 }
 
@@ -676,31 +760,37 @@ footer .social-icons a img {
 .label {
   font-weight: bold;
   color: #2c3e50;
-  width: 150px; /* Fixed width to maintain alignment */
-  text-align: right; /* Align the label text to the right */
+  width: 150px;
+  /* Fixed width to maintain alignment */
+  text-align: right;
+  /* Align the label text to the right */
 }
 
 /* Right column description should be left-aligned */
 .description {
   color: #7f8c8d;
   flex: 1;
-  text-align: left; /* Align the description text to the left */
+  text-align: left;
+  /* Align the description text to the left */
 }
 
 .breadcrumbs {
-    font-size: 14px;
-    color: #555;
-    padding: 10px 20px;
-    background: #f9f9f9;
-    border-radius: 5px;
-    display: inline-block;
-    
-    position: sticky;
-    top: 0;  /* Stick to the top of the page */
-    left: 0;
-    width: 100%;  
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
-    z-index: 1000;  /* Ensure it stays above other content */
+  font-size: 14px;
+  color: #555;
+  padding: 10px 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  display: inline-block;
+
+  position: sticky;
+  top: 0;
+  /* Stick to the top of the page */
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Light shadow for depth */
+  z-index: 1000;
+  /* Ensure it stays above other content */
 }
 
 
