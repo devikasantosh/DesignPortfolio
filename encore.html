@@ -46,13 +46,26 @@
         CMU’s School of Drama production of Titanic the Musical, as part of a client project with CMU’s Entertainment
         Technology Center.</p>
 
+        <h2>Overview</h2>
+        <p>Create an interactive exhibit in the Purnell Center lobby to immerse guests into the world of Titanic using <b>lighting</b>, <b>audio</b>, and <b>interactive set pieces</b> and  and prepare them for the musical.
+        </p>
       <h2>Concept</h2>
-      <p>Exploring the lives and stories of the characters through their luggage. The musical represents the passengers
+      <p><b>Exploring the lives and stories of the characters through their luggage.</b> The musical represents the passengers
         and their dreams and hopes for their future in America. <br>It focuses on the class disparities between them -
         the Third-Class immigrants dream of a better life in America, the Second Class imagine they too can join the
         lifestyles of the rich and famous, while the millionaire Barons of the First Class anticipate legacies lasting
         forever.</p>
+        <br>
       <p>We also plan to make our experience change with time, during the run of the show.</p>
+      <div class="art-grid">
+        <img src="Assets/encore1.png" width=100% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      </div>
+      <div id="galleryOverlay" class="overlay">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+      </div>
       <br>
       <ul>
         <li>The beginning represents the passengers boarding the ship - bright and hopeful, with countless dreams.</li>
@@ -63,7 +76,7 @@
           to replicate this and create a mood for introspection and quiet stillness.</li>
       </ul>
       <br>
-      <p>We plan to change the lighting, visuals, and soundscapes through these three parts of the experience:</p>
+      <p>We plan to change the <b>lighting, visuals, and soundscapes</b> through these three parts of the experience:</p>
       <ul>
         <li>We plan to have a bright and sunny pre-show, symbolising the luggage being boarded onto the ship, and the
           sounds of seagulls and shipyards.</li>
@@ -75,35 +88,12 @@
           soundscape would be silent, either with no sound playing, or using noise-cancelling effects to make it more
           unsettling.</li>
       </ul>
+      
       <br>
       <h2>Challenges</h2>
-      <p>Our challenges include fabricating the luggage stations, programming the Arduino for the functions we want, and
-        encouraging guests to touch and interact with the exhibit. Another major challenge is making the sound
-        technology audible in a lobby full of theater-goers.</p>
-
-      <br>
-      <h2>Quick User Journey - Interactions</h2>
-      <p>As the user walks past a luggage station, a motion sensor detects their presence and the trunk opens, with a
-        programmed light tracing the outlines of the props inside, encouraging them to interact with it. We would use
-        directional speakers to play an audio recording of the character narrating, also triggered by the motion sensor.
-        The guests can explore the props inside - rift through the characters' clothing, read their diaries and letters,
-        examine their possessions, and thereby understand and empathise with their stories.</p>
-
-      <br>
-      <h2>Role</h2>
-      <p>I am working as the <b>experience designer</b> and the <b>narrative designer</b> on the project.</p>
-      <p>I will be crafting user journeys and personas for our young and old audience, and making sure the experience
-        feels complete even if they miss any or more of the three parts.</p>
-      <p>I will also be conducting extensive research into the characters' lives, who they were to others, and how they
-        each spoke or wrote, and would mimic these and create stories for them that I'll write in their journals,
-        diaries, and pocketbooks.</p>
-      <p>I am also going to be creating a strong and engaging narrative for the whole experience, to ensure guests
-        connect with these characters.</p>
-      <p>For the Entertainment Technology Center, I am designing our team's logo, poster, and halves sheet, too.</p>
+      <p>Our challenges include encouraging guests to touch and interact with the exhibit, creating user journeys that feel complete even if the guest misses one or two phases of the experience, and managing lighting design for the one matinee show we have.</p>
       <div class="art-grid">
-        <img src="Assets/encore1.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-        <img src="Assets/encore2.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-        <img src="Assets/encore3.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+        <img src="Assets/encore3.png" width=100% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
       </div>
 
       <div id="galleryOverlay" class="overlay">
@@ -112,10 +102,64 @@
         <a class="prev">&#10094;</a>
         <a class="next">&#10095;</a>
       </div>
+      <br>
+      <h2>Quick User Journey - Interactions</h2>
+      <p>As the user walks past a luggage station, a motion sensor detects their presence and the trunk opens, with a
+        programmed light tracing the outlines of the props inside, encouraging them to interact with it. We would use
+        directional speakers to play an audio recording of the character narrating, also triggered by the motion sensor.
+        The guests can explore the props inside - rift through the characters' clothing, read their diaries and letters,
+        examine their possessions, and thereby understand and empathise with their stories.</p>
+        <div class="art-grid">
+          <img src="Assets/encore2.png" width=100% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+        </div>
+  
+        <div id="galleryOverlay" class="overlay">
+          <span class="close" onclick="closeGallery()">&times;</span>
+          <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
+        </div>
+      <br>
+      
+      
+      <h2>Progress - Experience Design</h2>
+        <ul>
+          <li><b>Helped us finalize characters -</b> Our client and us had different ideas on whether we should be using characters from the musical or shine the spotlight on ones that weren't featured. Building a user journey map made us understand how using new characters would distract the guests from both, our experience, as well as our clients, as they would expect to see these characters in the musical, and also exit during the intermission and search for an interesting character they had seen on stage.</li>
+          <li>We wanted <b>means to collect feedback and guage how immersed guests are</b> without having to fill feedback forms. We thought of a hanging net of messages in bottles exhibit, where we got feedback that it was not period-accurate. We moved on to a postcard exhibit, as the ship was also a mailing ship, but faculty feedback told us that people would not really write a postcard. We then took inspiration from the ship's Marconi room, and made our own version of their telegram system, and took the liberty to make it voice-enabled.</li>
+          <li><b>Playtesting</b> this idea, we realised that guests would feel freer to talk if they knew what they said was anonymous, so we tried iterating different modifcations - messages appearing randomly, new ones showing up later, multiple existing messages, until we finally came up with wave-like visuals of messages flowing together, forming an ocean. These were only possible through user-reseach, playtesting, and frequest modifications and feedback sessions.</li>
+        </ul>
+
+    <h2>Role</h2>
+    <p>I am working as the <b>experience designer</b> and the <b>narrative designer</b> on the project.</p>
+    <br><p>I will be <b>crafting user journeys and personas</b> for our young and old audience, and <b>making sure the experience
+      feels complete even if they miss any or more of the three parts</b>.</p>
+    <br><p>I will also be <b>conducting extensive research</b> into the characters' lives, who they were to others, and how they
+      each spoke or wrote, and would mimic these and create stories for them that I'll write in their <b>journals,
+      diaries, and pocketbooks</b>.</p>
+    <br><p>I am also going to be creating a <b>strong and engaging narrative</b> for the whole experience, to ensure guests
+    <b>connect</b> with these characters.</p>
+    <br><p>For the Entertainment Technology Center, I am designing our team's <b>logo, poster, and half sheet</b>, too.</p>
+    <br>
+    <div class="art-grid">
+      <img src="Assets/encore-logo.png" width=100% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      <img src="Assets/encore-poster.png" width=100% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      <img src="Assets/encore-halfsheet.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+      <img src="Assets/encore-halfsheet2.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+
+    </div>
+
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </div>
+
+
+
+
 
     </section>
-
-    <br>
     <div class="video-container">
       </iframe>
     </div>
@@ -128,7 +172,12 @@
 
 
     <p class="tagline">This is an <b>ongoing project</b> and will be updated as work progresses.</p>
-
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
 
   </main>
 
