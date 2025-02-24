@@ -308,4 +308,63 @@ h1.dark{
 .keyword-role {
     background: #b56576; /* Red tone */
 }
+.this-word {
+    position: relative;
+    display: inline-block;
+    transition: font-size 0.1s ease-out;
+}
 
+#animated-navbar {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#animated-navbar.hidden {
+    display: flex;
+    opacity: 0;
+}
+
+#animated-navbar .word {
+    font-size: 16px;
+}
+
+
+
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+.filter-button {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.filter-button.active {
+    background-color: #0077b5;
+    color: white;
+  }
+
+.project.hidden {
+    display: none;
+  }

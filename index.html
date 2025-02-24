@@ -30,6 +30,12 @@
 
     <div class="index-header-content">
       <h1>Devika Santosh</h1>
+      <!-- <p>Entertainment Technology student, aspiring Experience <span class="this-word">Designer</span></p>
+      <div class="about-me">
+        <p>With a passion for creative
+          <span class="this-word">technologies</span>, and a keen interest in storytelling and <span class="this-word">immersive experiences</span>, I strive to merge the boundaries
+          between creativity and technology. &#10024;</p>
+      </div> -->
       <p>Entertainment Technology student, aspiring Experience Designer</p>
       <div class="about-me">
         <p>With a passion for creative
@@ -44,10 +50,23 @@
   </index-header>
   <main>
     <h1 class="dark">My Work</h1>
+    <!-- Navbar to Appear Below "My Work" -->
+    <!-- <div id="animated-navbar" class="hidden">
+      <span class="word">Design</span>
+      <span class="word">Games</span>
+      <span class="word">Technical Art</span>
+    </div> -->
+
+    <div class="filter-container">
+      <button class="filter-button active" data-filter="all">All</button>
+      <button class="filter-button" data-filter="design">Design</button>
+      <button class="filter-button" data-filter="games">Games</button>
+      <button class="filter-button" data-filter="technical-art">Technical Art</button>
+    </div>
 
 
     <section id="game-projects">
-      <a href="transformational.html" class="project">
+      <a href="transformational.html" class="project design">
         <img src="Assets/transformational.gif" alt="Transformational Design">
         <div class="project-info">
           <h2>Transformational Design</h2>
@@ -59,10 +78,10 @@
           </div>
         </div>
       </a>
-      <a href="encore.html" class="project">
+      <a href="encore.html" class="project design">
         <img src="Assets/ux-cover.png" alt="Experience Design" width="300">
         <div class="project-info">
-          <h2>User Experience</h2>
+          <h2>Experience Design</h2>
           <p class="tagline">Currently working as an experience designer and narrative designer for a pre-show
             lobby experience for Titanic the Musical, as a client project for CMU's School of Drama.</p>
           <div class="keywords">
@@ -74,7 +93,7 @@
           </div>
         </div>
       </a>
-      <a href="ui.html" class="project">
+      <a href="ui.html" class="project design">
         <img src="Assets/ui-cover.png" alt="Project 3 Thumbnail" width="100">
         <div class="project-info">
           <h2>UI Design</h2>
@@ -86,7 +105,7 @@
           </div>
         </div>
       </a>
-      <a href="marketing.html" class="project">
+      <a href="marketing.html" class="project design">
         <img src="Assets/marketing-cover-1.png" alt="Project 3 Thumbnail" width="100">
         <div class="project-info">
           <h2>Marketing and Social Media Design</h2>
@@ -99,17 +118,7 @@
           </div>
         </div>
       </a>
-      <a href="art.html" class="project">
-        <img src="Assets/art.gif" alt="Project 3 Thumbnail" width="100">
-        <div class="project-info">
-          <h2>Artwork</h2>
-          <p class="tagline">2D Art, Storyboarding, and Animation.</p>
-          <div class="keywords">
-            <span class="keyword">Procreate</span>
-          </div>
-        </div>
-      </a>
-      <a href="games.html" class="project">
+      <!-- <a href="games.html" class="project">
         <img src="Assets/BVW_all.png" alt="Project 3 Thumbnail" width="100">
         <div class="project-info">
           <h2>Games</h2>
@@ -125,8 +134,95 @@
             <span class="keyword">C#</span>
           </div>
         </div>
+      </a> -->
+      
+      <a href="deerstranger.html" class="project games">
+        <img src="Assets\DeerStranger.png" alt="Project 2 Thumbnail">
+        <div class="project-info">
+          <h2>"Deer Stranger,"</h2>
+          <p class="tagline">A horror-themed escape room built for Oculus Quest 3!</p>
+          <p class="tagline">This is a VR world where a <b>naïve user</b> feels they have a high degree of agency, while
+            also limiting their range of actions, so that they would perform the tasks we have predicted they would.</p>
+          <div class="keywords">
+            <span class="keyword-role">Programmer</span>
+            <span class="keyword-role">Producer</span>
+            <span class="keyword">Unity</span>
+            <span class="keyword">C#</span>
+            <span class="keyword">VR</span>
+          </div>
+        </div>
       </a>
-      <a href="maya.html" class="project">
+      <a href="treasurefalls.html" class="project games">
+        <img src="Assets\Treasure Falls.PNG" alt="Project 2 Thumbnail">
+        <div class="project-info">
+          <h2>Treasure Falls</h2>
+          <p class="tagline">A 2-player experience using dance mats as controllers!</p>
+          <div class="keywords">
+            <span class="keyword-role">Programmer</span>
+            <span class="keyword">Unity</span>
+            <span class="keyword">C#</span>
+            <span class="keyword">DDR Pads</span>
+          </div>
+        </div>
+      </a>
+      <a href="twotofoxtrot.html" class="project games">
+        <img src="Assets\twotofoxtrotimg.png" alt="Project 2 Thumbnail">
+        <div class="project-info">
+          <h2>Two to Foxtrot</h2>
+          <p class="tagline">Asymmetric game where two players see different things and must communicate to win the game.
+          </p>
+          <div class="keywords">
+            <span class="keyword-role">Programmer</span>
+            <span class="keyword-role">Producer</span>
+            <span class="keyword-role">Technical Artist - Shaders</span>
+            <span class="keyword">Unity</span>
+            <span class="keyword">C#</span>
+            <span class="keyword">Xbox Controllers</span>
+            <span class="keyword">Asymmetric Play</span>
+          </div>
+        </div>
+      </a>
+      <a href="thecatmeowspa.html" class="project games">
+        <img src="Assets\CatMeowSpa.png" alt="Project 2 Thumbnail">
+        <div class="project-info">
+          <h2>The Cat Meow Spa</h2>
+          <p class="tagline">Bathing a cat using the Microsoft Xbox adaptive controllers!</p>
+          <p class="tagline">Selected for CMU's Building Virtual Worlds Festival - Fall 2024.</p>
+          <div class="keywords">
+            <span class="keyword-role">Programmer</span>
+            <span class="keyword">Unity</span>
+            <span class="keyword">C#</span>
+            <span class="keyword">Microsoft Xbox Adaptive Controllers</span>
+          </div>
+        </div>
+      </a>
+      <a href="signlanguage.html" class="project games">
+        <img src="Assets\Frame 7.png" alt="Project 1 Thumbnail">
+        <div class="project-info">
+          <h2>Gamified Sign Language Learning Experience</h2>
+          <p class="tagline">Gamifying sign language education using dynamic difficulty adjustment.</p>
+          <p class="tagline">(Capstone project at Vellore Institute of Technology, Chennai.)</p>
+          <div class="keywords">
+            <span class="keyword">Unity</span>
+            <span class="keyword">C#</span>
+            <span class="keyword">VR</span>
+            <span class="keyword">Gesture Recognition</span>
+            <span class="keyword">Dynamic Difficulty Adjustment</span>
+          </div>
+        </div>
+      </a>
+      <a href="art.html" class="project design">
+        <img src="Assets/art.gif" alt="Project 3 Thumbnail" width="100">
+        <div class="project-info">
+          <h2>Artwork</h2>
+          <p class="tagline">2D Art, Storyboarding, and Animation.</p>
+          <div class="keywords">
+            <span class="keyword">Procreate</span>
+          </div>
+        </div>
+      </a>
+      
+      <!-- <a href="maya.html" class="project">
         <img src="Assets/maya1.png" alt="Project 3 Thumbnail" width="100">
         <div class="project-info">
           <h2>Technical Art</h2>
@@ -140,6 +236,44 @@
             <span class="keyword">Unity</span>
           </div>
         </div>
+      </a> -->
+
+      <a href="archeology.html" class="project technical-art">
+        <img src="Assets/maya3.png" alt="Archeological Ruins Generator Tool">
+        <div class="project-info">
+          <h2>Scene Scatter Tool - Generating Archeological Ruins</h2>
+          <p class="tagline">Created using Maya and Python scripting, this script allows the artist to generate an archeological ruins scene by selecting 3D models of arches and pillars with varying levels of decay, and setting the number of 3D models and their relative distance.</p>
+          <div class="keywords">
+            <span class="keyword">Maya</span>
+            <span class="keyword">Python</span>
+            <span class="keyword">Tools and Pipeline</span>
+        </div>
+        </div>
+      </a>
+        <a href="naturalvariety.html" class="project technical-art">
+        <img src="Assets/maya4.png" alt="Project 2 Thumbnail" width="300">
+        <div class="project-info">
+          <h2>Programming Natural Variety</h2>
+          <p class="tagline">Inspired by The <b>Science behind Pixar</b> exhibit on Programming Natural Variety!<br> I created a tool where an artist can create a patch of grass by adjusting colour, variation in colour, height and width of grass blades, area of patch, curvature, and number of blades of grass.</p>
+          <div class="keywords">
+            <span class="keyword">Maya</span>
+          <span class="keyword">Python</span>
+          <span class="keyword">Tools and Pipeline</span>
+          <span class="keyword">Procedural Generation</span>
+        </div>
+        </div>
+      </a>
+      <a href="shader.html" class="project technical-art">
+        <img src="Assets/shadernearresized.gif" alt="Project 3 Thumbnail" width="100">
+        <div class="project-info">
+          <h2>Technical Art - Shaders</h2>
+          <p class="tagline">A glitch effect shader created for CMU's Building Virtual Worlds Round 4, to respawn a fantasy character after they fall into a pit.</p>
+          <div class="keywords">
+            <span class="keyword">Unity</span>
+            <span class="keyword">Shader Graphs</span>
+            <span class="keyword">Technical Art</span>
+        </div>
+      </div>
       </a>
     </section>
 

@@ -808,3 +808,81 @@ footer .social-icons a img {
   color: #333;
   font-weight: bold;
 }
+
+.project-content {
+  position: relative; /* Ensures absolute positioning works inside */
+}
+
+
+.next-project-preview {
+  position: absolute; /* Fixed to the viewport */
+  bottom: 20px; /* 20px from the bottom */
+  right: 120px; /* 20px from the right */
+  
+  width: 250px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  transform: translateY(-170px);
+  display: flex;
+  
+
+}
+
+.next-project-preview a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Take up available space */
+}
+
+.preview-left img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.next-project-info {
+  padding: 10px;
+  text-align: left;
+}
+
+.next-project-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.next-project-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.preview-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+}
+
+.preview-right svg {
+  fill: #333; /* Arrow color */
+}
+
+.next-project-preview:hover {
+  transform: scale(1.05) translateY(180); /* Remove the manual translateY */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
