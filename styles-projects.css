@@ -886,3 +886,16 @@ footer .social-icons a img {
   transform: scale(1.05) translateY(180); /* Remove the manual translateY */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+  background-color: white; /* Add a default background color */
+}
+
+.card.highlight {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff; /* Light blue highlight color */
+}

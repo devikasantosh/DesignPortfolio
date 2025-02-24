@@ -7,27 +7,25 @@ document.getElementById("downButton").addEventListener("click", scrollToNavbar);
 
 
 const filterButtons = document.querySelectorAll('.filter-button');
-    const projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.project');
 
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Remove active class from all buttons
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
         button.classList.add('active');
 
         const filter = button.dataset.filter;
         projects.forEach(project => {
-          if (filter === 'all' || project.classList.contains(filter)) {
-            project.classList.remove('hidden');
-          } else {
-            project.classList.add('hidden');
-          }
+            if (filter === 'all' || project.classList.contains(filter)) {
+                project.classList.remove('hidden');
+            } else {
+                project.classList.add('hidden');
+            }
         });
-      });
     });
+});
 
-    
+
 let initialPositions = []; // Store initial positions and font sizes
 
 function handleScroll() {
@@ -223,3 +221,26 @@ const navLinks = document.querySelectorAll('nav ul li a');
   });
 });
 
+
+function isElementCenterScreen(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const elementCenter = rect.top + rect.height / 2;
+    const screenCenter = windowHeight / 2;
+
+    return elementCenter >= screenCenter - (rect.height / 4) && elementCenter <= screenCenter + (rect.height / 4);
+}
+
+function handleScroll() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        if (isElementCenterScreen(card)) {
+            card.classList.add('highlight');
+        } else {
+            card.classList.remove('highlight');
+        }
+    });
+}
+
+window.addEventListener('scroll', handleScroll);
+handleScroll();
