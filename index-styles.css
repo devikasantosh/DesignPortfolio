@@ -160,6 +160,11 @@ index-header::after, footer::after {
     padding: 30px 0;
 }
 
+main {
+    padding-top: 10px; /* Adjust the padding value as needed */
+    /* Add any other main element styles here */
+}
+
 /* Footer */
 /* footer {
     text-align: center;

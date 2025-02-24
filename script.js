@@ -1,5 +1,5 @@
 document.getElementById("downButton").addEventListener("click", function() {
-    document.querySelector("#game-projects").scrollIntoView({ behavior: "smooth" });
+    document.querySelector("main").scrollIntoView({ behavior: "smooth" });
 });
 
 window.addEventListener("scroll", handleScroll);
