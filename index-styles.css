@@ -174,7 +174,7 @@ main {
 } */
 
 footer a {
-    color: #0077b5;
+    color: #E0FFFF;
     text-decoration: none;
 }
 
@@ -366,7 +366,8 @@ h1.dark{
   }
 
 .filter-button.active {
-    background-color: #0077b5;
+    background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
+background: #6d597a;
     color: white;
   }
 
