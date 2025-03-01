@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+    <link rel="stylesheet" href="styles-projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Devika Santosh</h1>
+            <p>Entertainment Technology student, aspiring Experience Designer</p>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">About + Showreel</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="maya.html">Technical Art</a></li>
+                <li><a href="contact.html">Résumé</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="breadcrumbs">
+        <a href="index.html">Home</a> &gt;
+        <a href="art.html">Art</a> &gt;
+        <span class="current">Arduino Animation with Pulse Sensor Input</span>
+    </nav>
+
+    <main id="project-content">
+        <section class="project-header">
+              <p class="tagline">Project photos and videos will be added as soon as received!</p>
+            <h2>Arduino Animation with Pulse Sensor Input</h2>
+            <h3>8x8 LED grid animation created with Arduino that changes pace based on pulse sensor data.</h3>
+        </section>
+
+        <p><i>An 8x8 LED grid playing an animation that varies with the user's heart rate, which would be read via a
+                sensor. When the person's heart rate is higher, the animation plays faster, and vice versa. </i></p>
+                <p><i>Inspired by
+                <a href="https://www.linkedin.com/posts/collinmcatee_animation-inspiration-running-activity-7282076220207337474-kHOB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADKJ-skBAWceWjZdoqKH7d5orvM87z19dAk">this</a> LinkedIn animation created using a map by Collin McAtee!
+            </i></p>
+            
+        <section class="detail">
+            <div class="detail-container">
+                <h3 class="title">Student's Criteria for Success</h3>
+                <div class="text-content">
+                    <ul>
+                        <li>If this project is a good blend of creativity and tech, especially since I'm interested in animation.
+                        </li>
+                        <li> Experimenting and finding a good delay rate and frames for the animation. Being able to simplify
+                            everything to feel the same on just an 8x8 grid.</li>
+                        <li>Training my brain to start thinking of logic in a better way.</li>
+                        <li>Having fun and thinking outside the box while building this!</li>
+                    </ul>
+            
+                </div>
+            </div>
+        </section>
+        
+        <section class="project-header">
+            <h3>Physical Project Sketch</h3>
+            <img src="Assets\physical-project-sketch.png" alt="Storyboard" class="art-item" onclick="openGallery(1)" width="85%">
+
+
+            <h3>Functional Block Diagram</h3>
+            <img src="Assets\blockdiagram.png" alt="Storyboard" class="art-item" onclick="openGallery(1)" width="85%">
+
+            <h3>Electronic Schematic Sketch</h3>
+            <img src="Assets\schematic.png" alt="Storyboard" class="art-item" onclick="openGallery(1)" width="85%">
+
+            <h3>Project Build Plan</h3>
+
+            <h3>Implementation</h3>
+        </section>
+        </section>
+
+
+
+        </section>
+
+
+        <section class="project-challenges">
+            <section class="project-challenges">
+
+                <h3>Project Specifications</h3>
+                <ul>
+                    <li><b>Time: </b>4 hours</li>
+                    <li><b>Role: </b>Individual Project</li>
+                    <li><b>Software and Platforms: </b>Arduino IDE</li>
+                </ul>
+            </section>
+
+            
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="next-project-preview">
+            <a href="treasurefalls.html">
+                <div class="preview-left">
+                    <img src="Assets/Treasure Falls.PNG" alt="Next Project">
+                    <div class="next-project-info">
+                        <h3>Treasure Falls</h3>
+                        <p>A 2-player experience using dance mats as controllers!</p>
+                    </div>
+                </div>
+                <div class="preview-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a>
+        </p>
+        <div class="social-icons">
+            <div class="button-container">
+
+                <div class="glass-btn blue-btn">
+                    <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+                        style="width: 5.5em">
+                </div>
+
+                <div class="glass-btn blue-btn">
+
+                    <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+                        style="width: 5.5em">
+
+                </div>
+
+                <div class="glass-btn blue-btn">
+                    <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+                        style="width: 5.5em">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
