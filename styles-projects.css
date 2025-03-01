@@ -899,3 +899,118 @@ footer .social-icons a img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #f0f8ff; /* Light blue highlight color */
 }
+
+.detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+    position: relative;
+}
+
+.glass-box {
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    
+    /* Glassmorphic Effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    flex: 1;
+    font-size: 2.5rem; /* Bigger title */
+    font-weight: bold;
+    text-align: left;
+    color: #fff; /* White text for contrast */
+}
+
+.text-content {
+    flex: 2;
+    font-size: 1rem;
+    text-align: left;
+    color: #f1f1f1; /* Light text for contrast */
+}
+
+.text-content h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #66b3ff; /* Soft blue */
+}
+
+@media (max-width: 768px) {
+    .glass-box {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+}
+.detail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10%;
+}
+
+.detail-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px; /* Creates space between title and text */
+}
+
+.title {
+  flex: 1;
+  font-size: 2.5rem; /* Bigger title */
+  font-weight: bold;
+  text-align: left;
+  color: #333;
+}
+
+.text-content {
+  flex: 2;
+  font-size: 1rem;
+  text-align: left;
+  color: #555;
+}
+
+.text-content h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0077b5;
+}
+
+@media (max-width: 768px) {
+  .detail-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .title {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .text-content {
+      text-align: center;
+  }
+}
