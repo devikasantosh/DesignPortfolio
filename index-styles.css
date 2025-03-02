@@ -294,7 +294,7 @@ h1.dark{
     margin-top: 10px;
 }
 
-.keyword, .keyword-role {
+.keyword, .keyword-role, .keyword-topic {
     background: linear-gradient(to right, #6ec3f4, #b9beff);
     -webkit-background-clip: text; 
     color: transparent;
@@ -313,6 +313,11 @@ h1.dark{
 .keyword-role {
     background: #b56576; /* Red tone */
 }
+
+.keyword-topic {
+    background: #6d597a; /* Red tone */
+}
+
 .this-word {
     position: relative;
     display: inline-block;
