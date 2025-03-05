@@ -33,10 +33,10 @@
     </nav>
   </header>
   <nav class="breadcrumbs">
-    <a href="index.html">Home</a> &gt;  
-    <a href="games.html">Games</a> &gt;  
+    <a href="index.html">Home</a> &gt;
+    <a href="games.html">Games</a> &gt;
     <span class="current">Two to Foxtrot</span>
-</nav>
+  </nav>
 
 
   <main id="project-content">
@@ -47,35 +47,116 @@
         experiences.</p>
     </section>
     <br>
-    <section class="project-card">
-      <div class="detail">
-        <span class="label">ROLE</span>
-        <span class="description">Producer, Programmer, Technical Artist</span>
-      </div>
-      <div class="detail">
-        <span class="label">TIMELINE</span>
-        <span class="description">2 weeks</span>
-      </div>
-      <div class="detail">
-        <span class="label">SOFTWARE & PLATFORMS</span>
-        <span class="description">Unity Engine, XBox Controllers</span>
-      </div>
+    <div class="project-container">
+      <section class="project-card">
+        <div class="project-detail">
+          <span class="project-label">ROLE</span>
+          <span class="project-description">Producer, Programmer, Technical Artist. UI programmer for interim round</span>
+        </div>
+        <div class="project-detail">
+          <span class="project-label">TIMELINE</span>
+          <span class="project-description">2 weeks</span>
+        </div>
+        <div class="project-detail">
+          <span class="project-label">SOFTWARE & PLATFORMS</span>
+          <span class="project-description">Unity Engine, XBox Controllers</span>
+        </div>
       </section>
+      <img src="Assets/communicategif.gif" alt="Project GIF" class="project-gif">
+    </div>
+    
+
+    <section class="detail">
+      <div class="detail-container">
+        <h3 class="title">Game Mechanic</h3>
+        <div class="text-content">
+          <p>2-player <b>asymmetric</b> game where the human and the forest spirit have <b>different abilities</b>, and
+            can <b>see and interact with different entities</b>.</p>
+          <p>The human can move physical obstacles. The spirit can talk to the ghost. The human can read. The players
+            must <b>communicate</b> to solve the puzzles.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail">
+      <div class="detail-container">
+        <h3 class="title">Controllers</h3>
+        <div class="text-content">
+          <p>Xbox controllers for each player.</p>
+        </div>
+      </div>
+    </section>
+
 
     <br>
     <section class="project-challenges">
       <h3>Team</h3>
       <p>Joy Lim, Sharon Liu, Winnie Tsai</p>
       <br>
-      <h3>Challenges</h3>
-      <ul>
-        <li>Our main challenge was <b>audience throughput</b>, and figuring out how to make the experience accommodate
-          as many
-          guests as we can, and still feel interesting to people who have already watched others playing it.</li>
-        <li>Since we'd decided on making a puzzle game, maintaining the <b>element of surprise</b> was crucial.</li>
-        <li>Creating a strong <b>asymmetrical</b> game was also challenging.</li>
-      </ul>
     </section>
+
+    <h3>Role: Integrating UI into the game</h3>
+    <img src="Assets/ui-part1.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+    <p style="text-align: center"><i>UI appears based on range of player within a region</i></p>
+    <img src="Assets/ui-part2.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+    <p style="text-align: center"><i>UI for communication with ghost - player cannot decipher the whole request</i></p>
+    <br>
+    <h3>Encouraging players to communicate early on</h3>
+    <img src="Assets/communicategif.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+    <p style="text-align: center"><i>Conversation between characters visible only on their respective screens - makes
+        players talk to eachother to complete tasks</i></p>
+    <p style="text-align: center"><i><b>Alt text: </b>Sprit cannot move the rock. The spirit player sees the "That's too
+        heavy for me to move." dialogue. The human sees only the "Hmm, maybe I can move this." line. Works as a
+        standalone line for the human player too.</i></p>
+
+    <br>
+    <h3>Quests!</h3>
+    <p>The spirit can talk to the ghost. The human can read. The players
+      must <b>communicate</b> to solve the puzzles.</p>
+    <img src="Assets/ghostrequests.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+    <p style="text-align: center"><i>Human view and Spirit view</i></p>
+    <p style="text-align: center"><i>Red(flower + mushroom)!!</i></p>
+
+    <br>
+    <h3>Happy ghost - the light bridge opens!</h3>
+    <img src="Assets/ghostui-part1.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+    <p style="text-align: center"><i>When the task (red flower + red mushroom) is complete, the ghost animation and UI
+        changes, and the light bridge is now accessible to players.</i></p>
+
+    <br>
+    <h3>End of Part One - Cinematic Fade Out</h3>
+    <img src="Assets/ghostui-part2.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+    <p style="text-align: center"><i>Each player's screen fades to white slowly, after they enter the light bridge and
+        fall into an abyss.</i></p>
+    <p style="text-align: center"><i> This was the end of our interim game and was meant to feel complete. We later
+        added more tasks between the ghost's first request and the final fadeout escape.</i></p>
+
+
+
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    <section class="detail">
+      <div class="detail-container">
+        <h3 class="title">Challenges</h3>
+        <div class="text-content">
+          <ul>
+            <li>Our main challenge was <b>audience throughput</b>, and figuring out how to make the experience
+              accommodate
+              as many
+              guests as we can, and still feel interesting to people who have already watched others playing it.</li>
+            <li>Since we'd decided on making a puzzle game, maintaining the <b>element of surprise</b> was crucial.
+            </li>
+            <li>Creating a strong <b>asymmetrical</b> game was also challenging.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <br>
 
     <div class="video-container">
@@ -97,8 +178,7 @@
     <p>Our world explored a fantasy land and the story of a human and a spirit, both with different abilities in the
       world, and who can see and understand different things, navigating a journey of escaping a ghost.</p>
     <p>I was a <b>programmer and producer</b>, and also worked as a <b>technical artist</b>, creating trail and glitch
-      shaders that fit the world.
-    </p>
+      shaders that fit the world, and fade-out effects. I also worked as the <b>UI programmer </b>for the interim round, setting up the range, placement, and timing of UI elements.    </p>
 
     </p>
 
@@ -116,20 +196,20 @@
   <footer id="contact">
     <div class="next-project-preview">
       <a href="thecatmeowspa.html">
-          <div class="preview-left">
-              <img src="Assets/thecatmeowspa.png" alt="Next Project">
-              <div class="next-project-info">
-                  <h3>The Cat Meow Spa</h3>
-                  <p>Bathing a cat using the Microsoft Xbox adaptive controllers!</p>
-              </div>
+        <div class="preview-left">
+          <img src="Assets/thecatmeowspa.png" alt="Next Project">
+          <div class="next-project-info">
+            <h3>The Cat Meow Spa</h3>
+            <p>Bathing a cat using the Microsoft Xbox adaptive controllers!</p>
           </div>
-          <div class="preview-right">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-              </svg>
-          </div>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </div>
       </a>
-  </div>
+    </div>
     <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
     <div class="social-icons">
       <div class="button-container">

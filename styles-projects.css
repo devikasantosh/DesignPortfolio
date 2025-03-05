@@ -719,6 +719,10 @@ footer .social-icons a img {
   border-radius: 5px;
 }
 
+.project-container {
+  position: relative;
+  display: inline-block; /* Ensures it wraps around the card properly */
+}
 /* Container for the card */
 .project-card {
   display: flex;
@@ -735,6 +739,7 @@ footer .social-icons a img {
   overflow: hidden;
   /* Ensure the gradient stays within bounds */
   position: relative;
+  z-index: 2; /* Ensures the card appears above the GIF */
 }
 
 /* Gradient effect on top edge */
@@ -750,14 +755,14 @@ footer .social-icons a img {
 }
 
 /* Each row is displayed horizontally */
-.detail {
+.project-detail {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 /* Left column label should be right-aligned */
-.label {
+.project-label {
   font-weight: bold;
   color: #2c3e50;
   width: 150px;
@@ -767,11 +772,20 @@ footer .social-icons a img {
 }
 
 /* Right column description should be left-aligned */
-.description {
+.project-description {
   color: #7f8c8d;
   flex: 1;
   text-align: left;
   /* Align the description text to the left */
+}
+
+.project-gif {
+  position: absolute;
+  top: 50%;
+  transform: rotate(0deg) translateY(-50%);
+  z-index: 1; /* Puts it behind the card */
+  opacity: 0.8; /* Optional: Makes it slightly transparent */
+  pointer-events: none; /* Prevents accidental interactions */
 }
 
 .breadcrumbs {
