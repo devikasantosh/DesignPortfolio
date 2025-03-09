@@ -307,7 +307,7 @@ h1.dark{
 }
 
 .keyword {
-    background: #0077b5; /* Blue tone */
+    background: #6d597a; /* Blue tone */
 }
 
 .keyword-role {
@@ -315,7 +315,9 @@ h1.dark{
 }
 
 .keyword-topic {
-    background: #6d597a; /* Red tone */
+    /*background: #0077b5; /* Red tone */
+    background: #6d597a; /* Blue tone */
+
 }
 
 .this-word {

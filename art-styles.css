@@ -483,6 +483,12 @@ body {
     transform: scale(1.05);
 }
 
+.art-item-resized {
+  cursor: pointer;
+
+}
+
+
 /* Gallery overlay styling */
 .overlay {
     display: none;

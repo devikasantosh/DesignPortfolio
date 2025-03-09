@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     let currentImageIndex = 0;
     const images = document.querySelectorAll('.art-item');
+    const imagesresized = document.querySelectorAll('.art-item-resized');
     const galleryOverlay = document.getElementById('galleryOverlay');
     const galleryImage = document.getElementById('galleryImage');
 
@@ -24,9 +25,19 @@ document.addEventListener('DOMContentLoaded', function () {
         updateGalleryImage();
     }
 
+    function changeImageresized(direction) {
+        currentImageIndex = (currentImageIndex + direction + imagesresized.length) % imagesresized.length;
+        updateGalleryImageresized();
+    }
+
     // Update the gallery image based on the current index
     function updateGalleryImage() {
         const imageSrc = images[currentImageIndex].src;
+        galleryImage.src = imageSrc;
+    }
+
+    function updateGalleryImageresized() {
+        const imageSrc = imagesresized[currentImageIndex].src;
         galleryImage.src = imageSrc;
     }
 
@@ -47,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Set up click handlers for the art images
     images.forEach((image, index) => {
+        image.addEventListener('click', function () {
+                    console.log('Image clicked:', index);
+openGallery(index);
+        });
+    });
+
+    imagesresized.forEach((image, index) => {
         image.addEventListener('click', function () {
                     console.log('Image clicked:', index);
 openGallery(index);
