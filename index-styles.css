@@ -262,6 +262,7 @@ h1.dark{
 
 .project img {
     width: 100%;
+    aspect-ratio: 4068 / 2836;
     height: auto;
     object-fit: cover;
 }
