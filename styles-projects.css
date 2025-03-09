@@ -828,22 +828,25 @@ footer .social-icons a img {
 }
 
 
+.next-projects-container {
+  display: flex;
+  justify-content: center; /* Centers the row of cards */
+  gap: 80px; /* Space between cards */
+  padding: 20px; /* Padding above the footer */
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
 .next-project-preview {
-  position: absolute; /* Fixed to the viewport */
-  bottom: 20px; /* 20px from the bottom */
-  right: 120px; /* 20px from the right */
-  
-  width: 250px;
+  flex: 1;
+  max-width: 300px; /* Keeps card size uniform */
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1000;
-  transform: translateY(-170px);
+  text-align: center;
   display: flex;
-  
-
+  flex-direction: column;
 }
 
 .next-project-preview a {
@@ -856,10 +859,10 @@ footer .social-icons a img {
 .preview-left {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Take up available space */
+  align-items: center;
 }
 
-.preview-left img {
+.next-project-preview img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -868,7 +871,7 @@ footer .social-icons a img {
 
 .next-project-info {
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .next-project-info h3 {
@@ -886,21 +889,15 @@ footer .social-icons a img {
 }
 
 .preview-right {
+  padding: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 10px 10px;
-}
-
-.preview-right svg {
-  fill: #333; /* Arrow color */
 }
 
 .next-project-preview:hover {
-  transform: scale(1.05) translateY(180); /* Remove the manual translateY */
+  transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-
 .card {
   border: 1px solid #ddd;
   padding: 20px;
@@ -968,4 +965,14 @@ footer .social-icons a img {
   .text-content {
       text-align: center;
   }
+}
+
+
+
+.dynamic-hr {
+  width: 580px; /* Adjust width as needed */
+  height: 2px; /* Base thickness */
+  background: #333;
+  margin: 10px auto; /* Center align */
+  border-radius: 50px; /* Smooth edges */
 }
