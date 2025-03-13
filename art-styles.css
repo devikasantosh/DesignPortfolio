@@ -127,7 +127,7 @@
     #second-nav {
     position: sticky;
     top: 0; /* Stick to the top of the viewport */
-      background: linear-gradient(to right, #22577a, #38a3a5); /* Gradient from pink to orange */
+    background-color: #f1f1f19c;
     z-index: 10; /* Ensure it stays above other content */
     padding: 10px 0;
     box-shadow: 0 4px 2px -2px gray; /* Optional shadow effect */

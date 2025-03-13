@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,99 +8,182 @@
   <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles-projects.css">
 </head>
 
 <body>
-    <header>
-      <a href="index.html">
-        <h1>Devika Santosh</h1>
-        <p>Entertainment Technology student, aspiring Experience Designer</p>
-      </a>
-      <nav>
-          <ul>
-            <li><a href="index.html">About</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="games.html">Games</a></li>
-            <li><a href="maya.html">Technical Art</a></li>
-            <li><a href="contact.html">Résumé</a></li>
-          </ul>
-        </nav>
-      </header>
-      <nav class="breadcrumbs">
-        <a href="index.html">Home</a> &gt;  
-        <a href="maya.html">Tools and Pipeline</a> &gt;  
-        <span class="current">Technical Art - Shaders</span>
+  <header>
+    <a href="index.html">
+      <h1>Devika Santosh</h1>
+      <p>Entertainment Technology student, aspiring Experience Designer</p>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="maya.html">Technical Art</a></li>
+        <li><a href="contact.html">Résumé</a></li>
+      </ul>
     </nav>
-      <main id="project-content">
-        <section class="project-header">
-          <h2>Technical Art - Shaders</h2>
-          
-      
-        
-        <p class="tagline">A glitch effect shader created for CMU's Building Virtual Worlds Round 4, to respawn a fantasy character after they fall into a pit.</p>
-        <div class="art-grid">
-          <img src="Assets/shader1.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-          <img src="Assets/shader2.png" width=49% alt="Art Project 2" class="art-item" onclick="openGallery(1)">
+  </header>
+  <nav class="breadcrumbs">
+    <a href="index.html">Home</a> &gt;
+    <a href="maya.html">Tools and Pipeline</a> &gt;
+    <span class="current">Technical Art - Shaders</span>
+  </nav>
+  <main id="project-content">
+    <section class="project-header">
+      <h2>Technical Art - Shaders</h2>
+
+
+
+      <p class="tagline">A glitch effect shader created for CMU's Building Virtual Worlds Round 4, to respawn a fantasy
+        character after they fall into a pit.</p>
+      <div class="art-grid">
+        <img src="Assets/shader1.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+        <img src="Assets/shader2.png" width=49% alt="Art Project 2" class="art-item" onclick="openGallery(1)">
       </div>
-      
+
       <div id="galleryOverlay" class="overlay">
         <span class="close" onclick="closeGallery()">&times;</span>
         <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
         <a class="prev">&#10094;</a>
         <a class="next">&#10095;</a>
+      </div>
+
+    </section>
+    <img src="shader-unity.png" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
+
+    <br>
+    <div class="video-container">
+      <img src="shadergif-closeup.gif" alt="Technical Art - Shaders" style="max-width: 60%; height: auto;">
+
+      <img src="Assets/shaderfar.gif" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
+      <!-- <img src="Assets/shadernear.gif" alt="Technical Art - Shaders" style="max-width: 30%; height: auto;"> -->
+      <img src="shadergif-far.gif" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
+      </iframe>
+    </div>
+    <br>
+    <p>Effect at start of page recreated on character assets from the Unity Asset Store. <br><b>Creator:</b> Dungeon
+      Mason</p>
+    <p><b>Link to character asset:</b> <a
+        href="https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-tiny-hero-duo-pbr-polyart-225148">https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-tiny-hero-duo-pbr-polyart-225148</a>
+    </p>
+    <p>Gifs are from original BVW game. Character artist: Joy Lim</p>
+    <section class="project-features">
+
+    </section>
+
+
+
+    <div class="dynamic-hr"></div>
+
+  </main>
+
+
+  <h2 style="text-align: center; font-family: 'Playfair Display', serif; color: #333;">
+    Check out some of my other projects!</h2>
+  <div class="next-projects-container">
+    <div class="next-project-preview">
+      <a href="twotofoxtrot.html">
+        <div class="preview-left">
+          <img src="Assets/TwoToFoxtrot2.png" alt="Next Project">
+          <div class="next-project-info">
+            <h3>Two to Foxtrot</h3>
+            <p>Asymmetric game where two players see different things and must communicate to win the
+              game.</p>
+          </div>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+
+
+
+        </div>
+      </a>
     </div>
 
-          </section>
-          <img src="shader-unity.png" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
-
-          <br>
-          <div class="video-container">
-            <img src="shadergif-closeup.gif" alt="Technical Art - Shaders" style="max-width: 60%; height: auto;">
-
-            <img src="Assets/shaderfar.gif" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
-            <!-- <img src="Assets/shadernear.gif" alt="Technical Art - Shaders" style="max-width: 30%; height: auto;"> -->
-            <img src="shadergif-far.gif" alt="Technical Art - Shaders" style="max-width: 100%; height: auto;">
-            </iframe>
-        </div>
-        <br>
-        <p>Effect at start of page recreated on character assets from the Unity Asset Store. <br><b>Creator:</b> Dungeon Mason</p>
-        <p><b>Link to character asset:</b> <a href="https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-tiny-hero-duo-pbr-polyart-225148">https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-tiny-hero-duo-pbr-polyart-225148</a></p>
-        <p>Gifs are from original BVW game. Character artist: Joy Lim</p>
-        <section class="project-features">
-          
-        </section>
-
-        
-      
-    
-    
-      </main>
-    
-      <!-- Footer -->
-      <footer id="contact">
-        <p>Contact me at: <a href= "mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
-        <div class="social-icons">
-          <div class="button-container">
-      
-            <div class="glass-btn blue-btn">
-                <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon" style="width: 5.5em">
-            </div>
-          
-            <div class="glass-btn blue-btn">
-    
-              <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon" style="width: 5.5em">
-          
+    <div class="next-project-preview">
+      <a href="archeology.html">
+        <div class="preview-left">
+          <img src="Assets/mayacover.png" alt="Next Project">
+          <div class="next-project-info">
+            <h3>Scene Scatter Tool - Generating Archeological Ruins</h3>
+            <p>Created using Maya and Python scripting, this script allows the artist to generate an
+              archeological ruins scene by selecting 3D models of arches and pillars with varying levels of decay, and
+              setting the number of 3D models and their relative distance.</p>
           </div>
-            
-            <div class="glass-btn blue-btn">
-              <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon" style="width: 5.5em">
-            </div>
-          
-          </div>    </div>
-      </footer>
-      <script src="script.js"></script>
-    </body>
-    </html>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+
+
+        </div>
+      </a>
+    </div>
+
+    <div class="next-project-preview">
+      <a href="naturalvariety.html">
+        <div class="preview-left">
+          <img src="Assets/mayacover2.png" alt="Next Project">
+          <div class="next-project-info">
+            <h3>Programming Natural Variety</h3>
+            <p>Inspired by The <b>Science behind Pixar</b> exhibit on Programming Natural Variety!<br> I
+              created a tool where an artist can create a patch of grass by adjusting colour, variation in colour,
+              height
+              and width of grass blades, area of patch, curvature, and number of blades of grass.</p>
+          </div>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+
+
+        </div>
+      </a>
+    </div>
+
+
+  </div>
+
+
+  <footer id="contact">
+
+    <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+    <div class="social-icons">
+      <div class="button-container">
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+            style="width: 5.5em">
+        </div>
+
+        <div class="glass-btn blue-btn">
+
+          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+            style="width: 5.5em">
+
+        </div>
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+            style="width: 5.5em">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
