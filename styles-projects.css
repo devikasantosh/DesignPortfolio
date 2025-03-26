@@ -978,3 +978,36 @@ footer .social-icons a img {
   margin: 10px auto; /* Center align */
   border-radius: 50px; /* Smooth edges */
 }
+
+.progress-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.progress-item {
+  flex: 1;
+  text-align: center;
+  transition: flex 0.3s ease;
+  overflow: hidden;
+}
+
+.progress-item img {
+  width: 150px;
+  height: 150px;
+}
+
+.progress-details {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.progress-item:hover {
+  flex: 2;
+}
+
+.progress-item:hover .progress-details {
+  opacity: 1;
+  max-height: 500px;
+}
