@@ -37,8 +37,16 @@
     <a href="design.html">Design</a> &gt;
     <span class="current">UI Design</span>
   </nav>
+
+  <nav class="sidebar">
+    <a href="#music-ui">Mobile App UI</a>
+    <a href="#event-ui">Website UI</a>
+    <a href="#ui-programming">Game UI Programming</a>
+  </nav>
+
+  
   <main>
-    <section id="design">
+    <section id="music-ui" class="ui-section">
 
       <h1>UI Design Projects</h1>
       <h2>&#10024;Music App UI</h2>
@@ -84,6 +92,8 @@
       <br>
       <br>
       <br>
+    </section>
+    <section id="event-ui" class="ui-section">
       <h2>&#10024;Event App UI</h2>
       This was probably my first step into the world of UI and UX design. HC Educates, HackClub’s yearly flagship event,
       consisted of a series of workshops followed by a Hackathon where participants could showcase what they learnt. I
@@ -119,25 +129,68 @@
       The website was later developed and deployed by HackClub’s web development department, and can be viewed at <br><a
         href="https://hackclubvit.github.io/hc-educates-site/"
         style="color: #0077b5;">https://hackclubvit.github.io/hc-educates-site/</a>
-        <br>
-        <br>
-        <br>
+      <br>
+      <br>
+      <br>
+    </section>
+    <section id="ui-programming" class="ui-section">
+
       <h2>&#10024;Game UI Programming - <a href="twotofoxtrot.html">Two to Foxtrot</a></h2>
       <h3>Role: Integrating UI into the game</h3>
       <br>
-      <p>Assets made by Joy Lim.</p>
+      <section class="detail">
+        <div class="detail-container">
+          <h3 class="title">Game Mechanic</h3>
+          <div class="text-content">
+            <p>2-player <b>asymmetric</b> game where the human and the forest spirit have <b>different abilities</b>,
+              and
+              can <b>see and interact with different entities</b>.</p>
+            <br>
+           
+            <p>The players
+              must <b>communicate</b> to solve the puzzles.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="sticky-notes-container">
+        <div class="sticky-note">
+          <p><b>Human Abilities:</b></p>
+          <p>- move physical obstacles</p>
+          <p>- read signs</p>
+        </div>
+
+        <div class="sticky-note">
+          <p><b>Spirit Abilities:</b></p>
+          <p>- talk to ghosts</p>
+          <p>- swimming</p>
+        </div>
+      </div><br><br>
+
+      <section class="detail">
+        <div class="detail-container">
+          <h3 class="title">Platform</h3>
+          <div class="text-content">
+            <br>
+            <p>Unity Engine, Xbox controllers for each player.</p>
+          </div>
+        </div>
+      </section>
       <br>
-      <p>My role involved intergrating this UI into the game, first, with placeholder assets I had made, and then with the final artists assets.</p>
+      <p>Assets made by <b>Joy Lim</b>.</p>
+      <br>
+      <p>My role involved intergrating this UI into the game, first, with placeholder assets I had made, and then with
+        the final artists assets.</p>
       <br>
       <p>Worked on:
-        <ul>
-          <li>overall planning of game UI programming,</li>
-          <li>setting zones where the UI should appear,</li>
-          <li>timing of appearance,</li>
-          <li>orientation of certain UI like dialogue during character movement,</li>
-          <li>having different UI appear for the human and the fox spirit, and</li>
-          <li>encouraging conversation between the two players using different UI monologues.</li>
-        </ul>
+      <ul>
+        <li><b>overall planning</b> of game UI programming,</li>
+        <li><b>setting zones</b> where the UI should appear,</li>
+        <li><b>timing</b> of appearance,</li>
+        <li><b>orientation</b> of certain UI like dialogue during character movement,</li>
+        <li>having <b>different UI</b> appear for the human and the fox spirit, and</li>
+        <li><b>encouraging conversation</b> between the two players using different UI monologues.</li>
+      </ul>
       <br>
       <img src="Assets/ui-part1.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)" width="100%">
       <p style="text-align: center"><i>UI appears based on range of player within a region</i></p>
@@ -147,7 +200,8 @@
       </p>
       <br>
       <h3>Encouraging players to communicate early on (Asymmetric Play - Part 1)</h3>
-      <img src="Assets/communicategif.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)" width="100%">
+      <img src="Assets/communicategif.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)"
+        width="100%">
       <p style="text-align: center"><i>Conversation between characters visible only on their respective screens - makes
           players talk to eachother to complete tasks</i></p>
       <p style="text-align: center"><i><b>Alt text: </b>Sprit cannot move the rock. The spirit player sees the "That's
@@ -159,26 +213,29 @@
       <h3>Quests! (Asymmetric Play - Part 2)</h3>
       <p>The spirit can talk to the ghost. The human can read. The players
         must <b>communicate</b> to solve the puzzles.</p>
-      <img src="Assets/ghostrequests.png" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)" width="100%">
+      <img src="Assets/ghostrequests.png" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)"
+        width="100%">
       <p style="text-align: center"><i>Human view and Spirit view</i></p>
       <p style="text-align: center"><i>Red(flower + mushroom)!!</i></p>
 
       <br>
       <h3>Happy ghost - the light bridge opens!</h3>
-      <img src="Assets/ghostui-part1.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)" width="100%">
+      <img src="Assets/ghostui-part1.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)"
+        width="100%">
       <p style="text-align: center"><i>When the task (red flower + red mushroom) is complete, the ghost animation and UI
           changes, and the light bridge is now accessible to players.</i></p>
 
       <br>
       <h3>End of Part One - Cinematic Fade Out</h3>
-      <img src="Assets/ghostui-part2.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)" width="100%">
+      <img src="Assets/ghostui-part2.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)"
+        width="100%">
       <p style="text-align: center"><i>Each player's screen fades to white slowly, after they enter the light bridge and
           fall into an abyss.</i></p>
       <p style="text-align: center"><i> This was the end of our interim game and was meant to feel complete. We later
           added more tasks between the ghost's first request and the final fadeout escape.</i></p>
 
       <br>
-      
+
     </section>
     <div class="dynamic-hr"></div>
 
@@ -201,7 +258,7 @@
           </div>
         </a>
       </div>
-    
+
       <div class="next-project-preview">
         <a href="uxresearch.html">
           <div class="preview-left">
@@ -218,14 +275,15 @@
           </div>
         </a>
       </div>
-    
+
       <div class="next-project-preview">
         <a href="encore.html">
           <div class="preview-left">
             <img src="Assets/encore.png" alt="Next Project">
             <div class="next-project-info">
               <h3>Experience Design</h3>
-              <p>Location-based entertainment. A pre-show lobby experience for CMU's Titanic the Musical. Serving as narrative and experience designer.</p>
+              <p>Location-based entertainment. A pre-show lobby experience for CMU's Titanic the Musical. Serving as
+                narrative and experience designer.</p>
             </div>
           </div>
           <div class="preview-right">
@@ -236,12 +294,12 @@
         </a>
       </div>
     </div>
-    
+
   </main>
 
 
   <footer id="contact">
-    
+
     <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
     <div class="social-icons">
       <div class="button-container">
