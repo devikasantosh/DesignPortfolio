@@ -870,6 +870,7 @@ cursor: pointer;
 .sidebar {
   position: fixed;
   left: 12px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
