@@ -561,18 +561,7 @@ footer {
 .art-item {
   cursor: pointer;
 }
-.art-item::after {
-  content: '🔍'; /* or use an SVG if you want */
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 4px 6px;
-  border-radius: 50%;
-  font-size: 14px;
-  pointer-events: none;
-}
+
 
 /*MOVILE FRIENDLY UI*/
 @media (max-width: 480px) {
