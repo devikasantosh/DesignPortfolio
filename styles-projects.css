@@ -1010,3 +1010,15 @@ footer .social-icons a img {
   opacity: 1;
   max-height: 500px;
 }
+
+.design-grid-props {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 10px; /* spacing between images */
+}
+
+.art-item-props {
+  width: 100%;     /* fill the grid cell */
+  height: auto;    /* maintain aspect ratio */
+  object-fit: cover; /* optional for consistent size cropping */
+}

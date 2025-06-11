@@ -263,3 +263,86 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll('.art-item-props');
+    const imagesresized = document.querySelectorAll('.art-item-resized');
+    const galleryOverlay = document.getElementById('galleryOverlay');
+    const galleryImage = document.getElementById('galleryImage');
+
+    console.log('Gallery Images:', images); // Check if images are being selected correctly
+
+    // Open the gallery
+    function openGallery(index) {
+        currentImageIndex = index;
+        galleryOverlay.style.display = 'flex';
+        updateGalleryImage();
+    }
+
+    // Close the gallery
+    function closeGallery() {
+        galleryOverlay.style.display = 'none';
+    }
+
+    // Change image based on direction (prev or next)
+    function changeImage(direction) {
+        currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+        updateGalleryImage();
+    }
+
+    function changeImageresized(direction) {
+        currentImageIndex = (currentImageIndex + direction + imagesresized.length) % imagesresized.length;
+        updateGalleryImageresized();
+    }
+
+    // Update the gallery image based on the current index
+    function updateGalleryImage() {
+        const imageSrc = images[currentImageIndex].src;
+        galleryImage.src = imageSrc;
+    }
+
+    function updateGalleryImageresized() {
+        const imageSrc = imagesresized[currentImageIndex].src;
+        galleryImage.src = imageSrc;
+    }
+
+    // Event listener for the close button
+    const closeBtn = document.querySelector('.close');
+    closeBtn.addEventListener('click', closeGallery);
+
+    // Event listeners for prev and next arrows
+    const prevBtn = document.querySelector('.prev');
+    prevBtn.addEventListener('click', function () {
+        changeImage(-1); // Show previous image
+    });
+
+    const nextBtn = document.querySelector('.next');
+    nextBtn.addEventListener('click', function () {
+        changeImage(1); // Show next image
+    });
+
+    // Set up click handlers for the art images
+    images.forEach((image, index) => {
+        image.addEventListener('click', function () {
+                    console.log('Image clicked:', index);
+openGallery(index);
+        });
+    });
+
+    imagesresized.forEach((image, index) => {
+        image.addEventListener('click', function () {
+                    console.log('Image clicked:', index);
+openGallery(index);
+        });
+    });
+
+    // Close gallery if clicked outside the image
+    galleryOverlay.addEventListener('click', function (event) {
+        if (event.target === galleryOverlay) {
+            closeGallery(); // Close the gallery if the overlay is clicked
+        }
+    });
+});
