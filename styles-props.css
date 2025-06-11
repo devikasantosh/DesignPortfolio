@@ -1025,6 +1025,13 @@
     cursor: pointer; /* <-- This makes the cursor a pointer on hover */
 
   }
+
+  .art-item-props2 {
+    width: 400px; /* Adjust as needed */
+    height: auto;
+    cursor: pointer; /* <-- This makes the cursor a pointer on hover */
+
+  }
   
   .design-grid {
     text-align: center;
@@ -1059,16 +1066,15 @@
   .sidebar {
     position: fixed;
     left: 12px;
-    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     font-size: 14px;
     font-family: Montserrat;
-    z-index: 9999;        /* Very high value */
-
+    z-index: 9999;
   }
+  
   
   .sidebar a {
     color: #949494;
@@ -1085,5 +1091,12 @@
   
   .sidebar a:hover {
     opacity: 1;
+  }
+  
+  /* Indent sub-links */
+  .sidebar .sub-links {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
   }
   
