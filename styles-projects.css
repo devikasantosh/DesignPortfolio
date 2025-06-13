@@ -1022,3 +1022,28 @@ footer .social-icons a img {
   height: auto;    /* maintain aspect ratio */
   object-fit: cover; /* optional for consistent size cropping */
 }
+
+
+
+
+
+
+.sticky-notes-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Enables responsiveness */
+  margin-top: 10px;
+}
+
+.sticky-note {
+  background: #FFEB3B;
+  padding: 20px;
+  width: 240px;
+  transform: rotate(-2deg);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
