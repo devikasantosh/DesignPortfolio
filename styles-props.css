@@ -785,6 +785,7 @@
     z-index: 1; /* Puts it behind the card */
     opacity: 0.8; /* Optional: Makes it slightly transparent */
     pointer-events: none; /* Prevents accidental interactions */
+    width:450%;
   }
   
   .breadcrumbs {
@@ -1098,5 +1099,39 @@
     margin-left: 16px;
     display: flex;
     flex-direction: column;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .sticky-notes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Enables responsiveness */
+    margin-top: 40px;
+  }
+  
+  .sticky-note {
+    background: #FFEB3B;
+    padding: 20px;
+    width: 300px;
+    transform: rotate(-2deg);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
   
