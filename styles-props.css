@@ -37,7 +37,7 @@
     background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
     background-size: 300% 300%;
     animation: gradientAnimation 8s ease infinite;
-    color: white;
+    color: #f6f4d2;
     text-align: center;
     padding: 20px;
   }
@@ -64,7 +64,7 @@
     color: inherit;
   }
   header h1 {
-    color: #f4f4f4;
+    color: #f6f4d2;
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
     margin: 0;
@@ -89,13 +89,13 @@
   
   nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #f6f4d2;
     font-weight: bold;
   }
   
   /* Hover state */
   nav ul li a:hover {
-    color: #f4f4f4;
+    color: #333;
     /* Blue color on hover */
   }
   
@@ -347,7 +347,7 @@
     text-align: center;
     padding: 20px;
     background-color: #252422;
-    color: #f7f7f2;
+    color: #f6f4d2;
   }
   
   header a {
