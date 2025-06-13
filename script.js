@@ -435,29 +435,33 @@ openGallery(index);
 
 
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const topSections = ["about", "paper-props", "3d"];
-    const sectionDivs = topSections.map(id => document.getElementById(id));
-    const navLinks = document.querySelectorAll(".sidebar a.top-link");
+document.addEventListener("DOMContentLoaded", () => {
+  const linkElements = document.querySelectorAll(".sidebar a"); // selects both top and sub links
+  const sectionIds = Array.from(linkElements).map(link => link.getAttribute("href").slice(1));
+  const sectionDivs = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px 0px -60% 0px",
-      threshold: 0
-    };
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px 0px -60% 0px",
+    threshold: 0
+  };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${entry.target.id}`) {
-              link.classList.add("active");
-            }
-          });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        linkElements.forEach(link => {
+          link.classList.remove("active");
+        });
+
+        const activeLink = document.querySelector(`.sidebar a[href="#${entry.target.id}"]`);
+        if (activeLink) {
+          activeLink.classList.add("active");
         }
-      });
-    }, observerOptions);
+      }
+    });
+  }, observerOptions);
 
-    sectionDivs.forEach(section => observer.observe(section));
+  sectionDivs.forEach(section => {
+    if (section) observer.observe(section);
   });
+});
