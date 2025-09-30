@@ -1,0 +1,1050 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+
+}
+
+/* Flexbox Layout to keep footer at the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #f6f4d2;
+  /* Text color */
+  background-color: #252422;
+  /* Background color */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 40% 30%; }
+  50% { background-position: 100% 70%; }
+  75% { background-position: 60% 20%; }
+  100% { background-position: 0% 50%; }
+}
+/* Header and Footer Styling */
+header,
+footer {
+  position: relative;
+  background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
+  color: #f6f4d2;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Noise Overlay */
+header::after,
+footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Assets/noise.png');
+  /* Add your noise image */
+  opacity: 0.15;
+  /* Adjust transparency */
+  pointer-events: none;
+  /* Ensures it doesn't interfere with clicks */
+}
+
+header a{
+  text-decoration: none;
+  color: inherit;
+}
+header h1 {
+  color: #f6f4d2;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f6f4d2;
+  font-weight: bold;
+}
+
+/* Hover state */
+nav ul li a:hover {
+  color: #333;
+  /* Blue color on hover */
+}
+
+/* Focus and active states */
+nav ul li a:focus,
+nav ul li a.active {
+  color: #f4f4f4;
+  /* Blue color on active */
+}
+
+/* Optional underline effect */
+nav ul li a:hover,
+nav ul li a.active {
+  text-decoration: underline;
+}
+
+
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content area takes up remaining space */
+main {
+  flex: 1;
+  padding: 40px;
+  padding-left: 100px;
+}
+
+#about {
+  max-width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Align items to the top */
+  padding: 40px 0;
+  /* Padding to create space at the top/bottom */
+  margin: 0 auto;
+  /* Center the section horizontally */
+}
+
+.about-me {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  /* Add gap between text and image */
+}
+
+.text-content {
+  flex: 1;
+  max-width: 60%;
+  font-size: 1.5em;
+}
+
+.about-me h1 {
+  background: linear-gradient(to right, #22577a, #38a3a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: black;
+}
+
+.about-me p {
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+#three-container-about {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#three-container-about img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Showreel Section */
+#showreel {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#showreel video {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+/* Projects Section */
+#projects {
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  margin: 10px 0;
+}
+
+
+#game-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.project {
+  width: 250px;
+  background-color: #f7f7f2;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #028090;
+}
+
+.project-info {
+  padding: 10px;
+}
+
+.project-info h2 {
+  font-family: 'Playfair Display', serif;
+  color: #028090;
+  font-size: 1.5em;
+}
+
+.project-info .tagline {
+  font-family: 'Montserrat', sans-serif;
+  color: #252422;
+  font-size: 1em;
+}
+
+.project video {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #028090;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.keywords {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keyword {
+  background-color: #007acc;
+  /* Blue bubble background */
+  color: #005999;
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.keyword:nth-child(odd) {
+  background-color: #005999;
+  /* Alternating orange bubbles */
+}
+
+.keyword:hover {
+  background-color: #005999;
+  /* Darker blue on hover */
+  cursor: default;
+}
+
+#game-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  display: block;
+  width: 300px;
+  /* Adjust as needed */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  text-decoration: none;
+  /* Remove default link underline */
+  color: inherit;
+  /* Keep text color consistent */
+  transition: transform 0.2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+}
+
+.project video,
+.project img {
+  width: 100%;
+  border-bottom: 2px solid #028090;
+  border-radius: 10px 10px 0 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #252422;
+  background-color: #f7f7f2;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #252422;
+  color: #f6f4d2;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  position: relative;
+  /* Ensure the footer can have effects like box-shadow */
+  box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53);
+  /* Glow effect on top */
+}
+
+/* Footer Styling */
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.glass-btn {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  margin-left: 1em;
+  margin-right: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.blue-btn {
+    -webkit-box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+    -moz-box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+    box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+
+    &:hover {
+      -webkit-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+      -moz-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+      box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+    }
+  }
+}
+
+.icon-link {
+  display: inline-flex;
+  /* Ensures the link behaves like a flex container */
+  align-items: center;
+  /* Centers the image vertically */
+  justify-content: center;
+  /* Centers the image horizontally */
+  text-decoration: none;
+  /* Removes underline */
+}
+
+.icon-link img {
+  width: 100%;
+  /* Makes the image take up 80% of its container */
+  height: auto;
+  /* Maintains aspect ratio */
+  object-fit: contain;
+  /* Ensures image fits well within its container */
+  transition: transform 0.3s ease;
+  /* Adds smooth hover animation */
+}
+
+.icon-link:hover img {
+  transform: scale(1.1);
+  /* Slightly enlarges the icon on hover */
+}
+
+
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.project-header h2 {
+  font-size: 2.5rem;
+  color: #22577a;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: #028090;
+  margin-top: 5px;
+}
+
+.media video,
+.media img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.project-description,
+.project-features,
+.project-technologies,
+.project-challenges {
+  margin-top: 0px;
+}
+
+h3 {
+  color: #22577a;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #f7f7f2;
+}
+
+
+#galleryOverlay {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlay {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#galleryOverlay {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Make sure it appears on top */
+}
+
+.overlay-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close,
+.prev,
+.next {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.close {
+  top: 20px;
+  right: 20px;
+}
+
+.prev {
+  top: 50%;
+  left: 20px;
+}
+
+.next {
+  top: 50%;
+  right: 20px;
+}
+
+.art-item {
+  cursor: pointer;
+}
+
+
+/*MOVILE FRIENDLY UI*/
+@media (max-width: 480px) {
+  .art-item {
+    width: 100%;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .project-features h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-features a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Styling for Overlay Gallery */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Styling for the footer */
+footer {
+  position: relative;
+  /* Ensure the footer can have effects like box-shadow */
+  box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53);
+  /* Glow effect on top */
+}
+
+/* Footer Styling */
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+
+.project-info {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 220px;
+}
+
+.info-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.info-card p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.info-card-long {
+  background: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 660px;
+}
+
+.info-card-long h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.info-card-long p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.sticky-notes-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sticky-note {
+  background: #FFEB3B;
+  padding: 15px;
+  width: 440px;
+  transform: rotate(-3deg);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  border-radius: 5px;
+}
+
+.project-container {
+  position: relative;
+  display: inline-block; /* Ensures it wraps around the card properly */
+}
+/* Container for the card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+  margin: 30px 0 30px 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(-3deg);
+  /* Tilt the card by 3 degrees */
+  overflow: hidden;
+  /* Ensure the gradient stays within bounds */
+  position: relative;
+  z-index: 2; /* Ensures the card appears above the GIF */
+}
+
+/* Gradient effect on top edge */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  /* Gradient height */
+  background: linear-gradient(to right, #22577a, #38a3a5);
+}
+
+/* Each row is displayed horizontally */
+.project-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Left column label should be right-aligned */
+.project-label {
+  font-weight: bold;
+  color: #2c3e50;
+  width: 150px;
+  /* Fixed width to maintain alignment */
+  text-align: right;
+  /* Align the label text to the right */
+}
+
+/* Right column description should be left-aligned */
+.project-description {
+  color: #7f8c8d;
+  flex: 1;
+  text-align: left;
+  /* Align the description text to the left */
+}
+
+.project-gif {
+  position: absolute;
+  top: 50%;
+  transform: rotate(0deg) translateY(-50%);
+  z-index: 1; /* Puts it behind the card */
+  opacity: 0.8; /* Optional: Makes it slightly transparent */
+  pointer-events: none; /* Prevents accidental interactions */
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  color: #555;
+  padding: 10px 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  display: inline-block;
+
+  position: sticky;
+  top: 0;
+  /* Stick to the top of the page */
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Light shadow for depth */
+  z-index: 1000;
+  /* Ensure it stays above other content */
+}
+
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .current {
+  color: #333;
+  font-weight: bold;
+}
+
+.project-content {
+  position: relative; /* Ensures absolute positioning works inside */
+}
+
+
+.next-projects-container {
+  display: flex;
+  justify-content: center; /* Centers the row of cards */
+  gap: 80px; /* Space between cards */
+  padding: 20px; /* Padding above the footer */
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.next-project-preview {
+  flex: 1;
+  max-width: 300px; /* Keeps card size uniform */
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.next-project-preview a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-left {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.next-project-preview img {
+  width: 100%;
+  aspect-ratio: 4068 / 2836;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.next-project-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.next-project-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.next-project-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.preview-right {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.next-project-preview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+  background-color: white; /* Add a default background color */
+}
+
+.card.highlight {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff; /* Light blue highlight color */
+}
+
+.detail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10%;
+}
+
+.detail-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px; /* Creates space between title and text */
+}
+
+.title {
+  flex: 1;
+  font-size: 2.5rem; /* Bigger title */
+  font-weight: bold;
+  text-align: left;
+  background: linear-gradient(to right, #22577a, #38a3a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-content {
+  flex: 2;
+  font-size: 1rem;
+  text-align: left;
+  color: #555;
+}
+
+.text-content h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0077b5;
+}
+
+@media (max-width: 768px) {
+  .detail-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .title {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .text-content {
+      text-align: center;
+  }
+}
+
+
+
+.dynamic-hr {
+  width: 580px; /* Adjust width as needed */
+  height: 2px; /* Base thickness */
+  background: #333;
+  margin: 10px auto; /* Center align */
+  border-radius: 50px; /* Smooth edges */
+}
+
+.progress-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.progress-item {
+  flex: 1;
+  text-align: center;
+  transition: flex 0.3s ease;
+  overflow: hidden;
+}
+
+.progress-item img {
+  width: 150px;
+  height: 150px;
+}
+
+.progress-details {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.progress-item:hover {
+  flex: 2;
+}
+
+.progress-item:hover .progress-details {
+  opacity: 1;
+  max-height: 500px;
+}
+
+.design-grid-props {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 10px; /* spacing between images */
+}
+
+.art-item-props {
+  width: 100%;     /* fill the grid cell */
+  height: auto;    /* maintain aspect ratio */
+  object-fit: cover; /* optional for consistent size cropping */
+}
+
+
+
+
+
+
+.sticky-notes-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Enables responsiveness */
+  margin-top: 10px;
+}
+
+.sticky-note {
+  background: #FFEB3B;
+  padding: 20px;
+  width: 240px;
+  transform: rotate(-2deg);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
