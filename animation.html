@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link rel="stylesheet" href="art-styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <h1>Devika Santosh</h1>
+      <p>Entertainment Technology student, aspiring Experience Designer</p>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="maya.html">Technical Art</a></li>
+        <li><a href="contact.html">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="design">
+
+      <h1>Character Design and Animation Projects</h1>
+      <p><b>Class: </b>Introduction to 3D Animation Pipeline</p>
+      <p>Software: Procreate, Zbrush, Autodesk Maya, Adobe Substance Painter 3D</p>
+      <br>
+      <h2>Concept Art and Worldbuilding</h2>
+      <img src="Assets/char1.png" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="40%">
+      <img src="Assets/char2.png" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="40%">
+      <img src="Assets/char3.png" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="40%">
+      <br>      <br>
+
+      <h2>3D Modelling</h2>
+      <p>Modelling on Zbrush, remeshing on Maya</p>
+      <img src="Assets/char4.png" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="40%">
+      <img src="Assets/char5.png" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="40%">
+      <br>
+      <br>
+      <h2>Texturing</h2>
+      <p>Done on Substance Painter</p>
+      <img src="Assets/char9.png" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="40%">
+      <div id="galleryOverlay" class="overlay">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+      </div>
+      <br>      <br>
+
+      <h2>Lighting and Rendering
+        <p>Maya - Arnold</p>
+        <img src="Assets/char8.jpg" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="30%">
+
+        <img src="Assets/char6.jpg" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="30%">
+        <img src="Assets/char10.jpg" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="30%">
+        <img src="Assets/char7.jpg" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="30%">
+
+        <img src="Assets/char11.jpg" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="30%">
+        <img src="Assets/char12.jpg" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="30%">
+
+
+      </h2>
+      <br>      <h2>Storyboarding</h2>
+      <img src="Assets/dsantosh_asst8_v2.png" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="91%">
+<br>
+      <br>      <h2>Rigging and Controls</h2>
+      <img src="Assets/sporerig-hands.gif" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="45%">
+      <img src="Assets/sporerig-arms.gif" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="45%">
+      <img src="Assets/sporerig-turn.gif" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="45%">
+      <img src="Assets/sporerig-back.gif" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="45%">
+      <img src="Assets/sporerig-midback.gif" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="91%">
+      <img src="Assets/sporerig-ik1.gif" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="45%">
+      <img src="Assets/sporerig-ik2.gif" alt="Art Project 1" class="art-item-resized" onclick="openGallery(0)" width="45%">
+
+<br>
+<br>      <h2>Final Animation</h2>
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1080375503?h=7d8d65515e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:91%;height:91%;" title="Spore - Final Animation Project - Devika Santosh">
+        </iframe>
+      </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      <div id="galleryOverlay" class="overlay">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+
+      <br><br>
+
+    </section>
+
+
+    <section id="animation">
+      <br><br>
+
+      <h1>Animation Projects</h1>
+      <p>Software: Procreate</p>
+      <br><br>
+
+      <b><u>When the Clock Strikes 12</u></b>
+      <p>Imagine a world where shadows spring to life at the stroke of midday. As the sun reaches its zenith, and the
+        shadows fall right below, the magic unfolds. Unseen by human eyes, a secret realm reveals itself in the shadows
+        below.</p>
+      <br><br>
+
+      <p><b><u>Character Design</u></b></p>
+      <img src="Assets\shadow 1.jpeg" height="315">
+      <p><b><u>Basic Storyboarding</u></b></p>
+      <iframe width="840" height="472.5" src="https://www.youtube.com/embed/AjOtR5tJveA" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <p><b><u>Animation (work-in-progress!)</u></b></p>
+
+    </section>
+    <div class="dynamic-hr"></div>
+
+  </main>
+
+
+  <h2 style="text-align: center; font-family: 'Playfair Display', serif; color: #333;">
+      Check out some of my other projects!</h2>
+  <div class="next-projects-container">
+    <div class="next-project-preview">
+      <a href="shader.html">
+        <div class="preview-left">
+          <img src="Assets/shadernearresized.gif" alt="Next Project">
+          <div class="next-project-info">
+            <h3>Technical Art - Shaders</h3>
+            <p>A glitch effect shader created for CMU's Building Virtual Worlds Round 4, to respawn a
+            fantasy character after they fall into a pit.</p>
+
+          </div>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+
+
+              </div>
+          </a>
+      </div>
+
+      <div class="next-project-preview">
+        <a href="arduino.html">
+          <div class="preview-left">
+            <img src="Assets/workingvid.gif" alt="Next Project">
+            <div class="next-project-info">
+              <h3>Arduino Animation with Pulse Sensor Input</h3>
+              <p>8x8 LED grid animation created with Arduino that changes pace based on pulse sensor data.</p>
+  
+            </div>
+          </div>
+          <div class="preview-right">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+  
+
+              </div>
+          </a>
+      </div>
+
+
+      <div class="next-project-preview">
+        <a href="ui.html">
+          <div class="preview-left">
+            <img src="Assets/uicover.png" alt="Next Project">
+            <div class="next-project-info">
+              <h3>UI Design</h3>
+              <p>Extracurricular projects - mobile UI design, web-based UI, and UI programming for games.</p>
+            <p>Features a music application UI that won second place in a design hackathon.</p>
+            </div>
+          </div>
+          <div class="preview-right">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+  
+              </div>
+          </a>
+      </div>
+  </div>
+
+  <footer id="contact">
+    <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+    <div class="social-icons">
+      <div class="button-container">
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+            style="width: 5.5em">
+        </div>
+
+        <div class="glass-btn blue-btn">
+
+          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+            style="width: 5.5em">
+
+        </div>
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+            style="width: 5.5em">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
