@@ -912,6 +912,30 @@ footer .social-icons a img {
   background-color: #f0f8ff; /* Light blue highlight color */
 }
 
+.goals-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.goal-column ul {
+  color: #555;
+  line-height: 1.6;
+}
+
+.detail-row {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.detail-row .detail {
+  flex: 1;
+}
+
 .detail {
   width: 100%;
   display: flex;

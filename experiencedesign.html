@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link rel="stylesheet" href="styles-projects.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <h1>Devika Santosh</h1>
+      <p>Entertainment Technology student, aspiring Experience Designer</p>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="maya.html">Technical Art</a></li>
+        <li><a href="contact.html">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="breadcrumbs">
+    <a href="index.html">Home</a> &gt;
+    <a href="design.html">Design</a> &gt;
+    <span class="current">Experience Design</span>
+  </nav>
+
+  <main id="project-content">
+    <section class="project-header">
+      <h2>Experience Design</h2>
+      <h3>Projects from Experience Design (CMU ETC53613) taught by Ruth Comley.</h3>
+    </section>
+    <p><i>Includes projection mapping, binaural audio recording, artistic DMX lighting, a dark ride, and an escape room.
+      </i></p><br>
+
+    <div class="project-container">
+      <section class="project-card">
+        <div class="project-detail">
+          <span class="project-label">SOFTWARE AND SKILLS</span>
+          <span class="project-description">Unity, HeavyM, Adobe After Effects, DMX show controls</span>
+        </div>
+        <div class="project-detail">
+          <span class="project-label">TIMELINE</span>
+          <span class="project-description">Fall 2025</span>
+        </div>
+
+      </section>
+      <img src="Assets/deerstrangercover.png" alt="Project GIF" class="project-gif">
+    </div>
+
+    <section class="detail">
+      <div class="detail-container">
+        <h3 class="title">Escape Room</h3>
+        <div class="text-content">
+          <p>A narrative-driven escape room using an Egyptian tomb set with sensors embedded on the floors and walls,
+            and DMX lighting set up in the space. We were tasked with utilising the kiosk and the tomb to create an
+            immersive escape room experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <h3>Space Provided</h3>
+    <img src="Assets/ExperienceDesign/tombspace.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+      width="49%">
+    <img src="Assets/ExperienceDesign/kioskspace2.JPG" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+      width="49%">
+    <p style="text-align: center"><i>Tomb (left) and kiosk (right) sets provided for us to work with.</i></p>
+    <br> <br>
+
+    <br>
+    <section class="detail">
+      <div class="detail-container">
+        <h3 class="title">Experience Journey</h3>
+        <div class="text-content">
+          <p>Trapped in an Ancient Egyptian Tomb, you must solve the puzzles of the curse in order to escape. The lights
+            dim
+            throughout and when they go out it means the mummies will wake up to drive you mad for interrupting their
+            eternal
+            rest.</p>
+
+          <br>
+          <p><b>Estimated Length: </b>8 minutes</p>
+          <p><b>Actual Length: </b>10 minutes</p>
+        </div>
+      </div>
+    </section>
+
+    <img src="Assets/ExperienceDesign/Curse_ExperienceJourney.png" alt="Art Project 1" class="art-item"
+      onclick="openGallery(0)" width="100%">
+    <p style="text-align: center"><i>Experience journey map.</i></p>
+
+    <br>
+    <div class="detail-row">
+
+      <section class="goals-section">
+
+        <div class="goal-column">
+          <h3 class="title">Project Goals</h3>
+          <ul>
+            <li>Create a two player cooperative puzzle-based experience that explores the Cursed Tomb</li>
+            <li>One player is in the Tomb and the other person is at the Kiosk</li>
+            <li>Use a state map to track the users through the experience</li>
+            <li>Using monitors, touch screen, physical buttons, physical sensors, lighting, and speakers</li>
+            <li>Using theme - Ancient Egyptian Tomb</li>
+          </ul>
+        </div>
+
+        <div class="goal-column">
+          <h3 class="title">Experience Goals</h3>
+          <ul>
+            <li>Engage users to seek out the clues to solve the puzzles</li>
+            <li>Challenge users to navigate multiple types of pattern based puzzles</li>
+            <li>For group scenarios encourage them to work together as a team</li>
+            <li>Use lighting & sound to influence user decisions and emotions</li>
+            <li>Keep users engaged and curious without it being too difficult</li>
+          </ul>
+        </div>
+
+        
+    </div>
+
+    <h3>Experience Walkthrough (General steps in the experience from the POV of the guest):</h3>
+    <ul>
+      <li>The guest walks into the tomb</li>
+      <li>The kiosk is lit up</li>
+      <li>The kiosk buttons are arranged by the guest</li>
+      <li>The tomb is lit up</li>
+      <li>The experience narration plays the riddles and the kiosk screen book also shows the riddles and hints</li>
+    </ul>
+
+    <br> <br>
+    <br>
+    <h3>Final Experience</h3>
+    <div class="video-container">
+      <iframe width="755" height="425" src="https://www.youtube.com/embed/gHJ2qmA-lXQ" title="Deer Stranger"
+        frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <!-- <iframe width="1840" height="1035" src="https://www.youtube.com/embed/gHJ2qmA-lXQ" title="UX Projection Mapping Screen Recording" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    <p style="text-align: center"><i>HeavyM screen recording.</i></p>
+
+    <br> <br>
+
+
+    <br>
+    <h3>Playtesting</h3>
+    <img src="Assets/ExperienceDesign/wall-short (1).mp4" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+      width="100%">
+    <br> <br>
+
+    <div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    </section>
+
+
+    <section class="project-challenges">
+      <br>
+      <h3>Team</h3>
+      <p>Melanie Danver, Libby Egan, Mikayla Gee, Felix Li</p>
+      <br>
+      <h3>Challenges</h3>
+      <p>Making a cohesive 5 person project, and using ChromaDepth effectively while maintaining a visual style.</p>
+      <!-- <h3>Feedback Received</h3>
+      <p>Making a cohesive 5 person project, and using ChromaDepth effectively while maintaining a visual style.</p> -->
+    </section>
+    <br>
+    <div class="dynamic-hr"></div>
+
+
+    <section class="detail">
+      <div class="detail-container">
+        <h3 class="title">Halloween Theatre Projection Mapping</h3>
+        <div class="text-content">
+          <p>Impromptu project working with our advisor Ruth Comley's theatre company, Stage and Steel Productions'
+            annual Halloween festival.</p>
+          <p>We mapped the space and each created our own experience in a short afternoon. Mine was envisioned to be
+            eerie.</p>
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <h3>Space - Before</h3>
+    <img src="Assets/ExperienceDesign/space-before.heic" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+      width="100%">
+    <br> <br>
+    <h3>Mapping</h3>
+    <img src="Assets/ExperienceDesign/mapping1.heic" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+      width="100%">
+    <img src="Assets/ExperienceDesign/mapping2.heic" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+      width="100%">
+
+    <br> <br>
+    <h3>Complete Experience</h3>
+    <div class="video-container">
+      <iframe width="755" height="425" src="https://www.youtube.com/embed/D1pFYu0Qggk" title="Deer Stranger"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+    <br> <br>
+  </main>
+
+  <br>
+  <div class="dynamic-hr"></div>
+  <h2 style="text-align: center; font-family: 'Playfair Display', serif; color: #333;">
+    Check out some of my other projects!</h2>
+  <div class="next-projects-container">
+    <div class="next-project-preview">
+      <a href="twotofoxtrot.html">
+        <div class="preview-left">
+          <img src="Assets/TwoToFoxtrot2.png" alt="Next Project">
+          <div class="next-project-info">
+            <h3>Two to Foxtrot</h3>
+            <p>Asymmetric game where two players see different things and must communicate to win the
+              game.</p>
+          </div>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <div class="next-project-preview">
+      <a href="treasurefalls.html">
+        <div class="preview-left">
+          <img src="Assets/TreasureFalls2.png" alt="Next Project">
+          <div class="next-project-info">
+            <h3>Treasure Falls</h3>
+            <p>A 2-player experience using dance mats as controllers!</p>
+          </div>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <div class="next-project-preview">
+      <a href="thecatmeowspa.html">
+        <div class="preview-left">
+          <img src="Assets/thecatmeowspa.png" alt="Next Project">
+          <div class="next-project-info">
+            <h3>The Cat Meow Spa</h3>
+            <p>Bathing a cat using the Microsoft adaptive controllers!</p>
+          </div>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <footer id="contact">
+
+    <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+    <div class="social-icons">
+      <div class="button-container">
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+            style="width: 5.5em">
+        </div>
+
+        <div class="glass-btn blue-btn">
+
+          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+            style="width: 5.5em">
+
+        </div>
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+            style="width: 5.5em">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
