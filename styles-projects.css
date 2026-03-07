@@ -1071,3 +1071,9 @@ footer .social-icons a img {
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
+.audio-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically (if the container has a defined height) */
+}
