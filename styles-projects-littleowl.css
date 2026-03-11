@@ -1167,3 +1167,10 @@ footer .social-icons a img {
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically (if the container has a defined height) */
 }
+
+.overlay-image {
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.2s ease;
+  cursor: zoom-in;
+}
