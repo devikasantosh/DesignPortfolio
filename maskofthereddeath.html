@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+    <link rel="stylesheet" href="styles-projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Devika Santosh</h1>
+            <p>Entertainment Technology student, aspiring Experience Designer</p>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="maya.html">Technical Art</a></li>
+                <li><a href="contact.html">Résumé</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="breadcrumbs">
+        <a href="index.html">Home</a> &gt;
+        <a href="games.html">Games</a> &gt;
+        <span class="current">Mask of the Red Death</span>
+    </nav>
+
+    <main id="project-content">
+        <section class="project-header">
+            <h2>Mask of the Red Death</h2>
+            <h3>Pittsburgh Global Game Jam best theming winner 2026!</h3>
+        </section>
+        <p><i>The Red Death has come to the party. Find it among the masquerade guests before it’s too late. Inspired by
+                an Edgar Allan Poe short story, for the 2026 theme "mask".
+            </i></p><br>
+
+        <div class="project-container">
+            <section class="project-card">
+                <div class="project-detail">
+                    <span class="project-label">ROLE</span>
+                    <span class="project-description">Environment Artist, Graphic Designer</span>
+                </div>
+                <div class="project-detail">
+                    <span class="project-label">TIMELINE</span>
+                    <span class="project-description">48 hours</span>
+                </div>
+
+            </section>
+            <img src="Assets/ggj-banner.png" alt="Project GIF" class="project-gif">
+        </div>
+
+        <section class="detail">
+            <div class="detail-container">
+                <h3 class="title">Inspiration</h3>
+                <div class="text-content">
+                    <p>Theme provided? Mask. We spent 3 hours deliberating how best to fit this theme, and we finally
+                        combined two ideas we were all drawn to, masquerade balls and plague doctor masks, neatly into
+                        one narrative when we found our biggest inspiration - Edgar Allan Poe's <i>The Masque of the Red
+                            Death
+                        </i>, an 1842 short story about about a mysterious figure representing a deadly plague
+                        infiltrating a masquerade ball and kill everyone across 7 rooms (symbolic of the stages of
+                        life). </p>
+                </div>
+            </div>
+        </section>
+
+        <img src="Assets/GGJ_miro1.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+        <!-- <img src="Assets/GGJ-miro2.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="39%"> -->
+        <p style="text-align: center"><i>Initial ideation.</i></p>
+        <br>
+        <img src="Assets/GGJ-miro3.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+        <p style="text-align: center"><i>The final idea.</i></p>
+
+        <section class="detail">
+            <div class="detail-container">
+                <h3 class="title">Environment Art</h3>
+                <div class="text-content">
+                    <p>I took on the role of environment artist, learning Blender overnight and modelling the layout of
+                        the rooms, and texturing all seven based on the original source material.</p>
+                </div>
+            </div>
+        </section>
+        <img src="Assets/GGJ_envref.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+        <p style="text-align: center"><i>Reference from the source material.</i></p>
+        <img src="Assets/GGJ_env1.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+
+        <section class="detail">
+            <div class="detail-container">
+                <h3 class="title">Graphic Design</h3>
+                <div class="text-content">
+                    <p>Additionally, created the team's logo (go Poe's Crows!) and our game's cover art.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <img src="Assets/GGJ_TeamLogo.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
+        <img src="Assets/Mask of the Red Death - cover.png" alt="Art Project 1" class="art-item"
+            onclick="openGallery(0)" width="49%">
+
+        <section class="detail">
+            <div class="detail-container">
+                <h3 class="title">Play it, we promise you'll have fun!</h3>
+                <div class="text-content">
+                    <p>You can find our build on the <a
+                            href="https://globalgamejam.org/games/2026/mask-red-death-9-0">Global Game Jam website</a>.
+                    </p>
+                    <a href="https://globalgamejam.org/games/2026/mask-red-death-9-0"><img src="Assets/GGJ_website.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+                        width="100%"></a>
+                    <br>
+                    <p>Just download the release.zip Game Executable, extract the files, and run the Red Death
+                        application.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <div id="galleryOverlay" class="overlay">
+            <span class="close" onclick="closeGallery()">&times;</span>
+            <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+
+
+
+        <section class="project-challenges">
+            <br>
+            <h3>Team</h3>
+            <p>Josh Kaplan, Melanie Danver, Liam Neely, Riya Kanani, Alex Hall, Malaya Heflin, Grace Rodriguez</p>
+            <br>
+
+        </section>
+        <div class="dynamic-hr"></div>
+
+    </main>
+
+
+    <h2 style="text-align: center; font-family: 'Playfair Display', serif; color: #333;">
+        Check out some of my other projects!</h2>
+    <div class="next-projects-container">
+        <div class="next-project-preview">
+            <a href="twotofoxtrot.html">
+                <div class="preview-left">
+                    <img src="Assets/TwoToFoxtrot2.png" alt="Next Project">
+                    <div class="next-project-info">
+                        <h3>Two to Foxtrot</h3>
+                        <p>Asymmetric game where two players see different things and must communicate to win the
+                            game.</p>
+                    </div>
+                </div>
+                <div class="preview-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <div class="next-project-preview">
+            <a href="treasurefalls.html">
+                <div class="preview-left">
+                    <img src="Assets/TreasureFalls2.png" alt="Next Project">
+                    <div class="next-project-info">
+                        <h3>Treasure Falls</h3>
+                        <p>A 2-player experience using dance mats as controllers!</p>
+                    </div>
+                </div>
+                <div class="preview-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <div class="next-project-preview">
+            <a href="thecatmeowspa.html">
+                <div class="preview-left">
+                    <img src="Assets/thecatmeowspa.png" alt="Next Project">
+                    <div class="next-project-info">
+                        <h3>The Cat Meow Spa</h3>
+                        <p>Bathing a cat using the Microsoft adaptive controllers!</p>
+                    </div>
+                </div>
+                <div class="preview-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <footer id="contact">
+
+        <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a>
+        </p>
+        <div class="social-icons">
+            <div class="button-container">
+
+                <div class="glass-btn blue-btn">
+                    <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+                        style="width: 5.5em">
+                </div>
+
+                <div class="glass-btn blue-btn">
+
+                    <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+                        style="width: 5.5em">
+
+                </div>
+
+                <div class="glass-btn blue-btn">
+                    <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+                        style="width: 5.5em">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
