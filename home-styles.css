@@ -78,6 +78,29 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Hover state */
+nav ul li a:hover {
+    color: #333; /* Blue color on hover */
+}
+
+/* Focus and active states */
+nav ul li a:focus,
+nav ul li a.active {
+    color: #333; /* Blue color on active */
+}
+
+/* Optional underline effect */
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+  
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
 /* nav ul li.active {
     padding-left: 2px;
     padding-right: 2px;
@@ -182,6 +205,17 @@ h1 {
     text-align: center;
     color: #333; /* Adjust color if needed */
 }
+
+
+
+h2 {
+      text-align: center; /* Center text in both sections */
+
+  font-size: 2em;
+  color: #22577a;
+  margin-bottom: 15px;
+}
+
 
 /* Project Cards Layout */
 #game-projects {
