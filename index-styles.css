@@ -161,6 +161,7 @@ index-header::after, footer::after {
 }
 
 main {
+    scroll-margin-top: 20px;
     padding-top: 10px; /* Adjust the padding value as needed */
     /* Add any other main element styles here */
 }
@@ -209,15 +210,27 @@ h1 {
     background: transparent;
     border: none;
     cursor: pointer;
-    transform: translateY(70%);
+    transform: translateY(50%);
     padding: 50px;
     transition: transform 0.3s ease;
     z-index: 10;
+    animation: nudge 6s ease-in-out infinite;
 }
 
 .down-button img {
     width: 50px;  /* Adjust size of the arrow */
     height: auto;
+}
+
+@keyframes nudge {
+    0%, 90%, 100% {
+        /* Base position */
+        transform: translateY(50%);
+    }
+    95% {
+        /* Pushes FURTHER down (e.g., from 50% to 80%) */
+        transform: translateY(80%);
+    }
 }
 
 /* Optional: Add a smooth transition effect for scrolling */
@@ -241,6 +254,7 @@ html {
 }
 
 h1.dark{
+    font-size: 3em;
     color: #333;
 }
 .project {
@@ -354,7 +368,7 @@ h1.dark{
 }
 
 
-
+/* 
 
 .filter-container {
     display: flex;
@@ -377,7 +391,48 @@ h1.dark{
     background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
 background: #6d597a;
     color: white;
-  }
+  } */
+
+  
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures it looks good on mobile */
+  margin: 40px 0; /* Increased margin to separate it from other content */
+  gap: 15px;      /* Uses gap instead of margin for better spacing control */
+}
+
+.filter-button {
+  background-color: #f0f0f0; /* Lighter base to make it look clickable */
+  color: #333;
+  padding: 15px 35px;        /* Much wider and taller padding */
+  border: 2px solid #355070; /* Adds a border so it doesn't disappear */
+  cursor: pointer;
+  border-radius: 50px;       /* Pill shape makes it look more like a "UI" element */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;          /* Bolder text */
+  font-size: 1.1rem;         /* Slightly larger font size */
+  transition: all 0.3s ease; /* Smooth hover effects */
+  text-transform: uppercase; /* Makes it feel more professional/noticeable */
+  letter-spacing: 1px;
+}
+
+/* Hover Effect: Give the user immediate feedback */
+.filter-button:hover {
+  background-color: #355070;
+  color: white;
+  transform: translateY(-3px); /* Subtle lift effect */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.filter-button.active {
+  /* Use the gradient you already have, but make it vibrant */
+  background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
+  border-color: rgba(255, 255, 255, 0.8); 
+  color: white;
+  box-shadow: 0 4px 15px rgba(109, 89, 122, 0.4);
+  transform: scale(1.05); /* Make the active button slightly larger */
+}
 
 .project.hidden {
     display: none;
