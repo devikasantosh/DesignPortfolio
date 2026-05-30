@@ -1088,3 +1088,36 @@ footer .social-icons a img {
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically (if the container has a defined height) */
 }
+
+.findings-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+    margin:2rem 0;
+}
+
+.findings-grid-2{
+  display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.5rem;
+    margin:2rem 0;
+}
+
+.finding-card{
+    padding:1.5rem;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-1{background:#fbb4ae;}
+.card-2{background:#b3cde3;}
+.card-3{background:#ccebc5;}
+.card-4{background:#decbe4;}
+.card-5{background:#fed9a6;}
+.card-6{background:#ffffcc;}
+
+@media(max-width:768px){
+    .findings-grid{
+        grid-template-columns:1fr;
+    }
+}
