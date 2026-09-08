@@ -1376,7 +1376,6 @@ footer .social-icons a img {
 
 .media {
     overflow: hidden;
-    background: #ddd;
 }
 
 .media img,
@@ -1395,10 +1394,6 @@ footer .social-icons a img {
 .small {
     width: 50%;
     min-height: 100px;
-}
-
-.placeholder {
-    background: #ddd;
 }
 
 
