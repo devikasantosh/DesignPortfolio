@@ -476,7 +476,6 @@ main {
 .media img {
     width: 100%;
     border-radius: 10px;
-    margin-top: 20px;
 }
 
 .project-description,
@@ -1134,56 +1133,6 @@ footer .social-icons a img {
     /* Centers vertically (if the container has a defined height) */
 }
 
-.findings-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.findings-grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.finding-card {
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.card-1 {
-    background: #fbb4ae;
-}
-
-.card-2 {
-    background: #b3cde3;
-}
-
-.card-3 {
-    background: #ccebc5;
-}
-
-.card-4 {
-    background: #decbe4;
-}
-
-.card-5 {
-    background: #fed9a6;
-}
-
-.card-6 {
-    background: #ffffcc;
-}
-
-@media(max-width:768px) {
-    .findings-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 
 .lego-navigation {
@@ -1444,6 +1393,7 @@ footer .social-icons a img {
 }
 
 .small {
+    width: 50%;
     min-height: 100px;
 }
 
@@ -2158,46 +2108,6 @@ html {
 }
 
 
-.findings {
-    width: min(900px, 90%);
-    margin: 80px auto;
-}
-
-.findings h2 {
-    display: inline-block;
-    background: #4d006f;
-    color: white;
-    padding: 8px 18px;
-    font-size: 1rem;
-}
-
-.findings-board {
-    position: relative;
-    min-height: 250px;
-}
-
-.finding {
-    position: absolute;
-    background: #a04b91;
-    color: white;
-    padding: 15px;
-    width: 180px;
-}
-
-.finding-1 {
-    left: 0;
-    top: 20px;
-}
-
-.finding-2 {
-    left: 200px;
-    top: 5px;
-}
-
-.finding-3 {
-    left: 100px;
-    top: 110px;
-}
 
 /* Bookshop */
 #bookshop .section-heading {
@@ -2212,4 +2122,449 @@ html {
 /* Pride */
 #pride .section-heading {
     background-color: #6f008e;
+}
+.video-grid-vertical {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+/* LEFT TALL */
+.tall-left {
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+
+
+/* THREE SQUARES */
+.square-1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.square-2 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.square-3 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
+/* RIGHT TALL */
+.tall-right {
+    grid-column: 3;
+    grid-row: 1 / 4;
+}
+
+
+/* ALL MEDIA */
+.video-grid-vertical .video-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-grid-vertical video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.video-grid-vertical {
+    display: grid;
+
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: repeat(3, 200px);
+
+    gap: 8px;
+
+    justify-content: center;
+}
+
+
+.tall-left {
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+
+.square-1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.square-2 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.square-3 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.tall-right {
+    grid-column: 3;
+    grid-row: 1 / 4;
+}
+
+.video-grid-vertical .video-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-grid-vertical video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video-grid-vertical {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 8px;
+
+    width: 100%;
+    aspect-ratio: 5 / 3;
+}
+
+.video-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.tall-left {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+}
+
+.square-1 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.square-2 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.square-3 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.tall-right {
+    grid-column: 4 / 6;
+    grid-row: 1 / 4;
+}
+
+
+
+
+.media-grid-ij {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    height: 600px; /* controls the overall size */
+}
+
+/* All media */
+.media-item-ij {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* IMAGE */
+
+.image-main {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+.image-main img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* TOP RIGHT — SQUARE VIDEO */
+.video-square-top {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.video-square-top video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* BOTTOM LEFT — SQUARE VIDEO */
+.video-square-bottom {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.video-square-bottom video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* BOTTOM RIGHT — TWO VIDEOS */
+.video-stack {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    min-height: 0;
+}
+
+.video-wide {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-wide video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.media-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+/* =========================
+   TOP ROW
+   ========================= */
+
+.top-row {
+    height: 300px;
+}
+
+/* 4:3 image */
+.image-main {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-main img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Top-right square */
+.top-row .square-video {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.top-row .square-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================
+   BOTTOM ROW
+   ========================= */
+
+.bottom-row {
+    height: 300px;
+}
+
+/* Bottom-left square */
+.bottom-row .square-video {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.bottom-row .square-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* Right side: two videos */
+.video-stack {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    min-height: 0;
+}
+
+.wide-video {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.wide-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.image-container-barbie {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container-barbie img {
+  width: 25vw;       /* Sets width to 50% of the screen width */
+  height: auto;      /* Keeps the original aspect ratio */
+  margin-bottom: 20px; /* Adds space between the images */
+border-radius: 12px;}
+
+
+.lego-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.lego-column {
+    min-width: 0;
+}
+
+.lego-columns .video-grid-vertical {
+    width: 100%;
+    display: block;
+}
+
+.lego-columns .video-item,
+.lego-columns .tall-left {
+    width: 100%;
+    max-width: none;
+}
+
+.lego-columns .video-grid-vertical video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.media-grid.wes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 16px; /* Optional: adjusts the spacing between items */
+}
+
+/* Optional: ensures images fill their containers nicely */
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+
+
+
+
+
+
+/* Container section styling */
+.findings {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+/* Heading style */
+.findings h2 {
+  font-size: 1.75rem;
+  color: #111111;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 0.5rem;
+}
+
+/* Grid layout for the findings board */
+.findings-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual finding card styling */
+.finding {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle hover effect for interactivity */
+.finding:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph spacing and line height for readability */
+.finding p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
 }
