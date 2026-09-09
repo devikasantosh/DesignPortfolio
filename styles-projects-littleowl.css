@@ -1544,40 +1544,19 @@ footer .social-icons a img {
     background: rgba(0, 0, 0, 0.25);
 }
 
-
+/* Navbar */
 .sidebar {
-    position: sticky;
-    top: 350px;
-
-    display: flex;
-    flex-direction: column;
-
-    width: 160px;
-    flex-shrink: 0;
-
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
+    z-index: 10;
 }
 
-.sidebar a {
-    color: #949494;
-    text-decoration: none;
-    opacity: 0.6;
-    transition: opacity 0.2s ease;
+/* Hero */
+.project-hero {
+    position: relative;
+    z-index: 20;
 }
 
-.sidebar a.active {
-    opacity: 1;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.sidebar a:hover {
-    opacity: 1;
-}
-
-.sidebar .sub-links {
-    margin-left: 16px;
-    display: flex;
-    flex-direction: column;
+/* Impact cards */
+.impact-section {
+    position: relative;
+    z-index: 20;
 }
