@@ -1560,3 +1560,585 @@ footer .social-icons a img {
     position: relative;
     z-index: 20;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- GENERAL ---------- */
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        padding: 18px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 8px 15px;
+        margin-top: 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .project-hero {
+        width: 100%;
+        height: calc(100vh - 130px);
+        min-height: 500px;
+    }
+
+    .hero-content {
+        width: 90%;
+        margin-top: 0;
+    }
+
+    .hero-eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        margin-bottom: 8px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(55px, 18vw, 100px);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+        overflow-wrap: break-word;
+    }
+
+    .hero-subtitle {
+        margin: 15px 0 18px;
+        font-size: 16px;
+        line-height: 1.3;
+        letter-spacing: 0.04em;
+    }
+
+    .hero-description {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .hero-details {
+        gap: 6px;
+        font-size: 10px;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+    }
+
+    .scroll-indicator {
+        width: 36px;
+        height: 36px;
+        bottom: 18px;
+    }
+
+
+    /* ---------- IMPACT CARDS ---------- */
+
+    .impact-section {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .impact-card {
+        min-height: 280px;
+        padding: 45px 25px;
+        border-right: none;
+        border-bottom: 1px solid #bbb;
+    }
+
+    .impact-card:last-child {
+        border-bottom: none;
+    }
+
+    .impact-content {
+        width: 90%;
+    }
+
+    .impact-number {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    .impact-card h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .impact-card p {
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    #about {
+        max-width: 100%;
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .about-me {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .text-content {
+        max-width: 100%;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .about-me p {
+        line-height: 1.6;
+    }
+
+    #three-container-about {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    #three-container-about img {
+        max-width: 80%;
+    }
+
+
+    /* ---------- DETAIL / PROJECT INTRO ---------- */
+
+    .detail {
+        padding: 35px 20px;
+    }
+
+    .detail-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .title {
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .text-content {
+        width: 100%;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .text-content h4 {
+        font-size: 1.1rem;
+    }
+
+
+    /* ---------- PROJECT CARDS ---------- */
+
+    #game-projects {
+        width: 100%;
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .project:hover {
+        transform: none;
+    }
+
+
+    /* ---------- PROJECT INFO CARDS ---------- */
+
+    .project-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info-card,
+    .info-card-long {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* ---------- STICKY NOTES ---------- */
+
+    .sticky-notes-container {
+        width: 100%;
+        padding: 0 15px;
+        gap: 25px;
+    }
+
+    .sticky-note {
+        width: 100%;
+        max-width: 350px;
+        padding: 18px;
+        font-size: 0.9rem;
+    }
+
+
+    /* ---------- PROJECT CARD ---------- */
+
+    .project-card {
+        width: calc(100% - 30px);
+        max-width: none;
+        margin: 25px auto;
+        padding: 18px;
+    }
+
+    .project-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .project-label {
+        width: auto;
+        text-align: left;
+        font-size: 0.85rem;
+    }
+
+    .project-description {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+
+    /* ---------- PROJECT GIF ---------- */
+
+    .project-gif {
+        position: relative;
+        top: auto;
+        transform: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    /* ---------- CASE STUDY SECTIONS ---------- */
+
+    .case-section {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .section-content {
+        width: 100%;
+        max-width: none;
+        padding: 0 20px;
+    }
+
+
+    /* ---------- SIDEBAR ---------- */
+
+    /*
+       Keep the sidebar, but make it smaller on phones.
+       Since it is fixed, keep it out of the main content.
+    */
+
+    .sidebar {
+        left: 8px;
+        font-size: 10px;
+    }
+
+    .sidebar .sub-links {
+        margin-left: 10px;
+    }
+
+
+    /* ---------- BREADCRUMBS ---------- */
+
+    .breadcrumbs {
+        font-size: 11px;
+        padding: 8px 12px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+
+    /* ---------- PROGRESS GRID ---------- */
+
+    .progress-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .progress-item {
+        width: 100%;
+        flex: none;
+    }
+
+    .progress-item:hover {
+        flex: none;
+    }
+
+    .progress-details {
+        opacity: 1;
+        max-height: none;
+    }
+
+    .progress-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    /* ---------- DESIGN GRID ---------- */
+
+    .design-grid-props {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+
+    /* ---------- MEDIA ---------- */
+
+    .media video,
+    .media img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    #showreel {
+        margin-top: 25px;
+        padding: 0 15px;
+    }
+
+    #showreel video {
+        width: 100%;
+    }
+
+
+    /* ---------- AUDIO ---------- */
+
+    .audio-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .audio-container audio {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- NEXT PROJECTS ---------- */
+
+    .next-projects-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 15px;
+    }
+
+    .next-project-preview {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .next-project-preview:hover {
+        transform: none;
+    }
+
+
+    /* ---------- GALLERY OVERLAY ---------- */
+
+    .overlay-image {
+        max-width: 92%;
+        max-height: 80%;
+    }
+
+    .close {
+        top: 15px;
+        right: 15px;
+        font-size: 26px;
+    }
+
+    .prev {
+        left: 8px;
+        font-size: 26px;
+    }
+
+    .next {
+        right: 8px;
+        font-size: 26px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 25px 15px;
+        font-size: 0.8rem;
+    }
+
+    footer .social-icons a img {
+        width: 22px;
+        height: 22px;
+        margin: 0 5px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .button-container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .glass-btn {
+        width: 70px;
+        height: 70px;
+        margin: 0;
+    }
+
+
+    /* ---------- HORIZONTAL RULE ---------- */
+
+    .dynamic-hr {
+        width: 80%;
+        max-width: 580px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 1.35rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    nav ul {
+        gap: 6px 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.72rem;
+    }
+
+    .project-hero {
+        height: calc(100vh - 115px);
+        min-height: 450px;
+    }
+
+    .hero-content {
+        width: 92%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(48px, 19vw, 80px);
+    }
+
+    .hero-eyebrow {
+        font-size: 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-details {
+        font-size: 9px;
+    }
+
+    .impact-card {
+        min-height: 250px;
+        padding: 35px 20px;
+    }
+
+    .impact-number {
+        font-size: 48px;
+    }
+
+    .impact-card h2 {
+        font-size: 17px;
+    }
+
+    .impact-card p {
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 1.7rem;
+    }
+
+    .section-content {
+        padding: 0 15px;
+    }
+
+    .sidebar {
+        left: 5px;
+        font-size: 9px;
+    }
+
+    .design-grid-props {
+        grid-template-columns: 1fr;
+    }
+
+}
