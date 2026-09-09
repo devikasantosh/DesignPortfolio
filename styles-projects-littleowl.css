@@ -1174,3 +1174,410 @@ footer .social-icons a img {
   transition: transform 0.2s ease;
   cursor: zoom-in;
 }
+
+
+
+/* =========================================
+   PROJECT HERO
+========================================= */
+
+.project-hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    height: calc(100vh - 152px);
+    min-height: 500px;
+}
+
+
+/* Background video */
+
+.hero-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* Dark overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.30) 55%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* Hero text */
+
+.hero-content {
+  
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 85%);
+
+    text-align: center;
+
+    margin-top: -20px;
+}
+
+
+/* Small project category */
+
+.hero-eyebrow {
+    margin: 0 0 10px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* Main title */
+
+.hero-content h1 {
+    margin: 0;
+
+    font-size: clamp(80px, 12vw, 180px);
+
+    line-height: 0.85;
+
+    font-weight: 800;
+
+    letter-spacing: -0.04em;
+}
+
+
+/* Subtitle */
+
+.hero-subtitle {
+    margin: 20px 0 25px;
+
+    font-size: clamp(18px, 2vw, 28px);
+
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* One-line pitch */
+
+.hero-description {
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+    font-size: clamp(18px, 2vw, 20px);
+
+    line-height: 1.4;
+}
+
+
+/* Role / metadata */
+
+.hero-details {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+.hero-details strong {
+    font-weight: 800;
+        letter-spacing: 0.08em;
+
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+.scroll-indicator {
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: 1.5px solid #333;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+
+.scroll-indicator span {
+    width: 9px;
+    height: 9px;
+
+    border-right: 1.5px solid #333;
+    border-bottom: 1.5px solid #333;
+
+    transform: rotate(45deg) translate(-2px, -2px);
+}
+
+
+/* Hover */
+
+.scroll-indicator:hover {
+    background: white;
+
+    transform: translateX(-50%) scale(1.08);
+}
+
+/* =========================================
+   IMPACT SECTION
+========================================= */
+
+.impact-section {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    background: #f4f3ef;
+}
+
+
+.impact-card {
+    min-height: 300px;
+
+    padding: 60px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-right: 1px solid #bbb;
+}
+
+
+.impact-card:last-child {
+    border-right: none;
+}
+
+
+.impact-number {
+    font-size: 70px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+.impact-card h2 {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+}
+
+
+.impact-card p {
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+}
+
+.impact-section {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.impact-card {
+    position: relative;
+
+    min-height: 350px;
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+
+/* Darkens the photograph so the text remains readable */
+
+.impact-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    transition: background 0.3s ease;
+}
+
+
+/* Text */
+
+.impact-content {
+    position: relative;
+    z-index: 2;
+
+    width: 80%;
+
+    text-align: center;
+}
+
+
+/* Number */
+
+.impact-number {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+/* Heading */
+
+.impact-card h2 {
+    margin: 0 0 12px;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+}
+
+
+/* Description */
+
+.impact-card p {
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+
+/* Optional hover */
+
+.impact-card:hover .impact-overlay {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+.sidebar {
+    position: sticky;
+    top: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 160px;
+    flex-shrink: 0;
+
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar a {
+    color: #949494;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.sidebar a.active {
+    opacity: 1;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.sidebar a:hover {
+    opacity: 1;
+}
+
+.sidebar .sub-links {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
