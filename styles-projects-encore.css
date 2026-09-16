@@ -1,0 +1,2422 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+
+}
+
+/* Flexbox Layout to keep footer at the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #f6f4d2;
+  /* Text color */
+  background-color: #252422;
+  /* Background color */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 40% 30%; }
+  50% { background-position: 100% 70%; }
+  75% { background-position: 60% 20%; }
+  100% { background-position: 0% 50%; }
+}
+/* Header and Footer Styling */
+header,
+footer {
+  position: relative;
+  background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
+  color: #f6f4d2;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Noise Overlay */
+header::after,
+footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Assets/noise.png');
+  /* Add your noise image */
+  opacity: 0.15;
+  /* Adjust transparency */
+  pointer-events: none;
+  /* Ensures it doesn't interfere with clicks */
+}
+
+header a{
+  text-decoration: none;
+  color: inherit;
+}
+header h1 {
+  color: #f6f4d2;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f6f4d2;
+  font-weight: bold;
+}
+
+/* Hover state */
+nav ul li a:hover {
+  color: #333;
+  /* Blue color on hover */
+}
+
+/* Focus and active states */
+nav ul li a:focus,
+nav ul li a.active {
+  color: #f4f4f4;
+  /* Blue color on active */
+}
+
+/* Optional underline effect */
+nav ul li a:hover,
+nav ul li a.active {
+  text-decoration: underline;
+}
+
+
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content area takes up remaining space */
+main {
+  flex: 1;
+  padding: 40px;
+  padding-left: 100px;
+}
+
+#about {
+  max-width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Align items to the top */
+  padding: 40px 0;
+  /* Padding to create space at the top/bottom */
+  margin: 0 auto;
+  /* Center the section horizontally */
+}
+
+.about-me {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  /* Add gap between text and image */
+}
+
+.text-content {
+  flex: 1;
+  max-width: 60%;
+  font-size: 1.5em;
+}
+
+.about-me h1 {
+  background: linear-gradient(to right, #22577a, #38a3a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: black;
+}
+
+.about-me p {
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+#three-container-about {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#three-container-about img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Showreel Section */
+#showreel {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#showreel video {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+/* Projects Section */
+#projects {
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  margin: 10px 0;
+}
+
+
+#game-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.project {
+  width: 250px;
+  background-color: #f7f7f2;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #028090;
+}
+
+.project-info {
+  padding: 10px;
+}
+
+.project-info h2 {
+  font-family: 'Playfair Display', serif;
+  color: #028090;
+  font-size: 1.5em;
+}
+
+.project-info .tagline {
+  font-family: 'Montserrat', sans-serif;
+  color: #252422;
+  font-size: 1em;
+}
+
+.project video {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #028090;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.keywords {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keyword {
+  background-color: #007acc;
+  /* Blue bubble background */
+  color: #005999;
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.keyword:nth-child(odd) {
+  background-color: #005999;
+  /* Alternating orange bubbles */
+}
+
+.keyword:hover {
+  background-color: #005999;
+  /* Darker blue on hover */
+  cursor: default;
+}
+
+#game-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  display: block;
+  width: 300px;
+  /* Adjust as needed */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  text-decoration: none;
+  /* Remove default link underline */
+  color: inherit;
+  /* Keep text color consistent */
+  transition: transform 0.2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+}
+
+.project video,
+.project img {
+  width: 100%;
+  border-bottom: 2px solid #028090;
+  border-radius: 10px 10px 0 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #252422;
+  background-color: #f7f7f2;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #252422;
+  color: #f6f4d2;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  position: relative;
+  /* Ensure the footer can have effects like box-shadow */
+  box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53);
+  /* Glow effect on top */
+}
+
+/* Footer Styling */
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.glass-btn {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  margin-left: 1em;
+  margin-right: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.blue-btn {
+    -webkit-box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+    -moz-box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+    box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+
+    &:hover {
+      -webkit-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+      -moz-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+      box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+    }
+  }
+}
+
+.icon-link {
+  display: inline-flex;
+  /* Ensures the link behaves like a flex container */
+  align-items: center;
+  /* Centers the image vertically */
+  justify-content: center;
+  /* Centers the image horizontally */
+  text-decoration: none;
+  /* Removes underline */
+}
+
+.icon-link img {
+  width: 100%;
+  /* Makes the image take up 80% of its container */
+  height: auto;
+  /* Maintains aspect ratio */
+  object-fit: contain;
+  /* Ensures image fits well within its container */
+  transition: transform 0.3s ease;
+  /* Adds smooth hover animation */
+}
+
+.icon-link:hover img {
+  transform: scale(1.1);
+  /* Slightly enlarges the icon on hover */
+}
+
+
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.project-header h2 {
+  font-size: 2.5rem;
+  color: #22577a;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: #028090;
+  margin-top: 5px;
+}
+
+.media video,
+.media img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.project-description,
+.project-features,
+.project-technologies,
+.project-challenges {
+  margin-top: 0px;
+}
+
+h3 {
+  color: #22577a;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #f7f7f2;
+}
+
+
+#galleryOverlay {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlay {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#galleryOverlay {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Make sure it appears on top */
+}
+
+.overlay-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close,
+.prev,
+.next {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.close {
+  top: 20px;
+  right: 20px;
+}
+
+.prev {
+  top: 50%;
+  left: 20px;
+}
+
+.next {
+  top: 50%;
+  right: 20px;
+}
+
+.art-item {
+  cursor: pointer;
+}
+
+
+/*MOVILE FRIENDLY UI*/
+@media (max-width: 480px) {
+  .art-item {
+    width: 100%;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .project-features h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-features a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Styling for Overlay Gallery */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Styling for the footer */
+footer {
+  position: relative;
+  /* Ensure the footer can have effects like box-shadow */
+  box-shadow: 0px -10px 15px rgba(2, 128, 144, 0.53);
+  /* Glow effect on top */
+}
+
+/* Footer Styling */
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+
+.project-info {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 220px;
+}
+
+.info-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.info-card p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.info-card-long {
+  background: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 660px;
+}
+
+.info-card-long h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.info-card-long p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.sticky-notes-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sticky-note {
+  background: #FFEB3B;
+  padding: 15px;
+  width: 440px;
+  transform: rotate(-3deg);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  border-radius: 5px;
+}
+
+.sticky-note-broad {
+  background: #FFEB3B;
+  padding: 15px;
+  width: 440px;
+  transform: rotate(-3deg);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  border-radius: 5px;
+}
+
+
+.project-container {
+  position: relative;
+  display: inline-block; /* Ensures it wraps around the card properly */
+}
+/* Container for the card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+  margin: 30px 0 30px 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(-3deg);
+  /* Tilt the card by 3 degrees */
+  overflow: hidden;
+  /* Ensure the gradient stays within bounds */
+  position: relative;
+  z-index: 2; /* Ensures the card appears above the GIF */
+}
+
+/* Gradient effect on top edge */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  /* Gradient height */
+  background: linear-gradient(to right, #22577a, #38a3a5);
+}
+
+/* Each row is displayed horizontally */
+.project-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Left column label should be right-aligned */
+.project-label {
+  font-weight: bold;
+  color: #2c3e50;
+  width: 150px;
+  /* Fixed width to maintain alignment */
+  text-align: right;
+  /* Align the label text to the right */
+}
+
+/* Right column description should be left-aligned */
+.project-description {
+  color: #7f8c8d;
+  flex: 1;
+  text-align: left;
+  /* Align the description text to the left */
+}
+
+.project-gif {
+  position: absolute;
+  top: 50%;
+  transform: rotate(0deg) translateY(-50%);
+  z-index: 1; /* Puts it behind the card */
+  opacity: 0.8; /* Optional: Makes it slightly transparent */
+  pointer-events: none; /* Prevents accidental interactions */
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  color: #555;
+  padding: 10px 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  display: inline-block;
+
+  position: sticky;
+  top: 0;
+  /* Stick to the top of the page */
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Light shadow for depth */
+  z-index: 1000;
+  /* Ensure it stays above other content */
+}
+
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .current {
+  color: #333;
+  font-weight: bold;
+}
+
+.project-content {
+  position: relative; /* Ensures absolute positioning works inside */
+}
+
+
+.next-projects-container {
+  display: flex;
+  justify-content: center; /* Centers the row of cards */
+  gap: 80px; /* Space between cards */
+  padding: 20px; /* Padding above the footer */
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.next-project-preview {
+  flex: 1;
+  max-width: 300px; /* Keeps card size uniform */
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.next-project-preview a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-left {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.next-project-preview img {
+  width: 100%;
+  aspect-ratio: 4068 / 2836;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.next-project-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.next-project-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.next-project-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.preview-right {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.next-project-preview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+  background-color: white; /* Add a default background color */
+}
+
+.card.highlight {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff; /* Light blue highlight color */
+}
+
+.goals-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.goal-column ul {
+  color: #555;
+  line-height: 1.6;
+}
+
+.detail-row {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.detail-row .detail {
+  flex: 1;
+}
+
+.detail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10%;
+}
+
+.detail-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px; /* Creates space between title and text */
+}
+
+.title {
+  flex: 1;
+  font-size: 2.5rem; /* Bigger title */
+  font-weight: bold;
+  text-align: left;
+  background: linear-gradient(to right, #22577a, #38a3a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-content {
+  flex: 2;
+  font-size: 1rem;
+  text-align: left;
+  color: #555;
+}
+
+.text-content h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0077b5;
+}
+
+@media (max-width: 768px) {
+  .detail-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .title {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .text-content {
+      text-align: center;
+  }
+}
+
+
+
+.dynamic-hr {
+  width: 580px; /* Adjust width as needed */
+  height: 2px; /* Base thickness */
+  background: #333;
+  margin: 10px auto; /* Center align */
+  border-radius: 50px; /* Smooth edges */
+}
+
+.progress-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.progress-item {
+  flex: 1;
+  text-align: center;
+  transition: flex 0.3s ease;
+  overflow: hidden;
+}
+
+.progress-item img {
+  width: 150px;
+  height: 150px;
+}
+
+.progress-details {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.progress-item:hover {
+  flex: 2;
+}
+
+.progress-item:hover .progress-details {
+  opacity: 1;
+  max-height: 500px;
+}
+
+.design-grid-props {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 10px; /* spacing between images */
+}
+
+.art-item-props {
+  width: 100%;     /* fill the grid cell */
+  height: auto;    /* maintain aspect ratio */
+  object-fit: cover; /* optional for consistent size cropping */
+}
+
+
+
+
+
+
+.sticky-notes-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Enables responsiveness */
+  margin-top: 10px;
+}
+
+.sticky-note {
+  background: #FFEB3B;
+  padding: 20px;
+  width: 240px;
+  transform: rotate(-2deg);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically (if the container has a defined height) */
+}
+
+.findings-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+    margin:2rem 0;
+}
+
+.findings-grid-2{
+  display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.5rem;
+    margin:2rem 0;
+}
+
+.finding-card{
+    padding:1.5rem;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-1{background:#fbb4ae;}
+.card-2{background:#b3cde3;}
+.card-3{background:#ccebc5;}
+.card-4{background:#decbe4;}
+.card-5{background:#fed9a6;}
+.card-6{background:#ffffcc;}
+
+@media(max-width:768px){
+    .findings-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+
+.lego-navigation {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    width: 720px;
+    height: 360px;
+
+    gap: 0;
+/* 
+        width: 360px;
+    height: 180px; */
+
+    margin: 40px auto;
+}
+
+.lego-bookshop {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.lego-indiana {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.lego-pride {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.lego-brick {
+    position: relative;
+
+    display: grid;
+
+    padding: 12px;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.lego-bookshop {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    background: #d45f70;
+}
+
+.lego-indiana {
+    background: #75458e;
+
+    padding: 8px;
+}
+
+.lego-pride {
+    background: #6f008e;
+
+    padding: 8px;
+}
+
+.lego-stud {
+    position: relative;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    aspect-ratio: 1;
+
+    background: #222;
+
+    box-shadow:
+        inset 2px 2px 5px rgba(255,255,255,0.35),
+        inset -3px -3px 5px rgba(0,0,0,0.35),
+        2px 3px 5px rgba(0,0,0,0.25);
+}
+
+.lego-stud img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.lego-stud::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    box-shadow:
+        inset 3px 3px 5px rgba(255,255,255,0.3),
+        inset -3px -3px 5px rgba(0,0,0,0.3);
+
+    pointer-events: none;
+}
+
+.lego-brick {
+    box-shadow:
+        inset 3px 3px 8px rgba(255,255,255,0.25),
+        inset -4px -4px 8px rgba(0,0,0,0.2),
+        3px 5px 8px rgba(0,0,0,0.25);
+}
+
+.lego-brick:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.08);
+    cursor: pointer;
+}
+
+.lego-brick:active {
+    transform: translateY(1px);
+}
+
+
+
+
+/* =========================================
+   PROJECT HERO
+========================================= */
+
+.project-hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    height: calc(100vh - 152px);
+    min-height: 500px;
+}
+
+
+/* Background video */
+
+.hero-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* Dark overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.30) 55%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* Hero text */
+
+.hero-content {
+  
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 85%);
+
+    text-align: center;
+
+    margin-top: -20px;
+}
+
+
+/* Small project category */
+
+.hero-eyebrow {
+    margin: 0 0 10px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* Main title */
+
+.hero-content h1 {
+    margin: 0;
+
+    font-size: clamp(80px, 12vw, 180px);
+
+    line-height: 0.85;
+
+    font-weight: 800;
+
+    letter-spacing: -0.04em;
+}
+
+
+/* Subtitle */
+
+.hero-subtitle {
+    margin: 20px 0 25px;
+
+    font-size: clamp(18px, 2vw, 28px);
+
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* One-line pitch */
+
+.hero-description {
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+    font-size: clamp(18px, 2vw, 20px);
+
+    line-height: 1.4;
+}
+
+
+/* Role / metadata */
+
+.hero-details {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+.hero-details strong {
+    font-weight: 800;
+        letter-spacing: 0.08em;
+
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+.scroll-indicator {
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: 1.5px solid #333;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+
+.scroll-indicator span {
+    width: 9px;
+    height: 9px;
+
+    border-right: 1.5px solid #333;
+    border-bottom: 1.5px solid #333;
+
+    transform: rotate(45deg) translate(-2px, -2px);
+}
+
+
+/* Hover */
+
+.scroll-indicator:hover {
+    background: white;
+
+    transform: translateX(-50%) scale(1.08);
+}
+
+/* =========================================
+   IMPACT SECTION
+========================================= */
+
+.impact-section {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    background: #f4f3ef;
+}
+
+
+.impact-card {
+    min-height: 300px;
+
+    padding: 60px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-right: 1px solid #bbb;
+}
+
+
+.impact-card:last-child {
+    border-right: none;
+}
+
+
+.impact-number {
+    font-size: 70px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+.impact-card h2 {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+}
+
+
+.impact-card p {
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+}
+
+.impact-section {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.impact-card {
+    position: relative;
+
+    min-height: 350px;
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+
+/* Darkens the photograph so the text remains readable */
+
+.impact-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    transition: background 0.3s ease;
+}
+
+
+/* Text */
+
+.impact-content {
+    position: relative;
+    z-index: 2;
+
+    width: 80%;
+
+    text-align: center;
+}
+
+
+/* Number */
+
+.impact-number {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+/* Heading */
+
+.impact-card h2 {
+    margin: 0 0 12px;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+}
+
+
+/* Description */
+
+.impact-card p {
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+
+/* Optional hover */
+
+.impact-card:hover .impact-overlay {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+/* =========================================================
+   MOBILE RESPONSIVE OVERRIDES
+   Add this AFTER all existing CSS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0 15px;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        padding: 18px 15px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 8px 15px;
+        margin-top: 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    #about {
+        width: 100%;
+        max-width: none;
+        padding: 35px 10px;
+    }
+
+    .about-me {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .text-content {
+        width: 100%;
+        max-width: none;
+        font-size: 1rem;
+    }
+
+    .about-me p {
+        line-height: 1.6;
+    }
+
+    #three-container-about {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    #three-container-about img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* ---------- SHOWREEL ---------- */
+
+    #showreel {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    #showreel video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- PROJECT GRID ---------- */
+
+    #projects {
+        width: 100%;
+    }
+
+    .project-grid {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #game-projects {
+        width: 100%;
+        padding: 25px 0;
+        gap: 20px;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .project:hover {
+        transform: none;
+    }
+
+    .project video,
+    .project img {
+        width: 100%;
+    }
+
+
+    /* ---------- PROJECT INFO CARDS ---------- */
+
+    .project-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .info-card,
+    .info-card-long {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* ---------- KEYWORDS ---------- */
+
+    .keywords {
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .keyword {
+        font-size: 0.75rem;
+        padding: 5px 9px;
+    }
+
+
+    /* ---------- STICKY NOTES ---------- */
+
+    .sticky-notes-container {
+        width: 100%;
+        padding: 0 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .sticky-note,
+    .sticky-note-broad {
+        width: 100%;
+        max-width: 350px;
+        padding: 18px;
+        font-size: 0.9rem;
+    }
+
+
+    /* ---------- PROJECT CARD ---------- */
+
+    .project-container {
+        width: 100%;
+    }
+
+    .project-card {
+        width: calc(100% - 30px);
+        max-width: 350px;
+        margin: 25px auto;
+        padding: 18px;
+    }
+
+    .project-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .project-label {
+        width: auto;
+        text-align: left;
+        font-size: 0.85rem;
+    }
+
+    .project-description {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .project-gif {
+        position: relative;
+        top: auto;
+        transform: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    /* ---------- BREADCRUMBS ---------- */
+
+    .breadcrumbs {
+        width: 100%;
+        font-size: 11px;
+        padding: 8px 12px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+
+    /* ---------- GOALS ---------- */
+
+    .goals-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .goal-column {
+        width: 100%;
+    }
+
+
+    /* ---------- DETAIL SECTIONS ---------- */
+
+    .detail-row {
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .detail {
+        width: 100%;
+        padding: 35px 15px;
+    }
+
+    .detail-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .title {
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .text-content {
+        width: 100%;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .text-content h4 {
+        font-size: 1.1rem;
+    }
+
+
+    /* ---------- DIVIDER ---------- */
+
+    .dynamic-hr {
+        width: 80%;
+        max-width: 580px;
+    }
+
+
+    /* ---------- PROGRESS ---------- */
+
+    .progress-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .progress-item {
+        width: 100%;
+        flex: none;
+    }
+
+    .progress-item:hover {
+        flex: none;
+    }
+
+    .progress-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .progress-details {
+        opacity: 1;
+        max-height: none;
+    }
+
+
+    /* ---------- DESIGN GRID ---------- */
+
+    .design-grid-props {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        width: 100%;
+    }
+
+    .art-item-props {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* ---------- FINDINGS ---------- */
+
+    .findings-grid,
+    .findings-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 25px 0;
+    }
+
+    .finding-card {
+        padding: 20px;
+    }
+
+
+    /* =====================================================
+       LEGO NAVIGATION
+    ===================================================== */
+
+    .lego-navigation {
+        width: 100%;
+        max-width: 540px;
+        height: auto;
+
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+
+        margin: 70px auto;
+    }
+
+    .lego-bookshop {
+        width: 100%;
+        height: auto;
+
+        grid-column: 1;
+        grid-row: 1 / 3;
+
+        aspect-ratio: 1 / 1;
+        padding: 15px;
+    }
+
+    .lego-indiana {
+        width: 100%;
+        height: auto;
+
+        grid-column: 2;
+        grid-row: 1;
+
+        aspect-ratio: 1 / 1;
+        padding: 10px;
+    }
+
+    .lego-pride {
+        width: 100%;
+        height: auto;
+
+        grid-column: 2;
+        grid-row: 2;
+
+        aspect-ratio: 1 / 1;
+        padding: 10px;
+    }
+
+    .lego-stud {
+        width: 100%;
+        height: 100%;
+    }
+
+    .lego-brick {
+        min-width: 0;
+        min-height: 0;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .project-hero {
+        width: 100%;
+        height: calc(100vh - 125px);
+        min-height: 500px;
+    }
+
+    .hero-content {
+        width: 90%;
+        margin-top: 0;
+    }
+
+    .hero-eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        margin-bottom: 8px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(52px, 18vw, 100px);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+        overflow-wrap: break-word;
+    }
+
+    .hero-subtitle {
+        margin: 15px 0 18px;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .hero-description {
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .hero-details {
+        gap: 6px;
+        font-size: 9px;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+    }
+
+    .scroll-indicator {
+        width: 36px;
+        height: 36px;
+        bottom: 18px;
+    }
+
+
+    /* ---------- IMPACT SECTION ---------- */
+
+    .impact-section {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .impact-card {
+        width: 100%;
+        min-height: 280px;
+        padding: 45px 25px;
+        border-right: none;
+        border-bottom: 1px solid #bbb;
+    }
+
+    .impact-card:last-child {
+        border-bottom: none;
+    }
+
+    .impact-content {
+        width: 90%;
+    }
+
+    .impact-number {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    .impact-card h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .impact-card p {
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- MEDIA ---------- */
+
+    .media {
+        width: 100%;
+    }
+
+    .media video,
+    .media img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+
+    /* ---------- AUDIO ---------- */
+
+    .audio-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .audio-container audio {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- NEXT PROJECTS ---------- */
+
+    .next-projects-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 10px;
+    }
+
+    .next-project-preview {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .next-project-preview:hover {
+        transform: none;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 25px 15px;
+        font-size: 0.8rem;
+    }
+
+    footer .social-icons a img {
+        width: 22px;
+        height: 22px;
+        margin: 0 5px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .button-container {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .glass-btn {
+        width: 70px;
+        height: 70px;
+        margin: 0;
+    }
+
+
+    /* ---------- GALLERY / OVERLAY ---------- */
+
+    #galleryOverlay,
+    .overlay {
+        padding: 15px;
+    }
+
+    .overlay-image {
+        max-width: 92%;
+        max-height: 80%;
+    }
+
+    .close {
+        top: 15px;
+        right: 15px;
+        font-size: 26px;
+    }
+
+    .prev {
+        left: 8px;
+        font-size: 26px;
+    }
+
+    .next {
+        right: 8px;
+        font-size: 26px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 1.35rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    nav ul {
+        gap: 6px 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.72rem;
+    }
+
+
+    main {
+        padding: 0 10px;
+    }
+
+
+    /* About */
+
+    #about {
+        padding: 30px 5px;
+    }
+
+    .text-content {
+        font-size: 0.95rem;
+    }
+
+
+    /* Hero */
+
+    .project-hero {
+        height: calc(100vh - 115px);
+        min-height: 450px;
+    }
+
+    .hero-content {
+        width: 92%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(45px, 19vw, 80px);
+    }
+
+    .hero-eyebrow {
+        font-size: 9px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .hero-details {
+        font-size: 8px;
+    }
+
+
+    /* Impact */
+
+    .impact-card {
+        min-height: 250px;
+        padding: 35px 20px;
+    }
+
+    .impact-number {
+        font-size: 48px;
+    }
+
+    .impact-card h2 {
+        font-size: 17px;
+    }
+
+    .impact-card p {
+        font-size: 13px;
+    }
+
+
+    /* Projects */
+
+    .project {
+        max-width: 100%;
+    }
+
+    .info-card,
+    .info-card-long {
+        max-width: 100%;
+    }
+
+
+    /* Detail */
+
+    .title {
+        font-size: 1.7rem;
+    }
+
+    .section-content {
+        padding: 0 10px;
+    }
+
+
+    /* LEGO */
+
+    .lego-navigation {
+        width: 100%;
+        margin: 55px auto;
+    }
+
+    .lego-bookshop,
+    .lego-indiana,
+    .lego-pride {
+        padding: 8px;
+    }
+
+
+    /* Findings */
+
+    .finding-card {
+        padding: 16px;
+    }
+
+
+    /* Design grid */
+
+    .design-grid-props {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Sticky notes */
+
+    .sticky-note,
+    .sticky-note-broad {
+        max-width: 100%;
+    }
+
+
+    /* Buttons */
+
+    .glass-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+
+    
+  .design-grid-props {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    gap: 10px; /* Optional: adds spacing between images */
+    justify-content: center; /* Optional: center-aligns grid */
+  }
+  
+  .art-item-props {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    cursor: pointer; /* <-- This makes the cursor a pointer on hover */
+
+  }
+
+  .art-item-props2 {
+    width: 400px; /* Adjust as needed */
+    height: auto;
+    cursor: pointer; /* <-- This makes the cursor a pointer on hover */
+
+  }
+  
+  .design-grid {
+    text-align: center;
+}
