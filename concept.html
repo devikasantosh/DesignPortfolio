@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+
+  <link rel="stylesheet" href="concept-styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <h1>Devika Santosh</h1>
+      <p>Experience Designer & Creative Technologist</p>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="maya.html">Technical Art</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="breadcrumbs">
+        <a href="index.html">Home</a> &gt;
+        <a href="design.html">Design</a> &gt;
+        <span class="current">Concept Design</span>
+    </nav>
+  <main>
+    
+    <section id="art">
+      <h1>Concept Design</h1>
+      <br>
+      <p>Concept sketches created on Procreate, SketchUp, and Blender.</p>
+      <div class="art-grid">
+        <img src="Assets/concept1.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+        </div>
+              <div class="art-grid">
+
+        <img src="Assets/concept2 (1).png" alt="Art Project 2" class="art-item"
+          onclick="openGallery(1, 'Earth Day artwork for The Scientific Teen')">
+        <img src="Assets/concept2 (2).png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
+        <img src="Assets/concept2 (3).png" alt="Art Project 3" class="art-item" onclick="openGallery(3)">
+        
+      </div>
+
+      <div id="galleryOverlay" class="overlay">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+      </div>
+
+    </section>
+
+    <section class="hero">
+
+        <div class="hero-number">01</div>
+
+        <div class="hero-title">
+            <p class="eyebrow">CONCEPT DEVELOPMENT / ALT CTRL</p>
+
+            <h1>
+                GHOST<br>
+                DETECTION<br>
+                DEVICE
+            </h1>
+        </div>
+
+        <div class="hero-description">
+            <p>
+                Designing a physical device for an
+                alternate-control game about detecting
+                and interacting with ghosts.
+            </p>
+
+            <span>CONCEPT ART · PROCREATE · SKETCHUP · BLENDER</span>
+        </div>
+
+    </section>
+
+
+    <!-- BRIEF -->
+
+    <section class="editorial-section brief">
+
+        <div class="section-label">
+            <span>01</span>
+            <span>PROJECT BRIEF</span>
+        </div>
+
+        <div class="brief-grid">
+
+            <div class="brief-heading">
+                <h2>
+                    What would a
+                    ghost detector
+                    feel like?
+                </h2>
+            </div>
+
+            <div class="brief-copy">
+
+                <p class="lead">
+                    The goal was to develop the visual language
+                    and physical form of a fictional ghost-detection
+                    device before moving into fabrication and
+                    interactive prototyping.
+                </p>
+
+                <p>
+                    Early exploration focused on silhouette,
+                    ergonomics, interaction points, and the
+                    relationship between believable hardware
+                    and supernatural functionality.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="project-meta">
+
+            <div>
+                <span>ROLE</span>
+                <strong>Concept Artist</strong>
+            </div>
+
+            <div>
+                <span>TOOLS</span>
+                <strong>Procreate · SketchUp · Blender</strong>
+            </div>
+
+            <div>
+                <span>FORMAT</span>
+                <strong>Alternate-Control Game</strong>
+            </div>
+
+            <div>
+                <span>STAGE</span>
+                <strong>Concept Development</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HARDWARE -->
+
+    <section class="editorial-section hardware">
+
+        <div class="section-label">
+            <span>02</span>
+            <span>HARDWARE</span>
+        </div>
+
+        <div class="hardware-layout">
+
+            <div class="hardware-intro">
+
+                <h2>
+                    Built around
+                    physical interaction.
+                </h2>
+
+                <p>
+                    The concept was developed around a small
+                    collection of physical components that could
+                    become part of the player's interaction with
+                    the device.
+                </p>
+
+            </div>
+
+
+            <div class="components">
+
+                <div class="component">
+                    <span class="component-number">01</span>
+
+                    <div>
+                        <h3>A screen</h3>
+                        <p>Microcontroller</p>
+                    </div>
+                </div>
+
+                <div class="component">
+                    <span class="component-number">02</span>
+
+                    <div>
+                        <h3>4 switches</h3>
+                        <p>Visual feedback</p>
+                    </div>
+                </div>
+
+                <div class="component">
+                    <span class="component-number">03</span>
+
+                    <div>
+                        <h3>A VCR insert slot</h3>
+                        <p>Distance detection</p>
+                    </div>
+                </div>
+
+                <div class="component">
+                    <span class="component-number">04</span>
+
+                    <div>
+                        <h3>Antenna</h3>
+                        <p>Environmental feedback</p>
+                    </div>
+                </div>
+
+                <div class="component">
+                    <span class="component-number">05</span>
+
+                    <div>
+                        <h3>An on/off switch or lever</h3>
+                        <p>Player interaction</p>
+                    </div>
+                </div>
+
+                <div class="component">
+                    <span class="component-number">06</span>
+
+                    <div>
+                        <h3>A potentiometer</h3>
+                        <p>Player interaction</p>
+                    </div>
+                </div>
+
+                <div class="component">
+                    <span class="component-number">07</span>
+
+                    <div>
+                        <h3>A rotaty dial</h3>
+                        <p>Player interaction</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROCREATE -->
+
+    <section class="editorial-section sketches">
+
+        <div class="section-label">
+            <span>03</span>
+            <span>FORM EXPLORATION / PROCREATE</span>
+        </div>
+
+        <div class="sketch-intro">
+
+            <h2>
+                From gesture<br>
+                to silhouette.
+            </h2>
+
+            <p>
+                Rapid sketches explored different silhouettes,
+                control layouts, proportions, and ways the
+                device could communicate its function.
+            </p>
+
+        </div>
+
+
+        <div class="sketch-grid">
+<!-- 
+            <figure class="sketch sketch-large">
+                <img src="Assets/concept1.png">
+                <figcaption>
+                    <span>ITERATION 01</span>
+                    Initial silhouette exploration
+                </figcaption>
+            </figure>
+
+
+            <figure class="sketch sketch-small">
+                <img src="Assets/concept1.png">
+                <figcaption>
+                    <span>ITERATION 02</span>
+                    Control placement
+                </figcaption>
+            </figure>
+
+
+            <figure class="sketch sketch-small">
+                <img src="Assets/concept1.png">
+                <figcaption>
+                    <span>ITERATION 03</span>
+                    Alternate form
+                </figcaption>
+            </figure> -->
+
+
+            <figure class="sketch sketch-wide">
+                <img src="Assets/concept1.png">
+                <figcaption>
+                    <span>ITERATION 04</span>
+                    Interface and component study
+                </figcaption>
+            </figure>
+
+
+            <figure class="sketch sketch-medium">
+                <img src="Assets/concept5.png">
+                <figcaption>
+                    <span>ITERATION 05</span>
+                    Ergonomic exploration
+                </figcaption>
+            </figure>
+
+
+            <figure class="sketch sketch-medium">
+                <img src="Assets/Device_Concept.gif">
+                <figcaption>
+                    <span>ITERATION 06</span>
+                    Final direction
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKETCHUP -->
+
+    <section class="editorial-section modeling">
+
+        <div class="section-label">
+            <span>04</span>
+            <span>FORM DEVELOPMENT / SKETCHUP</span>
+        </div>
+
+        <div class="modeling-heading">
+
+            <h2>
+                Making the<br>
+                sketch physical.
+            </h2>
+
+            <p>
+                The selected concepts were translated into
+                rough 3D forms to test proportions, construction,
+                and physical relationships between components.
+            </p>
+
+        </div>
+
+
+        <div class="model-grid">
+
+            <figure>
+                <img src="Assets/concept2 (1).png">
+
+                <figcaption>
+                    <span>01</span>
+                    Primary volume
+                </figcaption>
+            </figure>
+
+
+            <figure class="model-offset">
+                <img src="Assets/concept2 (2).png">
+
+                <figcaption>
+                    <span>02</span>
+                    Component placement
+                </figcaption>
+            </figure>
+
+
+            <figure>
+                <img src="Assets/concept2 (3).png">
+
+                <figcaption>
+                    <span>03</span>
+                    Refined proportions
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </section>
+
+
+    <!-- BLENDER -->
+
+    <section class="editorial-section blender">
+
+        <div class="section-label">
+            <span>05</span>
+            <span>VISUALIZATION / BLENDER</span>
+        </div>
+
+        <div class="blender-intro">
+
+            <div>
+                <h2>
+                    From object<br>
+                    to artifact.
+                </h2>
+            </div>
+
+            <p>
+                Blender was used to push the selected form
+                toward a more resolved visual direction and
+                explore how the device could exist within the
+                game's world.
+            </p>
+
+        </div>
+
+
+        <figure class="render-main">
+
+            <img src="Assets/concept3.png">
+
+            <figcaption>
+                <span>FINAL FORM / 01</span>
+                Main device visualization
+            </figcaption>
+
+        </figure>
+
+
+        <div class="render-secondary">
+
+            <figure>
+                <img src="Assets/concept4.png">
+
+                <figcaption>
+                    <span>DETAIL / 02</span>
+                    Secondary visualization
+                </figcaption>
+            </figure>
+
+            <div class="render-note">
+                <span>DEVELOPMENT NOTE</span>
+
+                <p>
+                    The final form balances recognizable
+                    hardware with a visual language that
+                    suggests something unfamiliar.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="dynamic-hr"></div>
+
+  </main>
+
+
+  <h2 style="text-align: center; font-family: 'Playfair Display', serif; color: #333;">
+      Check out some of my other projects!</h2>
+  <div class="next-projects-container">
+    <div class="next-project-preview">
+      <a href="shader.html">
+        <div class="preview-left">
+          <img src="Assets/shadernearresized.gif" alt="Next Project">
+          <div class="next-project-info">
+            <h3>Technical Art - Shaders</h3>
+            <p>A glitch effect shader created for CMU's Building Virtual Worlds Round 4, to respawn a
+            fantasy character after they fall into a pit.</p>
+
+          </div>
+        </div>
+        <div class="preview-right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+
+
+              </div>
+          </a>
+      </div>
+
+      <div class="next-project-preview">
+        <a href="arduino.html">
+          <div class="preview-left">
+            <img src="Assets/workingvid.gif" alt="Next Project">
+            <div class="next-project-info">
+              <h3>Arduino Animation with Pulse Sensor Input</h3>
+              <p>8x8 LED grid animation created with Arduino that changes pace based on pulse sensor data.</p>
+  
+            </div>
+          </div>
+          <div class="preview-right">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+  
+
+              </div>
+          </a>
+      </div>
+
+
+      <div class="next-project-preview">
+        <a href="ui.html">
+          <div class="preview-left">
+            <img src="Assets/uicover.png" alt="Next Project">
+            <div class="next-project-info">
+              <h3>UI Design</h3>
+              <p>Extracurricular projects - mobile UI design, web-based UI, and UI programming for games.</p>
+            <p>Features a music application UI that won second place in a design hackathon.</p>
+            </div>
+          </div>
+          <div class="preview-right">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+  
+              </div>
+          </a>
+      </div>
+  </div>
+
+  <footer id="contact">
+    <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
+    <div class="social-icons">
+      <div class="button-container">
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+            style="width: 5.5em">
+        </div>
+
+        <div class="glass-btn blue-btn">
+
+          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
+            style="width: 5.5em">
+
+        </div>
+
+        <div class="glass-btn blue-btn">
+          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
+            style="width: 5.5em">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
