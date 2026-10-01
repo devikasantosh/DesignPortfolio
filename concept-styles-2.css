@@ -2808,14 +2808,14 @@ footer .social-icons a img {
         margin-bottom: 90px;
     }
 
-    /* Always image first on mobile */
-    .concept-row .concept-media,
-    .concept-row:nth-child(even) .concept-media {
+    .concept-row .concept-text,
+    .concept-row:nth-child(even) .concept-text {
         order: 1;
     }
 
-    .concept-row .concept-text,
-    .concept-row:nth-child(even) .concept-text {
+    /* Image second on mobile */
+    .concept-row .concept-media,
+    .concept-row:nth-child(even) .concept-media {
         order: 2;
     }
 
