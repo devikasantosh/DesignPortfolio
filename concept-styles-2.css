@@ -3342,28 +3342,6 @@ body {
 }
 
 
-/* =========================================================
-   TOUCH DEVICES
-   Cursor tooltips don't make sense on phones.
-   Hide them rather than having floating text stuck
-   somewhere on the screen.
-========================================================= */
-
-@media (hover: none), (pointer: coarse) {
-
-    .cursor-tooltip {
-
-        display: none !important;
-    }
-
-    .life-card:hover img,
-    .gallery-card:hover img {
-
-        transform: none;
-    }
-
-}
-
 
 /* =========================================================
    VERY SMALL PHONES
