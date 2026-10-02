@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
   <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles-projects.css">
 </head>
 
 <body>
-    <header>
+  <header>
     <a href="index.html">
       <h1>Devika Santosh</h1>
       <p>Experience Designer & Creative Technologist</p>
@@ -29,52 +32,62 @@
       </ul>
     </nav>
   </header>
-      <nav class="breadcrumbs">
-        <a href="index.html">Home</a> &gt;  
-        <a href="maya.html">Tools and Pipeline</a> &gt;  
-        <span class="current">Programming Natural Variety</span>
+    <nav aria-label="Breadcrumb" class="sticky-breadcrumbs">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="maya.html">Tools and Pipeline</a></li>
+            <li><span aria-current="page">Programming Natural Variety</span></li>
+        </ol>
     </nav>
-      <main id="project-content">
-        <section class="project-header">
-          <h2>Programming Natural Variety</h2>
-          
-      
-        
-        <p class="tagline">Inspired by <a href="https://sciencebehindpixar.org/pipeline/sets-and-cameras/activity">The Science behind Pixar exhibit</a> on Programming Natural Variety! <br> I created a tool where an artist can create a patch of grass by adjusting colour, variation in colour, height and width of grass blades, area of patch, curvature, and number of blades of grass.
-        </p>
-        <div class="art-grid">
-          <img src="Assets/maya5.png" height=200 alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-          <img src="Assets/maya6.png" height=200 alt="Art Project 2" class="art-item" onclick="openGallery(1)">
+
+  <main id="project-content">
+    <section class="project-header">
+      <h2>Programming Natural Variety</h2>
+
+
+
+      <p class="tagline">Inspired by <a href="https://sciencebehindpixar.org/pipeline/sets-and-cameras/activity">The
+          Science behind Pixar exhibit</a> on Programming Natural Variety! <br> I created a tool where an artist can
+        create a patch of grass by adjusting colour, variation in colour, height and width of grass blades, area of
+        patch, curvature, and number of blades of grass.
+      </p>
+      <div class="art-grid">
+        <img src="Assets/maya5.png" height=200 alt="Art Project 1" class="art-item" onclick="openGallery(0)">
+        <img src="Assets/maya6.png" height=200 alt="Art Project 2" class="art-item" onclick="openGallery(1)">
       </div>
-      
+
       <div id="galleryOverlay" class="overlay">
         <span class="close" onclick="closeGallery()">&times;</span>
         <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
         <a class="prev">&#10094;</a>
         <a class="next">&#10095;</a>
+      </div>
+
+    </section>
+
+    <br>
+    <div class="video-container">
+      <iframe width="728.64" height="410.52" src="https://www.youtube.com/embed/VA-H0ZGRN1I"
+        title="Programming Natural Variety" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      </iframe>
     </div>
 
-          </section>
-
-          <br>
-          <div class="video-container">
-                <iframe width="728.64" height="410.52" src="https://www.youtube.com/embed/VA-H0ZGRN1I" title="Programming Natural Variety" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
-
-            </iframe>
-        </div>
-    
-        <section class="project-features">
-          <!-- <h3>Code</h3>
+    <section class="project-features">
+      <!-- <h3>Code</h3>
           <a href=https://github.com/devikasantosh/ArcheologicalRuinsGenerator>https://github.com/devikasantosh/ArcheologicalRuinsGenerator</a>
           <br><br> -->
-          
-          <h3>Credits</h3>
-          <p>Inspiration: <a href="https://sciencebehindpixar.org/pipeline/sets-and-cameras/activity">Science behind Pixar</a></p>
-          
-        </section>
 
-        
-      
+      <h3>Credits</h3>
+      <p>Inspiration: <a href="https://sciencebehindpixar.org/pipeline/sets-and-cameras/activity">Science behind
+          Pixar</a></p>
+
+    </section>
+
+
+
     <div class="dynamic-hr"></div>
 
   </main>
@@ -90,8 +103,8 @@
           <div class="next-project-info">
             <h3>Scene Scatter Tool - Generating Archeological Ruins</h3>
             <p>Created using Maya and Python scripting, this script allows the artist to generate an
-            archeological ruins scene by selecting 3D models of arches and pillars with varying levels of decay, and
-            setting the number of 3D models and their relative distance.</p>
+              archeological ruins scene by selecting 3D models of arches and pillars with varying levels of decay, and
+              setting the number of 3D models and their relative distance.</p>
           </div>
         </div>
         <div class="preview-right">
@@ -111,7 +124,7 @@
           <div class="next-project-info">
             <h3>Technical Art - Shaders</h3>
             <p>A glitch effect shader created for CMU's Building Virtual Worlds Round 4, to respawn a
-            fantasy character after they fall into a pit.</p>
+              fantasy character after they fall into a pit.</p>
 
           </div>
         </div>
