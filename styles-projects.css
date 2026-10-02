@@ -2456,3 +2456,58 @@ body {
         white-space: nowrap;
     }
 }
+
+
+.sticky-breadcrumbs {
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  z-index: 100; /* Keeps it above other content */
+  background-color: #ffffff; /* Solid background prevents text overlap */
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+    color: #555;
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-breadcrumbs li + li::before {
+  content: ">";
+  margin: 0 8px;
+  color: #666;
+}
+
+.sticky-breadcrumbs a{
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: 500;
+}
+
+
+.sticky-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.sticky-breadcrumbs [aria-current="page"] {
+    color: #333;
+    font-weight: bold;
+}
