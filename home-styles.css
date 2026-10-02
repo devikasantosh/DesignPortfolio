@@ -350,3 +350,52 @@ h2 {
     color: #333;
     font-weight: bold;
 }
+
+
+.keywords {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.keyword-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.keyword-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.keyword, .keyword-role, .keyword-topic {
+    background: linear-gradient(to right, #6ec3f4, #b9beff);
+    -webkit-background-clip: text; 
+    color: transparent;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.keyword {
+    background: #b56576; /* Blue tone */
+}
+
+.keyword-role {
+    color: #333333; /* Red tone */
+    border: 0.5px solid #333333;
+}
+
+.keyword-topic {
+    /*background: #0077b5; /* Red tone */
+    background: #b56576; /* Blue tone */
+
+}
