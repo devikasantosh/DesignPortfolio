@@ -250,6 +250,14 @@ h2 {
     object-fit: cover;
 }
 
+
+.project img {
+    width: 100%;
+    aspect-ratio: 4068 / 2836;
+    height: auto;
+    object-fit: cover;
+}
+
 .project-info {
     padding: 20px;
     display: flex;
