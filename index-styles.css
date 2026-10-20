@@ -281,6 +281,42 @@ h1.dark{
     object-fit: cover;
 }
 
+.ribbon {
+  position: absolute;
+  left: 0;
+  right: 0;   /* stretches the full width of the image */
+  bottom: 0;
+  padding: 10px 16px;
+  background: rgba(181, 88, 107, 0.85); /* your pink at ~85% opacity */
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.project-image {
+  position: relative;   /* the ribbon anchors to this */
+}
+
+.project-image img {
+  display: block;       /* removes the small gap under inline images */
+  width: 100%;
+}
+
+.ribbon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 16px;
+background: linear-gradient(
+    to right,
+    rgba(181, 88, 107, 0) 0%,     /* fully transparent on the left */
+    rgba(181, 88, 107, 1) 100%  /* strong pink on the right */
+  );  color: #fff;
+  text-align: right;
+}
+
 .project-info {
     padding: 20px;
     display: flex;
