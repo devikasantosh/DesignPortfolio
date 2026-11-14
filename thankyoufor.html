@@ -4,238 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+    <title>Thank You For… | Devika Santosh – Museum Exhibit Playtesting &amp; UX Research</title>
+    <meta name="description"
+        content="A gratitude wall exhibit for the Children’s Museum of Pittsburgh, with a formative evaluation of 10 child–caregiver pairs using observation, open-ended notes and a short post-experience form.">
+    <meta property="og:title" content="Thank You For… | Devika Santosh">
+    <meta property="og:description"
+        content="A gratitude wall exhibit for the Children’s Museum of Pittsburgh, with a formative evaluation of how children recognize and express gratitude.">
+    <meta property="og:image" content="https://devikasantosh.github.io/DesignPortfolio/Assets/LiM-Banner.png">
+    <link rel="icon" type="image/png" href="Assets/favicon.png">
 
-    <link rel="stylesheet" href="styles-projects.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-projects-ty.css?v=20261113">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
-<body>
+<!--
+  NOTES FOR DEVIKA (delete before publishing)
+  - ALT TEXT: drafted from file names and captions without seeing the images. Where it says "Exhibit photo N of 14"
+    or "Chart: …", replace it with what the image shows or the takeaway of the chart.
+  - Search this file for "CHECK:" to find spots where the numbers or claims need your confirmation.
+  - Search for "TODO:" for places where only you know the answer.
+  - Every onclick="openGallery(0)" is left exactly as it was so script.js keeps working.
+-->
+
+<body class="research-case">
     <header>
-    <a href="index.html">
-      <h1>Devika Santosh</h1>
-      <p>Experience Designer & Creative Technologist</p>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="design.html">Design</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="production.html">Production</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Résumé</a></li>
-      </ul>
-    </nav>
-  </header>
-   <nav aria-label="Breadcrumb" class="sticky-breadcrumbs">
+        <a href="index.html">
+            <h1>Devika Santosh</h1>
+            <p>Experience Designer &amp; Creative Technologist</p>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="production.html">Production</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Résumé</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav aria-label="Breadcrumb" class="sticky-breadcrumbs">
         <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="design.html">Design</a></li>
-            <li><span aria-current="page">Thank You For...</span></li>
+            <li><span aria-current="page">Thank You For…</span></li>
         </ol>
     </nav>
 
-
- 
     <main id="project-content">
+
+        <!-- ============ HERO ============ -->
         <section class="project-header">
-            <h2>Thank You For...</h2>
-            <h3>An interactive gratitude wall exhibit for the Kindness Gallery at the Children's Museum of Pittsburgh,
-                designed to hit SEL goals, where children can better recognize other people’s actions and develop
-                gratitude.</h3>
+            <h2>Thank You For…</h2>
+            <p class="tagline">An interactive gratitude wall for the Kindness Gallery at the Children’s Museum of
+                Pittsburgh. Children pick blocks for a person, what that person did, and how it made them feel, then
+                receive an award sticker.</p>
         </section>
-        <p><i><b>Ideation, concept art, laser cutting, fabrication, 2D artist, playtesting data collector.</b><br>
-            </i></p><br>
 
         <div class="project-container">
             <section class="project-card">
                 <div class="project-detail">
                     <span class="project-label">ROLE</span>
-                    <span class="project-description">Artist, fabricator, data collector</span>
+                    <span class="project-description">Playtest data collector, 2D artist, fabricator</span>
                 </div>
                 <div class="project-detail">
                     <span class="project-label">TIMELINE</span>
                     <span class="project-description">Spring 2026</span>
                 </div>
-
             </section>
-            <img src="Assets/LiM-Banner.png" alt="Project GIF" class="project-gif">
+            <img src="Assets/LiM-Banner.png" alt="Project banner for Thank You For…" class="project-gif">
         </div>
 
-        <section class="detail">
-            <div class="detail-container">
-                <h3 class="title">Design Brief</h3>
-                <div class="text-content">
-                    <p>Develop a portable family-friendly exhibit setup that engages children and their caregivers in
-                        activities that foster contemplation, conversations, behaviors and practices that unpack a
-                        socio-emotional skill area.</p>
+        <nav class="toc" aria-label="On this page">
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#early-research">Early research</a></li>
+                <li><a href="#evaluation">Evaluation</a></li>
+                <li><a href="#findings">Findings</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+                <li><a href="#process">Design process</a></li>
+            </ul>
+        </nav>
+
+        <!-- ============ SUMMARY ============ -->
+        <section id="summary">
+            <h2>Summary</h2>
+
+            <dl class="snapshot">
+                <div>
+                    <dt>Context</dt>
+                    <dd>Learning in Museums, a Carnegie Mellon University HCI course project for the Children’s Museum
+                        of Pittsburgh</dd>
                 </div>
-            </div>
+                <div>
+                    <dt>Team</dt>
+                    <dd>Libby Egan, Jillian Haguisan, Hales Wilson, and me</dd>
+                </div>
+                <div>
+                    <dt>What I did</dt>
+                    <dd>Ideation, concept art, laser cutting, fabrication, 2D art, and playtest data collection
+                        <!-- TODO: add your research responsibilities here, e.g. which of the four study roles you played, and whether you helped write the research questions or analyze the data. -->
+                    </dd>
+                </div>
+                <div>
+                    <dt>Methods</dt>
+                    <dd>Observation (behavior and talk), open-ended notes, a short post-experience form, and photo
+                        documentation</dd>
+                </div>
+                <div>
+                    <dt>Participants</dt>
+                    <dd>10 children (ages 0–5 and 6–10), each with an accompanying adult</dd>
+                </div>
+                <div>
+                    <dt>Setting</dt>
+                    <dd>Children’s Museum tent at CMU’s Spring Carnival</dd>
+                </div>
+            </dl>
+
+            <h3>Key findings</h3>
+            <ul class="key-findings">
+                <li><strong>Age shaped the experience.</strong> Children (6–10) chose blocks quickly, asked questions
+                    out loud, and 5 thanked us at the end. Young children (0–5) were mostly nonverbal, hesitated, and
+                    needed help from a facilitator or parent.</li>
+                <li><strong>Caregivers helped children finish, but often shifted their answers.</strong></li>
+                <li><strong>Some block labels did not work.</strong> “Guardian” and “Relative” were never chosen, and
+                    most feeling blocks were justified as happiness.</li>
+                <li><strong>The sample is small (N=10),</strong> so these are directions for the next iteration, not
+                    conclusions.</li>
+            </ul>
+
+            <h3>Design brief</h3>
+            <p>Develop a portable, family-friendly exhibit setup that engages children and their caregivers in
+                activities that foster contemplation, conversations, behaviors and practices that unpack a
+                social-emotional learning (SEL) skill area.</p>
+
+            <h3>Exhibit description</h3>
+            <p><b>Thank You For… </b>explores how children can practice gratitude by recognizing how acts of service
+                support them and show care, while connecting these experiences to how kindness makes them feel and
+                inspires them to treat others with kindness. Let’s celebrate the people who choose kindness and learn
+                how we can share it with others!</p>
         </section>
 
-        <section class="detail">
-            <div class="detail-container">
-                <h3 class="title">Exhibit Description</h3>
-                <div class="text-content">
-                    <p><b>Thank You For… </b>explores how children can practice gratitude by recognizing how acts of
-                        service support them and show care, while connecting these experiences to how kindness makes
-                        them feel and inspires them to treat others with kindness. Let's celebrate the people who choose
-                        kindness and learn how we can share it with others!</p>
+        <!-- ============ EARLY RESEARCH ============ -->
+        <section id="early-research">
+            <h2>Early research: Squishy Topics conversations</h2>
+            <p><b>Activity: Make an award!</b><br>
+                Children were asked to pick an adjective that best described themselves or someone else. They were
+                then prompted to draw anything that represented themselves or someone else embodying that adjective.
+            </p>
+
+            <figure>
+                <div class="fig-grid cols-2">
+                    <img src="Assets/ty_awardset1.jpg" alt="Setup for the “Make an award” activity, view 1"
+                        class="art-item" onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/ty_awardset2.jpg" alt="Setup for the “Make an award” activity, view 2"
+                        class="art-item" onclick="openGallery(0)" loading="lazy">
                 </div>
-            </div>
+                <figcaption>Setup.</figcaption>
+            </figure>
+
+            <figure>
+                <div class="fig-grid cols-2">
+                    <img src="Assets/ty_award1.jpg" alt="Award created in the activity, 1 of 4" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/ty_award2.jpg" alt="Award created in the activity, 2 of 4" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/ty_award3.jpg" alt="Award created in the activity, 3 of 4" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/ty_award4.jpg" alt="Award created in the activity, 4 of 4" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                </div>
+                <figcaption>Awards created.</figcaption>
+            </figure>
+
+            <figure>
+                <div class="fig-grid cols-2">
+                    <img src="Assets/ty_chosentrait.png" alt="Chart: the traits children chose for their awards"
+                        class="art-item" onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/ty_chosensubject.png"
+                        alt="Chart: who children chose as the subject of their awards" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                </div>
+                <figcaption>Findings: chosen traits and chosen subjects.
+                    <!-- TODO: add a one-sentence takeaway for these two charts. -->
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="Assets/ty_relationship.png"
+                    alt="Chart: each award recipient’s relationship to the child, and the trait the child chose"
+                    class="art-item" onclick="openGallery(0)" loading="lazy">
+                <figcaption>Findings: the subject’s relationship to the award recipient, and what trait they chose.
+                    <!-- TODO: add a one-sentence takeaway for this chart. -->
+                </figcaption>
+            </figure>
         </section>
 
+        <!-- ============ EVALUATION ============ -->
+        <section id="evaluation">
+            <h2>Formative evaluation</h2>
 
-        <section class="case-section">
-            <img src="Assets/LiM_CMP_1.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
-            <img src="Assets/LiM_CMP_2.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
+            <h3>Study objectives</h3>
+            <p>This evaluation continued to test whether the experience helps children connect the acts of service
+                others do for them to gratitude, and whether it helps them recognize how kind actions affect them and
+                how they can pass the kindness along. After our previous playtest we knew where the project had room to
+                improve, so we used that feedback to strengthen our questions and data collection.</p>
 
-
-            <img src="Assets/LiM_CMP_3.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
-            <img src="Assets/LiM_CMP_4.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
-
-
-
-            <img src="Assets/LiM_CMP_5.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
-            <img src="Assets/LiM_CMP_6.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
-            <br><br>
-            <section class="case-section">
-                <img src="Assets/ty_concept1.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <img src="Assets/ty_concept2.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-
-
-                <img src="Assets/ty_concept3.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <p style="text-align: center"><i>Concept Iterations.</i></p>
-
-            </section>
-            <br>
-            <br>
-
-
-            <section class="detail">
-                <div class="detail-container">
-                    <h3 class="title">Research: Squishy Topics Conversations</h3>
-                    <div class="text-content">
-                        <p><b>Activity: Make an award!</b><br>
-                            Children were asked to pick an adjective that best described themself or someone else. They
-                            were
-                            then prompted to draw anything that represented either themself or someone else embodying
-                            that
-                            adjective.
-                        </p>
-                    </div>
+            <figure>
+                <div class="fig-grid cols-2">
+                    <img src="Assets/LiM_CMP_7.jpg" alt="Exhibit photo 7 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_8.jpg" alt="Exhibit photo 8 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
                 </div>
-            </section>
+            </figure>
 
-            <section class="case-section">
-                <img src="Assets/ty_awardset1.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <img src="Assets/ty_awardset2.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <p style="text-align: center"><i>Setup.</i></p>
-                <br>
-
-                <img src="Assets/ty_award1.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="63%">
-                <img src="Assets/ty_award2.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="36%">
-                <img src="Assets/ty_award3.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <img src="Assets/ty_award4.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <p style="text-align: center"><i>Awards created.</i></p>
-                <br>
-
-                <section class="case-section">
-                    <img src="Assets/ty_chosentrait.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                        width="49%">
-                    <img src="Assets/ty_chosensubject.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                        width="49%">
-                    <p style="text-align: center"><i>Findings: chosen traits and chosen subjects.</i></p>
-                    <br>
-                    <img src="Assets/ty_relationship.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                        width="100%">
-                    <p style="text-align: center"><i>Findings: Subject’s Relationship to the Award Recipient
-                            and What Trait they Chose.</i></p>
-                    <br>
-
-
-                </section>
-
-
-                <section class="detail">
-                    <div class="detail-container">
-                        <h3 class="title">Experience Map</h3>
-                        <div class="text-content">
-                            <p>Storyboards and experience journey maps</p>
-                        </div>
-                    </div>
-                </section>
-
-                <img src="Assets/TY-storyboard.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="37%">
-                <img src="Assets/TY-experience map.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="62%">
-
-                <br>
-                <br>
-                <section class="detail">
-                    <div class="detail-container">
-                        <h3 class="title">Prototyping and Playtesting</h3>
-                        <div class="text-content">
-                            <p>Playtesting at the Children's Museum Tent during CMU's Spring Carnival.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <img src="Assets/Carnival1.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <img src="Assets/Carnival2.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <p style="text-align: center"><i>Photography by José Francisco Mireles Macario.</i></p>
-                <br>
-
-                <h2>Formative Evaluation Plan </h2>
-                <p><b>Study Objectives:
-                    </b></p>
-                <p>The purpose of the evaluation is to continue gauging if the experience helps children connect acts of
-                    service others do for them to gratitude. The experience is aimed to help children recognize how kind
-                    actions affect them and how they can pass the kindness along. After our last playtest evaluation we
-                    understand where our project had room for improvement and we are planning to use the feedback to
-                    help strengthen our questions and data collection processes.
-                </p>
-                <br>
-                <img src="Assets/LiM_CMP_7.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <img src="Assets/LiM_CMP_8.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="49%">
-                <br>
-                <br>
-                <p><b>Guiding Research Questions:
-                    </b></p>
-                <table border="1">
+            <h3>Guiding research questions</h3>
+            <div class="table-wrap" role="region" aria-label="Guiding research questions" tabindex="0">
+                <table>
                     <thead>
-                        <tr style="background-color: #f2f2f2;">
-                            <th>SEL Research Question</th>
-                            <th>What will count as evidence (indicators)</th>
-                            <th>How will you collect data</th>
+                        <tr>
+                            <th scope="col">SEL research question</th>
+                            <th scope="col">What counts as evidence (indicators)</th>
+                            <th scope="col">How data was collected</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Are visitors able to identify/recognize something someone has done for them that they're
-                                thankful for?</td>
-                            <td>The visitor can answer the "What have they done that you're thankful for?" question
-                                without further probing/facilitation.</td>
+                            <td>Are visitors able to identify or recognize something someone has done for them that
+                                they’re thankful for?</td>
+                            <td>The visitor can answer “What have they done that you’re thankful for?” without further
+                                probing or facilitation.</td>
                             <td>
                                 <ul>
                                     <li>Observation (talk)</li>
@@ -244,9 +249,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Are visitors able to express how they feel from those actions?</td>
-                            <td>The visitor can answer "How does that make you feel?" question without further
-                                probing/facilitation.</td>
+                            <td>Are visitors able to express how they feel about those actions?</td>
+                            <td>The visitor can answer “How does that make you feel?” without further probing or
+                                facilitation.</td>
                             <td>
                                 <ul>
                                     <li>Observation (talk)</li>
@@ -255,14 +260,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Did the visitor express gratitude towards those actions?</td>
+                            <td>Did the visitor express gratitude toward those actions?</td>
                             <td>
                                 <ul>
-                                    <li>Explicitly saying they're "thankful/grateful" when the person does that action
-                                    </li>
+                                    <li>Explicitly saying they’re “thankful” or “grateful” when the person does that
+                                        action</li>
                                     <li>Expressing happiness in response to the person doing that action</li>
-                                    <li>Explanation of why they chose a particular feeling block</li>
-                                    <li>Other (?)</li>
+                                    <li>Explaining why they chose a particular feeling block</li>
                                 </ul>
                             </td>
                             <td>
@@ -278,8 +282,8 @@
                             <td>Did visitors understand what to do without the facilitator?</td>
                             <td>
                                 <ul>
-                                    <li>Being able to interact with the exhibit without confusion</li>
-                                    <li>Did not ask facilitator what they need to do</li>
+                                    <li>Interacting with the exhibit without confusion</li>
+                                    <li>Not asking the facilitator what they need to do</li>
                                 </ul>
                             </td>
                             <td>
@@ -296,7 +300,7 @@
                             <td>
                                 <ul>
                                     <li>Pausing at parts of the exhibit</li>
-                                    <li>Asking questions/clarifications</li>
+                                    <li>Asking questions or for clarification</li>
                                 </ul>
                             </td>
                             <td>
@@ -308,518 +312,611 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
 
-                <img src="Assets/LiM_CMP_9.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="63%">
-                <img src="Assets/LiM_CMP_10.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                    width="36%">
-                <br>
-                <br>
-                <p><b>Mixed Method Data Collection Plan:</b></p>
-                <br>
-                <h2>Role 1 – Facilitator</h2>
-                <h3>Introduction</h3>
-                <blockquote>
-                    "Welcome to our experience! We are students from Carnegie Mellon University testing class project
-                    ideas for Children's Museum of Pittsburgh about emotions."
-
-
-
-                    "Also before we get you started is it ok if we note any observations we have as you interact with
-                    the experience?"
-
-
-
-                    "Also would it be ok if we took photos to help document our project?"
-                </blockquote>
-
-                <h3>Initiate Exhibit</h3>
-                <blockquote>
-                    "Can you think of a special person in your life?"
-
-
-                    "What is something they did that you remember?"
-
-
-                    "How did it make you feel?"
-
-
-                    "Why did you pick that block/response?"
-                </blockquote>
-
-                <h3>For Adults (The "Why")</h3>
-                <p>The goal of this project is to help children practice gratitude by recognizing how acts of service
-                    support them and show care, while connecting these experiences to how kindness makes them feel and
-                    inspires them to treat others with kindness.</p>
-            </section>
-            <br>
-            <hr>
-            <br>
-            <section>
-
-                <h2>Role 2 – Observer (Behavior Focus)</h2>
-                <p><em>Format: Written notes - open ended</em></p>
-                <strong>Observe and Write Down:</strong>
-                <ul>
-                    <li>What do people do?</li>
-                    <li>Where is their attention? Do parents and children focus on different things?</li>
-                    <li>Do visitors struggle to figure out what to do? What seems to cause this?</li>
-                    <li>Are instructions clear and intuitive? When does the facilitator step in?</li>
-                    <li>Do visitors have difficulty using parts of the exhibit?</li>
-                    <li>How long do they stay? Why do they leave?</li>
-                </ul>
-            </section>
-            <br>
-            <hr>
-            <br>
-            <section>
-                <h2>Role 3 – Listener (Talk Focus)</h2>
-                <p><em>Format: Google Form</em></p>
-                <strong>Listen for, record, and photograph:</strong>
-                <ul>
-                    <li>What are visitors saying, and to whom?</li>
-                    <li>What questions do they ask (to you or each other)?</li>
-                    <li>Do you hear any learning talk or discussion about your SEL topic?</li>
-                    <li>Do people make personal connections or references?</li>
-                </ul>
-            </section>
-            <br>
-            <hr>
-            <br>
-            <section>
-                <h2>Role 4 – Technician/Operations</h2>
-                <p>Running the technical aspects of the awards and concluding the experience.</p>
-                <blockquote>
-                    "Would you mind answering a few questions before you head out?"
-
-
-                    <em>(Fill out the Google Form Link on behalf of the participant)</em>
-
-
-
-                    "Thanks so much for taking the time to try out our experience!"
-                </blockquote>
-            </section>
-            <br>
-            <hr>
-            <br>
-            <section>
-                <h2>Methodology & Data Collection</h2>
-                <ul>
-                    <li><strong>Behavioral:</strong> Observational written notes.</li>
-                    <li><strong>Visual/Auditory:</strong> Photographic records and detailed notes on visitor dialogue
-                        (Role 3).</li>
-                </ul>
-            </section>
-            <br><br>
-
-            <section class="detail">
-                <div class="detail-container">
-                    <h3 class="title">Study</h3>
-                    <div class="text-content">
-                        <p>Data collected and inferences drawn.</p>
-                    </div>
+            <figure>
+                <div class="fig-grid cols-2">
+                    <img src="Assets/LiM_CMP_9.jpg" alt="Exhibit photo 9 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_10.jpg" alt="Exhibit photo 10 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
                 </div>
-            </section>
+            </figure>
 
-            <h2>Reporting Items</h2>
+            <h3>Data collection plan: four study roles</h3>
+            <p>Four team members each took one role during every session, so one person watched behavior, one listened
+                to talk, and the exhibit still ran smoothly.</p>
+
+            <div class="table-wrap" role="region" aria-label="Study roles" tabindex="0">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Role</th>
+                            <th scope="col">What they did</th>
+                            <th scope="col">Format</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Facilitator</td>
+                            <td>Welcomed visitors, asked permission to take notes and photos, and prompted them through
+                                the exhibit</td>
+                            <td>Scripted prompts</td>
+                        </tr>
+                        <tr>
+                            <td>2. Observer (behavior focus)</td>
+                            <td>Watched what people do, where their attention goes, where they struggle, and how long
+                                they stay</td>
+                            <td>Written notes, open-ended</td>
+                        </tr>
+                        <tr>
+                            <td>3. Listener (talk focus)</td>
+                            <td>Listened for what visitors say and ask, learning talk about the SEL topic, and personal
+                                connections</td>
+                            <td>Google Form, plus photos</td>
+                        </tr>
+                        <tr>
+                            <td>4. Technician / operations</td>
+                            <td>Ran the technical side of the awards, asked a few closing questions, and wrapped up the
+                                experience</td>
+                            <td>Google Form, filled in on the participant’s behalf</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <ul>
-                <li>Total number of participants N = 10</li>
-                <li>Adults accompanying the child did not participate in the exhibit; they either observed or
-                    facilitated</li>
-                <li>10/10 participants were accompanied by an adult</li>
-                <ul>
-                    <li>4/10 participants were also accompanied by another child (friend/sibling)</li>
-                </ul>
+                <li><strong>Behavioral:</strong> observational written notes.</li>
+                <li><strong>Visual and auditory:</strong> photographic records and detailed notes on visitor dialogue
+                    (Role 3).</li>
             </ul>
-            <img src="Assets/LiM/graph1.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
-            <img src="Assets/LiM/graph2.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="49%">
-            <br><br>
-            <h2>Overall Data</h2>
-            <p>The responses from all participants are shown below. Note that some participants completed the activity
-                multiple times, and all of their attempts were included. Additionally, 3 participants (#3-YC-F, #7-YC-M,
-                and #9-YC-M) did not fully complete the exhibit/left some questions blank. 1 “What did they do?”
-                response was missed during observation.
-            </p>
 
-            <table border="1">
-                <thead>
-                    <tr style="background-color: #f2f2f2;">
-                        <th>Who is someone you’re thankful for?</th>
-                        <th>What did they do that you’re thankful for?</th>
-                        <th>How did it make you feel?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="Assets/LiM/graph3.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
-                        </td>
-                        <td>
-                            <img src="Assets/LiM/graph4.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
-                        </td>
-                        <td>
-                            <img src="Assets/LiM/graph5.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
+            <details>
+                <summary>Role 1 – Facilitator script</summary>
+                <div class="details-body">
+                    <h3>Introduction</h3>
+                    <blockquote>
+                        <p>“Welcome to our experience! We are students from Carnegie Mellon University testing class
+                            project ideas for Children’s Museum of Pittsburgh about emotions.”</p>
+                        <p>“Also before we get you started is it ok if we note any observations we have as you interact
+                            with the experience?”</p>
+                        <p>“Also would it be ok if we took photos to help document our project?”</p>
+                    </blockquote>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br><br>
+                    <h3>Initiate exhibit</h3>
+                    <blockquote>
+                        <p>“Can you think of a special person in your life?”</p>
+                        <p>“What is something they did that you remember?”</p>
+                        <p>“How did it make you feel?”</p>
+                        <p>“Why did you pick that block/response?”</p>
+                    </blockquote>
 
+                    <h3>For adults (the “why”)</h3>
+                    <p>The goal of this project is to help children practice gratitude by recognizing how acts of
+                        service support them and show care, while connecting these experiences to how kindness makes
+                        them feel and inspires them to treat others with kindness.</p>
+                </div>
+            </details>
 
-            <h2>Behavior Data Coding</h2>
-            <table border="1">
-                <thead>
-                    <tr style="background-color: #f2f2f2;">
-                        <th> </th>
-                        <th>Patterns</th>
-                        <th>Data Collection Method</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Engagement</td>
-                        <td>
-                            <ul>
-                                <li>Immediately picked blocks</li>
-                                <li>Looked through all options</li>
-                                <li>Created custom blocks</li>
-                                <li>Talked about personal stories (pets, friends)</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Observation (talk)</li>
-                                <li>Observation (behavior)</li>
-                                <li>Open notes</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Confusion</td>
-                        <td>
-                            <ul>
-                                <li>Didn’t understand “feeling blocks” at first</li>
-                                <li>Asked “what is this?”?</li>
-                                <li>Skipped steps (red → blue, ignored yellow)</li>
-                                <li>Needed facilitator/parent help</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Observation (talk)</li>
-                                <li>Observation (behavior)</li>
-                                <li>Open notes</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br><br>
+            <details>
+                <summary>Role 2 – Observer prompts</summary>
+                <div class="details-body">
+                    <p><em>Format: written notes, open-ended</em></p>
+                    <p><strong>Observe and write down:</strong></p>
+                    <ul>
+                        <li>What do people do?</li>
+                        <li>Where is their attention? Do parents and children focus on different things?</li>
+                        <li>Do visitors struggle to figure out what to do? What seems to cause this?</li>
+                        <li>Are instructions clear and intuitive? When does the facilitator step in?</li>
+                        <li>Do visitors have difficulty using parts of the exhibit?</li>
+                        <li>How long do they stay? Why do they leave?</li>
+                    </ul>
+                </div>
+            </details>
 
-            <h2>Young Children (0-5yr) Findings</h2>
-            <li>
-                <ul>3 participants fully completed exhibit at least once</ul>
-            <li>
-                <ul>#7-YC-M left before completing “Feeling”</ul>
-                <ul>#9-YC-F left before completing “Person” and “Action” on 2nd try</ul>
-            </li>
-            <ul>All participants were mostly nonverbal</ul>
-            <ul>All participants displayed hesitation & needed facilitator/parent’s help</ul>
-            <ul>2 participants answered questions out of order</ul>
-            <ul>Gratitude was not observed from any participants</ul>
-            </li>
-            <img src="Assets/LiM/graph6.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="50%">
+            <details>
+                <summary>Role 3 – Listener prompts</summary>
+                <div class="details-body">
+                    <p><em>Format: Google Form</em></p>
+                    <p><strong>Listen for, record, and photograph:</strong></p>
+                    <ul>
+                        <li>What are visitors saying, and to whom?</li>
+                        <li>What questions do they ask (to you or each other)?</li>
+                        <li>Do you hear any learning talk or discussion about your SEL topic?</li>
+                        <li>Do people make personal connections or references?</li>
+                    </ul>
+                </div>
+            </details>
 
-            <table border="1">
-                <thead>
-                    <tr style="background-color: #f2f2f2;">
-                        <th>Who is someone you’re thankful for?</th>
-                        <th>What did they do that you’re thankful for?</th>
-                        <th>How did it make you feel?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="Assets/LiM/graph7.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
-                        </td>
-                        <td>
-                            <img src="Assets/LiM/graph8.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
-                        </td>
-                        <td>
-                            <img src="Assets/LiM/graph9.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
+            <details>
+                <summary>Role 4 – Technician / operations script</summary>
+                <div class="details-body">
+                    <p>Running the technical aspects of the awards and concluding the experience.</p>
+                    <blockquote>
+                        <p>“Would you mind answering a few questions before you head out?”</p>
+                        <p><em>(Fill out the Google Form link on behalf of the participant.)</em></p>
+                        <p>“Thanks so much for taking the time to try out our experience!”</p>
+                    </blockquote>
+                </div>
+            </details>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br><br>
-            <h2>Children (6-10yr) Findings</h2>
-            <li>
-                <ul>6 participants fully completed exhibit at least once</ul>
-            <li>
-                <ul>#4-C-M completed exhibit 3x</ul>
-                <ul>#10-C-M completed exhibit 2x</ul>
-            </li>
-            <ul>4 participants chose blocks immediately</ul>
-            <ul>2 participants asked for clarification</ul>
-            <li>
-                <ul>#4-C-M asked “What is this?” to the reflective & feeling blocks</ul>
-            </li>
-            <ul>Participants were observed to be generally more talkative than YC</ul>
-            <ul>2 participants answered questions out of order</ul>
-            <ul>5 participants thanked us at the end of the exhibit</ul>
-            </li>
-            <img src="Assets/LiM/graph10.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="50%">
+            <h3>Participants and setting</h3>
+            <!-- CHECK: confirm you have permission (from the museum, the course, and families) to publish photos of children on a public site, or blur faces. -->
+            <p>We playtested in the Children’s Museum tent during CMU’s Spring Carnival. Before starting, facilitators
+                asked each family for permission to take notes and photos.</p>
+            <ul>
+                <li>Total number of participants: N = 10</li>
+                <li>All 10 participants were accompanied by an adult, who observed or facilitated but did not take part
+                    in the exhibit
+                    <ul>
+                        <li>4 of 10 participants were also accompanied by another child (friend or sibling)</li>
+                    </ul>
+                </li>
+            </ul>
 
-            <table border="1">
-                <thead>
-                    <tr style="background-color: #f2f2f2;">
-                        <th>Who is someone you’re thankful for?</th>
-                        <th>What did they do that you’re thankful for?</th>
-                        <th>How did it make you feel?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="Assets/LiM/graph11.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
-                        </td>
-                        <td>
-                            <img src="Assets/LiM/graph12.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
-                        </td>
-                        <td>
-                            <img src="Assets/LiM/graph13.png" alt="Art Project 1" class="art-item"
-                                onclick="openGallery(0)" width="100%">
+            <figure>
+                <div class="fig-grid cols-2">
+                    <img src="Assets/LiM/graph1.png" alt="Chart: participant details (1 of 2)" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM/graph2.png" alt="Chart: participant details (2 of 2)" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                </div>
+                <!-- TODO: add a caption saying what graph1 and graph2 show. -->
+            </figure>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br><br>
+            <figure>
+                <div class="fig-grid cols-2">
+                    <img src="Assets/Carnival1.jpg"
+                        alt="Playtesting at the Children’s Museum tent during CMU’s Spring Carnival, photo 1"
+                        class="art-item" onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/Carnival2.jpg"
+                        alt="Playtesting at the Children’s Museum tent during CMU’s Spring Carnival, photo 2"
+                        class="art-item" onclick="openGallery(0)" loading="lazy">
+                </div>
+                <figcaption>Playtesting at the Children’s Museum tent during CMU’s Spring Carnival. Photography by José
+                    Francisco Mireles Macario.</figcaption>
+            </figure>
+        </section>
 
-            <h2>Notable Observations</h2>
-            <table border="1">
-                <thead>
-                    <tr style="background-color: #f2f2f2;">
-                        <th>Gratitude Behaviors</th>
-                        <th>Confusion Behaviors</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            #4-C-M displayed strong gratitude and gave the facilitator a hug upon receiving
-                            the award
-                            sticker</td>
-                        <td>
-                            #10-C-M asked "what do you do after this?" after placing person block
-                            <br>
-                            <ul>
-                                <li>We can implement design changes to make goals/transitions more clear
-                                </li>
+        <!-- ============ FINDINGS ============ -->
+        <section id="findings">
+            <h2>Findings</h2>
 
-                            </ul>
-                        </td>
-                    </tr>
-                    <td>
-                        #3-YC-F reached out for the award stickers and said "I want thank you". She then
-                        gave it to her
-                        dad
-                        <br>
-                        <ul>
-                            <li>Indicates even though she didn’t complete the activity, she could still
-                                recognize the
-                                meaning of “thank you” to an extent
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        #4-C-M asked "what is this?" to the reflective blocks and feeling blocks
-                        <br>
-                        <ul>
-                            <li>We can work on better explanation of the reflective blocks
-                            </li>
-                            <li>We still prefer ambiguous options to allow individual interpretations, even
-                                if it risks
-                                participant confusion
-                            </li>
-                        </ul>
-                    </td>
-                </tbody>
-            </table>
+            <h3>Overall data</h3>
+            <p>Participant IDs read number, age group (YC = young children 0–5, C = children 6–10), and M/F. The charts
+                below show the responses from all participants. Some participants completed the activity multiple
+                times, and all of their attempts are included. Three participants (#3-YC-F, #7-YC-M, and #9-YC-M) did
+                not fully complete the exhibit or left some questions blank. One “What did they do?” response was
+                missed during observation.</p>
+            <!-- CHECK: #9 is “YC-M” here but “YC-F” in the Young Children list below. Make them match. -->
 
-            <br><br>
+            <div class="table-wrap" role="region" aria-label="Responses from all participants" tabindex="0">
+                <table class="chart-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Who is someone you’re thankful for?</th>
+                            <th scope="col">What did they do that you’re thankful for?</th>
+                            <th scope="col">How did it make you feel?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="Assets/LiM/graph3.png"
+                                    alt="Chart: who all participants said they were thankful for" class="art-item"
+                                    onclick="openGallery(0)" loading="lazy"></td>
+                            <td><img src="Assets/LiM/graph4.png"
+                                    alt="Chart: what those people did that participants were thankful for"
+                                    class="art-item" onclick="openGallery(0)" loading="lazy"></td>
+                            <td><img src="Assets/LiM/graph5.png"
+                                    alt="Chart: how participants said it made them feel" class="art-item"
+                                    onclick="openGallery(0)" loading="lazy"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
+            <h3>Behavior data coding</h3>
+            <div class="table-wrap" role="region" aria-label="Behavior data coding" tabindex="0">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Theme</th>
+                            <th scope="col">Patterns</th>
+                            <th scope="col">Data collection method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Engagement</th>
+                            <td>
+                                <ul>
+                                    <li>Immediately picked blocks</li>
+                                    <li>Looked through all options</li>
+                                    <li>Created custom blocks</li>
+                                    <li>Talked about personal stories (pets, friends)</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Observation (talk)</li>
+                                    <li>Observation (behavior)</li>
+                                    <li>Open notes</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Confusion</th>
+                            <td>
+                                <ul>
+                                    <li>Didn’t understand “feeling blocks” at first</li>
+                                    <li>Asked “What is this?”</li>
+                                    <li>Skipped steps (red → blue, ignored yellow)</li>
+                                    <li>Needed facilitator or parent help</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Observation (talk)</li>
+                                    <li>Observation (behavior)</li>
+                                    <li>Open notes</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <img src="Assets/LiM_CMP_11.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                width="32.5%">
-            <img src="Assets/LiM_CMP_12.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
-                width="32.5%">
-            <img src="Assets/LiM_CMP_13.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="33%">
+            <h3>Young children (0–5) findings</h3>
+            <!-- CHECK: this list says 3 young children fully completed at least once, but the Overall data note says 3 young children (#3, #7, #9) did not fully complete. Add n per age group so the totals add up to 10. -->
+            <ul>
+                <li>3 participants fully completed the exhibit at least once
+                    <ul>
+                        <li>#7-YC-M left before completing “Feeling”</li>
+                        <li>#9-YC-F left before completing “Person” and “Action” on the 2nd try</li>
+                    </ul>
+                </li>
+                <li>All participants were mostly nonverbal</li>
+                <li>All participants displayed hesitation and needed facilitator or parent help</li>
+                <li>2 participants answered questions out of order</li>
+                <!-- CHECK: “Gratitude was not observed” sits next to #3-YC-F saying “I want thank you” and giving her sticker to her dad (see Notable observations). Consider: “No explicit gratitude was observed, though #3-YC-F …”. -->
+                <li>Gratitude was not observed from any participants</li>
+            </ul>
 
-            <img src="Assets/LiM_CMP_14.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+            <figure>
+                <img src="Assets/LiM/graph6.png" alt="Chart: summary of young children’s (0–5) results" class="art-item"
+                    onclick="openGallery(0)" loading="lazy" style="max-width: 480px;">
+            </figure>
 
-            <br><br>
-            <h2>Overall Findings</h2>
+            <div class="table-wrap" role="region" aria-label="Young children’s responses" tabindex="0">
+                <table class="chart-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Who is someone you’re thankful for?</th>
+                            <th scope="col">What did they do that you’re thankful for?</th>
+                            <th scope="col">How did it make you feel?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="Assets/LiM/graph7.png"
+                                    alt="Chart: who young children said they were thankful for" class="art-item"
+                                    onclick="openGallery(0)" loading="lazy"></td>
+                            <td><img src="Assets/LiM/graph8.png"
+                                    alt="Chart: what young children said those people did" class="art-item"
+                                    onclick="openGallery(0)" loading="lazy"></td>
+                            <td><img src="Assets/LiM/graph9.png"
+                                    alt="Chart: how young children said it made them feel" class="art-item"
+                                    onclick="openGallery(0)" loading="lazy"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Children (6–10) findings</h3>
+            <ul>
+                <li>6 participants fully completed the exhibit at least once
+                    <ul>
+                        <li>#4-C-M completed the exhibit 3 times</li>
+                        <li>#10-C-M completed the exhibit 2 times</li>
+                    </ul>
+                </li>
+                <li>4 participants chose blocks immediately</li>
+                <li>2 participants asked for clarification
+                    <ul>
+                        <li>#4-C-M asked “What is this?” about the reflective and feeling blocks</li>
+                    </ul>
+                </li>
+                <li>Participants were generally more talkative than young children</li>
+                <li>2 participants answered questions out of order</li>
+                <li>5 participants thanked us at the end of the exhibit</li>
+            </ul>
+
+            <figure>
+                <img src="Assets/LiM/graph10.png" alt="Chart: summary of children’s (6–10) results" class="art-item"
+                    onclick="openGallery(0)" loading="lazy" style="max-width: 480px;">
+            </figure>
+
+            <div class="table-wrap" role="region" aria-label="Children’s responses" tabindex="0">
+                <table class="chart-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Who is someone you’re thankful for?</th>
+                            <th scope="col">What did they do that you’re thankful for?</th>
+                            <th scope="col">How did it make you feel?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="Assets/LiM/graph11.png"
+                                    alt="Chart: who children said they were thankful for" class="art-item"
+                                    onclick="openGallery(0)" loading="lazy"></td>
+                            <td><img src="Assets/LiM/graph12.png"
+                                    alt="Chart: what children said those people did" class="art-item"
+                                    onclick="openGallery(0)" loading="lazy"></td>
+                            <td><img src="Assets/LiM/graph13.png"
+                                    alt="Chart: how children said it made them feel" class="art-item"
+                                    onclick="openGallery(0)" loading="lazy"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Notable observations</h3>
+            <div class="table-wrap" role="region" aria-label="Notable observations" tabindex="0">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Gratitude behaviors</th>
+                            <th scope="col">Confusion behaviors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#4-C-M displayed strong gratitude and gave the facilitator a hug upon receiving the
+                                award sticker.</td>
+                            <td>#10-C-M asked “What do you do after this?” after placing the person block.
+                                <ul>
+                                    <li>We can implement design changes to make goals and transitions clearer.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#3-YC-F reached out for the award stickers and said “I want thank you.” She then gave it
+                                to her dad.
+                                <ul>
+                                    <li>This indicates that even though she didn’t complete the activity, she could
+                                        still recognize the meaning of “thank you” to an extent.</li>
+                                </ul>
+                            </td>
+                            <td>#4-C-M asked “What is this?” about the reflective blocks and feeling blocks.
+                                <ul>
+                                    <li>We can work on a better explanation of the reflective blocks.</li>
+                                    <li>We still prefer ambiguous options that allow individual interpretations, even if
+                                        it risks participant confusion.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <figure>
+                <div class="fig-grid cols-3">
+                    <img src="Assets/LiM_CMP_11.jpg" alt="Exhibit photo 11 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_12.jpg" alt="Exhibit photo 12 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_13.jpg" alt="Exhibit photo 13 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                </div>
+            </figure>
+            <figure>
+                <img src="Assets/LiM_CMP_14.jpg" alt="Exhibit photo 14 of 14" class="art-item"
+                    onclick="openGallery(0)" loading="lazy">
+            </figure>
+
+            <h3>Summary of findings</h3>
+            <!-- CHECK: Finding 3 says facilitation didn’t reliably improve completion, but Finding 6 says caregiver guidance improved it. Say what differs between facilitator help and caregiver help. -->
+            <!-- CHECK: Finding 4 says all participants could identify someone they were thankful for, but three did not fully complete. Confirm this is true for the “Person” step. -->
             <section class="findings-grid">
                 <div class="finding-card card-1">
-                    <h3>Finding 1</h3>
-                    <p>Children were generally better at understanding and completing the activity than Young Children.
-                    </p>
+                    <h3>Children understood and completed the activity more readily than young children</h3>
+                    <p class="evidence"><strong>Evidence:</strong> every young child hesitated and needed facilitator or
+                        parent help; among children, 4 chose blocks immediately and 6 completed the exhibit at least
+                        once.</p>
                 </div>
 
                 <div class="finding-card card-2">
-                    <h3>Finding 2</h3>
-                    <p>Children tended to be more vocal if they were confused or curious.</p>
+                    <h3>Children were more vocal when confused or curious</h3>
+                    <p class="evidence"><strong>Evidence:</strong> 2 children asked for clarification, including
+                        #4-C-M asking “What is this?” about the reflective and feeling blocks.</p>
                 </div>
 
                 <div class="finding-card card-3">
-                    <h3>Finding 3</h3>
-                    <p>Young Children were mostly nonverbal and facilitation did not necessarily improve completion.</p>
+                    <h3>Young children were mostly nonverbal, and facilitation did not reliably improve completion</h3>
+                    <p class="evidence"><strong>Evidence:</strong> all needed facilitator or parent help, yet #7-YC-M
+                        still left before completing “Feeling.”</p>
                 </div>
 
                 <div class="finding-card card-4">
-                    <h3>Finding 4</h3>
-                    <p>All participants could identify someone they were thankful for.</p>
+                    <h3>All participants could identify someone they were thankful for</h3>
                 </div>
 
                 <div class="finding-card card-5">
-                    <h3>Finding 5</h3>
-                    <p>Children expressed gratitude more readily than Young Children.</p>
+                    <h3>Children expressed gratitude more readily than young children</h3>
+                    <p class="evidence"><strong>Evidence:</strong> 5 children thanked us at the end; among young
+                        children, #3-YC-F’s “I want thank you” was the closest sign.</p>
                 </div>
 
                 <div class="finding-card card-6">
-                    <h3>Finding 6</h3>
-                    <p>Caregiver guidance improved completion but often shifted responses.</p>
+                    <h3>Caregiver guidance improved completion but often shifted responses</h3>
+                    <p class="evidence"><strong>Evidence:</strong> accompanying adults often acted as facilitators when
+                        a child was confused or couldn’t read.</p>
                 </div>
             </section>
 
-            <br><br>
-            <h2>Content/Usability Issues Discovered During Exhibit</h2>
+            <h3>Content and usability issues</h3>
             <section class="findings-grid-2">
                 <div class="finding-card card-1">
-                    <p>Accompanying adults would often act as facilitators if the child was confused or couldn’t read
+                    <p>Accompanying adults would often act as facilitators if the child was confused or couldn’t read.
                     </p>
                 </div>
 
                 <div class="finding-card card-2">
-                    <p>#7-YC-M initiated with the exhibit, but he walked away when he saw one of the shelves was full
-                        (even though the other shelf had empty rows)
-                    </p>
+                    <p>#7-YC-M started the exhibit, but walked away when he saw that one of the shelves was full (even
+                        though the other shelf had empty rows).</p>
                 </div>
 
                 <div class="finding-card card-3">
                     <p>Some participants struggled to place the blocks in the shelves, and we had to hold the shelves
-                        down as they put it in
-                    </p>
+                        down as they put them in.</p>
                 </div>
 
                 <div class="finding-card card-4">
-                    <p>We would occasionally have to reset the blocks if the shelves were full, or if the blocks were
-                        scattered on the floor and not in the baskets
-                    </p>
+                    <p>We occasionally had to reset the blocks if the shelves were full, or if the blocks were scattered
+                        on the floor and not in the baskets.</p>
                 </div>
             </section>
 
-              <br><br>
-            <h2>Overall Findings</h2>
-            <section class="findings-grid">
+            <h3>Limitations and design implications</h3>
+            <section class="findings-grid-2">
                 <div class="finding-card card-1">
-                    <p>Our sample size of N=10 is relatively small and therefore may not be fully representative of the general public
-</p>
+                    <h3>Small sample</h3>
+                    <p>Our sample size of N=10 is relatively small and may not be representative of the general public.
+                    </p>
                 </div>
 
                 <div class="finding-card card-2">
-                    <p>Visual features of the design–use of prime colors & simplistic appearance–seemed to be attracting children too young for the activity and discouraging targeted age groups. This caused many of our observations with YC to rely heavily on facilitation
-</p>
+                    <h3>Visual design skewed young</h3>
+                    <p>The prime colors and simplistic appearance seemed to attract children too young for the
+                        activity and discourage the targeted age group. This made many of our observations with young
+                        children rely heavily on facilitation.</p>
+                    <p>This could push us to research design elements that are equally appealing to older kids but
+                        accessible to younger children as well.</p>
                 </div>
 
                 <div class="finding-card card-3">
-                    <p>This could push us to research design elements that are equally appealing to older kids, but accessible for younger children as well.</p>
+                    <h3>Block vocabulary</h3>
+                    <p>The “Guardian” and “Relative” blocks were never used, possibly because they sounded too
+                        legal-jargon for children. There needs to be a balance between blocks being specific and
+                        general.</p>
                 </div>
 
                 <div class="finding-card card-4">
-                    <p>“Guardian” and “Relative” blocks were never used, indicating that they were possibly too legal-jargon for children
-</p>
-                </div>
-
-                <div class="finding-card card-5">
-                    <p>There needs to be a balance between blocks being specific vs general
-</p>
-                </div>
-
-                <div class="finding-card card-6">
-                    <p>Most of the feeling blocks were justified because they represented happiness, suggesting kids still struggled with associating gratitude with more complex feelings
-</p>
+                    <h3>Feelings</h3>
+                    <p>Most of the feeling blocks were justified because they represented happiness, suggesting kids
+                        still struggled to associate gratitude with more complex feelings.</p>
                 </div>
             </section>
-
-
-             <section class="detail">
-            <div class="detail-container">
-                <h3 class="title">Museum Recommendations</h3>
-                <div class="text-content">
-                    <p>The team's recommendations to the Children's Museum of Pittsburgh</p>
-                </div>
-            </div>
         </section>
 
-        <p>Our team successfully applied the <i>Play with Real Stuff</i> design philosophy by allowing children to physically engage with blocks as part of their response & interaction with the exhibit. 
-            
-            <br><br>         
+        <!-- ============ RECOMMENDATIONS ============ -->
+        <section id="recommendations">
+            <h2>Recommendations for the Children’s Museum of Pittsburgh</h2>
 
-            If we were to further develop our exhibit, we would want to display the award stickers on the wall for visitors to see. This could be through either a projector onto a wall, or a display screen specifically for this purpose.</p>
-            <br>
-<p>More engagement is required to deepen socio-emotional learning for children, and we believe that we should give more agency to visitors instead of facilitating them throughout the entire exhibit.             <br><br>
-Additionally, our current exhibit relies on some physical ability since visitors have to pick up and place blocks, so incorporating other ways the visitor can respond to the questions, pressing a button, recording a response, etc., can make our design more inclusive.             <br><br>
-Our current blocks had very generalized cartoon characters for the sake of easier prototyping, but we could expand the blocks to be more diverse, or contain additional accessibility features such as braille.
-</p><br>
-<p>To further develop the activity for older children we would continue to refine the visual aesthetics and work on making the difficulty level more scalable for different age ranges.              <br><br>
-This could include adding optional challenges and prompts to give them more opportunities to demonstrate the developmental milestones they resonate with.             <br><br>
-We would continue to delve into the storytelling aspect to help brainstorm meaningful and relatable actions, choices, and consequences.             <br><br>
-These could be framed within reflection surrounding gratitude or go broader on the impact that people’s actions have on each other.             <br><br>
-This would continue to reinforce the primary objectives of encouraging children to work on their self and social awareness so they understand that their actions and words make an impact.
-</p>
-            <div id="galleryOverlay" class="overlay">
-                <span class="close" onclick="closeGallery()">&times;</span>
-                <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
-                <a class="prev" onclick="changeImage(-1)">&#10094;</a>
-                <a class="next" onclick="changeImage(1)">&#10095;</a>
-            </div>
+            <h3>What worked</h3>
+            <p>Letting children respond with physical blocks applied the museum’s <i>Play with Real Stuff</i> design
+                philosophy, and children engaged with them: some looked through every option and some created custom
+                blocks.</p>
 
+            <h3>Give visitors more agency</h3>
+            <p>More engagement is needed to deepen socio-emotional learning, and we believe visitors should have more
+                agency instead of being facilitated through the entire exhibit.</p>
+            <ul>
+                <li>Display the award stickers on the wall for visitors to see, using a projector or a dedicated
+                    display screen.</li>
+            </ul>
 
+            <h3>Make it more inclusive</h3>
+            <ul>
+                <li>The exhibit relies on some physical ability because visitors have to pick up and place blocks. Add
+                    other ways to respond to the questions, such as pressing a button or recording a response.</li>
+                <li>The blocks use very generalized cartoon characters for easier prototyping. Expand them to be more
+                    diverse, and add accessibility features such as braille.</li>
+            </ul>
 
-            <section class="project-challenges">
-                <br>
-                <h3>Team</h3>
-                <p>Libby Egan, Jillian Haguisan, Hales Wilson
-                </p>
-                <br>
+            <h3>Scale the experience for older children</h3>
+            <ul>
+                <li>Refine the visual aesthetics and make the difficulty level scalable across age ranges.</li>
+                <li>Add optional challenges and prompts that give older children more chances to demonstrate the
+                    developmental milestones they resonate with.</li>
+                <li>Continue developing the storytelling to brainstorm meaningful and relatable actions, choices, and
+                    consequences. These could be framed around gratitude, or go broader to the impact people’s actions
+                    have on each other.</li>
+                <li>Together, these continue to support the primary objective: helping children build self and social
+                    awareness so they understand that their actions and words make an impact.</li>
+            </ul>
+        </section>
 
-            </section>
-            <div class="dynamic-hr"></div>
+        <!-- ============ DESIGN PROCESS ============ -->
+        <section id="process">
+            <h2>Design and fabrication process</h2>
+
+            <h3>Concept iterations</h3>
+            <figure>
+                <div class="fig-grid cols-3">
+                    <img src="Assets/ty_concept1.png" alt="Concept art, iteration 1" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/ty_concept2.gif" alt="Animated concept art, iteration 2" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/ty_concept3.png" alt="Concept art, iteration 3" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                </div>
+                <figcaption>Concept iterations.</figcaption>
+            </figure>
+
+            <h3>Experience map</h3>
+            <p>Storyboards and experience journey maps.</p>
+            <figure>
+                <div class="fig-grid cols-2">
+                    <img src="Assets/TY-storyboard.png" alt="Storyboard of the visitor experience" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/TY-experience%20map.png" alt="Experience journey map" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                </div>
+            </figure>
+
+            <h3>The built exhibit</h3>
+            <figure>
+                <div class="fig-grid cols-3">
+                    <img src="Assets/LiM_CMP_1.jpg" alt="Exhibit photo 1 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_2.jpg" alt="Exhibit photo 2 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_3.jpg" alt="Exhibit photo 3 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_4.jpg" alt="Exhibit photo 4 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_5.jpg" alt="Exhibit photo 5 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                    <img src="Assets/LiM_CMP_6.jpg" alt="Exhibit photo 6 of 14" class="art-item"
+                        onclick="openGallery(0)" loading="lazy">
+                </div>
+            </figure>
+        </section>
+
+        <div id="galleryOverlay" class="overlay">
+            <span class="close" onclick="closeGallery()" role="button" aria-label="Close gallery">&times;</span>
+            <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+            <a class="prev" onclick="changeImage(-1)" role="button" aria-label="Previous image">&#10094;</a>
+            <a class="next" onclick="changeImage(1)" role="button" aria-label="Next image">&#10095;</a>
+        </div>
+
+        <section class="project-challenges" id="team">
+            <h2>Team</h2>
+            <p>Libby Egan, Jillian Haguisan, Hales Wilson</p>
+        </section>
+        <div class="dynamic-hr"></div>
 
     </main>
 
 
-    <h2 style="text-align: center; font-family: 'Playfair Display', serif; color: #333;">
-        Check out some of my other projects!</h2>
+    <h2 class="more-title">Check out some of my other projects!</h2>
     <div class="next-projects-container">
         <div class="next-project-preview">
             <a href="midway.html">
                 <div class="preview-left">
-                    <img src="Assets/midway-resized-cover.png" alt="Next Project">
+                    <img src="Assets/midway-resized-cover.png" alt="Cover image for Mid-Way to the Midway">
                     <div class="next-project-info">
                         <h3>Mid-Way to the Midway</h3>
                         <p>For my work with another major <b>museum</b> - the Heinz History Center, check out: An
@@ -828,7 +925,8 @@ This would continue to reinforce the primary objectives of encouraging children 
                     </div>
                 </div>
                 <div class="preview-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        aria-hidden="true">
                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
                     </svg>
                 </div>
@@ -838,7 +936,7 @@ This would continue to reinforce the primary objectives of encouraging children 
         <div class="next-project-preview">
             <a href="encore.html">
                 <div class="preview-left">
-                    <img src="Assets/encore-cover.png" alt="Next Project">
+                    <img src="Assets/encore-cover.png" alt="Cover image for Two to Foxtrot">
                     <div class="next-project-info">
                         <h3>Two to Foxtrot</h3>
                         <p>For more <b>location-based experiences</b>, check out: A pre-show lobby experience for
@@ -848,19 +946,18 @@ This would continue to reinforce the primary objectives of encouraging children 
                     </div>
                 </div>
                 <div class="preview-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        aria-hidden="true">
                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
                     </svg>
                 </div>
             </a>
         </div>
 
-
-
         <div class="next-project-preview">
             <a href="littleowl.html">
                 <div class="preview-left">
-                    <img src="Assets/LittleOwl/owl-cover.png" alt="Next Project">
+                    <img src="Assets/LittleOwl/owl-cover.png" alt="Cover image for Little Owl Construction Co.">
                     <div class="next-project-info">
                         <h3>Little Owl Construction Co.</h3>
                         <p>For <b>another skill</b>, check out: UI/UX designer for a physical interactive platform that
@@ -873,10 +970,10 @@ This would continue to reinforce the primary objectives of encouraging children 
                     </div>
                 </div>
                 <div class="preview-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        aria-hidden="true">
                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
                     </svg>
-
                 </div>
             </a>
         </div>
@@ -891,20 +988,18 @@ This would continue to reinforce the primary objectives of encouraging children 
             <div class="button-container">
 
                 <div class="glass-btn blue-btn">
-                    <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
+                    <img src="Assets/footer/linkedin-tile%203.png" alt="linkedin" class="social-icon"
+                        id="linkedin-icon" style="width: 5.5em">
+                </div>
+
+                <div class="glass-btn blue-btn">
+                    <img src="Assets/footer/github-tile%202.png" alt="github" class="social-icon" id="github-icon"
                         style="width: 5.5em">
                 </div>
 
                 <div class="glass-btn blue-btn">
-
-                    <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
-                        style="width: 5.5em">
-
-                </div>
-
-                <div class="glass-btn blue-btn">
-                    <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
-                        style="width: 5.5em">
+                    <img src="Assets/footer/behance-tile%202.png" alt="Behance" class="social-icon"
+                        id="behance-icon" style="width: 5.5em">
                 </div>
 
             </div>

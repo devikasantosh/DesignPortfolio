@@ -1,0 +1,307 @@
+/* Art Station section. Uses the same width, fonts and colours as the rest of
+   the page. Loaded after styles-projects-littleowl.css. */
+
+.as-block {
+  margin: 0 0 56px;
+}
+
+.as-block h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #22577a;
+  margin: 0 0 10px;
+}
+
+.as-block p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.as-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.as-compare+.as-compare {
+  margin-top: 16px;
+}
+
+.as-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #22577a;
+}
+
+.as-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.as-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.as-block figure {
+  margin: 0;
+}
+
+.as-block figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.as-block figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+
+  .as-compare,
+  .as-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Resize block: both images share one height. Widths are proportional to each
+   image's aspect ratio (options sheet about 4.2:1, final about 1.15:1). */
+.as-compare--resize {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.as-compare--resize>div {
+  min-width: 0;
+}
+
+.as-compare--resize>div:first-child {
+  flex: 4.21 1 0;
+}
+
+.as-compare--resize>div:last-child {
+  flex: 1.15 1 0;
+}
+
+@media (max-width: 600px) {
+  .as-compare--resize {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sidebar links land just below the sticky breadcrumb bar */
+#overview,
+#concept,
+#branding,
+#prototyping,
+#designthinking,
+#wireframing,
+#interfaces,
+#art-station,
+#programming-station,
+#lighting-station,
+#sound-station,
+#facilitator-station {
+  scroll-margin-top: 70px;
+}
+
+/* Click to enlarge */
+.as-block img {
+  cursor: zoom-in;
+}
+
+.as-block img:focus-visible {
+  outline: 3px solid #38a3a5;
+  outline-offset: 2px;
+}
+
+.as-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.as-lightbox[hidden] {
+  display: none;
+}
+
+/* Opening: backdrop fades in, image rises into place */
+.as-lightbox:not([hidden]) {
+  animation: as-fade 0.25s ease-out;
+}
+
+.as-lightbox:not([hidden]) .as-lightbox__stage {
+  animation: as-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes as-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes as-rise {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.as-lightbox figure {
+  margin: 0;
+  text-align: center;
+}
+
+/* The stage is a fixed window; zoom and pan happen inside it with a transform */
+.as-lightbox__stage {
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.as-lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  background: #fff;
+  cursor: zoom-in;
+  transform-origin: center center;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.as-lightbox.is-zoomed img {
+  cursor: zoom-out;
+}
+
+.as-lightbox.is-dragging img {
+  cursor: grabbing;
+}
+
+.as-lightbox.no-anim img {
+  transition: none;
+}
+
+.as-lightbox figcaption {
+  margin-top: 10px;
+  min-height: 1.4em;
+  color: #f7f7f2;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.as-lightbox button {
+  position: absolute;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.as-lightbox button:hover,
+.as-lightbox button:focus-visible {
+  color: #38a3a5;
+}
+
+.as-lightbox__close {
+  top: 16px;
+  right: 20px;
+}
+
+.as-lightbox__prev {
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.as-lightbox__next {
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .as-lightbox:not([hidden]),
+  .as-lightbox:not([hidden]) .as-lightbox__stage {
+    animation: none;
+  }
+
+  .as-lightbox img {
+    transition: none;
+  }
+}
+
+/* Image rows (Sound Station) */
+.as-row {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.as-row--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.as-row--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.as-row--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.as-block ol {
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+.as-block li+li {
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+
+  .as-row--3,
+  .as-row--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

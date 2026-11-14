@@ -3553,3 +3553,206 @@ header nav::-webkit-scrollbar {
     width: 100%;
 
 }
+
+/* =========================================================
+   PROJECT OPENING SECTION (title, summary, banner, metadata)
+   Paste at the VERY BOTTOM of the stylesheet
+========================================================= */
+
+.project-header,
+.project-container {
+    --curse-accent: #9b2c2c;   /* deep tomb red: change per project */
+    --curse-gold:   #b8893a;
+    --ink:          #252422;
+    --ink-soft:     #55524e;
+    --hairline:     rgba(37, 36, 34, 0.18);
+}
+
+
+/* ---------- Title block ---------- */
+
+main .project-header {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0 40px;
+}
+
+/* "Showcased at..." becomes a small eyebrow ABOVE the title */
+main .project-header p {
+    order: -1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin: 0 0 18px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--curse-accent);
+}
+
+main .project-header p::before {
+    content: "";
+    width: 36px;
+    height: 1px;
+    background: var(--curse-gold);
+}
+
+main .project-header h2 {
+    order: 0;
+    margin: 0 0 24px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 7vw, 4.75rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+}
+
+main .project-header h3 {
+    order: 1;
+    max-width: 680px;
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--ink-soft);
+}
+
+/* the stray <br> between the header and the banner */
+main .project-header + br {
+    display: none;
+}
+
+
+/* ---------- Banner + metadata strip ---------- */
+
+main .project-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 80px;
+}
+
+/* Banner image: full width, uncropped, in normal flow, shown first */
+main .project-container .project-gif {
+    order: 1;
+
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+    opacity: 1;
+    border-radius: 4px;
+    pointer-events: auto;
+}
+
+/* Metadata card becomes a clean strip underneath */
+main .project-container .project-card {
+    order: 2;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0;
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 22px 0;
+
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    overflow: visible;
+
+    border-bottom: 1px solid var(--hairline);
+}
+
+/* remove the gradient bar on the old card */
+main .project-container .project-card::before {
+    display: none;
+}
+
+main .project-container .project-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 0 28px;
+}
+
+main .project-container .project-detail:first-child {
+    padding-left: 0;
+}
+
+main .project-container .project-detail + .project-detail {
+    border-left: 1px solid var(--hairline);
+}
+
+main .project-container .project-label {
+    width: auto;
+    text-align: left;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--curse-accent);
+}
+
+main .project-container .project-description {
+    flex: none;
+    width: auto;
+    text-align: left;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    main .project-header {
+        margin: 40px 0 28px;
+    }
+
+    main .project-header h3 {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    main .project-container {
+        margin-bottom: 55px;
+    }
+
+    main .project-container .project-card {
+        grid-template-columns: 1fr;
+        padding: 8px 0;
+    }
+
+    main .project-container .project-detail,
+    main .project-container .project-detail:first-child {
+        padding: 16px 0;
+    }
+
+    main .project-container .project-detail + .project-detail {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+    }
+}
+
