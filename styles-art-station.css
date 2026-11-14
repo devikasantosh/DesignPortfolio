@@ -305,3 +305,22 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Same-height image row: widths follow each image's shape (set by a small script in the page) */
+.as-row--fit {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.as-row--fit figure {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .as-row--fit {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

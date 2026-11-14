@@ -46,7 +46,6 @@
         <a href="#concept" class="top-link">Concept</a>
         <a href="#branding" class="top-link">Branding</a>
         <a href="#prototyping" class="top-link">Paper Prototyping</a>
-        <a href="#designthinking" class="top-link">Design Thinking</a>
 
         <a href="#wireframing" class="top-link">Wireframing</a>
         <a href="#interfaces" class="top-link">Interfaces</a>
@@ -463,26 +462,6 @@
 
             <section class="case-section">
                 <div class="section-content">
-                    <section class="detail">
-                        <div class="detail-container" id="designthinking">
-                            <h3 class="title">Design Thinking</h3>
-                            <div class="text-content">
-                                <p>Used design thinking methodologies like crazy 8s for the UI interations.</p>
-                            </div>
-                        </div>
-
-                    </section>
-                    <img src="Assets/little owl design thinking 1.jpg" width=100% alt="Art Project 1" class="art-item"
-                        onclick="openGallery(0)">
-
-                    <p style="text-align: center"><i>Ideating the UI to turn the bird's head</i></p>
-
-
-                    <br>
-                </div>
-            </section>
-            <section class="case-section">
-                <div class="section-content">
 
                     <section class="detail">
                         <div class="detail-container" id="wireframing">
@@ -681,7 +660,7 @@
                    arrow keys or buttons for next/previous, Esc to close.
                    --------------------------------------------------------------- */
                 document.addEventListener('DOMContentLoaded', function () {
-                    var imgs = [].slice.call(document.querySelectorAll('#art-station .as-block img, #sound-station .as-block img, #facilitator-station .as-block img'));
+                    var imgs = [].slice.call(document.querySelectorAll('#art-station .as-block img, #sound-station .as-block img, #facilitator-station .as-block img, #programming-station .as-block img'));
                     if (!imgs.length) return;
 
                     var MAX_SCALE = 5;
@@ -860,35 +839,199 @@
                 <div class="section-content">
                     <div id="programming-station">
 
-
                         <h3 class="title">Programming Station</h3>
-                        <img src="Assets/LittleOwl/InitialProgrammingWireframes.png" width=100% alt="Art Project 1"
-                            class="art-item" onclick="openGallery(0)">
-                        <p style="text-align: center"><i>Wireframes for programming station flow.</i>
-                        </p>
-                        <br>
-                        <img src="Assets/LittleOwl/Initial Programming Colours - 1.png" width=49% alt="Art Project 1"
-                            class="art-item" onclick="openGallery(0)">
-                        <img src="Assets/LittleOwl/Initial Programming Colours - 2.png" width=49% alt="Art Project 1"
-                            class="art-item" onclick="openGallery(0)">
-                        <img src="Assets/LittleOwl/Initial Programming Colours - 3.png" width=49% alt="Art Project 1"
-                            class="art-item" onclick="openGallery(0)">
-                        <img src="Assets/LittleOwl/Initial Programming Colours - 4.png" width=49% alt="Art Project 1"
-                            class="art-item" onclick="openGallery(0)">
-                        <p style="text-align: center"><i>Initial theming experimentation.</i></p>
-                        <br>
 
-                        <img src="Assets/LittleOwl/Programming Wireframe - new colour - 1.png" width=49%
-                            alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-                        <img src="Assets/LittleOwl/Programming Wireframe - new colour - 3.png" width=49%
-                            alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-                        <p style="text-align: center"><i>New theming experimentation.</i></p>
-                        <br>
+                        <div class="as-block">
+                            <p>At the Programming Station, guests use code blocks to design the movement of the
+                                animatronic. The station is designed to be similar to other introductory coding
+                                programs like Scratch, and each block colour corresponds to a different body part of the
+                                animatronic. It runs on a
+                                Beetronic 12TS7 tablet.</p>
+                            <figure>
+                                <img loading="lazy" src="Assets/LittleOwl/owl-cover.png"
+                                    alt="A middle schooler working with block code at the programming station">
+                            </figure>
 
-                        <img src="Assets/LittleOwl/Programming UI - Basic Code Blocks.png" width=100%
-                            alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-                        <p style="text-align: center"><i>Final programming station.</i></p>
-                        <br>
+                            <figcaption>A middle schooler working with block code at the programming station.</figcaption>
+                            <br>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Programming UI - Basic Code Blocks.png"
+                                    alt="Final programming station interface">
+                                <figcaption>Final programming station.</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="as-block">
+                            <h4>Wireframe flow</h4>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/InitialProgrammingWireframes.png"
+                                    alt="Wireframes of the programming station flow">
+                                <figcaption>Wireframes for programming station flow.</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="as-block">
+                            <h4>A distinct colour and icon for each movement</h4>
+                            <p>Each movement block has its own distinct colour and a UI icon.</p>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/prog-block-colours.png"
+                                    alt="Programming blocks for turn head, open beak, close beak, lift wings, lower wings, loop and wait, each with its own colour and icon">
+                                <figcaption>The code blocks.</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="as-block">
+                            <h4>Designing head movement</h4>
+                            <p>I used Crazy 8s to ideate how guests could move the animatronic's head. Ideas included
+                                drop-down boxes for directions or angles, a 3x3 grid for where the head should point,
+                                an Xbox controller for live puppeteering (record, puppeteer, stop), separate blocks for
+                                head up, down, left and right, two drop-downs for top, center and bottom and for left,
+                                center and right, drawing a path for the head to follow, and animated presets like nod,
+                                shake, shock, disgust, curiosity and dizzy.</p>
+                            <p>I chose the 3x3 grid, but during UI design we later went with separate blocks for head
+                                up, head down, head left and head right, for programming ease.</p>
+                            <figure><img loading="lazy" src="Assets/little owl design thinking 1.jpg"
+                                    alt="Crazy 8s sketches of ideas for turning the bird's head">
+                                <figcaption>Ideating the UI to turn the bird's head</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="as-block">
+                            <h4>Paper prototype playtests</h4>
+                            <p>The paper prototype was an essential part of the process. It covered the block code,
+                                and it's where people suggested loop blocks, where we decided on the head movement
+                                blocks, and where we saw how people played with it overall.</p>
+                                <div class="as-row as-row--fit">
+                                <figure><img loading="lazy" src="Assets/paperprototype_code.jpg"
+                                        alt="Code blocks paper prototype, complete with dropdown lists made of sticky notes"></figure>
+                                <figure><img loading="lazy" src="Assets/paperprototype_work2.jpg"
+                                        alt="Guests playtesting our clock code"></figure>
+                            </div>
+                            <script>
+                                /* Rows with .as-row--fit: widths follow each image's shape, so every image in the row has the same height. */
+                                (function () {
+                                    document.querySelectorAll('.as-row--fit').forEach(function (row) {
+                                        var figs = [].slice.call(row.querySelectorAll('figure'));
+                                        function fit() {
+                                            figs.forEach(function (f) {
+                                                var im = f.querySelector('img');
+                                                if (im && im.naturalWidth && im.naturalHeight) {
+                                                    f.style.flexGrow = im.naturalWidth / im.naturalHeight;
+                                                }
+                                            });
+                                        }
+                                        figs.forEach(function (f) {
+                                            var im = f.querySelector('img');
+                                            if (im) im.addEventListener('load', fit);
+                                        });
+                                        fit();
+                                    });
+                                })();
+                            </script>
+                        </div>
+
+                        <div class="as-block">
+                            <h4>Showing where blocks can connect</h4>
+                            <p>When a block is picked up, a small highlight circle appears at the connection points of
+                                the existing puzzle structure: the bottom of a block for the next block, or, for some
+                                blocks, its right end. If the head is already moving up, it can't also move in parallel,
+                                so picking up Head Down only allows attaching below the existing structure. Lift Wings
+                                can happen at the same time as Head Up or after it, so a glowing circle shows both to
+                                the right of Head Up and below it, allowing parallel and consecutive actions.</p>
+
+                            <!-- <div class="as-compare">
+                                <figure><img loading="lazy" src="Assets/LittleOwl/prog-connection-highlight.png"
+                                        alt="Programming blocks with glowing circles marking where the picked-up block can attach">
+                                    <figcaption>Highlights showing where a block can connect.</figcaption>
+                                </figure>
+                                <figure><img loading="lazy" src="Assets/LittleOwl/prog-connection-ghost.png"
+                                        alt="Ghost jigsaw block showing where the picked-up block can go">
+                                    <figcaption>Ghost block showing where a block can go.</figcaption>
+                                </figure>
+                            </div> -->
+
+                            <div class="as-row as-row--3">
+
+                                <figure><img loading="lazy" src="Assets/LittleOwl/prog-connection-ghost.png"
+                                        alt="Ghost jigsaw block showing where the picked-up block can go">
+                                    <figcaption>Ghost block showing where a block can go.</figcaption>
+                                </figure>
+                                <figure><img loading="lazy" src="Assets/LittleOwl/prog-connection-shadow.png"
+                                        alt="Programming blocks with glowing circles marking where the picked-up block can attach">
+                                    <figcaption>Shadows showing where a block can land.</figcaption>
+                                </figure>
+                                <figure><img loading="lazy" src="Assets/LittleOwl/prog-connection-highlight.png"
+                                        alt="Programming blocks with glowing circles marking where the picked-up block can attach">
+                                    <figcaption>Highlights showing where a block can connect.</figcaption>
+                                </figure>
+                            </div>
+
+
+
+                            <p>I tested three variations of this: a ghost jigsaw block showing where the new block can
+                                go, a similar shadow effect showing where the new block could land, or just a dot
+                                showing where it could be attached. The final version uses the dot.
+                            </p>
+
+                        </div>
+
+                        <div class="as-block">
+                            <h4>An expanding loop block</h4>
+                            <p>I planned the loop block as an asset that could be reused whenever a new block is
+                                attached. The top and bottom pieces stay the same, and an expansion piece is added to
+                                make the loop block larger because something new is inside it. Some gap is left inside
+                                the loop block at the base, to show the user they can add more blocks there. The loop
+                                block is red overall. Loops were later cancelled, so this did not make it into the final
+                                build.</p>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/prog-loop-expanding.png"
+                                    alt="Loop block pieces: top and bottom stay the same, with expansion pieces added as blocks are placed inside">
+                                <figcaption>Expanding loop block asset. Colours are for demonstration only.</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="as-block">
+                            <h4>Other iterations</h4>
+                            <p><b>Loops.</b> I tested loop blocks that expand as kids add blocks but stay connected to
+                                the main chain of blocks, and loop blocks that look like one solid block with the same
+                                dimensions as every other block, to make programming easier. The solid blocks would also
+                                have a pop-up, and I tested two versions: one with an expanding loop, like the one
+                                planned, and one that opens a new overlay window where kids set all their code blocks.
+                                Kids didn't use loops in their simple animations, even though adult playtesters from the
+                                ETC wanted them.</p>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/prog-loop-popups.png"
+                                    alt="Two versions of the loop pop-up in the programming interface: an overlay window, and an expanding loop in the block chain">
+                                <figcaption>Loop pop-up versions 1 and 2.</figcaption>
+                            </figure>
+
+                            <p><b>Pop-ups.</b> Pop-ups were also tested for turn head, wait, loop and move, but
+                                overall they were out of scope.</p>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/prog-popups.png"
+                                    alt="Pop-up functionalities - turn head block, wait block, loop block, move bird on stage block.">
+                                <figcaption>Pop-up functionalities.</figcaption>
+                            </figure>
+
+                            <p><b>Moving the bird on the platform.</b> I tested two drop-down boxes, one for forward or
+                                backward and one for the number of steps, and a digital UI similar to the physical track
+                                we would have had. Moving the bird forward and back on the platform was out of scope for
+                                the hardware.</p>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/prog-stage-movement.png"
+                                    alt="Move blocks with drop-down boxes for direction and steps, and with a track-style selector">
+                                <figcaption>Stage movement block versions.</figcaption>
+                            </figure>
+
+                            <p><b>Setting eye colour and movement.</b> The eye LED panel was out of scope for the
+                                hardware.</p>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/prog-iter-eyes.png"
+                                    alt="Iterations of setting eye colour and movement">
+                                <figcaption>Setting eye colour and movement.</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="as-block">
+                            <h4>Asset library</h4>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/ProgrammingComponents.png"
+                                    alt="Programming station asset library">
+                                <figcaption>Asset library for handoff to future teams.</figcaption>
+                            </figure>
+                        </div>
+
                     </div>
                 </div>
             </section>
