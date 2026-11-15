@@ -365,37 +365,23 @@
                             </div>
                         </div>
                     </section>
-                    <div
-                        style="width: 100%; max-width: 900px; height: 550px; overflow-y: auto; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding01.png"
-                            alt="Little Owl Construction Co. Branding" style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding02.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding03.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding04.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding05.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding06.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding07.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding08.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding09.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding10.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding11.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding12.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding13.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-                        <img src="Assets/LittleOwl/Brand/LittleOwlBranding14.png" alt="Branding Details"
-                            style="width: 100%; display: block;">
-
+                    <div class="as-brand" id="branding-gallery">
+                        <figure class="as-brand__hero"><img src="Assets/LittleOwl/Brand/LittleOwlBranding01.png" alt="Little Owl Construction Co. branding board 1 of 14"></figure>
+                        <div class="as-thumbs">
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding02.png" alt="Little Owl Construction Co. branding board 2 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding03.png" alt="Little Owl Construction Co. branding board 3 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding04.png" alt="Little Owl Construction Co. branding board 4 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding05.png" alt="Little Owl Construction Co. branding board 5 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding06.png" alt="Little Owl Construction Co. branding board 6 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding07.png" alt="Little Owl Construction Co. branding board 7 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding08.png" alt="Little Owl Construction Co. branding board 8 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding09.png" alt="Little Owl Construction Co. branding board 9 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding10.png" alt="Little Owl Construction Co. branding board 10 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding11.png" alt="Little Owl Construction Co. branding board 11 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding12.png" alt="Little Owl Construction Co. branding board 12 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding13.png" alt="Little Owl Construction Co. branding board 13 of 14"></figure>
+                            <figure><img loading="lazy" src="Assets/LittleOwl/Brand/LittleOwlBranding14.png" alt="Little Owl Construction Co. branding board 14 of 14"></figure>
+                        </div>
                     </div>
                     <!-- <img src="Assets/littleowl_designdoc_v2.png" width=100% alt="Art Project 1" class="art-item"
                         onclick="openGallery(0)">
@@ -660,7 +646,7 @@
                    arrow keys or buttons for next/previous, Esc to close.
                    --------------------------------------------------------------- */
                 document.addEventListener('DOMContentLoaded', function () {
-                    var imgs = [].slice.call(document.querySelectorAll('#art-station .as-block img, #sound-station .as-block img, #facilitator-station .as-block img, #programming-station .as-block img'));
+                    var imgs = [].slice.call(document.querySelectorAll('#art-station .as-block img, #sound-station .as-block img, #facilitator-station .as-block img, #programming-station .as-block img, #branding-gallery img'));
                     if (!imgs.length) return;
 
                     var MAX_SCALE = 5;

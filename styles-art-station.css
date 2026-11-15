@@ -324,3 +324,138 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Branding: carousel ---------- */
+.as-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.as-carousel:focus-visible {
+  outline: 3px solid #38a3a5;
+  outline-offset: 2px;
+}
+
+.as-carousel__viewport {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.as-carousel__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.as-carousel__slide {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.as-carousel__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.as-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(34, 87, 122, 0.85);
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.as-carousel__btn:hover:not(:disabled),
+.as-carousel__btn:focus-visible {
+  background: #38a3a5;
+}
+
+.as-carousel__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.as-carousel__btn--prev {
+  left: 12px;
+}
+
+.as-carousel__btn--next {
+  right: 12px;
+}
+
+.as-carousel__count {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(34, 87, 122, 0.85);
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* ---------- Branding: hero board + thumbnail grid ---------- */
+.as-brand {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.as-brand figure {
+  margin: 0;
+}
+
+.as-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: zoom-in;
+}
+
+.as-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.as-thumbs img {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.as-thumbs img:hover,
+.as-thumbs img:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .as-thumbs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .as-thumbs img {
+    transition: none;
+  }
+}
