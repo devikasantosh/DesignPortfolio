@@ -41,23 +41,78 @@
         </ol>
     </nav>
 
-    <nav class="sidebar">
-        <a href="#overview" class="top-link">Overview</a>
-        <a href="#concept" class="top-link">Concept</a>
-        <a href="#branding" class="top-link">Branding</a>
-        <a href="#prototyping" class="top-link">Paper Prototyping</a>
-
-        <a href="#wireframing" class="top-link">Wireframing</a>
-        <a href="#interfaces" class="top-link">Interfaces</a>
-
-        <div class="sub-links">
-            <a href="#art-station">Art Station</a>
-            <a href="#programming-station">Programming Station</a>
-            <a href="#lighting-station">Lighting Station</a>
-            <a href="#sound-station">Sound Station</a>
-            <a href="#facilitator-station">Facilitator Station</a>
+    <nav class="sidebar sn" aria-label="Case study sections">
+        <button type="button" class="sn-toggle" aria-expanded="false" aria-controls="sn-list">Sections</button>
+        <div class="sn-list" id="sn-list">
+            <a href="#overview" class="top-link sn-group">Process</a>
+            <a href="#overview" class="top-link sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Overview</span></a>
+            <a href="#concept" class="top-link sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Concept</span></a>
+            <a href="#user-research" class="top-link sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">User Research</span></a>
+            <a href="#branding" class="top-link sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Branding</span></a>
+            <a href="#prototyping" class="top-link sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Paper Prototyping</span></a>
+            <a href="#wireframing" class="top-link sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Wireframing</span></a>
+            <a href="#interfaces" class="top-link sn-group">Interfaces</a>
+            <a href="#art-station" class="sn-link sn-link--st"><span class="sn-dot"></span><span class="sn-label">Art
+                    Station</span></a>
+            <a href="#programming-station" class="sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Programming Station</span></a>
+            <a href="#lighting-station" class="sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Lighting Station</span></a>
+            <a href="#sound-station" class="sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Sound Station</span></a>
+            <a href="#facilitator-station" class="sn-link sn-link--st"><span class="sn-dot"></span><span
+                    class="sn-label">Facilitator Station</span></a>
         </div>
     </nav>
+    <script>
+        /* Side nav: highlights the section you are in, and opens/closes the Sections menu on phones. */
+        (function () {
+            var nav = document.querySelector('.sidebar.sn');
+            if (!nav) return;
+            var toggle = nav.querySelector('.sn-toggle');
+            var links = [].slice.call(nav.querySelectorAll('a.sn-link[href^="#"]'));
+            var ticking = false;
+
+            function update() {
+                ticking = false;
+                var line = window.innerHeight * 0.3, best = -1, bestTop = -Infinity;
+                links.forEach(function (a, i) {
+                    /* looked up on every update, because this script runs before the sections exist */
+                    var t = document.getElementById(a.getAttribute('href').slice(1));
+                    if (!t) return;
+                    var top = t.getBoundingClientRect().top;
+                    if (top <= line && top > bestTop) { bestTop = top; best = i; }
+                });
+                if (best < 0) best = 0;
+                links.forEach(function (a, i) {
+                    a.classList.toggle('is-current', i === best);
+                    if (i === best) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+                });
+            }
+            function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+            document.addEventListener('scroll', onScroll, true);
+            window.addEventListener('resize', onScroll);
+            window.addEventListener('load', update);
+            update();
+
+            function setOpen(open) {
+                nav.classList.toggle('is-open', open);
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+            toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
+            window.addEventListener('click', function (e) {
+                if (!nav.classList.contains('is-open')) return;
+                if (!nav.contains(e.target) || (e.target.closest && e.target.closest('a.sn-link'))) setOpen(false);
+            }, true);
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+        })();
+    </script>
 
 
 
@@ -337,6 +392,14 @@
 
                     <br>
 
+                </div>
+            </section>
+            <section class="case-section">
+                <div class="section-content">
+                    <div class="detail-container" id="user-research">
+                        <h3 class="title">User Research</h3>
+                    </div>
+                    <br>
                     <img src="Assets/LittleOwl/User Personas.png" width=100% alt="Art Project 1" class="art-item"
                         onclick="openGallery(0)">
                     <p style="text-align: center"><i>Guest Personas</i></p>
@@ -660,7 +723,7 @@
                    arrow keys or buttons for next/previous, Esc to close.
                    --------------------------------------------------------------- */
                 document.addEventListener('DOMContentLoaded', function () {
-                    var imgs = [].slice.call(document.querySelectorAll('#art-station .as-block img, #sound-station .as-block img, #facilitator-station .as-block img, #programming-station .as-block img, #lighting-station .as-block img, #branding-gallery img'));
+                    var imgs = [].slice.call(document.querySelectorAll('main img.art-item, #art-station .as-block img, #sound-station .as-block img, #facilitator-station .as-block img, #programming-station .as-block img, #lighting-station .as-block img, #branding-gallery img'));
                     if (!imgs.length) return;
 
                     var MAX_SCALE = 5;
@@ -752,11 +815,21 @@
                         im.tabIndex = 0;
                         im.setAttribute('role', 'button');
                         im.setAttribute('aria-label', 'Enlarge image: ' + im.alt);
-                        im.addEventListener('click', function () { open(n); });
                         im.addEventListener('keydown', function (e) {
                             if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(n); }
                         });
                     });
+
+                    /* One click handler for every viewer image. It runs before the page's older gallery
+                       handlers, so older images open this viewer too. */
+                    document.addEventListener('click', function (e) {
+                        var im = e.target.closest ? e.target.closest('img') : null;
+                        var n = imgs.indexOf(im);
+                        if (n < 0) return;
+                        e.preventDefault();
+                        e.stopImmediatePropagation();
+                        open(n);
+                    }, true);
 
                     /* Click to zoom in (towards the click) or back out */
                     stage.addEventListener('click', function (e) {
@@ -1287,6 +1360,21 @@
                                 </div>
 
                             </div>
+                        </div>
+
+                        <div class="as-block">
+                            <h4>Connecting the interface to show control</h4>
+                            <p>I programmed the lighting station with the help of the show control system. I made the
+                                connections between the UI and the backend show control, which eased the programmers'
+                                workload, using a C# script that sent the slider/button values to the backend show
+                                control system.</p>
+                            <p>This helped ease the programmer's workload in our high-scope project, as we already had 5
+                                total stations to program.</p>
+                            <figure><img loading="lazy"
+                                    src="Assets/LittleOwl/lighting-show-control-diagram.svg"
+                                    alt="Diagram: the lighting station interface in Unity sends colour values to the show control system, which controls the lights">
+                                <figcaption>REPLACE_ME: caption for the diagram.</figcaption>
+                            </figure>
                         </div>
 
                         <div class="as-block">
