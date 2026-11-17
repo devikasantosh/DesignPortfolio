@@ -1,0 +1,383 @@
+/* Mid-Way case study add-ons.
+   Load order: styles-projects-littleowl.css, styles-art-station.css, then this file.
+   Uses the same colours, fonts and spacing as the Little Owl page (#22577a, #38a3a5,
+   #555 text, #e0e0e0 borders, #f7f7f2 tint). It only adds the few pieces Little Owl
+   does not have and does not change any existing style. */
+
+/* Sidebar links land just below the sticky breadcrumb bar */
+#role,
+#challenge,
+#playtesting,
+#client,
+#production,
+#handoff,
+#reflection {
+  scroll-margin-top: 70px;
+}
+
+/* ---------- Text helpers inside .as-block ---------- */
+.as-block ul {
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+.as-block ul li+li {
+  margin-top: 6px;
+}
+
+.as-block strong {
+  color: #333;
+}
+
+.as-block a {
+  color: #0077b5;
+}
+
+.mw-tag {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #22577a;
+}
+
+/* ---------- At a glance ---------- */
+.mw-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 28px 0 32px;
+}
+
+.mw-fact {
+  padding: 18px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+}
+
+.mw-fact b {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  background: linear-gradient(to right, #22577a, #38a3a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mw-fact span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* ---------- Trailer ---------- */
+.mw-video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.mw-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Cards ---------- */
+.mw-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 18px 20px;
+}
+
+.mw-card>:last-child {
+  margin-bottom: 0;
+}
+
+.mw-cards3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.mw-cards3 .mw-card ul,
+.mw-cards3 .mw-card p {
+  font-size: 0.92rem;
+}
+
+/* ---------- How it works ---------- */
+.mw-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.mw-steps li {
+  counter-increment: step;
+  position: relative;
+  margin: 0;
+  padding: 16px 18px 16px 58px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.as-block .mw-steps li+li {
+  margin-top: 0;
+}
+
+.mw-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #fff;
+  background: #22577a;
+}
+
+.mw-steps b {
+  display: block;
+  color: #22577a;
+  margin-bottom: 2px;
+}
+
+.mw-steps span {
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* ---------- Playtest rounds ---------- */
+.as-block.mw-round {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+
+.as-block.mw-round h4 {
+  margin-bottom: 2px;
+}
+
+.as-block.mw-round .mw-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0 0 14px;
+}
+
+.mw-dl {
+  margin: 0;
+}
+
+.mw-dl>div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  border-top: 1px solid #eee;
+}
+
+.mw-dl dt {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #22577a;
+  padding-top: 2px;
+}
+
+.mw-dl dd {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.mw-dl .mw-changed dt {
+  color: #38a3a5;
+}
+
+.mw-dl .mw-changed dd {
+  color: #333;
+}
+
+/* ---------- Budget ---------- */
+.mw-tier {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px 22px;
+}
+
+.mw-tier--ideal {
+  border-color: #38a3a5;
+}
+
+.mw-tier .mw-total {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  font-weight: bold;
+  margin: 2px 0 8px;
+  background: linear-gradient(to right, #22577a, #38a3a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.as-block .mw-tier p {
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.mw-tier dl {
+  margin: 0;
+}
+
+.mw-tier dl>div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.mw-tier dd {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* ---------- Callout ---------- */
+.mw-callout {
+  border-left: 4px solid #38a3a5;
+  background: #f7f7f2;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+}
+
+.as-block .mw-callout h4 {
+  margin-top: 0;
+}
+
+.mw-callout>:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Disclosure for working documents ---------- */
+.as-block details {
+  margin-top: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.as-block summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 18px;
+  font-weight: bold;
+  color: #22577a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.as-block summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #38a3a5;
+}
+
+.as-block details[open] summary::after {
+  content: "\2212";
+}
+
+.as-block summary:focus-visible {
+  outline: 3px solid #38a3a5;
+  outline-offset: 2px;
+}
+
+.mw-details-body {
+  padding: 0 18px 18px;
+}
+
+.mw-details-body iframe {
+  display: block;
+  width: 100%;
+  height: 620px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+/* ---------- Team ---------- */
+.mw-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.as-block .mw-team li {
+  margin: 0;
+  padding: 5px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .mw-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mw-cards3,
+  .mw-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .mw-dl>div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .mw-details-body iframe {
+    height: 460px;
+  }
+}
