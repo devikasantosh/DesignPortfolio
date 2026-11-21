@@ -370,6 +370,52 @@
     .text-content li {
       margin-bottom: 4px;
     }
+
+    .bf-device-styles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(20px, 5vw, 64px); /* Scales gap smoothly instead of locking at 100px */
+    }
+
+    .bf-device-styles figure {
+      margin: 0;
+    }
+
+    .bf-device-styles img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 900px) {
+      .bf-inv {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bf-styles {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .bf-device-styles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .bf-inv {
+        grid-template-columns: 1fr;
+      }
+
+      .bf-styles {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bf-device-styles {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
   </style>
 </head>
 
