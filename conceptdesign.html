@@ -416,6 +416,25 @@
         gap: 20px;
       }
     }
+
+    @media (max-width: 800px) {
+      .as-lightbox__prev,
+      .as-lightbox__next {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .as-lightbox__prev {
+        left: 10px !important;
+      }
+
+      .as-lightbox__next {
+        right: 10px !important;
+      }
+    }
   </style>
 </head>
 
