@@ -2,332 +2,357 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game UI & HUD Explorations — Devika Santosh</title>
+    <link rel="icon" type="image/x-icon" href="Assets/favicon.png">
 
-  <link rel="stylesheet" href="art-styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-game-ui.css">
 </head>
 
 <body>
-  <header>
-    <a href="index.html">
-      <h1>Devika Santosh</h1>
-      <p>Experience Designer & Creative Technologist</p>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="design.html">Design</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="production.html">Production</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Résumé</a></li>
-      </ul>
-    </nav>
-  </header>
-   <nav aria-label="Breadcrumb" class="sticky-breadcrumbs">
+    <header>
+        <a href="index.html">
+            <h1>Devika Santosh</h1>
+            <p>Experience Designer & Creative Technologist</p>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="games.html" class="active">Games</a></li>
+                <li><a href="production.html">Production</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Résumé</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav aria-label="Breadcrumb" class="sticky-breadcrumbs">
         <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><span aria-current="page">UI Design</span></li>
+            <li><a href="games.html">Games</a></li>
+            <li><span aria-current="page">Game UI & HUD Explorations</span></li>
         </ol>
     </nav>
 
+    <!-- Side Navigation -->
+    <nav class="sidebar sn" aria-label="Page sections">
+        <button type="button" class="sn-toggle" aria-expanded="false" aria-controls="sn-list">Explorations</button>
+        <div class="sn-list" id="sn-list">
+            <span class="sn-group">Explorations</span>
+            <a href="#doctor-who" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Doctor Who Menu & HUD</span></a>
+            <a href="#cooking-game" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Cooking Game UI</span></a>
+            <a href="#motion" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Motion Explorations</span></a>
+            <a href="#pixel-ui" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Pixel UI Library</span></a>
+            <a href="#sports-game" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Sports Game UI</span></a>
+        </div>
+    </nav>
 
-  <nav class="sidebar">
-    <a href="#music-ui">Mobile App UI</a>
-    <a href="#event-ui">Website UI</a>
-    <!-- <a href="#ui-programming">Game UI Programming</a> -->
-  </nav>
-
-
-  <main>
-    <section id="music-ui" class="ui-section">
-
-      <h1>UI Design Projects</h1>
-      <h2>&#10024;Music App UI</h2>
-      Created in 2 hours for Gradient, a UI ideathon by our university’s Android Club. Our design went on to win
-      <b>second place</b> in the event.
-
-      <br>
-      Teammate: Yashvardhan Gupta
-      <br>
-
-      <img src="Assets\musicapp\Fonts and Palette.png" class="center">
-      <br>
-      We drew inspiration from a vinyl record and tried to implement that classic aesthetic in a modern context. This
-      led
-      us to design a clean and minimalist interface, with a nostalgic touch of circular elements and a <b>vinyl-inspired
-        player</b>.
-      <br>
-
-      The color palette was specifically chosen to give a theatrical feel inspired by <b>nightclubs and concerts</b>,
-      and
-      the typography was kept simple to maintain the clean, minimalist aesthetic. We also ensured that the user
-      experience
-      was smooth and intuitive, with easily accessible features and a clear, easy-to-understand layout.
-      <br>
-      <div class="design-grid">
-        <img src="Assets\musicapp\Welcome.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-        <img src="Assets\musicapp\Home.png" alt="Art Project 2" class="art-item" onclick="openGallery(1)">
-        <img src="Assets\musicapp\Search Page.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
-        <img src="Assets\musicapp\Music.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
-        <img src="Assets\musicapp\Playlists.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
-        <img src="Assets\musicapp\Profile.png" alt="Art Project 3" class="art-item" onclick="openGallery(2)">
-      </div>
-
-      <!-- Gallery Overlay -->
-      <div id="galleryOverlay" class="overlay">
-        <span class="close" onclick="closeGallery()">&times;</span>
-        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
-        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
-        <a class="next" onclick="changeImage(1)">&#10095;</a>
-      </div>
-      This is one of my favourite creations, purely from the thrill of collaboratively creating something against a
-      deadline and seeing it come to life right in front of you.
-      <br>
-      <br>
+    <!-- Compact Page Intro -->
+    <section class="gallery-hero">
+        <div class="gallery-hero__inner">
+            <p class="hero-eyebrow">UI / UX & INTERACTION SANDBOX</p>
+            <h1>Game UI & HUD Explorations</h1>
+            <p class="hero-description">
+                Exploring game UI concepts, diegetic HUDs, menus, motion design, and interactive prototypes across different genres and visual styles.
+            </p>
+            <div class="hero-tags">
+                <span>Figma</span>
+                <span>Unity</span>
+                <span>After Effects</span>
+                <span>Protopie</span>
+            </div>
+        </div>
     </section>
-    <section id="event-ui" class="ui-section">
-      <h2>&#10024;Event Website UI</h2>
-      This was probably my first step into the world of UI and UX design. HC Educates, HackClub’s yearly flagship event,
-      consisted of a series of workshops followed by a Hackathon where participants could showcase what they learnt. I
-      was tasked with designing a one-page website framework to be presented to the web developers to create a site
-      where participants could find all the event details.
 
-      <img src="Assets\eventapp\fonts and palette.png" class="center">
-      <br>
-      Gradients and futuristic fonts, combined with the use of 3D elements and dynamic shapes, were used to create an
-      engaging and futuristic design that would appeal to the tech-savvy audience of the event. The layout was designed
-      to be clean and intuitive, ensuring that users could easily navigate through the site and find the information
-      they needed.
-      <br>
+    <main id="project-content">
 
-      <br>
-      <!-- <div class="design-grid">
-      <img src="Assets\eventapp\Website.png" alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-    </div>
+        <!-- 1. Doctor Who -->
+        <section class="ui-section" id="doctor-who">
+            <div class="section-content">
+                <div class="section-header">
+                    <div class="section-title-group">
+                        <h2 class="title">Doctor Who - Menu & HUD</h2>
+                        <div class="tags">
+                            <span class="tag">Sci-Fi</span>
+                            <span class="tag">Diegetic HUD</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                    </div>
+                    <p class="section-desc">
+                        Concept menus and TARDIS-inspired spatial HUD elements blending Gallifreyan circular geometry with tactile analog controls.
+                    </p>
+                </div>
 
-    <div id="galleryOverlay" class="overlay">
-      <span class="close" onclick="closeGallery()">&times;</span>
-      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
-      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
-      <a class="next" onclick="changeImage(1)">&#10095;</a>
-    </div> -->
-      <p style="text-align:center; color: #0077b5; font-size: 20px; font-style: italic; font-weight: bold;">~✨Figma
-        embeds may take a few seconds to load!✨~</p>
-
-      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="500px"
-        src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=115-3184&embed-host=share"
-        allowfullscreen></iframe>
-      <br>
-      The website was later developed and deployed by HackClub’s web development department, and can be viewed at <br><a
-        href="https://hackclubvit.github.io/hc-educates-site/"
-        style="color: #0077b5;">https://hackclubvit.github.io/hc-educates-site/</a>
-      <br>
-      <br>
-      <br>
-    <!-- </section>
-    <section id="ui-programming" class="ui-section">
-<br>
-      <h2>&#10024;Game UI Programming - <a href="twotofoxtrot.html">Two to Foxtrot</a></h2>
-      <h3>Role: Integrating UI into the game</h3>
-      <br>
-      <section class="detail">
-        <div class="detail-container">
-          <h3 class="title">Game Mechanic</h3>
-          <div class="text-content">
-            <p>2-player <b>asymmetric</b> game where the human and the forest spirit have <b>different abilities</b>,
-              and
-              can <b>see and interact with different entities</b>.</p>
-            <br>
-
-            <p>The players
-              must <b>communicate</b> to solve the puzzles.</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="sticky-notes-container">
-        <div class="sticky-note">
-          <p><b>Human Abilities:</b></p>
-          <p>- move physical obstacles</p>
-          <p>- read signs</p>
-        </div>
-
-        <div class="sticky-note">
-          <p><b>Spirit Abilities:</b></p>
-          <p>- talk to ghosts</p>
-          <p>- swimming</p>
-        </div>
-      </div><br><br>
-
-      <section class="detail">
-        <div class="detail-container">
-          <h3 class="title">Platform</h3>
-          <div class="text-content">
-            <br>
-            <p>Unity Engine, Xbox controllers for each player.</p>
-          </div>
-        </div>
-      </section>
-      <br>
-      <p>Assets made by <b>Joy Lim</b>.</p>
-      <br>
-      <p>My role involved intergrating this UI into the game, first, with placeholder assets I had made, and then with
-        the final artists assets.</p>
-      <br>
-      <p>Worked on:
-      <ul>
-        <li><b>overall planning</b> of game UI programming,</li>
-        <li><b>setting zones</b> where the UI should appear,</li>
-        <li><b>timing</b> of appearance,</li>
-        <li><b>orientation</b> of certain UI like dialogue during character movement,</li>
-        <li>having <b>different UI</b> appear for the human and the fox spirit, and</li>
-        <li><b>encouraging conversation</b> between the two players using different UI monologues.</li>
-      </ul>
-      <br>
-      <img src="Assets/ui-part1.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)" width="100%">
-      <p style="text-align: center"><i>UI appears based on range of player within a region</i></p>
-      <br>
-      <img src="Assets/ui-part2.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)" width="100%">
-      <p style="text-align: center"><i>UI for communication with ghost - player cannot decipher the whole request</i>
-      </p>
-      <br>
-      <h3>Encouraging players to communicate early on (Asymmetric Play - Part 1)</h3>
-      <img src="Assets/communicategif.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)"
-        width="100%">
-      <p style="text-align: center"><i>Conversation between characters visible only on their respective screens - makes
-          players talk to eachother to complete tasks</i></p>
-      <p style="text-align: center"><i><b>Alt text: </b>Sprit cannot move the rock. The spirit player sees the "That's
-          too
-          heavy for me to move." dialogue. The human sees only the "Hmm, maybe I can move this." line. Works as a
-          standalone line for the human player too.</i></p>
-
-      <br>
-      <h3>Quests! (Asymmetric Play - Part 2)</h3>
-      <p>The spirit can talk to the ghost. The human can read. The players
-        must <b>communicate</b> to solve the puzzles.</p>
-      <img src="Assets/ghostrequests.png" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)"
-        width="100%">
-      <p style="text-align: center"><i>Human view and Spirit view</i></p>
-      <p style="text-align: center"><i>Red(flower + mushroom)!!</i></p>
-
-      <br>
-      <h3>Happy ghost - the light bridge opens!</h3>
-      <img src="Assets/ghostui-part1.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)"
-        width="100%">
-      <p style="text-align: center"><i>When the task (red flower + red mushroom) is complete, the ghost animation and UI
-          changes, and the light bridge is now accessible to players.</i></p>
-
-      <br>
-      <h3>End of Part One - Cinematic Fade Out</h3>
-      <img src="Assets/ghostui-part2.gif" alt="Art Project 1" class="art-item-new" onclick="openGallery(0)"
-        width="100%">
-      <p style="text-align: center"><i>Each player's screen fades to white slowly, after they enter the light bridge and
-          fall into an abyss.</i></p>
-      <p style="text-align: center"><i> This was the end of our interim game and was meant to feel complete. We later
-          added more tasks between the ghost's first request and the final fadeout escape.</i></p> -->
-
-      <br>
-
-    </section>
-    <div class="dynamic-hr"></div>
-
-    <h2 style="text-align: center; font-family: 'Playfair Display', serif;">
-      Check out some of my other projects!</h2>
-    <div class="next-projects-container">
-      <div class="next-project-preview">
-        <a href="marketing.html">
-          <div class="preview-left">
-            <img src="Assets/marketing-cover-1.png" alt="Next Project">
-            <div class="next-project-info">
-              <h3>Marketing and Social Media Design</h3>
-              <p>More Figma! Online and offline marketing content designed for clubs as Design Lead and Content & Media Lead.</p>
+                <!-- 1 hero image + 2 supporting images -->
+                <div class="gallery-grid gallery-grid--featured">
+                    <figure class="span-full">
+                        <img src="Assets/GameUI/dw-main-menu.png" alt="Doctor Who inspired main menu screen">
+                        <figcaption>Main Title Screen & Save Slot Selector</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/dw-hud.png" alt="In-game TARDIS scanner HUD">
+                        <figcaption>Temporal Scanner & Sonic Screwdriver HUD</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/dw-map.png" alt="Time vortex navigation menu">
+                        <figcaption>Time Vortex Coordinate Navigation</figcaption>
+                    </figure>
+                </div>
             </div>
-          </div>
-          <div class="preview-right">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-            </svg>
-          </div>
-        </a>
-      </div>
+        </section>
 
-      <div class="next-project-preview">
-        <a href="uxresearch.html">
-          <div class="preview-left">
-            <img src="Assets/ux-research-cover.png" alt="Next Project">
-            <div class="next-project-info">
-              <h3>UX Research</h3>
-              <p>Ongoing. UX case study to redesign social media break timers and nudges!</p>
+        <!-- 2. Cooking Game UI -->
+        <section class="ui-section" id="cooking-game">
+            <div class="section-content">
+                <div class="section-header">
+                    <div class="section-title-group">
+                        <h2 class="title">Cozy Cooking Game UI</h2>
+                        <div class="tags">
+                            <span class="tag">Casual</span>
+                            <span class="tag">Inventory & Crafting</span>
+                            <span class="tag">Illustration</span>
+                        </div>
+                    </div>
+                    <p class="section-desc">
+                        Tactile recipe book, ingredient prep wheel, and order ticket system designed for fast readability during timed kitchen chaos.
+                    </p>
+                </div>
+
+                <div class="gallery-grid gallery-grid--2">
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/cooking-hud.png" alt="Cooking game kitchen HUD">
+                        <figcaption>Active Kitchen HUD & Order Tickets</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/cooking-recipe.png" alt="Recipe book UI overlay">
+                        <figcaption>Interactive Recipe Book & Ingredient Prep</figcaption>
+                    </figure>
+                </div>
             </div>
-          </div>
-          <div class="preview-right">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-            </svg>
-          </div>
-        </a>
-      </div>
+        </section>
 
-      <div class="next-project-preview">
-        <a href="encore.html">
-          <div class="preview-left">
-            <img src="Assets/encore.png" alt="Next Project">
-            <div class="next-project-info">
-              <h3>Experience Design</h3>
-              <p>Location-based entertainment. A pre-show lobby experience for CMU's Titanic the Musical. Serving as
-                narrative and experience designer. Click here to see more user research.</p>
+        <!-- 3. Motion Explorations -->
+        <section class="ui-section" id="motion">
+            <div class="section-content">
+                <div class="section-header">
+                    <div class="section-title-group">
+                        <h2 class="title">UI Motion & Micro-interactions</h2>
+                        <div class="tags">
+                            <span class="tag">Animation</span>
+                            <span class="tag">Feedback</span>
+                            <span class="tag">GIF / Video</span>
+                        </div>
+                    </div>
+                    <p class="section-desc">
+                        Screen transitions, button juice, radial menus, and alert popups focused on responsiveness and game feel.
+                    </p>
+                </div>
+
+                <!-- Supports both GIFs and looping MP4/WebM videos -->
+                <div class="gallery-grid gallery-grid--3">
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/motion-radial.gif" alt="Radial wheel selection animation">
+                        <figcaption>Radial Weapon/Item Wheel</figcaption>
+                    </figure>
+                    <figure>
+                        <video autoplay muted loop playsinline class="gallery-media">
+                            <source src="Assets/GameUI/motion-toast.mp4" type="video/mp4">
+                        </video>
+                        <figcaption>Quest Complete & Reward Toast</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/motion-transition.gif" alt="Menu screen transition">
+                        <figcaption>Pause Menu Staggered Entry</figcaption>
+                    </figure>
+                </div>
             </div>
-          </div>
-          <div class="preview-right">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-            </svg>
-          </div>
-        </a>
-      </div>
-    </div>
+        </section>
 
-  </main>
+        <!-- 4. Pixel UI Library -->
+        <section class="ui-section" id="pixel-ui">
+            <div class="section-content">
+                <div class="section-header">
+                    <div class="section-title-group">
+                        <h2 class="title">Pixel Art UI Kit</h2>
+                        <div class="tags">
+                            <span class="tag">Design System</span>
+                            <span class="tag">16-Bit</span>
+                            <span class="tag">Aseprite</span>
+                        </div>
+                    </div>
+                    <p class="section-desc">
+                        Modular 9-slice dialogue boxes, health bars, inventory slots, and controller prompt icons built on an 8px grid.
+                    </p>
+                </div>
 
+                <div class="gallery-grid gallery-grid--featured">
+                    <figure class="span-full">
+                        <img loading="lazy" src="Assets/GameUI/pixel-sheet.png" alt="Complete pixel UI component sheet" class="pixel-art">
+                        <figcaption>Component Sheet — Buttons, Sliders, Bars & 9-Slice Frames</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/pixel-dialogue.png" alt="Pixel dialogue box mockup" class="pixel-art">
+                        <figcaption>RPG Dialogue & Portrait Box</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/pixel-inventory.png" alt="Pixel inventory screen" class="pixel-art">
+                        <figcaption>Inventory & Equipment Loadout</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-  <footer id="contact">
+        <!-- 5. Sports Game UI -->
+        <section class="ui-section" id="sports-game">
+            <div class="section-content">
+                <div class="section-header">
+                    <div class="section-title-group">
+                        <h2 class="title">Sports Broadcast & Match UI</h2>
+                        <div class="tags">
+                            <span class="tag">Broadcast</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">HUD</span>
+                        </div>
+                    </div>
+                    <p class="section-desc">
+                        High-contrast scorebugs, stamina gauges, and post-match stat breakdowns inspired by live sports broadcasts.
+                    </p>
+                </div>
 
-    <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #0077b5;">devikasantosh@gmail.com</a></p>
-    <div class="social-icons">
-      <div class="button-container">
+                <div class="gallery-grid gallery-grid--2">
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/sports-hud.png" alt="In-match scorebug and player stamina HUD">
+                        <figcaption>Live Match Scorebug & Stamina Ring</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="Assets/GameUI/sports-stats.png" alt="Post-match player stats screen">
+                        <figcaption>Post-Match Telemetry & Shot Map</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-        <div class="glass-btn blue-btn">
-          <img src="Assets\footer\linkedin-tile 3.png" alt="linkedin" class="social-icon" id="linkedin-icon"
-            style="width: 5.5em">
+    </main>
+
+    <footer id="contact">
+        <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #7ec8e3;">devikasantosh@gmail.com</a></p>
+        <div class="social-icons">
+            <div class="button-container">
+                <div class="glass-btn blue-btn">
+                    <img src="Assets/footer/linkedin-tile 3.png" alt="LinkedIn" class="social-icon" style="width: 5.5em">
+                </div>
+                <div class="glass-btn blue-btn">
+                    <img src="Assets/footer/github-tile 2.png" alt="GitHub" class="social-icon" style="width: 5.5em">
+                </div>
+                <div class="glass-btn blue-btn">
+                    <img src="Assets/footer/behance-tile 2.png" alt="Behance" class="social-icon" style="width: 5.5em">
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <div class="glass-btn blue-btn">
+    <!-- Sidebar Scroll-Spy & Lightbox Script -->
+    <script>
+        // 1. Sidebar active link tracking & mobile toggle
+        (function () {
+            var nav = document.querySelector('.sidebar.sn');
+            if (!nav) return;
+            var toggle = nav.querySelector('.sn-toggle');
+            var links = [].slice.call(nav.querySelectorAll('a.sn-link[href^="#"]'));
+            var ticking = false;
 
-          <img src="Assets\footer\github-tile 2.png" alt="github" class="social-icon" id="github-icon"
-            style="width: 5.5em">
+            function update() {
+                ticking = false;
+                var line = window.innerHeight * 0.35, best = -1, bestTop = -Infinity;
+                links.forEach(function (a, i) {
+                    var t = document.getElementById(a.getAttribute('href').slice(1));
+                    if (!t) return;
+                    var top = t.getBoundingClientRect().top;
+                    if (top <= line && top > bestTop) { bestTop = top; best = i; }
+                });
+                if (best < 0) best = 0;
+                links.forEach(function (a, i) {
+                    a.classList.toggle('is-current', i === best);
+                    if (i === best) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+                });
+            }
+            function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+            document.addEventListener('scroll', onScroll, true);
+            window.addEventListener('resize', onScroll);
+            window.addEventListener('load', update);
+            update();
 
-        </div>
+            function setOpen(open) {
+                nav.classList.toggle('is-open', open);
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+            toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
+            window.addEventListener('click', function (e) {
+                if (!nav.classList.contains('is-open')) return;
+                if (!nav.contains(e.target) || (e.target.closest && e.target.closest('a.sn-link'))) setOpen(false);
+            }, true);
+        })();
 
-        <div class="glass-btn blue-btn">
-          <img src="Assets\footer\behance-tile 2.png" alt="Behance" class="social-icon" id="behance-icon"
-            style="width: 5.5em">
-        </div>
+        // 2. Click-to-zoom Lightbox for all gallery images
+        document.addEventListener('DOMContentLoaded', function () {
+            var imgs = [].slice.call(document.querySelectorAll('.gallery-grid img'));
+            if (!imgs.length) return;
 
-      </div>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+            var box = document.createElement('div');
+            box.className = 'ui-lightbox';
+            box.hidden = true;
+            box.innerHTML =
+                '<button type="button" class="ui-lightbox__close" aria-label="Close">&times;</button>' +
+                '<button type="button" class="ui-lightbox__prev" aria-label="Previous">&#10094;</button>' +
+                '<figure><img alt=""><figcaption></figcaption></figure>' +
+                '<button type="button" class="ui-lightbox__next" aria-label="Next">&#10095;</button>';
+            document.body.appendChild(box);
+
+            var big = box.querySelector('img');
+            var cap = box.querySelector('figcaption');
+            var current = 0;
+
+            function show(n) {
+                current = (n + imgs.length) % imgs.length;
+                var im = imgs[current];
+                var fc = im.closest('figure') ? im.closest('figure').querySelector('figcaption') : null;
+                big.src = im.currentSrc || im.src;
+                big.alt = im.alt;
+                big.classList.toggle('pixel-art', im.classList.contains('pixel-art'));
+                cap.textContent = fc ? fc.textContent.trim() : '';
+            }
+
+            function open(n) {
+                show(n);
+                box.hidden = false;
+                document.body.style.overflow = 'hidden';
+            }
+
+            function close() {
+                box.hidden = true;
+                document.body.style.overflow = '';
+            }
+
+            imgs.forEach(function (im, n) {
+                im.addEventListener('click', function () { open(n); });
+            });
+
+            box.querySelector('.ui-lightbox__close').addEventListener('click', close);
+            box.querySelector('.ui-lightbox__prev').addEventListener('click', function () { show(current - 1); });
+            box.querySelector('.ui-lightbox__next').addEventListener('click', function () { show(current + 1); });
+            box.addEventListener('click', function (e) { if (e.target === box) close(); });
+            document.addEventListener('keydown', function (e) {
+                if (box.hidden) return;
+                if (e.key === 'Escape') close();
+                if (e.key === 'ArrowLeft') show(current - 1);
+                if (e.key === 'ArrowRight') show(current + 1);
+            });
+        });
+    </script>
 </body>
 
 </html>
