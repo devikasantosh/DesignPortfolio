@@ -1084,3 +1084,39 @@ header nav {
 header nav::-webkit-scrollbar {
     display: none;
 }
+
+#contact {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #ffffff; /* Makes the text and icons white */
+}
+
+#contact a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centers the icons horizontally */
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: #ffffff; /* Controls the SVG color via currentColor */
+  display: inline-flex;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.75; /* Subtle dim on hover */
+}
+
+.social-svg {
+  width: 2rem;
+  height: 2rem;
+}
