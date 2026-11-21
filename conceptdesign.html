@@ -224,11 +224,7 @@
       }
     }
 
-    .case-section:has(.bf-step) .section-content {
-      max-width: 1400px;
-      padding: 0 6vw;
-    }
-
+  
     .bf-step {
       display: grid;
       grid-template-columns: 1.35fr 0.65fr;
@@ -362,6 +358,17 @@
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
+    }
+
+    .text-content ol,
+    .text-content ul {
+      margin: 8px 0 0;
+      padding-left: 1.5em;
+      list-style-position: outside;
+    }
+
+    .text-content li {
+      margin-bottom: 4px;
     }
   </style>
 </head>
@@ -661,8 +668,7 @@
         <div class="detail-container" id="set">
           <h3 class="title">The Set</h3>
           <div class="text-content">
-            <p>Finalised space design:</p>
-            <p>3 devices:</p>
+            <p>The finalised space design had 3 devices:</p>
             <ol>
               <li>ghost detection device</li>
               <li>pepper's ghost crystal ball</li>
