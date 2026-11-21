@@ -251,6 +251,14 @@ html {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    justify-content: center;
+}
+
+/* Keep cards from stretching when there are fewer results */
+#game-projects .project {
+    width: 100%;
+    max-width: 380px;
+    justify-self: center;
 }
 
 h1.dark{
@@ -542,3 +550,152 @@ background: #6d597a;
     color: #333;
     font-weight: bold;
 }
+
+
+/* FILTER WRAPPER */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    margin: 30px 0;
+    padding: 20px 24px;
+    border: 1px solid rgba(37, 36, 34, 0.2);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* FILTER GROUPS */
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+/* GROUP LABELS */
+.filter-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #77736b;
+    margin-right: 6px;
+}
+
+/* FILTER BUTTONS */
+.filter-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 8px 15px;
+    border: 1px solid rgba(37, 36, 34, 0.25);
+    border-radius: 30px;
+    background: transparent;
+    color: #252422;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+/* HOVER */
+.filter-button:hover {
+    border-color: #252422;
+    background: #8e8e8e;
+    color: #fcfbec;
+}
+
+/* ACTIVE */
+.filter-button.active {
+    background: #252422;
+    border-color: #252422;
+    color: #f6f4d2;
+}
+
+/* CLEAR FILTERS */
+.filter-button[data-filter="all"] {
+    font-size: 0.72rem;
+    padding: 7px 13px;
+    border-style: dashed;
+    opacity: 0.75;
+}
+
+.filter-button[data-filter="all"].active {
+    border-style: solid;
+    opacity: 1;
+}
+
+/* HIDDEN PROJECTS */
+.project.hidden {
+    display: none !important;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .filter-container {
+        gap: 18px;
+        padding: 16px;
+    }
+
+    .filter-group {
+        gap: 7px;
+    }
+
+    .filter-label {
+        flex-basis: 100%;
+        margin-bottom: 3px;
+    }
+
+    .filter-button {
+        font-size: 0.72rem;
+        padding: 7px 12px;
+    }
+}
+
+/* EMPTY FILTER STATE */
+.empty-filter-message {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 55px 20px;
+    text-align: center;
+    color: #252422;
+}
+
+.empty-filter-message h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.empty-filter-message p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    opacity: 0.7;
+}
+
+/* CLEAR FILTERS - DISTINCT STYLE */
+.filter-button[data-filter="all"] {
+    color: #b56576;
+    border:#b56576 lid #b56576;
+    font-weight: 600;
+    border-style: solid;
+    opacity: 1;
+    margin-left: 8px;
+}
+
+.filter-button[data-filter="all"]:hover {
+    background: #b56576;
+    color: #f6f4d2;
+    border-color: #b56576;
+}
+
+.filter-button[data-filter="all"].active {
+    background: #b56576;
+    color: #ffffff;
+    border-color: #b56576;
+}
+

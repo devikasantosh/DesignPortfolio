@@ -66,27 +66,37 @@
       <button class="filter-button" data-filter="production">Production</button>
     </div> -->
 
-    <div class="filter-container">
-      <button class="filter-button active" data-filter="all">All</button>
-      <button class="filter-button" data-filter="LBE">Location-Based Entertainment</button>
-      <button class="filter-button" data-filter="games">Games</button>
-      <button class="filter-button" data-filter="UI">UI/UX</button>
-      <button class="filter-button" data-filter="production">Production</button>
-      <!-- <button class="filter-button" data-filter="technical-art">Technical Art</button> -->
-      <button class="filter-button" data-filter="art">Art</button>
-      <button class="filter-button" data-filter="pgm">Programming</button>
+    
 
-      <!-- <button class="filter-button" data-filter="LBE">Museums</button>
-      <button class="filter-button" data-filter="UI">Client Projects</button>
-      <button class="filter-button" data-filter="games">Educational</button>
-      <button class="filter-button" data-filter="LBE">Concept Design</button>
-      <button class="filter-button" data-filter="UI">Narrative</button>
-      <button class="filter-button" data-filter="games">Programming</button> -->
-    </div>
+<div class="filter-container">
+
+  <div class="filter-group">
+    <span class="filter-label">Domain</span>
+    <button class="filter-button" data-group="domain" data-filter="lbe">LBE</button>
+    <button class="filter-button" data-group="domain" data-filter="games">Games</button>
+    <button class="filter-button" data-group="domain" data-filter="other">Other</button>
+  </div>
+
+  <div class="filter-group">
+    <span class="filter-label">Roles & Skills</span>
+    <button class="filter-button" data-group="skills" data-filter="experience-design">Experience Design</button>
+    <button class="filter-button" data-group="skills" data-filter="ui">UI</button>
+    <button class="filter-button" data-group="skills" data-filter="narrative">Narrative</button>
+    <button class="filter-button" data-group="skills" data-filter="production">Production</button>
+    <button class="filter-button" data-group="skills" data-filter="programming">Programming</button>
+    <button class="filter-button" data-group="skills" data-filter="concept">Concept</button>
+    <button class="filter-button" data-group="skills" data-filter="art">Art</button>
+  </div>
+
+  <button class="filter-button active" data-filter="all">Clear Filters</button>
+
+</div>
+
+
 
 
     <section id="game-projects">
-      <a href="encore.html" class="project LBE">
+      <a href="encore.html" class="project LBE" data-filters="lbe experience-design narrative art">
         <div class="project-image">
           <img src="Assets/encore-cover.png" alt="Experience Design">
           <span class="ribbon">Client Project</span>
@@ -114,7 +124,7 @@
           </div>
         </div>
       </a>
-      <a href="littleowl.html" class="project LBE UI pgm">
+      <a href="littleowl.html" class="project LBE UI pgm" data-filters="lbe games experience-design ui concept programming">
         <div class="project-image">
           <img src="Assets/LittleOwl/owl-cover.png" alt="Experience Design" width="300">
           <span class="ribbon">Client Project</span>
@@ -145,7 +155,7 @@
         </div>
       </a>
 
-      <a href="midway.html" class="project LBE production">
+      <a href="midway.html" class="project LBE production" data-filters="lbe experience-design narrative production">
         <div class="project-image">
           <img src="Assets/midway-resized-cover.png" alt="Experience Design" width="300">
           <span class="ribbon">Client Project</span>
@@ -173,7 +183,7 @@
       </a>
 
 
-      <a href="deerstranger.html" class="project games production pgm">
+      <a href="deerstranger.html" class="project games production pgm" data-filters="games production programming">
         <img src="Assets\craig.png" alt="Project 2 Thumbnail">
         <div class="project-info">
           <h2>"Deer Stranger,"</h2>
@@ -198,7 +208,7 @@
       </a>
 
 
-      <a href="transformational.html" class="project LBE">
+      <a href="transformational.html" class="project LBE" data-filters="lbe experience-design narrative concept">
         <img src="Assets/transformational.gif" alt="Transformational Design">
         <div class="project-info">
           <h2>When the Voices Fade</h2>
@@ -213,7 +223,7 @@
           </div>
         </div>
       </a>
-      <a href="conceptdesign.html" class="project LBE games art">
+      <a href="conceptdesign.html" class="project LBE games art" data-filters="lbe games concept art ui">
         <img src="Assets/concept-cover.png" alt="Concept Design" width="300">
         <div class="project-info">
           <h2>Boofinder</h2>
@@ -233,7 +243,7 @@
           </div>
         </div>
       </a>
-      <a href="touchdesigner.html" class="project LBE technical-art pgm">
+      <a href="touchdesigner.html" class="project LBE technical-art pgm" data-filters="lbe experience-design programming">
         <img src="Assets/td_cover.gif" alt="Experience Design" width="300">
         <div class="project-info">
           <h2>Butterfly Garden</h2>
@@ -264,7 +274,7 @@
         </div>
       </a> -->
 
-      <a href="escaperoom.html" class="project LBE pgm">
+      <a href="escaperoom.html" class="project LBE pgm" data-filters="lbe experience-design programming narrative">
         <div class="project-image">
           <img src="Assets/ExperienceDesign/experiencedesign-cover-2.png" alt="Experience Design" width="300">
           <span class="ribbon">Showcased at CMU Fall Festival 2025</span>
@@ -288,7 +298,7 @@
         </div>
       </a>
 
-      <a href="darkride.html" class="project LBE pgm">
+      <a href="darkride.html" class="project LBE pgm" data-filters="lbe games experience-design programming">
         <div class="project-image">
           <img src="Assets/ExperienceDesign/manor-resized-cover.png" alt="Experience Design" width="300">
           <span class="ribbon">Showcased at CMU Fall Festival 2025</span>
@@ -310,7 +320,7 @@
         </div>
       </a>
 
-      <a href="twotofoxtrot.html" class="project games production UI pgm">
+      <a href="twotofoxtrot.html" class="project games production UI pgm" data-filters="games ui production programming">
         <img src="Assets\twotofoxtrotimg.png" alt="Project 2 Thumbnail">
         <div class="project-info">
           <h2>Two to Foxtrot</h2>
@@ -336,7 +346,7 @@
           </div>
         </div>
       </a>
-      <a href="maskofthereddeath.html" class="project games art">
+      <a href="maskofthereddeath.html" class="project games art" data-filters="games art">
         <div class="project-image">
           <img src="Assets/GGJ-resized-cover.png" alt="Project 2 Thumbnail">
           <span class="ribbon">Award Winner</span>
@@ -369,7 +379,7 @@
         </div>
       </a>
 
-      <a href="thankyoufor.html" class="project LBE art">
+      <a href="thankyoufor.html" class="project LBE art" data-filters="lbe experience-design concept art">
         <div class="project-image">
           <img src="Assets/ty-resized-cover.png" alt="Project 2 Thumbnail">
           <span class="ribbon">Museum Collaborator</span>
@@ -402,7 +412,7 @@
       </a>
 
 
-      <a href="legomaps.html" class="project LBE technical-art art">
+      <a href="legomaps.html" class="project LBE technical-art art" data-filters="lbe experience-design programming art">
         <img src="Assets/Lego/prideCover.gif" alt="Project 2 Thumbnail">
         <div class="project-info">
           <h2>Lego Projection Mapping</h2>
@@ -428,7 +438,7 @@
 
 
 
-      <a href="treasurefalls.html" class="project games pgm">
+      <a href="treasurefalls.html" class="project games pgm" data-filters="games programming">
         <img src="Assets\Treasure Falls.PNG" alt="Project 2 Thumbnail">
         <div class="project-info">
           <h2>Treasure Falls</h2>
@@ -448,7 +458,7 @@
         </div>
       </a>
 
-      <a href="thecatmeowspa.html" class="project games pgm">
+      <a href="thecatmeowspa.html" class="project games pgm" data-filters="games programming">
 
         <div class="project-image">
           <img src="Assets\CatMeowSpa.png" alt="Project 2 Thumbnail">
@@ -473,7 +483,7 @@
       </a>
 
 
-      <a href="ui.html" class="project UI">
+      <a href="ui.html" class="project UI" data-filters="other ui">
         <img src="Assets/uicover.png" alt="Project 3 Thumbnail" width="100">
         <div class="project-info">
           <h2>UI Design</h2>
@@ -488,7 +498,7 @@
           </div>
         </div>
       </a>
-      <a href="marketing.html" class="project UI production">
+      <a href="marketing.html" class="project UI production" data-filters="other production art">
         <img src="Assets/marketing-cover-1.png" alt="Project 3 Thumbnail" width="100">
         <div class="project-info">
           <h2>Marketing and Social Media Design</h2>
@@ -542,7 +552,7 @@
       </a> -->
 
 
-      <a href="signlanguage.html" class="project games pgm">
+      <a href="signlanguage.html" class="project games pgm" data-filters="games experience-design ui programming">
         <img src="Assets\Frame 7.png" alt="Project 1 Thumbnail">
         <div class="project-info">
           <h2>Gamified Sign Language Learning Experience</h2>
@@ -577,7 +587,7 @@
         </div>
       </a> -->
 
-      <a href="fabrication.html" class="project LBE art">
+      <a href="fabrication.html" class="project LBE art" data-filters="lbe concept art">
         <div class="project-image">
           <img src="Assets/fabrication-cover.png" alt="Project 3 Thumbnail" width="100">
           <span class="ribbon">Client Project</span>
@@ -594,7 +604,7 @@
         </div>
       </a>
 
-      <a href="arduino.html" class="project technical-art LBE pgm">
+      <a href="arduino.html" class="project technical-art LBE pgm" data-filters="lbe programming">
         <img src="Assets\workingvid.gif" alt="Archeological Ruins Generator Tool">
         <div class="project-info">
           <h2>Arduino Animation with Pulse Sensor Input</h2>
@@ -606,7 +616,7 @@
           </div>
         </div>
       </a>
-      <a href="archeology.html" class="project technical-art pgm">
+      <a href="archeology.html" class="project technical-art pgm" data-filters="other programming art">
         <img src="Assets/mayacover.png" alt="Archeological Ruins Generator Tool">
         <div class="project-info">
           <h2>Scene Scatter Tool - Generating Archeological Ruins</h2>
@@ -621,7 +631,7 @@
           </div>
         </div>
       </a>
-      <a href="naturalvariety.html" class="project technical-art pgm">
+      <a href="naturalvariety.html" class="project technical-art pgm" data-filters="other programming art">
         <img src="Assets/mayacover2.png" alt="Project 2 Thumbnail" width="300">
         <div class="project-info">
           <h2>Programming Natural Variety</h2>
@@ -637,7 +647,7 @@
           </div>
         </div>
       </a>
-      <a href="art.html" class="project art">
+      <a href="art.html" class="project art" data-filters="other art">
         <img src="Assets/art.gif" alt="Project 3 Thumbnail" width="100">
         <div class="project-info">
           <h2>Artwork</h2>

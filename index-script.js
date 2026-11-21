@@ -1,4 +1,4 @@
-document.getElementById("downButton").addEventListener("click", function() {
+document.getElementById("downButton").addEventListener("click", function () {
     document.querySelector("main").scrollIntoView({ behavior: "smooth" });
 });
 
@@ -9,20 +9,135 @@ document.getElementById("downButton").addEventListener("click", scrollToNavbar);
 const filterButtons = document.querySelectorAll('.filter-button');
 const projects = document.querySelectorAll('.project');
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+// EMPTY STATE MESSAGE
+const emptyMessage = document.createElement('div');
+emptyMessage.className = 'empty-filter-message';
+emptyMessage.innerHTML = `
+    <h3>Hmm, nothing in this collection!</h3>
+    <p>Try mixing up your filters to discover more projects.</p>
+`;
+projects[0]?.parentElement.appendChild(emptyMessage);
+
+const selectedDomains = new Set();
+const selectedSkills = new Set();
+
+// LOAD SAVED FILTERS
+function loadSavedFilters() {
+    const savedFilters = JSON.parse(
+        sessionStorage.getItem('portfolioFilters') || '{}'
+    );
+
+    selectedDomains.clear();
+    selectedSkills.clear();
+
+    (savedFilters.domains || []).forEach(filter =>
+        selectedDomains.add(filter)
+    );
+
+    (savedFilters.skills || []).forEach(filter =>
+        selectedSkills.add(filter)
+    );
+}
+
+// UPDATE PROJECT VISIBILITY
+function updateProjectFilters() {
+
+    projects.forEach(project => {
+
+        const projectFilters = (project.dataset.filters || '')
+            .split(' ')
+            .filter(Boolean);
+
+        // OR logic within Domain
+        const matchesDomain =
+            selectedDomains.size === 0 ||
+            [...selectedDomains].some(filter =>
+                projectFilters.includes(filter)
+            );
+
+        // OR logic within Skills
+        const matchesSkills =
+            selectedSkills.size === 0 ||
+            [...selectedSkills].some(filter =>
+                projectFilters.includes(filter)
+            );
+
+        const visibleProjects = [...projects].filter(
+            project => !project.classList.contains('hidden')
+        );
+
+        emptyMessage.style.display =
+            visibleProjects.length === 0 ? 'block' : 'none';
+
+        // AND logic between Domain and Skills
+        const matches = matchesDomain && matchesSkills;
+
+        project.classList.toggle('hidden', !matches);
+    });
+
+    // UPDATE ACTIVE BUTTON STYLING
+    filterButtons.forEach(button => {
 
         const filter = button.dataset.filter;
-        projects.forEach(project => {
-            if (filter === 'all' || project.classList.contains(filter)) {
-                project.classList.remove('hidden');
-            } else {
-                project.classList.add('hidden');
-            }
-        });
+        const group = button.dataset.group;
+
+        if (filter === 'all') {
+            button.classList.toggle(
+                'active',
+                selectedDomains.size === 0 && selectedSkills.size === 0
+            );
+        } else {
+            const selectedSet = group === 'domain'
+                ? selectedDomains
+                : selectedSkills;
+
+            button.classList.toggle('active', selectedSet.has(filter));
+        }
     });
+
+    // SAVE FILTERS
+    sessionStorage.setItem('portfolioFilters', JSON.stringify({
+        domains: [...selectedDomains],
+        skills: [...selectedSkills]
+    }));
+}
+
+// FILTER BUTTON CLICK EVENTS
+filterButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        const filter = button.dataset.filter;
+        const group = button.dataset.group;
+
+        if (filter === 'all') {
+            selectedDomains.clear();
+            selectedSkills.clear();
+        } else {
+
+            const selectedSet = group === 'domain'
+                ? selectedDomains
+                : selectedSkills;
+
+            if (selectedSet.has(filter)) {
+                selectedSet.delete(filter);
+            } else {
+                selectedSet.add(filter);
+            }
+        }
+
+        updateProjectFilters();
+    });
+});
+
+// INITIAL RESTORE
+loadSavedFilters();
+updateProjectFilters();
+
+// RESTORE AGAIN WHEN RETURNING TO THE PAGE
+window.addEventListener('pageshow', () => {
+    loadSavedFilters();
+    updateProjectFilters();
 });
 
 
@@ -182,8 +297,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set up click handlers for the art images
     images.forEach((image, index) => {
         image.addEventListener('click', function () {
-                    console.log('Image clicked:', index);
-openGallery(index);
+            console.log('Image clicked:', index);
+            openGallery(index);
         });
     });
 
@@ -197,29 +312,29 @@ openGallery(index);
 
 
 const navLinks = document.querySelectorAll('nav ul li a');
-  
-  // Loop through all the links
-  navLinks.forEach(link => {
+
+// Loop through all the links
+navLinks.forEach(link => {
     // Check if the link's href matches the current page URL
     if (link.href === window.location.href) {
-      link.classList.add('active'); // Add the 'active' class to the current page link
+        link.classList.add('active'); // Add the 'active' class to the current page link
     }
-  });
+});
 
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
-  document.getElementById("linkedin-icon").addEventListener("click", function() {
-    window.open("https://www.linkedin.com/in/devikasantosh/", "_blank");
-  });
-  
-  document.getElementById("github-icon").addEventListener("click", function() {
-    window.open("https://github.com/devikasantosh", "_blank");
-  });
-  
-  document.getElementById("behance-icon").addEventListener("click", function() {
-      console.log('Behance icon clicked');
-      window.open("https://www.behance.net/devikasantosh", "_blank");
-  });
+    document.getElementById("linkedin-icon").addEventListener("click", function () {
+        window.open("https://www.linkedin.com/in/devikasantosh/", "_blank");
+    });
+
+    document.getElementById("github-icon").addEventListener("click", function () {
+        window.open("https://github.com/devikasantosh", "_blank");
+    });
+
+    document.getElementById("behance-icon").addEventListener("click", function () {
+        console.log('Behance icon clicked');
+        window.open("https://www.behance.net/devikasantosh", "_blank");
+    });
 });
 
 
