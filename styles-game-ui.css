@@ -535,3 +535,48 @@ main {
 .glass-btn:hover {
   transform: scale(1.08);
 }
+
+/* Grid Variations */
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* 2 top images + 4 bottom images */
+.gallery-grid--2-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.gallery-grid--2-4 .span-half {
+  grid-column: span 2;
+}
+.gallery-grid--2-4 .span-full {
+  grid-column: 1 / -1;
+}
+
+/* 4-image group sharing a single caption */
+.gallery-group__images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Matches the main gallery gap */
+}
+
+.gallery-group__images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Existing Variations */
+.gallery-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-grid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
