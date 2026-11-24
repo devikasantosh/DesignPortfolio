@@ -1106,3 +1106,86 @@ nav ul li a[aria-current="page"] {
   background-color: rgba(255, 255, 255, 0.22);
   text-decoration: underline;
 }
+
+/* ==========================================================================
+   SIDE-BY-SIDE IMAGES (Handles whitespace between inline-block <img> tags)
+   ========================================================================== */
+.art-item[width$="%"] {
+  display: inline-block;
+  vertical-align: top;
+  margin: 12px 0;
+  border-radius: 6px;
+}
+
+/* Pair of two consecutive width="49%" images */
+.art-item[width$="%"]:has(+ .art-item[width$="%"]) {
+  width: calc(50% - 10px) !important;
+  margin-right: 12px;
+}
+
+.art-item[width$="%"] + .art-item[width$="%"] {
+  width: calc(50% - 10px) !important;
+  margin-right: 0;
+}
+
+@media (max-width: 767px) {
+  .art-item[width$="%"]:has(+ .art-item[width$="%"]),
+  .art-item[width$="%"] + .art-item[width$="%"] {
+    display: block;
+    width: 100% !important;
+    margin-right: 0;
+  }
+}
+
+/* ==========================================================================
+   AUTOMATIC SIDE-BY-SIDE PAIRS FOR ALL CONSECUTIVE .art-item IMAGES
+   (Covers width="49%", height=200, and unattributed pairs)
+   ========================================================================== */
+.art-item:has(+ .art-item),
+.art-item + .art-item {
+  display: inline-block !important;
+  width: calc(50% - 10px) !important;
+  height: auto !important;
+  vertical-align: top;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.art-item:has(+ .art-item) {
+  margin-right: 12px !important;
+}
+
+.art-item + .art-item {
+  margin-right: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .art-item:has(+ .art-item),
+  .art-item + .art-item {
+    display: block !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+}
+
+.overlay-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  padding: 16px;
+  background-color: #f7f7f2; /* Soft warm off-white matching your page canvas */
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+}
+
+.overlay-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+}
+
+.overlay-image[src$=".png" i] {
+  padding: 16px;
+  background-color: #f7f7f2;
+}

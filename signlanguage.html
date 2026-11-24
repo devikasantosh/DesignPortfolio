@@ -82,6 +82,13 @@
       <img src="Assets\test4.png" height=200 alt="Art Project 2" class="art-item" onclick="openGallery(1)">
       <p><i>One of the 3 variations of test mode</i></p>
       <br>
+      
+<div id="galleryOverlay" class="overlay">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
       <p>Test mode has 3 types -
       <ul>
         <li>randomized, </li>
