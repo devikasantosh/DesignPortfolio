@@ -616,3 +616,31 @@ main {
   width: 2rem;
   height: 2rem;
 }
+
+.media-row-equal-height {
+    display: flex;
+    gap: 1.5rem; /* Match your existing .gallery-grid gap */
+    align-items: flex-start;
+}
+
+.media-row-equal-height > figure {
+    flex: calc(var(--ratio, 1));
+    margin: 0;
+    min-width: 0;
+}
+
+.media-row-equal-height .gallery-media {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Stack vertically on small mobile screens */
+@media (max-width: 768px) {
+    .media-row-equal-height {
+        flex-direction: column;
+    }
+    .media-row-equal-height > figure {
+        width: 100%;
+    }
+}

@@ -176,22 +176,36 @@
                 </div>
 
                 <!-- Supports both GIFs and looping MP4/WebM videos -->
-                <div class="gallery-grid gallery-grid--3">
-                    <figure>
-                        <img loading="lazy" src="Assets/GameUI/motion-radial.gif"
-                            alt="Radial wheel selection animation">
-                        <figcaption>Radial Weapon/Item Wheel</figcaption>
-                    </figure>
-                    <figure>
+                <div class="gallery-grid">
+                    <!-- Side-by-side equal height row -->
+                    <div class="media-row-equal-height span-full">
+    <figure style="--ratio: 2.52;">
+        <video autoplay muted loop playsinline class="gallery-media">
+            <source src="Assets/DW - start motion.mp4" type="video/mp4">
+        </video>
+        <figcaption>Start Button Animation</figcaption>
+    </figure>
+
+    <figure style="--ratio: 0.96;">
+        <video autoplay muted loop playsinline class="gallery-media">
+            <source src="Assets/DW - loading motion.mp4" type="video/mp4">
+        </video>
+        <figcaption>Loading Animation</figcaption>
+    </figure>
+</div>
+
+                    <!-- Full-width video below -->
+                    <figure class="span-full">
                         <video autoplay muted loop playsinline class="gallery-media">
-                            <source src="Assets/GameUI/motion-toast.mp4" type="video/mp4">
+                            <source src="Assets/DW - menu motion.mp4" type="video/mp4">
                         </video>
-                        <figcaption>Quest Complete & Reward Toast</figcaption>
+                        <figcaption>Menu Staggered Entry</figcaption>
                     </figure>
-                    <figure>
+
+                    <!-- <figure>
                         <img loading="lazy" src="Assets/GameUI/motion-transition.gif" alt="Menu screen transition">
                         <figcaption>Pause Menu Staggered Entry</figcaption>
-                    </figure>
+                    </figure> -->
                 </div>
             </div>
         </section>
