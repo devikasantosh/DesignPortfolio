@@ -5,10 +5,9 @@
   --bg-canvas: #f7f7f2;
   --bg-surface: #ffffff;
   --bg-subtle: #efefe9;
-  --bg-media: #141413;
 
   --text-primary: #1c1b18;
-  --text-secondary: #464540;
+  --text-secondary: #3a3935;
   --text-muted: #595852;
   --text-inverse: #f6f4d2;
 
@@ -17,7 +16,6 @@
   --brand-link: #175682;
 
   --border-subtle: #e2e2da;
-  --border-strong: #c8c8be;
   --shadow-sm: 0 2px 6px rgba(28, 27, 24, 0.05);
   --shadow-md: 0 8px 22px rgba(28, 27, 24, 0.09);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
@@ -33,7 +31,6 @@
   --space-6: 32px;
   --space-8: 48px;
   --space-10: 64px;
-  --space-12: 80px;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -43,7 +40,7 @@
 }
 
 /* ==========================================================================
-   2. RESET & BASE (Exact match to styles-game-ui.css)
+   2. RESET & BASE
    ========================================================================== */
 * {
   margin: 0;
@@ -78,7 +75,7 @@ footer :focus-visible,
 }
 
 /* ==========================================================================
-   3. HEADER & FOOTER (100% Identical to styles-game-ui.css + Link Hover)
+   3. HEADER & FOOTER (Original line spacing + frosted nav hover pill)
    ========================================================================== */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
@@ -110,11 +107,6 @@ footer::after {
 header a {
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
-}
-
-header a:hover {
-  opacity: 0.88;
 }
 
 header h1 {
@@ -131,26 +123,35 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 nav ul li a {
+  display: inline-block;
   text-decoration: none;
   color: #f6f4d2;
   font-weight: bold;
-  transition: opacity 0.2s ease;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  text-decoration: none;
+}
+
+nav ul li a.active,
+nav ul li a[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: inset 0 0 0 1px rgba(246, 244, 210, 0.45);
   text-decoration: underline;
   text-underline-offset: 4px;
-  opacity: 0.85;
 }
 
 /* ==========================================================================
-   4. STICKY BREADCRUMBS (Exact match to styles-game-ui.css)
+   4. STICKY BREADCRUMBS
    ========================================================================== */
 .sticky-breadcrumbs {
   position: sticky;
@@ -193,7 +194,7 @@ nav ul li a.active {
 }
 
 /* ==========================================================================
-   5. SIDE NAVIGATION (From styles-game-ui.css)
+   5. SIDE NAVIGATION
    ========================================================================== */
 .sidebar.sn {
   position: fixed;
@@ -343,7 +344,7 @@ nav ul li a.active {
 }
 
 /* ==========================================================================
-   6. CASE STUDY LAYOUT & FULL-WIDTH ALIGNED TYPOGRAPHY
+   6. CASE STUDY LAYOUT & NATURAL TYPOGRAPHY RHYTHM
    ========================================================================== */
 main#project-content {
   flex: 1;
@@ -351,13 +352,14 @@ main#project-content {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: var(--space-8) var(--space-5) var(--space-6);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 main#project-content [id] {
   scroll-margin-top: 64px;
 }
 
+/* Hero Title Block */
 main#project-content > .project-header:first-of-type {
   text-align: left;
   width: 100%;
@@ -390,25 +392,29 @@ main#project-content > p:first-of-type {
   text-align: left;
   font-size: 1.02rem;
   color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: var(--space-5);
+  line-height: 1.65;
+  margin-bottom: var(--space-4);
 }
 
+/* Headings & Paragraphs (Tight, natural spacing—no double gaps) */
 main#project-content h3 {
   font-family: var(--font-sans);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--brand-primary);
   line-height: 1.35;
-  margin-top: var(--space-6);
-  margin-bottom: var(--space-3);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
 }
 
 main#project-content p {
-  width: 100%;
   color: var(--text-secondary);
   font-size: 1rem;
-  margin-bottom: var(--space-4);
+  margin-bottom: 10px;
+}
+
+main#project-content p:last-child {
+  margin-bottom: 0;
 }
 
 main#project-content a {
@@ -425,13 +431,12 @@ main#project-content a:hover {
 }
 
 main#project-content ul {
-  width: 100%;
-  margin: var(--space-2) 0 var(--space-5) var(--space-5);
+  margin: var(--space-2) 0 var(--space-4) var(--space-5);
   color: var(--text-secondary);
 }
 
 main#project-content ul li {
-  margin-bottom: var(--space-2);
+  margin-bottom: 6px;
   padding-left: var(--space-1);
 }
 
@@ -443,7 +448,7 @@ main#project-content ul li {
   grid-template-columns: 260px 1fr;
   gap: var(--space-6);
   align-items: stretch;
-  margin: var(--space-5) 0 var(--space-8);
+  margin: var(--space-5) 0 var(--space-6);
   padding: var(--space-5);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -483,12 +488,11 @@ main#project-content ul li {
 
 .project-gif {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-height: 380px;
   object-fit: cover;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-media);
+  background: transparent;
   display: block;
 }
 
@@ -532,11 +536,6 @@ main#project-content ul li {
   margin-bottom: var(--space-2);
 }
 
-.detail .text-content p:last-child,
-.detail .text-content ul:last-child {
-  margin-bottom: 0;
-}
-
 section.project-header:not(:first-of-type),
 section.project-features,
 section.project-technologies,
@@ -574,51 +573,42 @@ section.project-challenges {
   margin-bottom: var(--space-2);
 }
 
-.sticky-note p:last-child {
-  margin-bottom: 0;
+/* ==========================================================================
+   10. IMAGES & CAPTIONS (Respects custom sizes, transparent PNGs & inline layouts)
+   ========================================================================== */
+main#project-content img {
+  max-width: 100%;
+  height: auto;
+  background: transparent;
 }
 
-/* ==========================================================================
-   10. ARTIFACT MEDIA, SIDE-BY-SIDE PAIRS & TRUE CENTERED CAPTIONS
-   ========================================================================== */
-.art-item {
-  width: 100%;
-  height: auto;
+/* Only full-width .art-item images without explicit width/height get block + shadow */
+.art-item:not([width]):not([height]):not([style*="width"]) {
   display: block;
-  margin: var(--space-4) 0 var(--space-2);
+  width: 100%;
+  margin: var(--space-3) 0 var(--space-2);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-media);
-  box-shadow: var(--shadow-sm);
+}
+
+/* .art-item with explicit width/height attributes keeps its natural or specified size */
+.art-item[width],
+.art-item[height] {
+  display: inline-block;
+  vertical-align: bottom;
+  margin: var(--space-2) var(--space-2) var(--space-2) 0;
+  border-radius: var(--radius-sm);
+}
+
+.art-item {
   cursor: zoom-in;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 .art-item:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--brand-accent);
 }
 
-.art-item:active {
-  transform: translateY(0);
-}
-
-.art-item:has(+ .art-item),
-.art-item + .art-item {
-  display: inline-block;
-  width: calc(50% - var(--space-2));
-  height: 290px;
-  object-fit: cover;
-  vertical-align: top;
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-2);
-}
-
-.art-item:has(+ .art-item) {
-  margin-right: var(--space-4);
-}
-
+/* Explicit 2-column grid (.art-grid) */
 .art-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -629,11 +619,11 @@ section.project-challenges {
 .art-grid img,
 .art-grid .art-item {
   width: 100%;
-  height: 290px;
-  object-fit: cover;
+  height: auto;
   margin: 0;
 }
 
+/* Captions below images */
 .art-item + p,
 .art-grid + p,
 main#project-content p[style*="text-align: center"] {
@@ -644,17 +634,7 @@ main#project-content p[style*="text-align: center"] {
   color: var(--text-muted);
   text-align: center !important;
   margin-top: var(--space-2);
-  margin-bottom: var(--space-5);
-}
-
-main#project-content > img:not(.art-item) {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: var(--space-5) 0;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-4);
 }
 
 /* ==========================================================================
@@ -670,7 +650,7 @@ main#project-content > img:not(.art-item) {
   overflow: hidden;
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-md);
-  background: var(--bg-media);
+  background: #141413;
 }
 
 .video-container iframe {
@@ -683,24 +663,23 @@ main#project-content > img:not(.art-item) {
 }
 
 .video-container:not(:has(iframe)) {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: var(--space-4);
   margin: var(--space-5) 0 var(--space-6);
 }
 
 .video-container:not(:has(iframe)) img {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 240px !important;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-sm);
+  background: transparent;
 }
 
 /* ==========================================================================
-   12. LIGHTBOX GALLERY OVERLAY
+   12. LIGHTBOX GALLERY OVERLAY (No underline on arrows)
    ========================================================================== */
 .overlay {
   display: none;
@@ -717,6 +696,7 @@ main#project-content > img:not(.art-item) {
   max-width: 90vw;
   max-height: 85vh;
   border-radius: var(--radius-sm);
+  background: transparent;
   box-shadow: var(--shadow-lg);
 }
 
@@ -730,20 +710,22 @@ main#project-content > img:not(.art-item) {
   min-width: 48px;
   min-height: 48px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   color: #ffffff;
   font-size: 1.75rem;
   font-weight: 600;
+  line-height: 1;
   cursor: pointer;
   user-select: none;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: background-color var(--transition-fast);
 }
 
 .overlay .close:hover,
 .overlay .prev:hover,
 .overlay .next:hover {
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.26);
+  text-decoration: none !important;
 }
 
 .overlay .close {
@@ -787,7 +769,7 @@ body > h2 {
 .next-projects-container {
   max-width: var(--container-max);
   width: 100%;
-  margin: 0 auto var(--space-12);
+  margin: 0 auto var(--space-10);
   padding: 0 var(--space-5);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -831,7 +813,7 @@ body > h2 {
   height: 175px;
   object-fit: cover;
   border-bottom: 1px solid var(--border-subtle);
-  background: var(--bg-media);
+  background: transparent;
   display: block;
 }
 
@@ -887,7 +869,7 @@ body > h2 {
 }
 
 /* ==========================================================================
-   14. FOOTER & SOCIAL ICONS (100% Identical to styles-game-ui.css)
+   14. FOOTER & SOCIAL ICONS
    ========================================================================== */
 #contact {
   width: 100%;
@@ -964,193 +946,7 @@ body > h2 {
 
   .sticky-notes-container,
   .art-grid,
-  .video-container:not(:has(iframe)),
   .next-projects-container {
     grid-template-columns: 1fr;
   }
-
-  .art-item:has(+ .art-item),
-  .art-item + .art-item {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-  }
-}
-
-/* ==========================================================================
-   3. HEADER & FOOTER
-   ========================================================================== */
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-header,
-footer {
-  position: relative;
-  background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
-  background-size: 300% 300%;
-  animation: gradientAnimation 8s ease infinite;
-  color: #f6f4d2;
-  text-align: center;
-  padding: 20px;
-}
-
-header::after,
-footer::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('Assets/noise.png');
-  opacity: 0.15;
-  pointer-events: none;
-}
-
-header a {
-  text-decoration: none;
-  color: inherit;
-}
-
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-}
-
-header p {
-  font-size: 1.1em;
-  margin: 5px 0 12px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-nav ul li a {
-  display: inline-block;
-  text-decoration: none;
-  color: #f6f4d2;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-}
-
-nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.16);
-  text-decoration: none;
-}
-
-nav ul li a.active {
-  background-color: rgba(255, 255, 255, 0.24);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* ==========================================================================
-   12. LIGHTBOX GALLERY OVERLAY
-   ========================================================================== */
-.overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  background-color: rgba(14, 14, 13, 0.92);
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-5);
-}
-
-.overlay-image {
-  max-width: 90vw;
-  max-height: 85vh;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-lg);
-}
-
-.overlay .close,
-.overlay .prev,
-.overlay .next {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 48px;
-  min-height: 48px;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 1;
-  cursor: pointer;
-  user-select: none;
-  text-decoration: none !important;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
-}
-
-.overlay .close:hover,
-.overlay .prev:hover,
-.overlay .next:hover {
-  background: rgba(255, 255, 255, 0.26);
-  text-decoration: none !important;
-}
-
-.overlay .close {
-  top: var(--space-5);
-  right: var(--space-5);
-}
-
-.overlay .prev {
-  left: var(--space-5);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.overlay .next {
-  right: var(--space-5);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-nav ul li a {
-  display: inline-block;
-  text-decoration: none;
-  color: #f6f4d2;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.16);
-  text-decoration: none;
-}
-
-nav ul li a.active,
-nav ul li a[aria-current="page"] {
-  background-color: rgba(255, 255, 255, 0.24);
-  box-shadow: inset 0 0 0 1px rgba(246, 244, 210, 0.45);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* ==========================================================================
-   TRANSPARENT PNG FIX — Keep transparent image backgrounds clear
-   ========================================================================== */
-.project-gif,
-.art-item,
-.art-grid img,
-.art-grid .art-item,
-main#project-content > img:not(.art-item),
-.video-container:not(:has(iframe)) img,
-.preview-left img,
-.overlay-image {
-  background: transparent;
 }
