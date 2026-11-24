@@ -696,7 +696,6 @@ main#project-content p[style*="text-align: center"] {
   max-width: 90vw;
   max-height: 85vh;
   border-radius: var(--radius-sm);
-  background: transparent;
   box-shadow: var(--shadow-lg);
 }
 
@@ -1189,3 +1188,4 @@ nav ul li a[aria-current="page"] {
   padding: 16px;
   background-color: #f7f7f2;
 }
+
