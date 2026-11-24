@@ -4,16 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
+  <title>Marketing & Social Media Design — Devika Santosh</title>
+  <link rel="icon" type="image/x-icon" href="Assets/favicon.png">
 
-  <link rel="stylesheet" href="art-styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-marketing.css">
 </head>
 
 <body>
@@ -25,188 +21,351 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="design.html">Design</a></li>
+        <li><a href="design.html" class="active">Design</a></li>
         <li><a href="games.html">Games</a></li>
         <li><a href="production.html">Production</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Résumé</a></li>
       </ul>
     </nav>
-    <br>
   </header>
-    <nav aria-label="Breadcrumb" class="sticky-breadcrumbs">
-        <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><span aria-current="page">Marketing and Social Media Design</span></li>
-        </ol>
-    </nav>
 
-  <main>
+  <nav aria-label="Breadcrumb" class="sticky-breadcrumbs">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><span aria-current="page">Marketing and Social Media Design</span></li>
+    </ol>
+  </nav>
 
-    <section id="design">
-
-      <h1>Marketing and Social Media Design</h1>
-
-      <h2>Social Media - Graphic Design</h2>
-      Created as part of my roles as design team member and design lead at various clubs and extracurriculars within and
-      outside VIT Chennai.
-      <br><br>
-      <h3>Post series on web development basics for IEEE Computer Society</h3>
-      <p style="text-align:center; color: #0077b5; font-size: 20px; font-style: italic; font-weight: bold;">~✨Figma
-        embeds may take a few seconds to load!✨~</p>
-
-      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
-        src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=0-1&embed-host=share"
-        allowfullscreen></iframe>
-      <!-- <div class="design-grid">
-      <img src="Assets\IEEEpost.png" alt="Art Project 1" width = "800px" class="art-item" onclick="openGallery(0)" >
+  <!-- Side Navigation -->
+  <nav class="sidebar sn" aria-label="Page sections">
+    <button type="button" class="sn-toggle" aria-expanded="false" aria-controls="sn-list">Projects</button>
+    <div class="sn-list" id="sn-list">
+      <span class="sn-group">Projects</span>
+      <a href="#ieee-webdev" class="sn-link"><span class="sn-dot"></span><span class="sn-label">IEEE Web Dev Series</span></a>
+      <a href="#hackclub-hackathon" class="sn-link"><span class="sn-dot"></span><span class="sn-label">HackClub Hackathon</span></a>
+      <a href="#envisage-ideathon" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Envisage Ideathon</span></a>
+      <a href="#cmu-encore" class="sn-link"><span class="sn-dot"></span><span class="sn-label">CMU Encore Branding</span></a>
     </div>
+  </nav>
 
-    <div id="galleryOverlay" class="overlay">
-      <span class="close" onclick="closeGallery()">&times;</span>
-      <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
-      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
-      <a class="next" onclick="changeImage(1)">&#10095;</a>
-    </div> -->
-      <br><br>
-      <h3>Online and Offline Marketing Content for HackClub's First Hackathon</h3>
-      <p style="text-align:center; color: #0077b5; font-size: 20px; font-style: italic; font-weight: bold;">~✨Figma
-        embeds may take a few seconds to load!✨~</p>
-
-      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
-        src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=1-2&embed-host=share"
-        allowfullscreen></iframe>
-      <br>
-      <br>
-      <h3>Promotional Content for Envisage - HackClub's Ideathon Event</h3>
-      <p style="text-align:center; color: #0077b5; font-size: 20px; font-style: italic; font-weight: bold;">~✨Figma
-        embeds may take a few seconds to load!✨~</p>
-
-      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
-        src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=6-2365&embed-host=share"
-        allowfullscreen></iframe>
-      <br>
-      <br>
-
-      <h3>Logo, Poster, Half Sheet for CMU project team Encore</h3>
-      <p>Created for the Titanic the Musical pre-show experience you can read about <a href="encore.html">here!</a></p>
-
-
-      <div class="art-grid">
-        <img src="Assets/encore-logo.png" width=100% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-        <img src="Assets/encore-poster.png" width=100% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-        <img src="Assets/encore-halfsheet.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-        <img src="Assets/encore-halfsheet2.png" width=49% alt="Art Project 1" class="art-item" onclick="openGallery(0)">
-
+  <!-- Compact Page Intro -->
+  <section class="gallery-hero">
+    <div class="gallery-hero__inner">
+      <p class="hero-eyebrow">BRANDING & VISUAL COMMUNICATION</p>
+      <h1>Marketing & Social Media Design</h1>
+      <p class="hero-description">
+        Created as part of my roles as design team member and design lead across student organizations, hackathons, and university productions at VIT Chennai and CMU.
+      </p>
+      <div class="hero-tags">
+        <span>Figma</span>
+        <span>Social Media</span>
+        <span>Print & Merch</span>
+        <span>Brand Identity</span>
       </div>
-
-      <div id="galleryOverlay" class="overlay">
-        <span class="close" onclick="closeGallery()">&times;</span>
-        <img id="galleryImage" class="overlay-image" src="" alt="Gallery Image">
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
-      </div>
-
-
-    </section>
-    <div class="dynamic-hr"></div>
-
-  </main>
-
-
-  <h2 style="text-align: center; font-family: 'Playfair Display', serif; color: #333;">
-    Check out some of my other projects!</h2>
-  <div class="next-projects-container">
-    <div class="next-project-preview">
-      <a href="ui.html">
-        <div class="preview-left">
-          <img src="Assets/uicover.png" alt="Next Project">
-          <div class="next-project-info">
-            <h3>UI Design</h3>
-            <p>Extracurricular projects - mobile UI design, web-based UI, and UI programming for games.</p>
-          <p>Features a music application UI that won second place in a design hackathon.</p>
-          </div>
-        </div>
-        <div class="preview-right">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-          </svg>
-
-        </div>
-      </a>
     </div>
+  </section>
 
-      <div class="next-project-preview">
-        <a href="twotofoxtrot.html">
-          <div class="preview-left">
-            <img src="Assets/TwoToFoxtrot2.png" alt="Next Project">
-            <div class="next-project-info">
-              <h3>Two to Foxtrot</h3>
-              <p>Asymmetric game where two players see different things and must communicate to win the
-                game.</p>
+  <main id="design">
+
+    <!-- 1. IEEE Computer Society -->
+    <section class="ui-section" id="ieee-webdev">
+      <div class="section-content">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2 class="title">Web Development Basics Series</h2>
+            <div class="tags">
+              <span class="tag">IEEE Computer Society</span>
+              <span class="tag">Carousel Series</span>
+              <span class="tag">Figma</span>
             </div>
           </div>
-          <div class="preview-right">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-            </svg>
-  
+          <p class="section-desc">
+            Educational social media post series designed to break down core web development concepts for student developers.
+          </p>
         </div>
-      </a>
-    </div>
 
-    <div class="next-project-preview">
-      <a href="transformational.html">
-        <div class="preview-left">
-          <img src="Assets/transformational.gif" alt="Next Project">
-          <div class="next-project-info">
-            <h3>Transformational Design</h3>
-            <p>Transformational design pitch for an exhibit highlighting human complicity
-            created as part of CMU's Entertainment Technology Fundamentals class.</p>
+        <p class="embed-notice">~✨ Figma embeds may take a few seconds to load! ✨~</p>
+        <div class="figma-embed-wrapper">
+          <iframe src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HackClub Hackathon -->
+    <section class="ui-section" id="hackclub-hackathon">
+      <div class="section-content">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2 class="title">HackClub's First Hackathon</h2>
+            <div class="tags">
+              <span class="tag">Event Branding</span>
+              <span class="tag">Online & Offline</span>
+              <span class="tag">Design Lead</span>
+            </div>
           </div>
+          <p class="section-desc">
+            Cohesive digital campaigns, social announcements, and physical event collateral created for HackClub's inaugural hackathon.
+          </p>
         </div>
-        <div class="preview-right">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-          </svg>
+
+        <p class="embed-notice">~✨ Figma embeds may take a few seconds to load! ✨~</p>
+        <div class="figma-embed-wrapper">
+          <iframe src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=1-2&embed-host=share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Envisage Ideathon -->
+    <section class="ui-section" id="envisage-ideathon">
+      <div class="section-content">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2 class="title">Envisage — HackClub Ideathon</h2>
+            <div class="tags">
+              <span class="tag">Promotional Campaign</span>
+              <span class="tag">Social Media</span>
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+          <p class="section-desc">
+            Visual identity and promotional graphics developed to drive registrations and engagement for Envisage.
+          </p>
+        </div>
+
+        <p class="embed-notice">~✨ Figma embeds may take a few seconds to load! ✨~</p>
+        <div class="figma-embed-wrapper">
+          <iframe src="https://embed.figma.com/design/QsazKMhfxRci25pTYG20BV/Portfolio-Showcase?node-id=6-2365&embed-host=share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CMU Encore -->
+    <section class="ui-section" id="cmu-encore">
+      <div class="section-content">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2 class="title">CMU Project Team Encore</h2>
+            <div class="tags">
+              <span class="tag">Logo Design</span>
+              <span class="tag">Print Collateral</span>
+              <span class="tag">CMU</span>
+            </div>
+          </div>
+          <p class="section-desc">
+            Logo, promotional poster, and half-sheet flyers created for the <em>Titanic the Musical</em> pre-show experience. You can read more about the project <a href="encore.html" class="inline-link">here</a>.
+          </p>
+        </div>
+
+        <div class="gallery-grid gallery-grid--featured">
+          <figure class="span-full">
+            <img src="Assets/encore-logo.png" alt="Encore Team Logo">
+            <figcaption>Encore Project Team Logo</figcaption>
+          </figure>
+          <figure class="span-full">
+            <img loading="lazy" src="Assets/encore-poster.png" alt="Titanic the Musical Pre-show Poster">
+            <figcaption>Promotional Event Poster</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" src="Assets/encore-halfsheet.png" alt="Encore Half Sheet Front">
+            <figcaption>Pre-Show Half Sheet (Front)</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" src="Assets/encore-halfsheet2.png" alt="Encore Half Sheet Back">
+            <figcaption>Pre-Show Half Sheet (Back)</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Projects Section -->
+    <section class="ui-section other-projects-section">
+      <div class="section-content">
+        <h2 class="other-projects-heading">Check out some of my other projects!</h2>
+        <div class="next-projects-container">
+
+          <div class="next-project-preview">
+            <a href="ui.html">
+              <div class="preview-left">
+                <img src="Assets/uicover.png" alt="UI Design">
+                <div class="next-project-info">
+                  <h3>UI Design</h3>
+                  <p>Extracurricular projects — mobile UI design, web-based UI, and UI programming for games. Features a music application UI that won second place in a design hackathon.</p>
+                </div>
+              </div>
+              <div class="preview-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="next-project-preview">
+            <a href="twotofoxtrot.html">
+              <div class="preview-left">
+                <img src="Assets/TwoToFoxtrot2.png" alt="Two to Foxtrot">
+                <div class="next-project-info">
+                  <h3>Two to Foxtrot</h3>
+                  <p>Asymmetric game where two players see different things and must communicate to win the game.</p>
+                </div>
+              </div>
+              <div class="preview-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="next-project-preview">
+            <a href="transformational.html">
+              <div class="preview-left">
+                <img src="Assets/transformational.gif" alt="Transformational Design">
+                <div class="next-project-info">
+                  <h3>Transformational Design</h3>
+                  <p>Transformational design pitch for an exhibit highlighting human complicity created as part of CMU's Entertainment Technology Fundamentals class.</p>
+                </div>
+              </div>
+              <div class="preview-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+              </div>
+            </a>
+          </div>
 
         </div>
-      </a>
-    </div>
-  </div>
+      </div>
+    </section>
 
+  </main>
 
   <footer id="contact">
     <p>Contact me at: <a href="mailto:devikasantosh@gmail.com" style="color: #A8DADC;">devikasantosh@gmail.com</a></p>
 
     <div class="social-icons">
       <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/devikasantosh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-        class="social-link">
+      <a href="https://linkedin.com/in/devikasantosh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-svg">
-        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-      </svg>
+          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg>
       </a>
 
       <!-- GitHub -->
-      <a href="https://github.com/devikasantosh" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-        class="social-link">
+      <a href="https://github.com/devikasantosh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-svg">
-        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
-      </svg>
+          <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+        </svg>
       </a>
 
       <!-- Behance -->
-      <a href="https://behance.net/devikasantosh" target="_blank" rel="noopener noreferrer" aria-label="Behance"
-        class="social-link">
+      <a href="https://behance.net/devikasantosh" target="_blank" rel="noopener noreferrer" aria-label="Behance" class="social-link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-svg">
-        <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
-      </svg>
+          <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
+        </svg>
       </a>
     </div>
   </footer>
-  <script src="script.js"></script>
+
+  <!-- Sidebar Scroll-Spy & Lightbox Script -->
+  <script>
+    // 1. Sidebar active link tracking & mobile toggle
+    (function () {
+      var nav = document.querySelector('.sidebar.sn');
+      if (!nav) return;
+      var toggle = nav.querySelector('.sn-toggle');
+      var links = [].slice.call(nav.querySelectorAll('a.sn-link[href^="#"]'));
+      var ticking = false;
+
+      function update() {
+        ticking = false;
+        var line = window.innerHeight * 0.35, best = -1, bestTop = -Infinity;
+        links.forEach(function (a, i) {
+          var t = document.getElementById(a.getAttribute('href').slice(1));
+          if (!t) return;
+          var top = t.getBoundingClientRect().top;
+          if (top <= line && top > bestTop) { bestTop = top; best = i; }
+        });
+        if (best < 0) best = 0;
+        links.forEach(function (a, i) {
+          a.classList.toggle('is-current', i === best);
+          if (i === best) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+        });
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      document.addEventListener('scroll', onScroll, true);
+      window.addEventListener('resize', onScroll);
+      window.addEventListener('load', update);
+      update();
+
+      function setOpen(open) {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
+      window.addEventListener('click', function (e) {
+        if (!nav.classList.contains('is-open')) return;
+        if (!nav.contains(e.target) || (e.target.closest && e.target.closest('a.sn-link'))) setOpen(false);
+      }, true);
+    })();
+
+    // 2. Click-to-zoom Lightbox for gallery images
+    document.addEventListener('DOMContentLoaded', function () {
+      var imgs = [].slice.call(document.querySelectorAll('.gallery-grid img'));
+      if (!imgs.length) return;
+
+      var box = document.createElement('div');
+      box.className = 'ui-lightbox';
+      box.hidden = true;
+      box.innerHTML =
+        '<button type="button" class="ui-lightbox__close" aria-label="Close">&times;</button>' +
+        '<button type="button" class="ui-lightbox__prev" aria-label="Previous">&#10094;</button>' +
+        '<figure><img alt=""><figcaption></figcaption></figure>' +
+        '<button type="button" class="ui-lightbox__next" aria-label="Next">&#10095;</button>';
+      document.body.appendChild(box);
+
+      var big = box.querySelector('img');
+      var cap = box.querySelector('figcaption');
+      var current = 0;
+
+      function show(n) {
+        current = (n + imgs.length) % imgs.length;
+        var im = imgs[current];
+        var fc = im.closest('figure') ? im.closest('figure').querySelector('figcaption') : null;
+        big.src = im.currentSrc || im.src;
+        big.alt = im.alt;
+        cap.textContent = fc ? fc.textContent.trim() : '';
+      }
+
+      function open(n) {
+        show(n);
+        box.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        box.hidden = true;
+        document.body.style.overflow = '';
+      }
+
+      imgs.forEach(function (im, n) {
+        im.addEventListener('click', function () { open(n); });
+      });
+
+      box.querySelector('.ui-lightbox__close').addEventListener('click', close);
+      box.querySelector('.ui-lightbox__prev').addEventListener('click', function () { show(current - 1); });
+      box.querySelector('.ui-lightbox__next').addEventListener('click', function () { show(current + 1); });
+      box.addEventListener('click', function (e) { if (e.target === box) close(); });
+      document.addEventListener('keydown', function (e) {
+        if (box.hidden) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+      });
+    });
+  </script>
 </body>
 
 </html>
