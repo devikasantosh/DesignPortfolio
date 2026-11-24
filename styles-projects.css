@@ -1140,3 +1140,17 @@ nav ul li a[aria-current="page"] {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+/* ==========================================================================
+   TRANSPARENT PNG FIX — Keep transparent image backgrounds clear
+   ========================================================================== */
+.project-gif,
+.art-item,
+.art-grid img,
+.art-grid .art-item,
+main#project-content > img:not(.art-item),
+.video-container:not(:has(iframe)) img,
+.preview-left img,
+.overlay-image {
+  background: transparent;
+}
