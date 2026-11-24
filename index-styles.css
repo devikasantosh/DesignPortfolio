@@ -702,6 +702,7 @@ background: #6d597a;
 
 #contact {
   width: 100%;
+  box-sizing: border-box;
   text-align: center;
   padding: 2rem 1rem;
   color: #ffffff; /* Makes the text and icons white */
