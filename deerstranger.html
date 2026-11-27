@@ -41,11 +41,20 @@
             <li><span aria-current="page">Deer Stranger,</span></li>
         </ol>
     </nav>
-
+<nav class="sidebar sn" aria-label="Page sections">
+    <button type="button" class="sn-toggle" aria-expanded="false" aria-controls="sn-list">Sections</button>
+    <div class="sn-list" id="sn-list">
+      <span class="sn-group">On This Page</span>
+      <a href="#overview" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Overview</span></a>
+      <a href="#mechanics" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Game Mechanic</span></a>
+      <a href="#vr" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Programmed VR Interactions</span></a>
+      <a href="#demo" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Full Demo</span></a>
+    </div>
+  </nav>
  
 
   <main id="project-content">
-    <section class="project-header">
+    <section class="project-header" id="overview">
       <h2>Deer Stranger,</h2>
       <h3>An Intuitive VR Experience for Naive Users</h3>
     </section>
@@ -70,7 +79,7 @@
     </div>
 
     <section class="detail">
-      <div class="detail-container">
+      <div class="detail-container" id="mechanics">
         <h3 class="title">Game Mechanic</h3>
         <div class="text-content">
           <p>Escape room! Major focus on making interactions intuitive to naïve guests, giving them a high degree of
@@ -106,8 +115,9 @@
 
     </section>
     </section>
-    <br>
-    <h3>Locking the Door - Hinge Joint Behaviour and Locking Mechanism</h3>
+    
+    <section class="project-header" id="vr"></section>
+    <br><h3>Locking the Door - Hinge Joint Behaviour and Locking Mechanism</h3>
     <img src="Assets/door.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
     <br> <br>
 
@@ -141,7 +151,9 @@
     </div>
 
     </section>
-    <br><br>
+        <section class="project-header" id="demo"></section>
+
+    <br>
     <h3>...if that didn't spoil the story for you and you're still here, watch this for the whole experience!</h3>
     <p>(I assure you, we made a lot of very cinematic decisions better appreciated when viewed fully)</p>
     <div class="video-container">
