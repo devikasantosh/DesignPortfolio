@@ -7,11 +7,11 @@
     <title>Portfolio</title>
     <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
 
-    <link rel="stylesheet" href="exp-styles-2.css">
+    <link rel="stylesheet" href="styles-manor.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -43,9 +43,20 @@
     </nav>
 
 
+    <nav class="sidebar sn" aria-label="Page sections">
+        <button type="button" class="sn-toggle" aria-expanded="false" aria-controls="sn-list">Sections</button>
+        <div class="sn-list" id="sn-list">
+            <span class="sn-group">On This Page</span>
+            <a href="#overview" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Overview</span></a>
+            <a href="#space" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Space Provided</span></a>
+            <a href="#playtesting" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Role 1: Playtesting</span></a>
+            <a href="#redesign" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Role 2: Environment Redesign</span></a>
+            <a href="#final" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Final Experience</span></a>
+        </div>
+    </nav>
 
     <main id="project-content">
-        <section class="project-header">
+        <section class="project-header" id="overview">
             <h2>The Manor</h2>
             <h3>A Ghostbusters-inspired comedy-horror dark ride, where you are trained to find and release trapped ghosts and rescue an old
                 manor. The goal of the project was to playtest an existing dark ride design, refine it based on our
@@ -72,7 +83,7 @@
         </div>
 
 
-        <section class="detail">
+        <section class="detail" id="space">
             <div class="detail-container">
                 <h3 class="title">Space Provided
                 </h3>
@@ -90,18 +101,20 @@
                 </div>
             </div>
         </section>
-        <img src="Assets/ExperienceDesign/CAVE-1.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+        <div class="art-row">
+            <img src="Assets/ExperienceDesign/CAVE-1.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
             width="31%">
         <img src="Assets/ExperienceDesign/CAVE-2.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
             width="31%">
         <img src="Assets/ExperienceDesign/CAVE-3.jpg" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
             width="35%">
+        </div>
         <p style="text-align: center"><i>CAVE with moving floors and three 3D projection walls.</i></p>
         <br> <br>
 
 
 
-        <section class="detail">
+        <section class="detail" id="role">
             <div class="detail-container">
                 <h3 class="title">My Role
                 </h3>
@@ -115,14 +128,14 @@
 
 
         <!-- ROW 1: IMAGE LEFT / TEXT RIGHT -->
-        <div class="concept-row">
+        <div class="concept-row" id="playtesting">
             <div class="concept-media">
                 <img src="Assets/ExperienceDesign/CAVE-4.jpg" alt="Art Project 1" class="art-item"
                     onclick="openGallery(0)" width="100%">
             </div>
 
             <div class="concept-text">
-                <span class="concept-label">01</span>
+                <!-- <span class="concept-label">01</span> -->
                 <h3>Playtesting</h3>
                 <p>
                     Playtested an existing dark ride project with 6 groups of varying dynamics. Documented findings and
@@ -136,7 +149,7 @@
         <br><br><br><br><br>
 
 
-        <div class="concept-row">
+        <div class="concept-row" id="redesign">
             <div class="concept-media">
 
                 <img src="Assets/ExperienceDesign/Capture.PNG7.PNG" alt="Art Project 1" class="art-item"
@@ -145,29 +158,35 @@
             </div>
 
             <div class="concept-text">
-                <span class="concept-label">02</span>
+                <!-- <span class="concept-label">02</span> -->
                 <h3>Environment Redesign</h3>
                 <p>Rearranged environment layout in Unity to match our artist, Melanie Danver's, new design.</p>
             </div>
         </div>
-        <img src="Assets/ExperienceDesign/manorredesign.png" alt="Art Project 1" class="art-item"
+        <div class="art-row">
+            <img src="Assets/ExperienceDesign/manorredesign.png" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="66%">
         <img src="Assets/ExperienceDesign/Capture.PNG8.PNG" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="33%">
+        </div>
 
+            <div class="art-row">
             <img src="Assets/ExperienceDesign/Capture.PNG" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="32.5%">
             <img src="Assets/ExperienceDesign/Capture.PNG2.PNG" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="32.5%">
             <img src="Assets/ExperienceDesign/Capture.PNG3.PNG" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="32.5%">
+        </div>
 
+            <div class="art-row">
             <img src="Assets/ExperienceDesign/Capture.PNG4.PNG" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="32.5%">
             <img src="Assets/ExperienceDesign/Capture.PNG5.PNG" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="32.5%">
             <img src="Assets/ExperienceDesign/Capture.PNG6.PNG" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="32.5%">
+        </div>
             <img src="Assets/ExperienceDesign/Capture.PNG7.PNG" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="100%">
 
@@ -185,7 +204,7 @@
 
 
 
-        <section class="detail">
+        <section class="detail" id="final">
             <div class="detail-container">
                 <h3 class="title">Final Experience
                 </h3>
@@ -314,6 +333,69 @@
     </div>
   </footer>
     <script src="script.js"></script>
+    <script>
+        /* Same-height rows: widths follow each image's shape, so every image in a row is the same height. */
+        (function () {
+            [].slice.call(document.querySelectorAll('.art-row')).forEach(function (row) {
+                [].slice.call(row.querySelectorAll('img')).forEach(function (img) {
+                    function fit() {
+                        if (img.naturalWidth && img.naturalHeight) {
+                            img.style.flexGrow = (img.naturalWidth / img.naturalHeight).toFixed(4);
+                        }
+                    }
+                    if (img.complete) fit();
+                    img.addEventListener('load', fit);
+                });
+            });
+        })();
+    </script>
+    <script>
+        /* Side nav: highlights the section you are in, opens/closes the Sections menu on phones,
+           and hides itself once "Check out some of my other projects!" comes into view. */
+        (function () {
+            var nav = document.querySelector('.sidebar.sn');
+            if (!nav) return;
+            var toggle = nav.querySelector('.sn-toggle');
+            var links = [].slice.call(nav.querySelectorAll('a.sn-link[href^="#"]'));
+            var ticking = false;
+
+            function update() {
+                ticking = false;
+                var next = document.querySelector('.next-projects-container');
+                if (next) {
+                    nav.classList.toggle('is-hidden', next.getBoundingClientRect().top <= window.innerHeight * 0.75);
+                }
+                var line = window.innerHeight * 0.35, best = -1, bestTop = -Infinity;
+                links.forEach(function (a, i) {
+                    var t = document.getElementById(a.getAttribute('href').slice(1));
+                    if (!t) return;
+                    var top = t.getBoundingClientRect().top;
+                    if (top <= line && top > bestTop) { bestTop = top; best = i; }
+                });
+                if (best < 0) best = 0;
+                links.forEach(function (a, i) {
+                    a.classList.toggle('is-current', i === best);
+                    if (i === best) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+                });
+            }
+            function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+            document.addEventListener('scroll', onScroll, true);
+            window.addEventListener('resize', onScroll);
+            window.addEventListener('load', update);
+            update();
+
+            function setOpen(open) {
+                nav.classList.toggle('is-open', open);
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+            toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
+            window.addEventListener('click', function (e) {
+                if (!nav.classList.contains('is-open')) return;
+                if (!nav.contains(e.target) || (e.target.closest && e.target.closest('a.sn-link'))) setOpen(false);
+            }, true);
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+        })();
+    </script>
 </body>
 
 </html>

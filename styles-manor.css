@@ -1,0 +1,1158 @@
+/* ==========================================================================
+   THE MANOR — project page stylesheet
+   Replaces exp-styles-2.css on darkride.html only.
+   Theme: same tokens as styles-projects.css (Two to Foxtrot), with the
+   Boofinder hero (gradient title, pill metadata, rounded banner) and the
+   Boofinder alternating image / text rows.
+   No markup is required beyond what darkride.html already has.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. DESIGN TOKENS
+   ========================================================================== */
+:root {
+  --bg-canvas: #f7f7f2;
+  --bg-surface: #ffffff;
+  --bg-subtle: #efefe9;
+
+  --text-primary: #1c1b18;
+  --text-secondary: #3a3935;
+  --text-muted: #595852;
+  --text-inverse: #f6f4d2;
+
+  --brand-primary: #1d4e6e;
+  --brand-navy: #22577a;
+  --brand-accent: #227476;
+  --brand-teal: #38a3a5;
+  --brand-link: #175682;
+
+  --border-subtle: #e2e2da;
+  --border-strong: #dcdcd4;
+  --shadow-sm: 0 2px 6px rgba(28, 27, 24, 0.05);
+  --shadow-md: 0 8px 22px rgba(28, 27, 24, 0.09);
+  --shadow-hover: 0 8px 20px rgba(34, 87, 122, 0.14);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
+  --space-12: 96px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --container-max: 1040px;
+  --gap: 12px;
+  --touch: 44px;
+  --transition-fast: 160ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ==========================================================================
+   2. RESET & BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background-color: var(--bg-canvas);
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+header :focus-visible,
+footer :focus-visible,
+.overlay :focus-visible {
+  outline-color: var(--text-inverse);
+}
+
+/* ==========================================================================
+   3. HEADER & FOOTER (identical to the rest of the site)
+   ========================================================================== */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header,
+footer {
+  position: relative;
+  background: linear-gradient(90deg, #355070, #6d597a, #b56576, #e56b6f);
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
+  color: var(--text-inverse);
+  text-align: center;
+  padding: 20px;
+}
+
+header::after,
+footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('Assets/noise.png');
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+header p {
+  font-family: var(--font-sans);
+  font-size: 17.6px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 5px 0 12px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* 44px tall targets; the visual weight is unchanged */
+nav ul li a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch);
+  padding: 0 14px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  color: var(--text-inverse);
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+nav ul li a:active {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+nav ul li a.active,
+nav ul li a[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.22);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#contact {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #ffffff;
+}
+
+#contact a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+#contact a:hover {
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch);
+  min-height: var(--touch);
+  color: #ffffff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.75;
+}
+
+.social-svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ==========================================================================
+   4. STICKY BREADCRUMBS
+   ========================================================================== */
+.sticky-breadcrumbs {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f9f9f9;
+  padding: 0 20px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.sticky-breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+.sticky-breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sticky-breadcrumbs li + li::before {
+  content: ">";
+  margin: 0 8px;
+  color: #666;
+}
+
+.sticky-breadcrumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch);
+  text-decoration: none;
+  color: #0b62a4; /* 5.9:1 on #f9f9f9 */
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.sticky-breadcrumbs a:hover {
+  text-decoration: underline;
+  color: #00528c;
+}
+
+.sticky-breadcrumbs [aria-current="page"] {
+  color: #333;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   5. PAGE LAYOUT
+   <main> is a wrapping flex row so consecutive <img class="art-item"> tags
+   can sit side by side (thirds / halves / two-thirds + third) from their
+   existing width="" attributes. Every other child takes a full row.
+   ========================================================================== */
+main#project-content {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: var(--gap);
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-5) var(--space-6);
+  line-height: 1.6;
+}
+
+main#project-content > * {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* The page uses <br> as spacers; spacing now comes from the layout */
+main#project-content br {
+  display: none;
+}
+
+main#project-content p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+main#project-content p:last-child {
+  margin-bottom: 0;
+}
+
+main#project-content b {
+  color: var(--text-primary);
+}
+
+main#project-content a {
+  color: var(--brand-link);
+  font-weight: 500;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+main#project-content a:hover {
+  color: var(--brand-accent);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   5b. SIDE NAVIGATION  (same pattern as Two to Foxtrot / Boofinder)
+   Wide: grouped list.  768-1249px: dot rail, label on hover/focus.
+   Phones: "Sections" button that opens a menu.
+   ========================================================================== */
+main#project-content [id] {
+  scroll-margin-top: 72px;
+}
+
+
+/* ==========================================================================
+   6. HERO  (Boofinder pattern: gradient title, lede, pill metadata, banner)
+   ========================================================================== */
+main#project-content > .project-header:first-of-type {
+  text-align: center;
+  padding-top: var(--space-5);
+}
+
+.project-header h2 {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  background: linear-gradient(to right, var(--brand-navy), var(--brand-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Lede: the existing <h3> carries the whole project summary */
+main#project-content .project-header h3 {
+  max-width: 66ch;
+  margin: 0 auto var(--space-5);
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+/* The "Showcased at…" line becomes a small status pill */
+main#project-content .project-header p {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 6px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brand-navy);
+}
+
+main#project-content .project-header p::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-teal);
+}
+
+/* Role / Tools pills above the banner */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  margin: var(--space-2) 0 var(--space-6);
+}
+
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-detail {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  font-size: 0.9rem;
+}
+
+.project-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-accent); /* 5.2:1 on white */
+}
+
+.project-description {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Banner is the focal point of the page */
+.project-gif {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  background: var(--bg-subtle);
+}
+
+/* ==========================================================================
+   7. EDITORIAL ROWS  (.detail — label left, copy right)
+   ========================================================================== */
+.detail {
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-5);
+  align-items: baseline;
+}
+
+main#project-content .detail .title {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--brand-primary);
+}
+
+.detail .text-content p {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.detail .text-content p + p {
+  margin-top: var(--space-3);
+}
+
+.detail .text-content br {
+  display: none;
+}
+
+/* ==========================================================================
+   8. NUMBERED CONCEPT ROWS  (Boofinder .bf-step pattern)
+   Row 1: image | text.   Later rows flip: text | image.
+   ========================================================================== */
+.concept-row {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  column-gap: clamp(24px, 6vw, 72px);
+  align-items: center;
+  margin-top: var(--space-6);
+}
+
+.concept-row ~ .concept-row {
+  grid-template-columns: 0.65fr 1.35fr;
+}
+
+.concept-row ~ .concept-row .concept-media {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.concept-row ~ .concept-row .concept-text {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.concept-media img,
+.concept-media .art-item {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: var(--radius-md);
+}
+
+.concept-label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--brand-accent); /* 5.2:1 on white, 4.9:1 on canvas */
+}
+
+main#project-content .concept-text h3 {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--brand-navy);
+}
+
+main#project-content .concept-text p {
+  max-width: 46ch;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+/* ==========================================================================
+   9. IMAGES & CAPTIONS
+   Direct-child images size themselves from their width="" attribute so
+   the rows that already exist in the HTML become tidy grids.
+   ========================================================================== */
+main#project-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+main#project-content > .art-item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border-radius: var(--radius-md);
+  cursor: zoom-in;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.art-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.art-item:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.art-item:focus-visible {
+  outline: 3px solid var(--brand-teal);
+  outline-offset: 2px;
+}
+
+/* 3-up (31% / 32.5% / 35%) */
+main#project-content > .art-item[width="31%"],
+main#project-content > .art-item[width="32.5%"],
+main#project-content > .art-item[width="35%"],
+main#project-content > .art-item[width="33%"] {
+  flex: 0 0 calc((100% - 2 * var(--gap)) / 3 - 0.5px);
+  width: calc((100% - 2 * var(--gap)) / 3 - 0.5px);
+}
+
+/* 2-up */
+main#project-content > .art-item[width="49%"],
+main#project-content > .art-item[width="50%"] {
+  flex: 0 0 calc((100% - var(--gap)) / 2 - 0.5px);
+  width: calc((100% - var(--gap)) / 2 - 0.5px);
+}
+
+/* 2/3 + 1/3 */
+main#project-content > .art-item[width="66%"] {
+  flex: 0 0 calc((100% - var(--gap)) * 2 / 3 - 0.5px);
+  width: calc((100% - var(--gap)) * 2 / 3 - 0.5px);
+}
+
+/* Same-height rows: each <div class="art-row"> holds 2-3 images. The small
+   script in the page sets each image's flex-grow to its aspect ratio
+   (width / height), so widths follow the picture's shape and every image in
+   the row ends up the same height. Before the images load they share equally. */
+.art-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.art-row .art-item {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0;
+  border-radius: var(--radius-md);
+  cursor: zoom-in;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Captions */
+.art-item + p,
+main#project-content p[style*="text-align: center"] {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-align: center !important;
+  margin-bottom: var(--space-4);
+}
+
+/* Spacing before the next section after an image block */
+main#project-content > .detail,
+main#project-content > .concept-row {
+  margin-top: var(--space-6);
+}
+
+main#project-content > .detail:first-of-type {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   10. PLAYTEST SPREADSHEET EMBED  (loading skeleton, then content)
+   ========================================================================== */
+main#project-content > iframe {
+  display: block;
+  width: 100%;
+  height: min(700px, 80vh);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(90deg, var(--bg-subtle) 25%, var(--bg-canvas) 50%, var(--bg-subtle) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-8);
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+/* ==========================================================================
+   11. VIDEO
+   ========================================================================== */
+.video-container:has(iframe) {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: var(--space-2) 0 var(--space-5);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  background: #141413;
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ==========================================================================
+   12. LIGHTBOX  (script.js toggles display; layout stays here)
+   ========================================================================== */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background-color: rgba(14, 14, 13, 0.92);
+}
+
+.overlay-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+}
+
+.overlay-image[src$=".png" i] {
+  padding: 16px;
+  background-color: var(--bg-canvas);
+}
+
+.overlay .close,
+.overlay .prev,
+.overlay .next {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none !important;
+  transition: background-color var(--transition-fast);
+}
+
+.overlay .close:hover,
+.overlay .prev:hover,
+.overlay .next:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.overlay .close:active,
+.overlay .prev:active,
+.overlay .next:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.overlay .close {
+  top: var(--space-5);
+  right: var(--space-5);
+}
+
+.overlay .prev {
+  left: var(--space-5);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.overlay .next {
+  right: var(--space-5);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ==========================================================================
+   13. DIVIDER + OTHER PROJECTS
+   ========================================================================== */
+.dynamic-hr {
+  height: 2px;
+  margin: var(--space-8) 0 var(--space-2);
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--brand-navy), var(--brand-teal), transparent);
+}
+
+body > h2 {
+  max-width: var(--container-max);
+  width: 100%;
+  margin: var(--space-4) auto var(--space-5);
+  padding: 0 var(--space-5);
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  color: var(--text-primary);
+  text-align: center !important;
+}
+
+.next-projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  gap: var(--space-5);
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto var(--space-10);
+  padding: 0 var(--space-5);
+}
+
+.next-project-preview {
+  display: flex;
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.next-project-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-accent);
+}
+
+.next-project-preview:active {
+  transform: translateY(-1px);
+}
+
+.next-project-preview:focus-within {
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 2px var(--brand-accent);
+}
+
+.next-project-preview a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.next-project-preview a:focus-visible {
+  outline: none; /* the card shows the ring via :focus-within */
+}
+
+.preview-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.preview-left img {
+  display: block;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.next-project-info {
+  padding: var(--space-4) var(--space-5) var(--space-2);
+}
+
+.next-project-info h3 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--brand-primary);
+}
+
+.next-project-info p {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.preview-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--space-2) var(--space-5) var(--space-4);
+  color: var(--brand-accent);
+  transition: transform var(--transition-fast);
+}
+
+.preview-right::before {
+  content: "View Project";
+  margin-right: var(--space-1);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.next-project-preview:hover .preview-right {
+  transform: translateX(3px);
+}
+
+.preview-right svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ==========================================================================
+   14. RESPONSIVE
+   ========================================================================== */
+@media (max-width: 900px) {
+  .next-projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  main#project-content {
+    padding: var(--space-5) var(--space-4) var(--space-5);
+  }
+
+  .detail-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  /* Image + text rows stack: picture first, then the copy */
+  .concept-row,
+  .concept-row ~ .concept-row {
+    display: block;
+    margin-top: var(--space-5);
+  }
+
+  .concept-row .concept-media {
+    margin-bottom: var(--space-4);
+  }
+
+  .concept-text p {
+    max-width: none;
+  }
+
+  /* Same-height rows stack on phones, one image per row */
+  .art-row {
+    flex-direction: column;
+  }
+
+  .art-row .art-item {
+    flex: none !important;
+    width: 100%;
+  }
+
+  /* Phone-sized screens: every gallery image gets its own row */
+  main#project-content > .art-item,
+  main#project-content > .art-item[width] {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .next-projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .overlay .prev {
+    left: 10px;
+  }
+
+  .overlay .next {
+    right: 10px;
+  }
+}
+
+/* ==========================================================================
+   15. REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  header,
+  footer,
+  main#project-content > iframe {
+    animation: none;
+  }
+
+  .sidebar.sn,
+  .sidebar.sn a.sn-link,
+  .sidebar.sn .sn-label,
+  .art-item,
+  .next-project-preview,
+  .preview-right,
+  .social-link,
+  nav ul li a,
+  .overlay .close,
+  .overlay .prev,
+  .overlay .next {
+    transition: none;
+  }
+
+  .art-item:hover,
+  .next-project-preview:hover,
+  .next-project-preview:hover .preview-right,
+  .social-link:hover {
+    transform: none;
+  }
+}
+
+
+
+/* ==========================================================================
+   5. SIDE NAVIGATION
+   ========================================================================== */
+.sidebar.sn {
+  position: fixed;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+}
+
+.sidebar.sn .sn-toggle,
+.sidebar.sn .sn-dot {
+  display: none;
+}
+
+.sidebar.sn .sn-group {
+  display: block;
+  margin-bottom: 6px;
+  padding-left: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8a8a84;
+}
+
+.sidebar.sn a.sn-link {
+  display: block;
+  padding: 6px 12px;
+  border-left: 2px solid transparent;
+  color: #5b5b57;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.sidebar.sn a.sn-link:hover {
+  color: #22577a;
+}
+
+.sidebar.sn a.sn-link.is-current {
+  border-left-color: #38a3a5;
+  color: #22577a;
+  font-weight: 600;
+}
+
+@media (min-width: 1250px) {
+  body:has(.sidebar.sn) main#project-content,
+  body:has(.sidebar.sn) .next-projects-container,
+  body:has(.sidebar.sn) > h2 {
+    padding-left: 220px;
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1249px) {
+  body:has(.sidebar.sn) main#project-content,
+  body:has(.sidebar.sn) .next-projects-container,
+  body:has(.sidebar.sn) > h2 {
+    padding-left: 48px;
+  }
+
+  .sidebar.sn .sn-group {
+    display: none;
+  }
+
+  .sidebar.sn a.sn-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 26px;
+    padding: 0;
+    border-left: 0;
+  }
+
+  .sidebar.sn .sn-dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f7f7f2;
+    border: 1.5px solid #9a9a92;
+  }
+
+  .sidebar.sn a.sn-link.is-current .sn-dot {
+    background: #38a3a5;
+    border-color: #38a3a5;
+  }
+
+  .sidebar.sn .sn-label {
+    position: absolute;
+    left: 20px;
+    padding: 2px 8px;
+    border: 1px solid #dcdcd4;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .sidebar.sn a.sn-link:hover .sn-label {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar.sn {
+    position: static;
+    transform: none;
+  }
+
+  .sidebar.sn .sn-toggle {
+    display: block;
+    position: fixed;
+    left: 14px;
+    bottom: 16px;
+    z-index: 1100;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 999px;
+    background: #22577a;
+    color: #fff;
+    font: 600 13px 'Montserrat', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+
+  .sidebar.sn .sn-list {
+    display: none;
+    position: fixed;
+    left: 14px;
+    bottom: 66px;
+    z-index: 1100;
+    width: 240px;
+    padding: 10px 6px;
+    border: 1px solid #dcdcd4;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar.sn.is-open .sn-list {
+    display: block;
+  }
+}
