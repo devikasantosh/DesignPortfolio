@@ -7,7 +7,7 @@
     <title>Portfolio</title>
     <link rel="icon" type="image/x-icon" href="Assets\favicon.png">
 
-    <link rel="stylesheet" href="exp-styles-2.css">
+    <link rel="stylesheet" href="styles-manor.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link
@@ -41,11 +41,21 @@
             <li><span aria-current="page">The Curse</span></li>
         </ol>
     </nav>
-
+   <nav class="sidebar sn" aria-label="Page sections">
+        <button type="button" class="sn-toggle" aria-expanded="false" aria-controls="sn-list">Sections</button>
+        <div class="sn-list" id="sn-list">
+            <span class="sn-group">On This Page</span>
+            <a href="#overview" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Overview</span></a>
+            <a href="#space" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Space Provided</span></a>
+            <a href="#dmx" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Role 1: DMX and show controls</span></a>
+            <a href="#book" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Role 2: Programming a Digital Book</span></a>
+            <a href="#final" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Final Experience</span></a>
+        </div>
+    </nav>
 
 
     <main id="project-content">
-        <section class="project-header">
+        <section class="project-header" id="overview">
             <h2>The Curse</h2>
             <h3>A narrative-driven escape room using an Egyptian tomb set with sensors embedded on the floors
                 and walls,
@@ -74,7 +84,7 @@
 
 
         <section class="detail">
-            <div class="detail-container">
+            <div class="detail-container" id="space">
                 <h3 class="title">Space Provided
                 </h3>
                 <div class="text-content">
@@ -115,13 +125,13 @@
 
         <!-- ROW 1: IMAGE LEFT / TEXT RIGHT -->
         <div class="concept-row">
-            <div class="concept-media">
+            <div class="concept-media" id="dmx">
                 <img src="Assets/ExperienceDesign/photos/DSC09472.JPG" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
                     width="100%">
             </div>
 
             <div class="concept-text">
-                <span class="concept-label">01</span>
+                <!-- <span class="concept-label">01</span> -->
                 <h3>Programmed DMX light controls and sensor responses.</h3>
                 <p>
                     Programmed the Unity project to work with the custom show control system, with light and audio cues
@@ -129,21 +139,21 @@
                 </p>
             </div>
         </div>
-        <img src="Assets/ExperienceDesign/photos/tomb1.JPG" alt="Art Project 1" class="art-item"
-            onclick="openGallery(0)" width="19.5%">
-             <img src="Assets/ExperienceDesign/photos/tomb2.JPG" alt="Art Project 1" class="art-item"
-            onclick="openGallery(0)" width="19.5%">
-            <img src="Assets/ExperienceDesign/photos/tomb3.JPG" alt="Art Project 1" class="art-item"
-            onclick="openGallery(0)" width="19.5%">
-            <img src="Assets/ExperienceDesign/photos/tomb4.JPG" alt="Art Project 1" class="art-item"
-            onclick="openGallery(0)" width="19.5%">
-            <img src="Assets/ExperienceDesign/photos/tomb5.JPG" alt="Art Project 1" class="art-item"
-            onclick="openGallery(0)" width="19.5%">
-            <br><br><br><br><br>
-            
+        <div class="art-row">
+    <img src="Assets/ExperienceDesign/photos/tomb1.JPG" alt="Art Project 1" class="art-item"
+        onclick="openGallery(0)" width="19.5%">
+    <img src="Assets/ExperienceDesign/photos/tomb2.JPG" alt="Art Project 1" class="art-item"
+        onclick="openGallery(0)" width="19.5%">
+    <img src="Assets/ExperienceDesign/photos/tomb3.JPG" alt="Art Project 1" class="art-item"
+        onclick="openGallery(0)" width="19.5%">
+    <img src="Assets/ExperienceDesign/photos/tomb4.JPG" alt="Art Project 1" class="art-item"
+        onclick="openGallery(0)" width="19.5%">
+    <img src="Assets/ExperienceDesign/photos/tomb5.JPG" alt="Art Project 1" class="art-item"
+        onclick="openGallery(0)" width="19.5%">
+</div>
 
         <div class="concept-row">
-            <div class="concept-media">
+            <div class="concept-media" id="book">
 
                 <img src="Assets/ExperienceDesign/photos/DSC09399.JPG" alt="Art Project 1" class="art-item"
                     onclick="openGallery(0)" width="49%">
@@ -151,7 +161,7 @@
             </div>
 
             <div class="concept-text">
-                <span class="concept-label">02</span>
+                <!-- <span class="concept-label">02</span> -->
                 <h3>Programmed a digital book on the touchscreen kiosk</h3>
                 <p>
                     Programmed a digital book on the kiosk, that only opens once the first puzzle has been solved and
@@ -187,7 +197,7 @@
 
 
 <section class="detail">
-            <div class="detail-container">
+            <div class="detail-container" id="final">
                 <h3 class="title">Final Experience
                 </h3>
                 <div class="text-content">

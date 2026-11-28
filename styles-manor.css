@@ -1103,3 +1103,47 @@ body > h2 {
 }
 
 
+
+/* ==========================================================================
+   14. FOOTER & SOCIAL ICONS
+   ========================================================================== */
+#contact {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #ffffff;
+}
+
+#contact a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+#contact a:hover {
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: #ffffff;
+  display: inline-flex;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.75;
+}
+
+.social-svg {
+  width: 2rem;
+  height: 2rem;
+}
