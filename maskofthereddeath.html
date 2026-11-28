@@ -41,6 +41,22 @@
         </ol>
     </nav>
 
+    <nav class="sidebar sn" aria-label="Page sections">
+        <button type="button" class="sn-toggle" aria-expanded="false" aria-controls="sn-list">Sections</button>
+        <div class="sn-list" id="sn-list">
+            <span class="sn-group">On This Page</span>
+            <a href="#inspiration" class="sn-link"><span class="sn-dot"></span><span
+                    class="sn-label">Inspiration</span></a>
+            <a href="#environment-art" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Environment
+                    Art</span></a>
+            <a href="#graphic-design" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Graphic
+                    Design</span></a>
+            <a href="#motion-graphics" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Motion
+                    Graphics</span></a>
+            <a href="#play" class="sn-link"><span class="sn-dot"></span><span class="sn-label">Play!</span></a>
+        </div>
+    </nav>
+
     <main id="project-content">
         <section class="project-header">
             <h2>Mask of the Red Death</h2>
@@ -66,7 +82,7 @@
         </div>
 
         <section class="detail">
-            <div class="detail-container">
+            <div class="detail-container" id="inspiration">
                 <h3 class="title">Inspiration</h3>
                 <div class="text-content">
                     <p>Theme provided? Mask. We spent 3 hours deliberating how best to fit this theme, and we finally
@@ -88,7 +104,7 @@
         <p style="text-align: center"><i>The final idea.</i></p>
 
         <section class="detail">
-            <div class="detail-container">
+            <div class="detail-container" id="environment-art">
                 <h3 class="title">Environment Art</h3>
                 <div class="text-content">
                     <p>I took on the role of environment artist, learning Blender overnight and modelling the layout of
@@ -104,7 +120,7 @@
         <p style="text-align: center"><i>Room environments.</i></p>
 
         <section class="detail">
-            <div class="detail-container">
+            <div class="detail-container" id="graphic-design">
                 <h3 class="title">Graphic Design</h3>
                 <div class="text-content">
                     <p>Additionally, created the team's logo (go Poe's Crows!) and our game's cover art.</p>
@@ -117,17 +133,18 @@
         <img src="Assets/Mask of the Red Death - cover.png" alt="Art Project 1" class="art-item"
             onclick="openGallery(0)" width="49%">
         <section class="detail">
-            <div class="detail-container">
+            <div class="detail-container" id="motion-graphics">
                 <h3 class="title">Motion Graphics</h3>
                 <div class="text-content">
                     <p>Made a game splash screen with Adobe After Effects.</p>
                 </div>
             </div>
 
-        </section><img src="Assets/MaskMotion.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)" width="100%">
+        </section><img src="Assets/MaskMotion.gif" alt="Art Project 1" class="art-item" onclick="openGallery(0)"
+            width="100%">
 
         <section class="detail">
-            <div class="detail-container">
+            <div class="detail-container" id="play">
                 <h3 class="title">Play it, we promise you'll have fun!</h3>
                 <div class="text-content">
                     <p>You can find our build on the <a
